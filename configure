@@ -6671,7 +6671,7 @@ _ACEOF
 
 
 
-ALL_LINGUAS="de"
+ALL_LINGUAS="de fr"
 
 # Specify the Makefiles
 ac_config_files="$ac_config_files Makefile src/Makefile po/Makefile.in"

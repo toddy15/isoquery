@@ -48,7 +48,7 @@ AC_SUBST(LIBXML_CFLAGS)
 # require gettext
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.16])
-ALL_LINGUAS="de"
+ALL_LINGUAS="de fr"
 
 # Specify the Makefiles
 AC_CONFIG_FILES(Makefile src/Makefile po/Makefile.in)

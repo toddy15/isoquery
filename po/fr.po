@@ -1,35 +1,39 @@
-# Translation of Isoquery to German
-# This file is distributed under the same license as the Isoquery package.
+# Translation of isoquery to French
+# This file is distributed under the same license as the isoquery package.
 #
 # Copyright (C)
-# Tobias Toedter <t.toedter@gmx.net>, 2007.
+# Christian Perrier <bubulle@debian.org>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery 0.8\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
 "POT-Creation-Date: 2007-10-27 12:08+0200\n"
-"PO-Revision-Date: 2007-10-01 21:37+0200\n"
-"Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
-"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"PO-Revision-Date: 2006-08-06 21:56-0500\n"
+"Last-Translator: Christian Perrier <bubulle@debian.org>\n"
+"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #: src/option_parser.cpp:116
 msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
-msgstr "%PROGRAM_NAME: Der ISO-Code »%CODE« wird nicht unterstützt."
+msgstr ""
 
 #: src/option_parser.cpp:141
+#, fuzzy
 msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
-msgstr "Aufruf: %PROGRAM_NAME [Optionen] [ISO Codes]"
+msgstr ""
+"Utilisation : %PROGRAM_NAME [options] code\n"
+"\n"
 
 #: src/option_parser.cpp:144
+#, fuzzy
 msgid "Options:"
-msgstr "Optionen:"
+msgstr "Options :\n"
 
 #: src/option_parser.cpp:145
+#, fuzzy
 msgid ""
 "  -i, --iso=NUMBER     The ISO standard to use\n"
 "                       Possible values: 639, 3166, 4217\n"
@@ -45,20 +49,25 @@ msgid ""
 "  -h, --help           Show this information\n"
 "  -v, --version        Show program version and copyright"
 msgstr ""
-"  -i, --iso=NUMMER     Der gewünschte ISO-Standard\n"
-"                       Mögliche Werte: 639, 3166, 4217\n"
-"                       (Voreinstellung: 3166)\n"
-"  -n, --name           Name der übergebenen Codes (Voreinstellung)\n"
-"  -o, --official_name  Offizieller Name der übergebenen Codes\n"
-"                       Dies kann das Gleiche sein wie --name.\n"
-"  -c, --common_name    Üblicher Name der übergebenen Codes\n"
-"                       Dies kann das Gleiche sein wie --name.\n"
-"  -l, --locale=LOCALE  Diese Locale für die Ausgabe verwenden\n"
-"  -x, --xmlfile=DATEI  Eine andere XML-Datei mit ISO-Daten verwenden\n"
-"                       (Voreinstellung: /usr/share/xml/iso-codes/iso_3166."
-"xml)\n"
-"  -h, --help           Anzeige dieser Informationen\n"
-"  -v, --version        Anzeige der Programmversion und des Copyrights"
+"  -i, --iso=NOMBRE      Norme ISO standard à utiliser\n"
+"                        Valeurs possibles: 639, 3166, 4217\n"
+"                        (défaut: 3166)\n"
+"  -n, --name            Retourne le nom correspondant au code demandé\n"
+"                        (défaut)\n"
+"  -o, --official_name   Retourne le nom officiel correspondant au\n"
+"                        code demandé\n"
+"                        Cette valeur peut être vide.\n"
+"  -c, --common_name     Retourne le nom courant correspondant au\n"
+"                        code demandé\n"
+"                        Cette valeur peut être vide.\n"
+"  -l, --locale=LOCALE   Utiliser ces paramètres régionaux (« locale »)\n"
+"                        pour la réponse\n"
+"  -x, --xmlfile=FICHIER Utiliser ce fichier XML comme source des données "
+"ISO\n"
+"                        (par défaut: /usr/share/xml/iso-codes/iso_3166.xml)\n"
+"  -h, --help            Afficher cette aide\n"
+"  -v, --version         Afficher la version du programme et les\n"
+"                        informations de copyright et de licence\n"
 
 #: src/option_parser.cpp:172
 msgid "Copyright (C) 2007 Tobias Toedter"
@@ -68,23 +77,24 @@ msgstr "Copyright (C) 2007 Tobias Toedter"
 #. your language.
 #: src/option_parser.cpp:176
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
-msgstr "Deutsche Übersetzung Copyright (C) 2007 Tobias Toedter"
+msgstr ""
 
 #: src/xmldata.cpp:50
 msgid "Error in setting up the parser."
-msgstr "Fehler beim Einrichten des Parsers."
+msgstr ""
 
 #: src/xmldata.cpp:54
 #, c-format
 msgid "libxml++ exception caught: %EXCEPTION"
-msgstr "Ausnahme von libxml++ abgefangen: %EXCEPTION"
+msgstr ""
 
 #: src/xmldata.cpp:74
 #, c-format
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
-msgstr "Die Datei »%FILENAME« enthält keine gültigen ISO %CODE Daten."
+msgstr ""
+"Le fichier « %FILENAME » ne contient pas de données ISO-%CODE valables."
 
 #: src/xmldata.cpp:214
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
-msgstr "Der Code »%CODE« ist in ISO %STANDARD nicht definiert."
+msgstr "Le code « %CODE » n'existe pas dans ISO-%STANDARD."
