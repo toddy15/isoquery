@@ -1,0 +1,91 @@
+# Translation of Isoquery to German
+# This file is distributed under the same license as the Isoquery package.
+#
+# Copyright (C)
+# Tobias Toedter <t.toedter@gmx.net>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery 0.8\n"
+"Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
+"POT-Creation-Date: 2007-10-01 21:35+0200\n"
+"PO-Revision-Date: 2007-10-01 21:37+0200\n"
+"Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: src/option_parser.cpp:116
+msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
+msgstr "%PROGRAM_NAME: Der ISO-Code »%CODE« wird nicht unterstützt."
+
+#: src/option_parser.cpp:141
+msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
+msgstr "Aufruf: %PROGRAM_NAME [Optionen] [ISO Codes]"
+
+#: src/option_parser.cpp:144
+msgid "Options:"
+msgstr "Optionen:"
+
+#: src/option_parser.cpp:145
+msgid ""
+"  -i, --iso=NUMBER     The ISO standard to use\n"
+"                       Possible values: 639, 3166, 4217\n"
+"                       (default: 3166)\n"
+"  -n, --name           Name for the supplied codes (default)\n"
+"  -o, --official_name  Official name for the supplied codes\n"
+"                       This may be the same as --name.\n"
+"  -c, --common_name    Common name for the supplied codes\n"
+"                       This may be the same as --name.\n"
+"  -l, --locale=LOCALE  Use this locale for output\n"
+"  -x, --xmlfile=FILE   Use another XML file with ISO data\n"
+"                       (default: /usr/share/xml/iso-codes/iso_3166.xml)\n"
+"  -h, --help           Show this information\n"
+"  -v, --version        Show program version and copyright"
+msgstr ""
+"  -i, --iso=NUMMER     Der gewünschte ISO-Standard\n"
+"                       Mögliche Werte: 639, 3166, 4217\n"
+"                       (Voreinstellung: 3166)\n"
+"  -n, --name           Name der übergebenen Codes (Voreinstellung)\n"
+"  -o, --official_name  Offizieller Name der übergebenen Codes\n"
+"                       Dies kann das Gleiche sein wie --name.\n"
+"  -c, --common_name    Üblicher Name der übergebenen Codes\n"
+"                       Dies kann das Gleiche sein wie --name.\n"
+"  -l, --locale=LOCALE  Diese Locale für die Ausgabe verwenden\n"
+"  -x, --xmlfile=DATEI  Eine andere XML-Datei mit ISO-Daten verwenden\n"
+"                       (Voreinstellung: /usr/share/xml/iso-codes/iso_3166."
+"xml)\n"
+"  -h, --help           Anzeige dieser Informationen\n"
+"  -v, --version        Anzeige der Programmversion und des Copyrights"
+
+#: src/option_parser.cpp:172
+msgid "Copyright (C) 2007 Tobias Toedter"
+msgstr "Copyright (C) 2007 Tobias Toedter"
+
+#. TRANSLATORS: Please change the uppercase words as appropriate for
+#. your language.
+#: src/option_parser.cpp:176
+msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
+msgstr "Deutsche Übersetzung Copyright (C) 2007 Tobias Toedter"
+
+#: src/xmldata.cpp:50
+msgid "Error in setting up the parser."
+msgstr "Fehler beim Einrichten des Parsers."
+
+#: src/xmldata.cpp:54
+#, c-format
+msgid "libxml++ exception caught: %EXCEPTION"
+msgstr "Ausnahme von libxml++ abgefangen: %EXCEPTION"
+
+#: src/xmldata.cpp:74
+#, c-format
+msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
+msgstr "Die Datei »%FILENAME« enthält keine gültigen ISO %CODE Daten."
+
+#: src/xmldata.cpp:208
+#, c-format
+msgid "The code '%CODE' is not defined in ISO %STANDARD."
+msgstr "Der Code »%CODE« ist in ISO %STANDARD nicht definiert."
+

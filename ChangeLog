@@ -1,0 +1,6 @@
+Isoquery trunk
+==============
+UNRELEASED
+
+* Initial setup, using basic classes and C++ code
+* Perform gettextize on source code

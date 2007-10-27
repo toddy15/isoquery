@@ -1,0 +1,15 @@
+TODO for Isoquery
+=================
+
+- bindtextdomain()
+
+- write a man page
+
+- allow use of ISO 639-3 and ISO 3166-2
+
+- allow use of multiple XPaths (needed for ISO 639)
+
+- optionally print results with NULL characters instead of newlines
+
+- possibly fix security warnings from scanners like
+  flawfinder, rats, and pscan
