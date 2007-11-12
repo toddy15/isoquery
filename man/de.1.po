@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery 0.8\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2007-11-12 15:04+0100\n"
-"PO-Revision-Date: 2007-11-12 15:42+0100\n"
+"POT-Creation-Date: 2007-11-12 15:37+0100\n"
+"PO-Revision-Date: 2007-11-12 15:51+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -447,7 +447,6 @@ msgid "AUTHOR"
 msgstr "AUTOR"
 
 # type: Plain text
-#: isoquery.1:181
-msgid "B<isoquery> was written by Tobias Toedter E<lt>t.toedter@gmx.netE<gt>."
-msgstr ""
-"B<isoquery> wurde von Tobias Toedter E<lt>t.toedter@gmx.netE<gt> geschrieben."
+#: isoquery.1:180
+msgid "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgstr "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
