@@ -1,0 +1,410 @@
+# Translation of Isoquery man page to German
+# This file is distributed under the same license as the Isoquery package.
+#
+# Tobias Toedter <t.toedter@gmx.net>, 2007.
+# Copyright (C)
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery 0.8\n"
+"Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
+"POT-Creation-Date: 2007-11-12 15:04+0100\n"
+"PO-Revision-Date: 2007-11-12 15:42+0100\n"
+"Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+# type: TH
+#: isoquery.1:5
+#, no-wrap
+msgid "ISOQUERY"
+msgstr "ISOQUERY"
+
+# type: TH
+#: isoquery.1:5
+#, no-wrap
+msgid "November 12, 2007"
+msgstr "12. November 2007"
+
+#
+# type: SH
+#: isoquery.1:32
+#, no-wrap
+msgid "NAME"
+msgstr "NAME"
+
+# type: Plain text
+#: isoquery.1:34
+msgid "isoquery - Search for various ISO codes (country, language, ...)"
+msgstr "isoquery - Suche nach verschiedenen ISO-Codes (Land, Sprache, ...)"
+
+# type: SH
+#: isoquery.1:35
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
+# type: Plain text
+#: isoquery.1:38
+msgid "B<isoquery> [I<options>] [I<file>] [I<ISO codes>]"
+msgstr "B<isoquery> [I<Optionen>] [I<DATEI>] [I<ISO-Codes>]"
+
+# type: SH
+#: isoquery.1:39
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "BESCHREIBUNG"
+
+# type: Plain text
+#: isoquery.1:49
+msgid ""
+"This manual page documents briefly the B<isoquery> command.  It can be used "
+"to generate a tabular output of the ISO standard codes provided by the "
+"package iso-codes.  It parses the XML files and shows all included ISO codes "
+"or just matching entries, if specified on the command line.  Moreover, it's "
+"possible to get all available translations for the ISO standard."
+msgstr "Diese Handbuchseite erläutert kurz das Programm B<isoquery>. Es kann dazu verwendet werden, die vom Paket iso-codes zur Verfügung gestellten ISO-Standard-Codes tabellarisch auszugeben. Es wertet die XML-Dateien aus und zeigt entweder alle enthaltenen ISO-Codes oder lediglich passende Einträge, wenn diese auf der Kommandozeile angegeben werden. Außerdem ist es möglich, alle verfügbaren Übersetzungen für den ISO-Standard zu erhalten."
+
+# type: SH
+#: isoquery.1:50
+#, no-wrap
+msgid "OPTIONS"
+msgstr "OPTIONEN"
+
+# type: Plain text
+#: isoquery.1:55
+msgid ""
+"This program follows the usual GNU command line syntax, with long options "
+"starting with two dashes (`-').  B<isoquery> supports the following options:"
+msgstr ""
+"Dieses Programm folgt dem üblichen Format der GNU Kommandozeilenoptionen, in dem "
+"lange Optionen mit zwei Minuszeichen beginnen (»-«). B<isoquery> "
+"unterstützt die folgenden Optionen:"
+
+# type: TP
+#: isoquery.1:55
+#, no-wrap
+msgid "B<-i, --iso=NUMBER>"
+msgstr "B<-i, --iso=NUMMER>"
+
+# type: Plain text
+#: isoquery.1:59
+msgid "The ISO standard to use.  Possible values: 639, 3166, 4217 (default: 3166)"
+msgstr ""
+"Der gewünschte ISO-Standard. Mögliche Werte: 639, 3166, 4217 "
+"(Voreinstellung: 3166)"
+
+# type: TP
+#: isoquery.1:59
+#, no-wrap
+msgid "B<-n, --name>"
+msgstr "B<-n, --name>"
+
+# type: Plain text
+#: isoquery.1:62
+msgid "Name for the supplied codes (default)"
+msgstr "Name der übergebenen Codes (Voreinstellung)"
+
+# type: TP
+#: isoquery.1:62
+#, no-wrap
+msgid "B<-o, --official_name>"
+msgstr "B<-o, --official_name>"
+
+# type: Plain text
+#: isoquery.1:66
+msgid "Official name for the supplied codes.  This may be the same as --name."
+msgstr ""
+"Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie --"
+"name."
+
+# type: TP
+#: isoquery.1:66
+#, no-wrap
+msgid "B<-c, --common_name>"
+msgstr "B<-c, --common_name>"
+
+# type: Plain text
+#: isoquery.1:70
+msgid "Common name for the supplied codes.  This may be the same as --name."
+msgstr "Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name."
+
+# type: TP
+#: isoquery.1:70
+#, no-wrap
+msgid "B<-l, --locale=LOCALE>"
+msgstr "B<-l, --locale=LOCALE>"
+
+# type: Plain text
+#: isoquery.1:73
+msgid "Use this locale for output."
+msgstr "Diese Locale für die Ausgabe verwenden."
+
+# type: TP
+#: isoquery.1:73
+#, no-wrap
+msgid "B<-x, --xmlfile=FILE>"
+msgstr "B<-x, --xmlfile=DATEI>"
+
+# type: Plain text
+#: isoquery.1:77
+msgid ""
+"Use another XML file with ISO data.  (default: /usr/share/xml/iso-codes/"
+"iso_3166.xml)"
+msgstr ""
+"Eine andere XML-Datei mit ISO-Daten verwenden (Voreinstellung: /usr/share/"
+"xml/iso-codes/iso_3166.xml)"
+
+# type: TP
+#: isoquery.1:77
+#, no-wrap
+msgid "B<-h, --help>"
+msgstr "B<-h, --help>"
+
+# type: Plain text
+#: isoquery.1:80
+msgid "Show summary of options."
+msgstr "Anzeige dieser Informationen."
+
+# type: TP
+#: isoquery.1:80
+#, no-wrap
+msgid "B<-v, --version>"
+msgstr "B<-v, --version>"
+
+# type: Plain text
+#: isoquery.1:83
+msgid "Show program version and copyright."
+msgstr "Anzeige der Programmversion und des Copyrights."
+
+# type: SH
+#: isoquery.1:84
+#, no-wrap
+msgid "EXAMPLES"
+msgstr "BEISPIELE"
+
+# type: Plain text
+#: isoquery.1:91
+msgid ""
+"If called without any command line options, B<isoquery> will put out a table "
+"of all ISO 3166 codes.  The first three columns contain the alpha-2 code, "
+"the alpha-3 code, and the numerical code assigned to the country listed in "
+"the fourth column."
+msgstr "Wenn B<isoquery> ohne Kommandozeilenoptionen aufgerufen wird, gibt das Programm eine Tabelle mit allen ISO 3166 Codes aus. Die ersten drei Spalten enthalten den Alpha-2-Code, den Alpha-3-Code und den nummerischen Code, die dem Land zugewiesen sind, das in der vierten Spalte aufgelistet wird."
+
+# type: Plain text
+#: isoquery.1:100
+#, no-wrap
+msgid ""
+"$ isoquery\n"
+"AF      AFG     004     Afghanistan\n"
+"AX      ALA     248     Åland Islands\n"
+"AL      ALB     008     Albania\n"
+"[...]\n"
+"YE      YEM     887     Yemen\n"
+"ZM      ZMB     894     Zambia\n"
+"ZW      ZWE     716     Zimbabwe\n"
+msgstr ""
+"$ isoquery\n"
+"AF      AFG     004     Afghanistan\n"
+"AX      ALA     248     Åland Islands\n"
+"AL      ALB     008     Albania\n"
+"[...]\n"
+"YE      YEM     887     Yemen\n"
+"ZM      ZMB     894     Zambia\n"
+"ZW      ZWE     716     Zimbabwe\n"
+
+# type: Plain text
+#: isoquery.1:103
+msgid ""
+"If you need only some countries, you can specify any of the codes in the "
+"first three columns to cut down the output."
+msgstr "Wenn Sie nur einige Länder benötigen, können Sie Codes angeben, die in den ersten drei Spalten angezeigt werden. Dadurch wird die Ausgabe auf die passenden Einträge beschränkt."
+
+# type: Plain text
+#: isoquery.1:108
+#, no-wrap
+msgid ""
+"$ isoquery so nor 484\n"
+"SO      SOM     706     Somalia\n"
+"NO      NOR     578     Norway\n"
+"MX      MEX     484     Mexico\n"
+msgstr ""
+"$ isoquery so nor 484\n"
+"SO      SOM     706     Somalia\n"
+"NO      NOR     578     Norway\n"
+"MX      MEX     484     Mexico\n"
+
+# type: Plain text
+#: isoquery.1:113
+msgid ""
+"Should you need the translations of the countries' names, just specify in "
+"which locale you'd like to see the output.  Please note that the original "
+"English name will be shown if there is no translation available for the "
+"specified locale."
+msgstr "Wenn Sie die Übersetzung der Ländernamen brauchen, geben Sie einfach die Locale an, in der Sie die Ausgabe benötigen. Bitte beachten Sie, dass der ursprüngliche englische Name angezeigt wird, wenn es für die angegebene Locale keine Übersetzung gibt."
+
+# type: Plain text
+#: isoquery.1:118
+#, no-wrap
+msgid ""
+"$ isoquery --locale=nl fr de es\n"
+"FR      FRA     250     Frankrijk\n"
+"DE      DEU     276     Duitsland\n"
+"ES      ESP     724     Spanje\n"
+msgstr ""
+"$ isoquery --locale=nl fr de es\n"
+"FR      FRA     250     Frankrijk\n"
+"DE      DEU     276     Duitsland\n"
+"ES      ESP     724     Spanje\n"
+
+# type: Plain text
+#: isoquery.1:124
+msgid ""
+"All of the above works for different ISO standards as well, so you can "
+"switch to language names by using the --iso command line option.  For ISO "
+"639, the first three columns are the ISO 639 2B code, the ISO 639 2T code "
+"and the ISO 639-1 code.  The third column may be empty."
+msgstr "All das oben gesagte funktioniert ebenso für andere ISO-Standards, so können Sie beispielsweise mit der Kommandozeilenoption --iso auf Sprachennamen umstellen. Bei ISO 639 enthalten die ersten drei Spalten den ISO 639 2B Code, den ISO 639 2T Code und den ISO 639-1 Code. Die dritte Spalte kann leer sein."
+
+# type: Plain text
+#: isoquery.1:133
+#, no-wrap
+msgid ""
+"$ isoquery --iso=639\n"
+"aar     aar     aa      Afar\n"
+"abk     abk     ab      Abkhazian\n"
+"ace     ace             Achinese\n"
+"[...]\n"
+"zun     zun             Zuni\n"
+"zxx     zxx             No linguistic content\n"
+"zza     zza             Zaza; Dimili; Dimli; Kirdki\n"
+msgstr ""
+"$ isoquery --iso=639\n"
+"aar     aar     aa      Afar\n"
+"abk     abk     ab      Abkhazian\n"
+"ace     ace             Achinese\n"
+"[...]\n"
+"zun     zun             Zuni\n"
+"zxx     zxx             No linguistic content\n"
+"zza     zza             Zaza; Dimili; Dimli; Kirdki\n"
+
+# type: Plain text
+#: isoquery.1:136
+msgid ""
+"You can trim down the results by specifying only some codes. Moreover, the "
+"option to get translated names is also available."
+msgstr "Sie können die Ergebnisse einschränken, indem Sie nur einzelne Codes angeben. Weiterhin ist auch hier die Möglichkeit vorhanden, übersetzte Namen zu erhalten."
+
+# type: Plain text
+#: isoquery.1:141
+#, no-wrap
+msgid ""
+"$ isoquery --iso=639 --locale=pt vi bo sw\n"
+"vie     vie     vi      Vietnamita\n"
+"tib     bod     bo      tibetano\n"
+"swa     swa     sw      suaíli\n"
+msgstr ""
+"$ isoquery --iso=639 --locale=pt vi bo sw\n"
+"vie     vie     vi      Vietnamita\n"
+"tib     bod     bo      tibetano\n"
+"swa     swa     sw      suaíli\n"
+
+# type: Plain text
+#: isoquery.1:146
+msgid ""
+"You can get selected translations of currency names from the ISO 4217 "
+"standard by using the following command.  The first two columns are the "
+"alpha-3 code and the numerical code assigned to the currency."
+msgstr "Sie können Übersetzungen für ausgewählte Währungsnamen aus dem ISO 4217 Standard erhalten, wenn Sie den folgenden Befehl eingeben. Die ersten beiden Spalten sind der Alpha-3-Code und der nummerische Code, die der Währung zugewiesen sind."
+
+# type: Plain text
+#: isoquery.1:150
+#, no-wrap
+msgid ""
+"$ isoquery --iso=4217 --locale=da cad 392\n"
+"CAD     124     Canadisk dollar\n"
+"JPY     392     Japansk yen\n"
+msgstr ""
+"$ isoquery --iso=4217 --locale=da cad 392\n"
+"CAD     124     Canadisk dollar\n"
+"JPY     392     Japansk yen\n"
+
+# type: SH
+#: isoquery.1:152
+#, no-wrap
+msgid "FILES"
+msgstr "DATEIEN"
+
+# type: Plain text
+#: isoquery.1:155
+msgid "By default, the XML files provided by the iso-codes package will be used."
+msgstr ""
+"In der Voreinstellung werden die Dateien verwendet, die durch das Paket iso-"
+"codes zur Verfügung gestellt werden."
+
+# type: Plain text
+#: isoquery.1:157
+msgid "I</usr/share/xml/iso-codes/iso_639.xml>"
+msgstr "I</usr/share/xml/iso-codes/iso_639.xml>"
+
+# type: Plain text
+#: isoquery.1:159
+msgid "I</usr/share/xml/iso-codes/iso_3166.xml>"
+msgstr "I</usr/share/xml/iso-codes/iso_3166.xml>"
+
+# type: Plain text
+#: isoquery.1:161
+msgid "I</usr/share/xml/iso-codes/iso_4217.xml>"
+msgstr "I</usr/share/xml/iso-codes/iso_4217.xml>"
+
+# type: SH
+#: isoquery.1:162
+#, no-wrap
+msgid "LICENSE"
+msgstr "LIZENZ"
+
+# type: Plain text
+#: isoquery.1:164
+msgid "Copyright (C) 2007 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgstr "Copyright (C) 2007 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+
+# type: Plain text
+#: isoquery.1:169
+msgid ""
+"Isoquery is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 3 of the License, or (at your option) "
+"any later version."
+msgstr "Isoquery ist freie Software. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren Version."
+
+# type: Plain text
+#: isoquery.1:174
+msgid ""
+"Isoquery is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr "Die Veröffentlichung von Isoquery erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License."
+
+# type: Plain text
+#: isoquery.1:178
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see E<lt>http://www.gnu.org/licenses/E<gt>."
+msgstr "Sie sollten ein Exemplar der GNU General Public License zusammen mit diesem Programm erhalten haben. Falls nicht, siehe E<lt>http://www.gnu.org/licenses/E<gt>."
+
+# type: SH
+#: isoquery.1:179
+#, no-wrap
+msgid "AUTHOR"
+msgstr "AUTOR"
+
+# type: Plain text
+#: isoquery.1:181
+msgid "B<isoquery> was written by Tobias Toedter E<lt>t.toedter@gmx.netE<gt>."
+msgstr "B<isoquery> wurde von Tobias Toedter E<lt>t.toedter@gmx.netE<gt> geschrieben."
+
