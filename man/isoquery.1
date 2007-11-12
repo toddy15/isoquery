@@ -15,23 +15,27 @@
 .\" .br        insert line break
 .\" .sp <n>    insert n+1 empty lines
 .\" for manpage-specific macros, see man(7)
+
 .\"
-.\" "verbatim" environment (from strace.1)
-.de CW
+.\" Create a verbatim environment
+.de VS
+.RS
 .sp
 .nf
-.ft CW
 ..
-.de CE
-.ft
+.de VE
 .fi
 .sp
+.RE
 ..
+
 .SH NAME
 isoquery \- Search for various ISO codes (country, language, ...)
+
 .SH SYNOPSIS
 .B isoquery
 .RI [ options "] [" file "] [" "ISO codes" ]
+
 .SH DESCRIPTION
 This manual page documents briefly the
 .B isoquery
@@ -42,6 +46,7 @@ It parses the XML files and shows all included ISO codes or just
 matching entries, if specified on the command line.
 Moreover, it's possible to get all available translations for
 the ISO standard.
+
 .SH OPTIONS
 This program follows the usual GNU command line syntax, with long
 options starting with two dashes (`\-').
@@ -75,6 +80,7 @@ Show summary of options.
 .TP
 .B \-v, \-\-version
 Show program version and copyright.
+
 .SH EXAMPLES
 If called without any command line options,
 .B isoquery
@@ -82,9 +88,7 @@ will put out a table of all ISO 3166 codes.
 The first three columns contain the alpha\-2 code, the alpha\-3 code,
 and the numerical code assigned to the country listed in the
 fourth column.
-.PP
-.RS
-.CW
+.VS
 $ isoquery
 AF      AFG     004     Afghanistan
 AX      ALA     248     Åland Islands
@@ -93,43 +97,31 @@ AL      ALB     008     Albania
 YE      YEM     887     Yemen
 ZM      ZMB     894     Zambia
 ZW      ZWE     716     Zimbabwe
-.CE
-.RE
-.PP
+.VE
 If you need only some countries, you can specify any of the codes in
 the first three columns to cut down the output.
-.PP
-.RS
-.CW
+.VS
 $ isoquery so nor 484
 SO      SOM     706     Somalia
 NO      NOR     578     Norway
 MX      MEX     484     Mexico
-.CE
-.RE
-.PP
+.VE
 Should you need the translations of the countries' names, just specify
 in which locale you'd like to see the output.
 Please note that the original English name will be shown if there is no
 translation available for the specified locale.
-.PP
-.RS
-.CW
+.VS
 $ isoquery \-\-locale=nl fr de es
 FR      FRA     250     Frankrijk
 DE      DEU     276     Duitsland
 ES      ESP     724     Spanje
-.CE
-.RE
-.PP
+.VE
 All of the above works for different ISO standards as well, so you can
 switch to language names by using the \-\-iso command line option.
 For ISO 639, the first three columns are the ISO 639 2B code, the
 ISO 639 2T code and the ISO 639-1 code.
 The third column may be empty.
-.PP
-.RS
-.CW
+.VS
 $ isoquery \-\-iso=639
 aar     aar     aa      Afar
 abk     abk     ab      Abkhazian
@@ -138,33 +130,25 @@ ace     ace             Achinese
 zun     zun             Zuni
 zxx     zxx             No linguistic content
 zza     zza             Zaza; Dimili; Dimli; Kirdki
-.CE
-.RE
-.PP
+.VE
 You can trim down the results by specifying only some codes. Moreover,
 the option to get translated names is also available.
-.PP
-.RS
-.CW
+.VS
 $ isoquery \-\-iso=639 \-\-locale=pt vi bo sw
 vie     vie     vi      Vietnamita
 tib     bod     bo      tibetano
 swa     swa     sw      suaíli
-.CE
-.RE
-.PP
+.VE
 You can get selected translations of currency names from the ISO 4217
 standard by using the following command.
 The first two columns are the alpha-3 code and the numerical code
 assigned to the currency.
-.PP
-.RS
-.CW
+.VS
 $ isoquery \-\-iso=4217 \-\-locale=da cad 392
 CAD     124     Canadisk dollar
 JPY     392     Japansk yen
-.CE
-.RE
+.VE
+
 .SH FILES
 By default, the XML files provided by the iso-codes package
 will be used.
@@ -174,6 +158,7 @@ will be used.
 .I /usr/share/xml/iso-codes/iso_3166.xml
 .br
 .I /usr/share/xml/iso-codes/iso_4217.xml
+
 .SH LICENSE
 Copyright (C) 2007 Tobias Toedter <t.toedter@gmx.net>
 .PP
@@ -190,6 +175,6 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.
 If not, see <http://www.gnu.org/licenses/>.
+
 .SH AUTHOR
-.B isoquery
-was written by Tobias Toedter <t.toedter@gmx.net>.
+Tobias Toedter <t.toedter@gmx.net>
