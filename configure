@@ -6674,7 +6674,7 @@ _ACEOF
 ALL_LINGUAS="de fr"
 
 # Specify the Makefiles
-ac_config_files="$ac_config_files Makefile src/Makefile po/Makefile.in"
+ac_config_files="$ac_config_files Makefile man/Makefile po/Makefile.in src/Makefile"
 
 
 # Write the configure script
@@ -7293,8 +7293,9 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "po-directories") CONFIG_COMMANDS="$CONFIG_COMMANDS po-directories" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-    "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+    "man/Makefile") CONFIG_FILES="$CONFIG_FILES man/Makefile" ;;
     "po/Makefile.in") CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
+    "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
 
   *) { { echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

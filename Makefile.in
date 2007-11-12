@@ -207,7 +207,7 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
-SUBDIRS = po src
+SUBDIRS = man po src
 EXTRA_DIST = config.rpath mkinstalldirs
 ACLOCAL_AMFLAGS = -I m4
 all: all-recursive

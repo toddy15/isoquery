@@ -18,8 +18,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-SUBDIRS = man po src
-
-EXTRA_DIST = config.rpath mkinstalldirs
-
-ACLOCAL_AMFLAGS = -I m4
+dist_man_MANS = isoquery.1
