@@ -188,7 +188,11 @@ sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
 target_alias = @target_alias@
+
+# Extract the list of languages from the po4a config file.
+LINGUAS = $(shell sed -ne 's/^.*\[po4a_langs\] \(.*\)$$/\1/p' $(srcdir)/isoquery.cfg)
 dist_man_MANS = isoquery.1
+EXTRA_DIST = isoquery.cfg isoquery-man.pot
 all: all-am
 
 .SUFFIXES:
@@ -301,9 +305,12 @@ distdir: $(DISTFILES)
 	    || exit 1; \
 	  fi; \
 	done
+	$(MAKE) $(AM_MAKEFLAGS) \
+	  top_distdir="$(top_distdir)" distdir="$(distdir)" \
+	  dist-hook
 check-am: all-am
 check: check-am
-all-am: Makefile $(MANS)
+all-am: Makefile $(MANS) all-local
 installdirs:
 	for dir in "$(DESTDIR)$(man1dir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
@@ -334,7 +341,7 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 clean: clean-am
 
-clean-am: clean-generic mostlyclean-am
+clean-am: clean-generic clean-local mostlyclean-am
 
 distclean: distclean-am
 	-rm -f Makefile
@@ -350,7 +357,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-man
+install-data-am: install-data-local install-man
 
 install-exec-am:
 
@@ -376,19 +383,70 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-info-am uninstall-man
+uninstall-am: uninstall-info-am uninstall-local uninstall-man
 
 uninstall-man: uninstall-man1
 
-.PHONY: all all-am check check-am clean clean-generic distclean \
-	distclean-generic distdir dvi dvi-am html html-am info info-am \
-	install install-am install-data install-data-am install-exec \
+.PHONY: all all-am all-local check check-am clean clean-generic \
+	clean-local dist-hook distclean distclean-generic distdir dvi \
+	dvi-am html html-am info info-am install install-am \
+	install-data install-data-am install-data-local install-exec \
 	install-exec-am install-info install-info-am install-man \
 	install-man1 install-strip installcheck installcheck-am \
 	installdirs maintainer-clean maintainer-clean-generic \
 	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am uninstall \
-	uninstall-am uninstall-info-am uninstall-man uninstall-man1
+	uninstall-am uninstall-info-am uninstall-local uninstall-man \
+	uninstall-man1
 
+
+all-local: man.stamp
+
+# FIXME: Use a stamp file until po4a supports them internally.
+man.stamp:
+	po4a --no-backups --variable srcdir=$(srcdir) \
+		$(srcdir)/isoquery.cfg
+	touch $@
+
+clean-local:
+	po4a --rm-backups --rm-translations --variable srcdir=$(srcdir) \
+		$(srcdir)/isoquery.cfg
+	rm -f man.stamp
+
+update-po:
+	po4a --no-backups --force --variable srcdir=$(srcdir) ./isoquery.cfg
+
+install-data-local:
+	for lang in $(LINGUAS); do \
+		if [ -d $(srcdir)/$$lang ]; then \
+			files=$$(echo $(srcdir)/$$lang/*.[1-9]); \
+			$(MAKE) install-man \
+				mandir="$(mandir)/$$lang" \
+				man_MANS="" \
+				dist_man_MANS="$$files"; \
+		fi \
+	done
+
+uninstall-local:
+	for lang in $(LINGUAS); do \
+		if [ -d $(srcdir)/$$lang ]; then \
+			files=$$(echo $(srcdir)/$$lang/*.[1-9]); \
+			$(MAKE) uninstall-man \
+				mandir="$(mandir)/$$lang" \
+				man_MANS="" \
+				dist_man_MANS="$$files"; \
+		fi \
+	done
+
+dist-hook: man.stamp
+	cp $(srcdir)/man.stamp $(distdir)/
+	for lang in $(LINGUAS); do \
+		cp $(srcdir)/$$lang.po $(distdir)/; \
+		cp $(srcdir)/$$lang.add $(distdir)/; \
+		$(mkdir_p) $(distdir)/$$lang; \
+		cp -r $(srcdir)/$$lang $(distdir)/; \
+	done
+
+.PHONY: update-po
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
