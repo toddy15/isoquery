@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: isoquery 0.8\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
 "POT-Creation-Date: 2007-10-27 12:08+0200\n"
-"PO-Revision-Date: 2007-10-01 21:37+0200\n"
+"PO-Revision-Date: 2007-11-12 13:46+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "%PROGRAM_NAME: Der ISO-Code »%CODE« wird nicht unterstützt."
 
 #: src/option_parser.cpp:141
 msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
-msgstr "Aufruf: %PROGRAM_NAME [Optionen] [ISO Codes]"
+msgstr "Aufruf: %PROGRAM_NAME [Optionen] [ISO-Codes]"
 
 #: src/option_parser.cpp:144
 msgid "Options:"
