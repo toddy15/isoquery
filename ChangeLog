@@ -1,5 +1,13 @@
-Isoquery trunk
+Isoquery 0.9
 ==============
+13 November 2007
+
+* Add man page
+* Use po4a to translate man page into German
+
+
+Isoquery 0.8
+============
 UNRELEASED
 
 * Initial setup, using basic classes and C++ code
