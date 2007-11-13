@@ -27,8 +27,12 @@ man.stamp:
 	touch $@
 
 clean-local:
-	po4a --rm-backups --rm-translations --variable srcdir=$(srcdir) \
-		$(srcdir)/isoquery.cfg
+	for lang in $(LINGUAS); do \
+		if [ -d $(srcdir)/$$lang ]; then \
+			rm -rf $(srcdir)/$$lang ; \
+		fi ; \
+		rm -f $(srcdir)/$$lang.po~ ; \
+	done
 	rm -f man.stamp
 
 update-po:
