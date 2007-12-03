@@ -30,7 +30,7 @@
 ..
 
 .SH NAME
-isoquery \- Search for various ISO codes (country, language, ...)
+isoquery \- Search and display various ISO codes (country, language, ...)
 
 .SH SYNOPSIS
 .B isoquery
@@ -91,11 +91,7 @@ fourth column.
 .VS
 $ isoquery
 AF      AFG     004     Afghanistan
-AX      ALA     248     Åland Islands
-AL      ALB     008     Albania
 [...]
-YE      YEM     887     Yemen
-ZM      ZMB     894     Zambia
 ZW      ZWE     716     Zimbabwe
 .VE
 If you need only some countries, you can specify any of the codes in
@@ -119,7 +115,7 @@ ES      ESP     724     Spanje
 All of the above works for different ISO standards as well, so you can
 switch to language names by using the \-\-iso command line option.
 For ISO 639, the first three columns are the ISO 639 2B code, the
-ISO 639 2T code and the ISO 639-1 code.
+ISO 639 2T code and the ISO 639\-1 code.
 The third column may be empty.
 .VS
 $ isoquery \-\-iso=639
@@ -134,14 +130,14 @@ zza     zza             Zaza; Dimili; Dimli; Kirdki
 You can trim down the results by specifying only some codes. Moreover,
 the option to get translated names is also available.
 .VS
-$ isoquery \-\-iso=639 \-\-locale=pt vi bo sw
+$ isoquery \-\-iso=639 \-\-locale=pt vi bo kl
 vie     vie     vi      Vietnamita
 tib     bod     bo      tibetano
-swa     swa     sw      suaíli
+kal     kal     kl      Kalaallisut; Greenlandic
 .VE
 You can get selected translations of currency names from the ISO 4217
 standard by using the following command.
-The first two columns are the alpha-3 code and the numerical code
+The first two columns are the alpha\-3 code and the numerical code
 assigned to the currency.
 .VS
 $ isoquery \-\-iso=4217 \-\-locale=da cad 392
