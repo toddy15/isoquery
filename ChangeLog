@@ -1,5 +1,12 @@
+Isoquery 0.10
+=============
+UNRELEASED
+
+* Setup testing framework to catch regression bugs
+
+
 Isoquery 0.9
-==============
+============
 13 November 2007
 
 * Add man page

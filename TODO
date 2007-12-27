@@ -4,6 +4,8 @@ TODO for Isoquery
 - BUG
   The codes in ISO 639 are shown twice if 2B and 2T code are
   identical. Examples are vie, swa.
+
+- Check for po4a, libxml++2.6-dev, pkg-config in configure?
   
 - bindtextdomain()
 
