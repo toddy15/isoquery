@@ -107,11 +107,16 @@ XMLData::set_attribute_name(Glib::ustring attr_name)
  * Return the next xpath depending on command line options
  */
 Glib::ustring
-XMLData::get_next_xpath(Glib::ustring code)
+XMLData::get_next_xpath(Glib::ustring code, bool initialize)
 {
 	Glib::ustring xpath = "";
-	static int xpath_index = 0;
-	static bool last_xpath = false;
+	static int xpath_index;
+	static bool last_xpath;
+
+	if (initialize) {
+		xpath_index = 0;
+		last_xpath = false;
+	}
 	
 	// No more xpaths available, so return an empty xpath
 	if (last_xpath) {
@@ -199,7 +204,7 @@ XMLData::show(Glib::ustring code)
 	const xmlpp::Element *current_node;
 	bool found = false;
 
-	xpath = get_next_xpath(code);
+	xpath = get_next_xpath(code, true);
 	while (!xpath.empty()) {
 		nodeset = parser.get_document()->get_root_node()->find(xpath);
 		for (iter = nodeset.begin(); iter != nodeset.end(); iter++) {
@@ -207,7 +212,11 @@ XMLData::show(Glib::ustring code)
 			print_node(current_node);
 			found = true;
 		}
-		xpath = get_next_xpath(code);
+		if (!found) {
+			xpath = get_next_xpath(code, false);
+		} else {
+			xpath = "";
+		}
 	}
 	// Show a warning if the code was not found
 	if (!found) {

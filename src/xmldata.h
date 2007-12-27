@@ -47,7 +47,7 @@ public:
 	void check(Glib::ustring iso_standard);
 	void set_output_locale(Glib::ustring output_locale);
 	void set_attribute_name(Glib::ustring attr_name);
-	Glib::ustring get_next_xpath(Glib::ustring code);
+	Glib::ustring get_next_xpath(Glib::ustring code, bool initialize);
 	void show(Glib::ustring code);
 };
 
