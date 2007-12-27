@@ -1,0 +1,11 @@
+# Command line
+isoquery -i639 aar nno tr wel sqi ca da eo
+# Expected output
+aar	aar	aa	Afar
+nno	nno	nn	Norwegian Nynorsk; Nynorsk, Norwegian
+tur	tur	tr	Turkish
+wel	cym	cy	Welsh
+alb	sqi	sq	Albanian
+cat	cat	ca	Catalan; Valencian
+dan	dan	da	Danish
+epo	epo	eo	Esperanto

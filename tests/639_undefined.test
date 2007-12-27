@@ -1,0 +1,6 @@
+# Command line
+isoquery -i639 bc abc 123
+# Expected output
+The code 'bc' is not defined in ISO 639.
+The code 'abc' is not defined in ISO 639.
+The code '123' is not defined in ISO 639.

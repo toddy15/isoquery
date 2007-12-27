@@ -1,0 +1,6 @@
+# Command line
+isoquery -i639 -les gd hu ja
+# Expected output
+gla	gla	gd	Gaelic; Scottish Gaelic
+hun	hun	hu	Húngaro
+jpn	jpn	ja	Japonés
