@@ -1,0 +1,7 @@
+# Command line
+isoquery --locale=de fr deu 028 gb
+# Expected output
+FR	FRA	250	Frankreich
+DE	DEU	276	Deutschland
+AG	ATG	028	Antigua und Barbuda
+GB	GBR	826	Vereinigtes Königreich

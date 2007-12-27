@@ -1,0 +1,5 @@
+# Command line
+isoquery -i4217 -lde cad try
+# Expected output
+CAD	124	Kanadischer Dollar
+TRY	949	Neue Türkische Lira
