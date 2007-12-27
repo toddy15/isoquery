@@ -1,0 +1,5 @@
+# Command line
+isoquery -i4217 pln 392
+# Expected output
+PLN	985	Polish Złoty
+JPY	392	Japanese Yen

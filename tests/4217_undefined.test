@@ -1,0 +1,6 @@
+# Command line
+isoquery -i4217 ab abc 123
+# Expected output
+The code 'ab' is not defined in ISO 4217.
+The code 'abc' is not defined in ISO 4217.
+The code '123' is not defined in ISO 4217.
