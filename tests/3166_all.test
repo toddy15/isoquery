@@ -51,7 +51,7 @@ CC	CCK	166	Cocos (Keeling) Islands
 CO	COL	170	Colombia
 KM	COM	174	Comoros
 CG	COG	178	Congo
-CD	ZAR	180	Congo, The Democratic Republic of the
+CD	COD	180	Congo, The Democratic Republic of the
 CK	COK	184	Cook Islands
 CR	CRI	188	Costa Rica
 CI	CIV	384	Côte d'Ivoire
@@ -194,7 +194,7 @@ SM	SMR	674	San Marino
 ST	STP	678	Sao Tome and Principe
 SA	SAU	682	Saudi Arabia
 SN	SEN	686	Senegal
-RS	SRB	891	Serbia
+RS	SRB	688	Serbia
 SC	SYC	690	Seychelles
 SL	SLE	694	Sierra Leone
 SG	SGP	702	Singapore
