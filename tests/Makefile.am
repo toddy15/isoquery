@@ -18,8 +18,15 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-SUBDIRS = man po src tests
+tests = $(wildcard $(srcdir)/*.test)
+EXTRA_DIST = $(tests)
 
-EXTRA_DIST = config.rpath mkinstalldirs
-
-ACLOCAL_AMFLAGS = -I m4
+check-local:
+	@for test in $(tests); do \
+		echo Testing $$test; \
+		command=`sed -n -e "2p" $$test`; \
+		$(top_builddir)/src/$$command > actual 2>&1; \
+		sed -e "0,/# Expected output/d" $$test > expected; \
+		diff -u expected actual; \
+	done
+	@rm -f expected actual

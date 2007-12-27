@@ -51,7 +51,7 @@ AM_GNU_GETTEXT_VERSION([0.16])
 ALL_LINGUAS="de fr"
 
 # Specify the Makefiles
-AC_CONFIG_FILES(Makefile man/Makefile po/Makefile.in src/Makefile)
+AC_CONFIG_FILES(Makefile man/Makefile po/Makefile.in src/Makefile tests/Makefile)
 
 # Write the configure script
 AC_OUTPUT
