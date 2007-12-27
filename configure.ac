@@ -36,10 +36,10 @@ if test -n "$PKG_CONFIG"; then
   vers=`$PKG_CONFIG --modversion libxml++-2.6 2>/dev/null | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
   if test -n "$vers" && test "$vers" -ge 2006000
   then
-     LIBXML_LIBS="`$PKG_CONFIG --libs libxml++-2.6`"
+     LIBXML_LIBS="-lxml++-2.6"
      LIBXML_CFLAGS="`$PKG_CONFIG --cflags libxml++-2.6`"
   else
-     AC_MSG_WARN([You need at least libxml++ 2.6.0])
+     AC_MSG_ERROR([You need at least libxml++ 2.6.0])
   fi
 fi
 AC_SUBST(LIBXML_LIBS)
