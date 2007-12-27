@@ -1,0 +1,6 @@
+# Command line
+isoquery --common_name ch swe tw
+# Expected output
+CH	CHE	756	Switzerland
+SE	SWE	752	Sweden
+TW	TWN	158	Taiwan

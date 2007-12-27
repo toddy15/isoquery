@@ -1,0 +1,188 @@
+# Command line
+isoquery -i4217
+# Expected output
+AED	784	UAE Dirham
+AFN	971	Afghani
+ALL	008	Albanian Lek
+AMD	051	Armenian Dram
+ANG	532	Netherlands Antillian Guilder
+AOA	973	Angola Kwanza
+ARS	032	Argentine Peso
+AUD	036	Australian Dollar
+AWG	533	Aruban Guilder
+AZN	944	Azerbaijanian Manat
+BAM	977	Convertible Marks
+BBD	052	Barbados Dollar
+BDT	050	Bangladeshi Taka
+BGN	975	Bulgarian Lev
+BHD	048	Bahraini Dinar
+BIF	108	Burundi Franc
+BMD	060	Bermudian Dollar
+BND	096	Brunei Dollar
+BOB	068	Boliviano
+BOV	984	Bolivian Mvdol
+BRL	986	Brazilian Real
+BSD	044	Bahamian Dollar
+BTN	064	Bhutan Ngultrum
+BWP	072	Botswana Pula
+BYR	974	Belarussian Rouble
+BZD	084	Belize Dollar
+CAD	124	Canadian Dollar
+CDF	976	Franc Congolais
+CHE	947	WIR Euro
+CHF	756	Swiss Franc
+CHW	948	WIR Franc
+CLF	990	Unidades de fomento
+CLP	152	Chilean Peso
+CNY	156	Chinese Yuan Renminbi
+COP	170	Colombian Peso
+COU	970	Unidad de Valor Real
+CRC	188	Costa Rican Colon
+CSD	891	Serbian Dinar
+CUP	192	Cuban Peso
+CVE	132	Cape Verde Escudo
+CYP	196	Cyprus Pound
+CZK	203	Czech Koruna
+DJF	262	Djibouti Franc
+DKK	208	Danish Krone
+DOP	214	Dominican Peso
+DZD	012	Algerian Dinar
+EEK	233	Estonian Kroon
+EGP	818	Egyptian Pound
+ERN	232	Eritrean Nakfa
+ETB	230	Ethiopian Birr
+EUR	978	Euro
+FJD	242	Fiji Dollar
+FKP	238	Falkland Islands Pound
+GBP	826	Pound Sterling
+GEL	981	Georgian Lari
+GHC	288	Ghanaian Cedi
+GIP	292	Gibraltar Pound
+GMD	270	Gambian Dalasi
+GNF	324	Guinea Franc
+GTQ	320	Guatemalan Quetzal
+GWP	624	Guinea-Bissau Peso
+GYD	328	Guyana Dollar
+HKD	344	Hong Kong Dollar
+HNL	340	Honduran Lempira
+HRK	191	Croatian Kuna
+HTG	332	Haitian Gourde
+HUF	348	Hungarian Forint
+IDR	360	Indonesian Rupiah
+ILS	376	New Israeli Shekel
+INR	356	Indian Rupee
+IQD	368	Iraqi Dinar
+IRR	364	Iranian Rial
+ISK	352	Iceland Krona
+JMD	388	Jamaican Dollar
+JOD	400	Jordanian Dinar
+JPY	392	Japanese Yen
+KES	404	Kenyan Shilling
+KGS	417	Kyrgyzstan Som
+KHR	116	Cambodian Riel
+KMF	174	Comoro Franc
+KPW	408	North Korean Won
+KRW	410	South Korean Won
+KWD	414	Kuwaiti Dinar
+KYD	136	Cayman Islands Dollar
+KZT	398	Kazakhstan Tenge
+LAK	418	Lao Kip
+LBP	422	Lebanese Pound
+LKR	144	Sri Lanka Rupee
+LRD	430	Liberian Dollar
+LSL	426	Lesotho Loti
+LTL	440	Lithuanian Litas
+LVL	428	Latvian Lats
+LYD	434	Libyan Dinar
+MAD	504	Moroccan Dirham
+MDL	498	Moldovan Leu
+MGA	969	Malagascy Ariary
+MKD	807	Macedonian Denar
+MMK	104	Myanmar Kyat
+MNT	496	Mongolian Tugrik
+MOP	446	Macao Pataca
+MRO	478	Mauritanian Ouguiya
+MTL	470	Maltese Lira
+MUR	480	Mauritius Rupee
+MVR	462	Maldive Rufiyaa
+MWK	454	Malawi Kwacha
+MXN	484	Mexican Peso
+MXV	979	Mexican Unidad de Inversion (UID)
+MYR	458	Malaysian Ringgit
+MZN	943	Mozambique Metical
+NAD	516	Namibian Dollar
+NGN	566	Nigerian Naira
+NIO	558	Nicaraguan Cordoba Oro
+NOK	578	Norwegian Krone
+NPR	524	Nepalese Rupee
+NZD	554	New Zealand Dollar
+OMR	512	Rial Omani
+PAB	590	Panamanian Balboa
+PEN	604	Peruvian Nuevo Sol
+PGK	598	Papua New Guinea Kina
+PHP	608	Philippine Peso
+PKR	586	Pakistan Rupee
+PLN	985	Polish Złoty
+PYG	600	Paraguay Guarani
+QAR	634	Qatari Rial
+ROL	642	Romanian Old Leu
+RON	946	Romanian New Leu
+RUB	643	Russian Rouble
+RWF	646	Rwanda Franc
+SAR	682	Saudi Riyal
+SBD	090	Solomon Islands Dollar
+SCR	690	Seychelles Rupee
+SDD	736	Sudanese Dinar
+SEK	752	Swedish Krona
+SGD	702	Singapore Dollar
+SHP	654	Saint Helena Pound
+SIT	705	Slovenian Tolar
+SKK	703	Slovak Koruna
+SLL	694	Leone
+SOS	706	Somali Shilling
+SRD	968	Surinam Dollar
+STD	678	São Tome and Principe Dobra
+SVC	222	El Salvador Colon
+SYP	760	Syrian Pound
+SZL	748	Swaziland Lilangeni
+THB	764	Thai Baht
+TJS	972	Tajik Somoni
+TMM	795	Turkmenistan Manat
+TND	788	Tunisian Dinar
+TOP	776	Tongan Pa'anga
+TRY	949	New Turkish Lira
+TTD	780	Trinidad and Tobago Dollar
+TWD	901	New Taiwan Dollar
+TZS	834	Tanzanian Shilling
+UAH	980	Ukrainian Hryvnia
+UGX	800	Ugandan Shilling
+USD	840	US Dollar
+USN	997	US Dollar (Next day)
+USS	998	US Dollar (Same day)
+UYU	858	Peso Uruguayo
+UZS	860	Uzbekistan Sum
+VEB	862	Venezuela Bolivar
+VND	704	Viet Nam Dong
+VUV	548	Vanuatu Vatu
+WST	882	Samoan Tala
+XAF	950	CFA Franc BEAC
+XAG	961	Silver
+XAU	959	Gold
+XBA	955	Bond Markets Units European Composite Unit (EURCO)
+XBB	956	European Monetary Unit (E.M.U.-6)
+XBC	957	European Unit of Account 9 (E.U.A.-9)
+XBD	958	European Unit of Account 17 (E.U.A.-17)
+XCD	951	East Caribbean Dollar
+XDR	960	Special Drawing Right
+XFO	   	Gold-Franc
+XFU	   	UIC-Franc
+XOF	952	CFA Franc BCEAO
+XPD	964	Palladium
+XPF	953	CFP Franc
+XPT	962	Platinum
+XTS	963	Code for testing purposes
+XXX	999	No currency involved
+YER	886	Yemeni Rial
+ZAR	710	South African Rand
+ZMK	894	Zambian Kwacha
+ZWD	716	Zimbabwe Dollar

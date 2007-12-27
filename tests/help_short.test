@@ -1,0 +1,19 @@
+# Command line
+isoquery -h
+# Expected output
+Usage: isoquery [options] [ISO codes]
+
+Options:
+  -i, --iso=NUMBER     The ISO standard to use
+                       Possible values: 639, 3166, 4217
+                       (default: 3166)
+  -n, --name           Name for the supplied codes (default)
+  -o, --official_name  Official name for the supplied codes
+                       This may be the same as --name.
+  -c, --common_name    Common name for the supplied codes
+                       This may be the same as --name.
+  -l, --locale=LOCALE  Use this locale for output
+  -x, --xmlfile=FILE   Use another XML file with ISO data
+                       (default: /usr/share/xml/iso-codes/iso_3166.xml)
+  -h, --help           Show this information
+  -v, --version        Show program version and copyright

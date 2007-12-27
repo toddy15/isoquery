@@ -1,0 +1,6 @@
+# Command line
+isoquery fr deu 028
+# Expected output
+FR	FRA	250	France
+DE	DEU	276	Germany
+AG	ATG	028	Antigua and Barbuda
