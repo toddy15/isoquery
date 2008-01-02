@@ -55,7 +55,7 @@ supports the following options:
 .TP
 .B \-i, \-\-iso=NUMBER
 The ISO standard to use.
-Possible values: 639, 3166, 4217 (default: 3166)
+Possible values: 639, 3166, 4217, 15924 (default: 3166)
 .TP
 .B \-n, \-\-name
 Name for the supplied codes (default)
@@ -143,6 +143,15 @@ assigned to the currency.
 $ isoquery \-\-iso=4217 \-\-locale=da cad 392
 CAD     124     Canadisk dollar
 JPY     392     Japansk yen
+.VE
+If you need to get script names, you can use the ISO 15924 table.
+The first two columns are the alpha\-4 code and the numerical code
+assigned to the script.
+.VS
+$ isoquery \-\-iso=15924 jpan latn 280
+Jpan    413     Japanese (alias for Han + Hiragana + Katakana)
+Latn    215     Latin
+Visp    280     Visible Speech
 .VE
 
 .SH FILES
