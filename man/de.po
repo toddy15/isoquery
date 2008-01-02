@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the Isoquery package.
 #
 # Copyright (C)
-# Tobias Toedter <t.toedter@gmx.net>, 2007.
+# Tobias Toedter <t.toedter@gmx.net>, 2007, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: isoquery 0.9\n"
+"Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
 "POT-Creation-Date: 2008-01-02 10:07+0100\n"
-"PO-Revision-Date: 2007-12-03 17:10+0100\n"
+"PO-Revision-Date: 2008-01-02 11:43+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "ISOQUERY"
 #: isoquery.1:5
 #, no-wrap
 msgid "January 2, 2008"
-msgstr ""
+msgstr "2. Januar 2008"
 
 #
 # type: SH
@@ -395,9 +395,8 @@ msgstr "LIZENZ"
 
 # type: Plain text
 #: isoquery.1:160
-#, fuzzy
 msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
-msgstr "Copyright (C) 2007 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgstr "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
 
 # type: Plain text
 #: isoquery.1:165
@@ -445,7 +444,3 @@ msgstr "AUTOR"
 #: isoquery.1:176
 msgid "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
 msgstr "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
-
-# type: TH
-#~ msgid "November 12, 2007"
-#~ msgstr "12. November 2007"
