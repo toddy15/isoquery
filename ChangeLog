@@ -1,6 +1,6 @@
 Isoquery 0.10
 =============
-UNRELEASED
+2 January 2008
 
 * Bug fix:
   The codes in ISO 639 were shown twice if 2B and 2T code are
