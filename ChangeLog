@@ -6,6 +6,8 @@ UNRELEASED
   The codes in ISO 639 were shown twice if 2B and 2T code are
   identical. Examples are vie, swa.
 * Setup testing framework to catch regression bugs
+* Remove call to bindtextdomain(), enabling translations of the
+  program output itself
 
 
 Isoquery 0.9
