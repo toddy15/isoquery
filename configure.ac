@@ -33,14 +33,14 @@ AC_CHECK_HEADERS([getopt.h])
 # setup libxml++
 AC_PATH_PROG(PKG_CONFIG, pkg-config)
 if test -n "$PKG_CONFIG"; then
-  vers=`$PKG_CONFIG --modversion libxml++-2.6 2>/dev/null | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
-  if test -n "$vers" && test "$vers" -ge 2006000
-  then
-     LIBXML_LIBS="-lxml++-2.6"
-     LIBXML_CFLAGS="`$PKG_CONFIG --cflags libxml++-2.6`"
-  else
-     AC_MSG_ERROR([You need at least libxml++ 2.6.0])
-  fi
+	vers=`$PKG_CONFIG --modversion libxml++-2.6 2>/dev/null | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+	if test -n "$vers" && test "$vers" -ge 2006000
+	then
+		LIBXML_LIBS="-lxml++-2.6"
+		LIBXML_CFLAGS="`$PKG_CONFIG --cflags libxml++-2.6`"
+	else
+		AC_MSG_ERROR([You need at least libxml++ 2.6.0])
+	fi
 fi
 AC_SUBST(LIBXML_LIBS)
 AC_SUBST(LIBXML_CFLAGS)
@@ -53,7 +53,7 @@ ALL_LINGUAS="de fr"
 # require po4a for manpage translations
 AC_PATH_PROG([PO4A], [po4a])
 if test -z "$PO4A"; then
-    AC_MSG_ERROR([po4a is required to build this program])
+	AC_MSG_ERROR([po4a is required to build this program])
 fi
 
 # Specify the Makefiles
