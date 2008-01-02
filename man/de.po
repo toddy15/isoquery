@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
 "POT-Creation-Date: 2008-01-02 17:24+0100\n"
-"PO-Revision-Date: 2008-01-02 11:43+0100\n"
+"PO-Revision-Date: 2008-01-02 17:28+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -100,12 +100,11 @@ msgstr "B<-i, --iso=NUMMER>"
 
 # type: Plain text
 #: isoquery.1:59
-#, fuzzy
 msgid ""
 "The ISO standard to use.  Possible values: 639, 3166, 4217, 15924 (default: "
 "3166)"
 msgstr ""
-"Der gewünschte ISO-Standard. Mögliche Werte: 639, 3166, 4217 "
+"Der gewünschte ISO-Standard. Mögliche Werte: 639, 3166, 4217, 15924 "
 "(Voreinstellung: 3166)"
 
 # type: TP
@@ -362,16 +361,14 @@ msgstr ""
 
 # type: Plain text
 #: isoquery.1:150
-#, fuzzy
 msgid ""
 "If you need to get script names, you can use the ISO 15924 table.  The first "
 "two columns are the alpha-4 code and the numerical code assigned to the "
 "script."
 msgstr ""
-"Sie können Übersetzungen für ausgewählte Währungsnamen aus dem ISO 4217 "
-"Standard erhalten, wenn Sie den folgenden Befehl eingeben. Die ersten beiden "
-"Spalten sind der Alpha-3-Code und der nummerische Code, die der Währung "
-"zugewiesen sind."
+"Wenn Sie Skriptnamen benötigen, können Sie die Tabelle für ISO 15924 "
+"verwenden. Die ersten beiden Spalten sind der Alpha-4-Code und der "
+"nummerische Code, die der Währung zugewiesen sind."
 
 # type: Plain text
 #: isoquery.1:155
@@ -382,6 +379,10 @@ msgid ""
 "Latn    215     Latin\n"
 "Visp    280     Visible Speech\n"
 msgstr ""
+"$ isoquery --iso=15924 jpan latn 280\n"
+"Jpan    413     Japanese (alias for Han + Hiragana + Katakana)\n"
+"Latn    215     Latin\n"
+"Visp    280     Visible Speech\n"
 
 # type: SH
 #: isoquery.1:157
