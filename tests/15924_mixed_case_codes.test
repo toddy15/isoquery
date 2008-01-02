@@ -1,0 +1,8 @@
+# Command line
+isoquery -i15924 Bali cans DEVA gURu 215
+# Expected output
+Bali	360	Balinese
+Cans	440	Unified Canadian Aboriginal Syllabics
+Deva	315	Devanagari (Nagari)
+Guru	310	Gurmukhi
+Latn	215	Latin

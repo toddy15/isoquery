@@ -1,0 +1,6 @@
+# Command line
+isoquery -i15924 -lfr Glag Perm 330
+# Expected output
+Glag	123	test
+Perm	227	Antique Permique
+Tibt	330	Tibeta
