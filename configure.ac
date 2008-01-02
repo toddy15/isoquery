@@ -33,14 +33,19 @@ AC_CHECK_HEADERS([getopt.h])
 # setup libxml++
 AC_PATH_PROG(PKG_CONFIG, pkg-config)
 if test -n "$PKG_CONFIG"; then
+	AC_MSG_CHECKING([if libxml++ version is greater than 2.6.0])
 	vers=`$PKG_CONFIG --modversion libxml++-2.6 2>/dev/null | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
 	if test -n "$vers" && test "$vers" -ge 2006000
 	then
 		LIBXML_LIBS="-lxml++-2.6"
 		LIBXML_CFLAGS="`$PKG_CONFIG --cflags libxml++-2.6`"
+		AC_MSG_RESULT([yes])
 	else
+		AC_MSG_RESULT([no])
 		AC_MSG_ERROR([You need at least libxml++ 2.6.0])
 	fi
+else
+	AC_MSG_ERROR([pkg-config is required to build this program])
 fi
 AC_SUBST(LIBXML_LIBS)
 AC_SUBST(LIBXML_CFLAGS)
