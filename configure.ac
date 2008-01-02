@@ -19,7 +19,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-AC_INIT([isoquery], [0.10], [Tobias Toedter <t.toedter@gmx.net>])
+AC_INIT([isoquery], [0.11~], [Tobias Toedter <t.toedter@gmx.net>])
 AM_MAINTAINER_MODE
 AM_INIT_AUTOMAKE([foreign])
 
@@ -49,6 +49,12 @@ AC_SUBST(LIBXML_CFLAGS)
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.16])
 ALL_LINGUAS="de fr"
+
+# require po4a for manpage translations
+AC_PATH_PROG([PO4A], [po4a])
+if test -z "$PO4A"; then
+    AC_MSG_ERROR([po4a is required to build this program])
+fi
 
 # Specify the Makefiles
 AC_CONFIG_FILES(Makefile man/Makefile po/Makefile.in src/Makefile tests/Makefile)

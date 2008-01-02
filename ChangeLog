@@ -1,3 +1,10 @@
+Isoquery 0.11
+=============
+UNRELEASED
+
+* Require po4a in configure script for manpage translations
+
+
 Isoquery 0.10
 =============
 2 January 2008
