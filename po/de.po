@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery 0.8\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2007-10-27 12:08+0200\n"
+"POT-Creation-Date: 2008-01-02 10:05+0100\n"
 "PO-Revision-Date: 2007-11-12 13:46+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -61,7 +61,8 @@ msgstr ""
 "  -v, --version        Anzeige der Programmversion und des Copyrights"
 
 #: src/option_parser.cpp:172
-msgid "Copyright (C) 2007 Tobias Toedter"
+#, fuzzy
+msgid "Copyright (C) 2007-2008 Tobias Toedter"
 msgstr "Copyright (C) 2007 Tobias Toedter"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
@@ -84,7 +85,7 @@ msgstr "Ausnahme von libxml++ abgefangen: %EXCEPTION"
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr "Die Datei »%FILENAME« enthält keine gültigen ISO %CODE Daten."
 
-#: src/xmldata.cpp:214
+#: src/xmldata.cpp:223
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr "Der Code »%CODE« ist in ISO %STANDARD nicht definiert."

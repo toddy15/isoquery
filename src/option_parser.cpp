@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007 Tobias Toedter
+ * Copyright (C) 2007-2008 Tobias Toedter
  * 
  * This file is part of Isoquery.
  * 
@@ -169,7 +169,7 @@ OptionParser::show_version()
 	string translation;
 
 	cout << PACKAGE_STRING << endl;
-	cout << _("Copyright (C) 2007 Tobias Toedter") << endl;
+	cout << _("Copyright (C) 2007-2008 Tobias Toedter") << endl;
 
 	/* TRANSLATORS: Please change the uppercase words as appropriate for
 	your language. */

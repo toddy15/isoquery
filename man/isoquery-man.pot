@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2007-12-03 17:07+0100\n"
+"POT-Creation-Date: 2008-01-02 10:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 # type: TH
 #: ./isoquery.1:5
 #, no-wrap
-msgid "November 12, 2007"
+msgid "January 2, 2008"
 msgstr ""
 
 # type: SH
@@ -319,7 +319,7 @@ msgstr ""
 
 # type: Plain text
 #: ./isoquery.1:160
-msgid "Copyright (C) 2007 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
 msgstr ""
 
 # type: Plain text

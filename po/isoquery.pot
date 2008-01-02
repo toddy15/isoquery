@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2007-10-27 12:08+0200\n"
+"POT-Creation-Date: 2008-01-02 10:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 
 #: src/option_parser.cpp:172
-msgid "Copyright (C) 2007 Tobias Toedter"
+msgid "Copyright (C) 2007-2008 Tobias Toedter"
 msgstr ""
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
@@ -69,7 +69,7 @@ msgstr ""
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr ""
 
-#: src/xmldata.cpp:214
+#: src/xmldata.cpp:223
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr ""
