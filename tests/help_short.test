@@ -5,7 +5,7 @@ Usage: isoquery [options] [ISO codes]
 
 Options:
   -i, --iso=NUMBER     The ISO standard to use
-                       Possible values: 639, 3166, 4217
+                       Possible values: 639, 3166, 4217, 15924
                        (default: 3166)
   -n, --name           Name for the supplied codes (default)
   -o, --official_name  Official name for the supplied codes

@@ -163,6 +163,18 @@ XMLData::get_next_xpath(Glib::ustring code, bool initialize)
 				xpath += "']";
 			}
 			last_xpath = true;
+		} else if (iso == "15924") {
+			if (isdigit(code.at(0))) {
+				xpath = "//iso_15924_entry[@numeric_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			} else {
+				xpath = "//iso_15924_entry[@alpha_4_code='";
+				xpath += code.substr(0, 1).uppercase();
+				xpath += code.substr(1, code.length()).lowercase();
+				xpath += "']";
+			}
+			last_xpath = true;
 		} else {
 			// Default to ISO 3166
 			if (code.length() == 2) {
@@ -243,6 +255,8 @@ XMLData::print_node(const xmlpp::Element *node)
 		print_attributes(node, "iso_639_2B_code", "iso_639_2T_code", "iso_639_1_code");
 	} else if (iso == "4217") {
 		print_attributes(node, "letter_code", "numeric_code");
+	} else if (iso == "15924") {
+		print_attributes(node, "alpha_4_code", "numeric_code");
 	}
 
 	// If 'official_name' or 'common_name' is not set, use

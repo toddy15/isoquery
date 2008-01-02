@@ -112,7 +112,8 @@ void
 OptionParser::validate()
 {
 	/* Check for valid ISO codes */
-	if ((iso != "639") and (iso != "3166") and (iso != "4217")) {
+	if ((iso != "639") and (iso != "3166") and (iso != "4217")
+	and (iso != "15924")) {
 		string msg = _("%PROGRAM_NAME: ISO code '%CODE' not supported.");
 		msg.replace(msg.find("%PROGRAM_NAME"), strlen("%PROGRAM_NAME"), PACKAGE_NAME);
 		msg.replace(msg.find("%CODE"), strlen("%CODE"), iso);
@@ -143,7 +144,7 @@ OptionParser::show_help()
 	cout << msg << endl << endl;
 	cout << _("Options:") << endl;
 	cout << _("  -i, --iso=NUMBER     The ISO standard to use\n\
-                       Possible values: 639, 3166, 4217\n\
+                       Possible values: 639, 3166, 4217, 15924\n\
                        (default: 3166)\n\
   -n, --name           Name for the supplied codes (default)\n\
   -o, --official_name  Official name for the supplied codes\n\
