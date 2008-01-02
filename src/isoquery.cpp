@@ -41,8 +41,6 @@ main(int argc, char *argv[])
 	/* Initialize gettext */
 	setlocale(LC_ALL, "");
 	textdomain(PACKAGE_NAME);
-	/* TODO: The path should not be hardcoded */
-	bindtextdomain(PACKAGE_NAME, "/home/toddy/src/isoquery/isoquery/po");
 
 	/* Parse options and set up default values */
 	option.parse(argc, argv);
