@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-01-02 10:05+0100\n"
+"POT-Creation-Date: 2008-01-02 17:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,22 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/option_parser.cpp:116
+#: src/option_parser.cpp:117
 msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
 msgstr ""
 
-#: src/option_parser.cpp:141
+#: src/option_parser.cpp:142
 msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
 msgstr ""
 
-#: src/option_parser.cpp:144
+#: src/option_parser.cpp:145
 msgid "Options:"
 msgstr ""
 
-#: src/option_parser.cpp:145
+#: src/option_parser.cpp:146
 msgid ""
 "  -i, --iso=NUMBER     The ISO standard to use\n"
-"                       Possible values: 639, 3166, 4217\n"
+"                       Possible values: 639, 3166, 4217, 15924\n"
 "                       (default: 3166)\n"
 "  -n, --name           Name for the supplied codes (default)\n"
 "  -o, --official_name  Official name for the supplied codes\n"
@@ -45,13 +45,13 @@ msgid ""
 "  -v, --version        Show program version and copyright"
 msgstr ""
 
-#: src/option_parser.cpp:172
+#: src/option_parser.cpp:173
 msgid "Copyright (C) 2007-2008 Tobias Toedter"
 msgstr ""
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
-#: src/option_parser.cpp:176
+#: src/option_parser.cpp:177
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr ""
 
-#: src/xmldata.cpp:223
+#: src/xmldata.cpp:235
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr ""

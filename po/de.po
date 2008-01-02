@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-01-02 10:05+0100\n"
+"POT-Creation-Date: 2008-01-02 17:29+0100\n"
 "PO-Revision-Date: 2008-01-02 11:06+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -17,22 +17,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: src/option_parser.cpp:116
+#: src/option_parser.cpp:117
 msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
 msgstr "%PROGRAM_NAME: Der ISO-Code »%CODE« wird nicht unterstützt."
 
-#: src/option_parser.cpp:141
+#: src/option_parser.cpp:142
 msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
 msgstr "Aufruf: %PROGRAM_NAME [Optionen] [ISO-Codes]"
 
-#: src/option_parser.cpp:144
+#: src/option_parser.cpp:145
 msgid "Options:"
 msgstr "Optionen:"
 
-#: src/option_parser.cpp:145
+#: src/option_parser.cpp:146
+#, fuzzy
 msgid ""
 "  -i, --iso=NUMBER     The ISO standard to use\n"
-"                       Possible values: 639, 3166, 4217\n"
+"                       Possible values: 639, 3166, 4217, 15924\n"
 "                       (default: 3166)\n"
 "  -n, --name           Name for the supplied codes (default)\n"
 "  -o, --official_name  Official name for the supplied codes\n"
@@ -60,13 +61,13 @@ msgstr ""
 "  -h, --help           Anzeige dieser Informationen\n"
 "  -v, --version        Anzeige der Programmversion und des Copyrights"
 
-#: src/option_parser.cpp:172
+#: src/option_parser.cpp:173
 msgid "Copyright (C) 2007-2008 Tobias Toedter"
 msgstr "Copyright (C) 2007-2008 Tobias Toedter"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
-#: src/option_parser.cpp:176
+#: src/option_parser.cpp:177
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr "Deutsche Übersetzung Copyright (C) 2007-2008 Tobias Toedter"
 
@@ -84,7 +85,7 @@ msgstr "Ausnahme von libxml++ abgefangen: %EXCEPTION"
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr "Die Datei »%FILENAME« enthält keine gültigen ISO %CODE Daten."
 
-#: src/xmldata.cpp:223
+#: src/xmldata.cpp:235
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr "Der Code »%CODE« ist in ISO %STANDARD nicht definiert."
