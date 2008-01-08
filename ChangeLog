@@ -6,6 +6,7 @@ UNRELEASED
 * Require pkg-config and libxml++ (>2.6.0) in configure script
 * Add support for ISO 15924
 * Update tests to pass with iso-codes 1.8
+* Update French translation, thanks to Christian Perrier
 
 
 Isoquery 0.10
