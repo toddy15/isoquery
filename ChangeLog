@@ -1,6 +1,6 @@
 Isoquery 0.11
 =============
-UNRELEASED
+9 January 2008
 
 * Require po4a in configure script for manpage translations
 * Require pkg-config and libxml++ (>2.6.0) in configure script
