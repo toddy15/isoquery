@@ -3,6 +3,7 @@ Isoquery trunk
 
 * Add #include statements required by GCC 4.3. Thanks to
   Martin Michlmayr for the bug report and patch. Closes: #462206
+* Better error message if the XML input file cannot be opened
 
 
 Isoquery 0.11

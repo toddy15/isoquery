@@ -27,6 +27,7 @@
 #include <cstring>
 #include <string>
 #include <iostream>
+#include <fstream>
 #include <libintl.h>
 using namespace std;
 
@@ -41,7 +42,17 @@ using namespace std;
 void
 XMLData::open(Glib::ustring filename)
 {
+	ifstream input_file;
 	
+	// Show a better error message if the XML input file cannot be opened
+	input_file.open(filename.c_str());
+	input_file.close();
+	if (!input_file.good()) {
+		string msg = _("The file '%FILENAME' could not be opened.");
+		msg.replace(msg.find("%FILENAME"), strlen("%FILENAME"), filename);
+		cerr << msg << endl;
+		exit(EXIT_FAILURE);
+	}
 	try {
 		// Validate the XML file
 		parser.set_validate();
