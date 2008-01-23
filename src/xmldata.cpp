@@ -25,7 +25,6 @@
 
 #include <cstdlib>
 #include <cstring>
-#include <string>
 #include <iostream>
 #include <fstream>
 #include <libintl.h>
@@ -48,7 +47,7 @@ XMLData::open(Glib::ustring filename)
 	input_file.open(filename.c_str());
 	input_file.close();
 	if (!input_file.good()) {
-		string msg = _("The file '%FILENAME' could not be opened.");
+		Glib::ustring msg = _("The file '%FILENAME' could not be opened.");
 		msg.replace(msg.find("%FILENAME"), strlen("%FILENAME"), filename);
 		cerr << msg << endl;
 		exit(EXIT_FAILURE);
@@ -65,7 +64,7 @@ XMLData::open(Glib::ustring filename)
 			exit(EXIT_FAILURE);
 		}
 	} catch (const std::exception &e) {
-		string msg = _("libxml++ exception caught: %EXCEPTION");
+		Glib::ustring msg = _("libxml++ exception caught: %EXCEPTION");
 		msg.replace(msg.find("%EXCEPTION"), strlen("%EXCEPTION"), e.what());
 		cerr << msg << endl;
 		exit(EXIT_FAILURE);
