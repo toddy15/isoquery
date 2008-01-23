@@ -5,5 +5,7 @@ TODO for Isoquery
 
 - optionally print results with NULL characters instead of newlines
 
+- allow to search for a name instead of just codes
+
 - possibly fix security warnings from scanners like
   flawfinder, rats, and pscan
