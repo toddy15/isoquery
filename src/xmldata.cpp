@@ -23,8 +23,11 @@
 #include <config.h>
 #endif
 
-#include <iostream>
+#include <cstdlib>
+#include <cstring>
 #include <string>
+#include <iostream>
+#include <libintl.h>
 using namespace std;
 
 #define _ gettext

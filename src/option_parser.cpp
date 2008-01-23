@@ -23,6 +23,7 @@
 #include <config.h>
 #endif
 
+#include <cstdlib>
 #include "gettext.h"
 #include "option_parser.h"
 

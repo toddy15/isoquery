@@ -23,6 +23,8 @@
 #include <config.h>
 #endif
 
+#include <cstdlib>
+#include <libintl.h>
 #include "option_parser.h"
 #include "xmldata.h"
 
