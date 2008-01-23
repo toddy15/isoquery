@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-01-02 17:29+0100\n"
+"POT-Creation-Date: 2008-01-23 10:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/option_parser.cpp:117
+#: src/option_parser.cpp:118
 msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
 msgstr ""
 
-#: src/option_parser.cpp:142
+#: src/option_parser.cpp:143
 msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
 msgstr ""
 
-#: src/option_parser.cpp:145
+#: src/option_parser.cpp:146
 msgid "Options:"
 msgstr ""
 
-#: src/option_parser.cpp:146
+#: src/option_parser.cpp:147
 msgid ""
 "  -i, --iso=NUMBER     The ISO standard to use\n"
 "                       Possible values: 639, 3166, 4217, 15924\n"
@@ -45,31 +45,36 @@ msgid ""
 "  -v, --version        Show program version and copyright"
 msgstr ""
 
-#: src/option_parser.cpp:173
+#: src/option_parser.cpp:174
 msgid "Copyright (C) 2007-2008 Tobias Toedter"
 msgstr ""
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
-#: src/option_parser.cpp:177
+#: src/option_parser.cpp:178
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr ""
 
-#: src/xmldata.cpp:50
+#: src/xmldata.cpp:51
+#, c-format
+msgid "The file '%FILENAME' could not be opened."
+msgstr ""
+
+#: src/xmldata.cpp:64
 msgid "Error in setting up the parser."
 msgstr ""
 
-#: src/xmldata.cpp:54
+#: src/xmldata.cpp:68
 #, c-format
 msgid "libxml++ exception caught: %EXCEPTION"
 msgstr ""
 
-#: src/xmldata.cpp:74
+#: src/xmldata.cpp:88
 #, c-format
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr ""
 
-#: src/xmldata.cpp:235
+#: src/xmldata.cpp:249
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr ""
