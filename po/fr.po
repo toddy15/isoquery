@@ -5,10 +5,10 @@
 # Christian Perrier <bubulle@debian.org>, 2006, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: isoquery 0.10\n"
+"Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
 "POT-Creation-Date: 2008-01-23 10:15+0100\n"
-"PO-Revision-Date: 2008-01-07 20:40+0100\n"
+"PO-Revision-Date: 2008-01-24 07:22+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -75,10 +75,9 @@ msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr "Traduction française Copyright (C) Christian Perrier"
 
 #: src/xmldata.cpp:51
-#, fuzzy, c-format
+#, c-format
 msgid "The file '%FILENAME' could not be opened."
-msgstr ""
-"Le fichier « %FILENAME » ne contient pas de données ISO-%CODE valables."
+msgstr "Le fichier « %FILENAME » n'a pas pu être ouvert."
 
 #: src/xmldata.cpp:64
 msgid "Error in setting up the parser."
