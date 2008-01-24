@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-01-23 10:15+0100\n"
+"POT-Creation-Date: 2008-01-24 13:07+0100\n"
 "PO-Revision-Date: 2008-01-24 07:22+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -74,27 +74,27 @@ msgstr "Copyright (C) 2007-2008 Tobias Toedter"
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr "Traduction française Copyright (C) Christian Perrier"
 
-#: src/xmldata.cpp:51
+#: src/xmldata.cpp:50
 #, c-format
 msgid "The file '%FILENAME' could not be opened."
 msgstr "Le fichier « %FILENAME » n'a pas pu être ouvert."
 
-#: src/xmldata.cpp:64
+#: src/xmldata.cpp:63
 msgid "Error in setting up the parser."
 msgstr "Erreur de mise en place de l'analyseur."
 
-#: src/xmldata.cpp:68
+#: src/xmldata.cpp:67
 #, c-format
 msgid "libxml++ exception caught: %EXCEPTION"
 msgstr "Exception libxml++ : %EXCEPTION"
 
-#: src/xmldata.cpp:88
+#: src/xmldata.cpp:87
 #, c-format
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr ""
 "Le fichier « %FILENAME » ne contient pas de données ISO-%CODE valables."
 
-#: src/xmldata.cpp:249
+#: src/xmldata.cpp:248
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr "Le code « %CODE » n'existe pas dans ISO-%STANDARD."

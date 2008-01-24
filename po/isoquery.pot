@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-01-23 10:15+0100\n"
+"POT-Creation-Date: 2008-01-24 13:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,26 +55,26 @@ msgstr ""
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr ""
 
-#: src/xmldata.cpp:51
+#: src/xmldata.cpp:50
 #, c-format
 msgid "The file '%FILENAME' could not be opened."
 msgstr ""
 
-#: src/xmldata.cpp:64
+#: src/xmldata.cpp:63
 msgid "Error in setting up the parser."
 msgstr ""
 
-#: src/xmldata.cpp:68
+#: src/xmldata.cpp:67
 #, c-format
 msgid "libxml++ exception caught: %EXCEPTION"
 msgstr ""
 
-#: src/xmldata.cpp:88
+#: src/xmldata.cpp:87
 #, c-format
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr ""
 
-#: src/xmldata.cpp:249
+#: src/xmldata.cpp:248
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr ""
