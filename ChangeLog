@@ -1,5 +1,6 @@
-Isoquery trunk
-==============
+Isoquery 0.12
+=============
+24 January 2008
 
 * Add #include statements required by GCC 4.3. Thanks to
   Martin Michlmayr for the bug report and patch. Closes: #462206
