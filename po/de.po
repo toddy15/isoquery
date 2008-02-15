@@ -1,14 +1,13 @@
 # Translation of Isoquery to German
 # This file is distributed under the same license as the Isoquery package.
 #
-# Copyright (C)
-# Tobias Toedter <t.toedter@gmx.net>, 2007, 2008.
+# Copyright (C) Tobias Toedter <t.toedter@gmx.net>, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-01-24 13:07+0100\n"
-"PO-Revision-Date: 2008-01-23 10:16+0100\n"
+"POT-Creation-Date: 2008-02-15 16:43+0100\n"
+"PO-Revision-Date: 2008-02-15 16:45+0100\n"
 "Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,19 +16,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: src/option_parser.cpp:118
+#: src/option_parser.cpp:124
 msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
 msgstr "%PROGRAM_NAME: Der ISO-Code »%CODE« wird nicht unterstützt."
 
-#: src/option_parser.cpp:143
+#: src/option_parser.cpp:149
 msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
 msgstr "Aufruf: %PROGRAM_NAME [Optionen] [ISO-Codes]"
 
-#: src/option_parser.cpp:146
+#: src/option_parser.cpp:152
 msgid "Options:"
 msgstr "Optionen:"
 
-#: src/option_parser.cpp:147
+#: src/option_parser.cpp:153
+#, fuzzy
 msgid ""
 "  -i, --iso=NUMBER     The ISO standard to use\n"
 "                       Possible values: 639, 3166, 4217, 15924\n"
@@ -42,6 +42,8 @@ msgid ""
 "  -l, --locale=LOCALE  Use this locale for output\n"
 "  -x, --xmlfile=FILE   Use another XML file with ISO data\n"
 "                       (default: /usr/share/xml/iso-codes/iso_3166.xml)\n"
+"  -0, --null           Separate entries with a NULL character instead\n"
+"                       of newline\n"
 "  -h, --help           Show this information\n"
 "  -v, --version        Show program version and copyright"
 msgstr ""
@@ -60,36 +62,36 @@ msgstr ""
 "  -h, --help           Anzeige dieser Informationen\n"
 "  -v, --version        Anzeige der Programmversion und des Copyrights"
 
-#: src/option_parser.cpp:174
+#: src/option_parser.cpp:182
 msgid "Copyright (C) 2007-2008 Tobias Toedter"
 msgstr "Copyright (C) 2007-2008 Tobias Toedter"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
-#: src/option_parser.cpp:178
+#: src/option_parser.cpp:186
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
 msgstr "Deutsche Übersetzung Copyright (C) 2007-2008 Tobias Toedter"
 
-#: src/xmldata.cpp:50
+#: src/xmldata.cpp:51
 #, c-format
 msgid "The file '%FILENAME' could not be opened."
 msgstr "Die Datei »%FILENAME« konnte nicht geöffnet werden."
 
-#: src/xmldata.cpp:63
+#: src/xmldata.cpp:64
 msgid "Error in setting up the parser."
 msgstr "Fehler beim Einrichten des Parsers."
 
-#: src/xmldata.cpp:67
+#: src/xmldata.cpp:68
 #, c-format
 msgid "libxml++ exception caught: %EXCEPTION"
 msgstr "Ausnahme von libxml++ abgefangen: %EXCEPTION"
 
-#: src/xmldata.cpp:87
+#: src/xmldata.cpp:88
 #, c-format
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
 msgstr "Die Datei »%FILENAME« enthält keine gültigen ISO %CODE Daten."
 
-#: src/xmldata.cpp:248
+#: src/xmldata.cpp:239
 #, c-format
 msgid "The code '%CODE' is not defined in ISO %STANDARD."
 msgstr "Der Code »%CODE« ist in ISO %STANDARD nicht definiert."
