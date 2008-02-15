@@ -15,5 +15,7 @@ Options:
   -l, --locale=LOCALE  Use this locale for output
   -x, --xmlfile=FILE   Use another XML file with ISO data
                        (default: /usr/share/xml/iso-codes/iso_3166.xml)
+  -0, --null           Separate entries with a NULL character instead
+                       of newline
   -h, --help           Show this information
   -v, --version        Show program version and copyright
