@@ -29,7 +29,6 @@ msgid "Options:"
 msgstr "Optionen:"
 
 #: src/option_parser.cpp:153
-#, fuzzy
 msgid ""
 "  -i, --iso=NUMBER     The ISO standard to use\n"
 "                       Possible values: 639, 3166, 4217, 15924\n"
@@ -59,6 +58,8 @@ msgstr ""
 "  -x, --xmlfile=DATEI  Eine andere XML-Datei mit ISO-Daten verwenden\n"
 "                       (Voreinstellung: /usr/share/xml/iso-codes/iso_3166."
 "xml)\n"
+"  -0, --null           Einträge durch ein NULL-Zeichen anstatt des\n"
+"                       Zeilenumbruches voneinander trennen\n"
 "  -h, --help           Anzeige dieser Informationen\n"
 "  -v, --version        Anzeige der Programmversion und des Copyrights"
 
