@@ -38,6 +38,8 @@ public:
 	string locale;
 	/* XML data source */
 	string xmlfile;
+	/* Separate entries with NULL instead of newline */
+	bool use_null_character;
 	/* Index of remaining arguments, if any */
 	int argument_start;
 	

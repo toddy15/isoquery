@@ -35,6 +35,8 @@ private:
 	string locale;
 	/* XML data source */
 	string xmlfile;
+	/* Separate entries with NULL instead of newline */
+	bool use_null_character;
 	
 	void print_node(const xmlpp::Element *node);
 	void print_attributes(const xmlpp::Element *node,
@@ -47,6 +49,7 @@ public:
 	void check(Glib::ustring iso_standard);
 	void set_output_locale(Glib::ustring output_locale);
 	void set_attribute_name(Glib::ustring attr_name);
+	void set_use_null_character(bool use_null);
 	vector<Glib::ustring> get_xpaths(Glib::ustring code);
 	void show(Glib::ustring code);
 };

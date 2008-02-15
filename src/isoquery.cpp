@@ -53,6 +53,7 @@ main(int argc, char *argv[])
 	xmldata.check(option.iso);
 	xmldata.set_output_locale(option.locale);
 	xmldata.set_attribute_name(option.name);
+	xmldata.set_use_null_character(option.use_null_character);
 
 	if (option.argument_start) {
 		for (q = option.argument_start; q < argc; q++) {

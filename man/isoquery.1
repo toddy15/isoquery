@@ -2,7 +2,7 @@
 .\" First parameter, NAME, should be all caps
 .\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
 .\" other parameters are allowed: see man(7), man(1)
-.TH ISOQUERY 1 "January 2, 2008"
+.TH ISOQUERY 1 "February 15, 2008"
 .\" Please adjust this date whenever revising the manpage.
 .\"
 .\" Some roff macros, for reference:
@@ -74,6 +74,9 @@ Use this locale for output.
 .B \-x, \-\-xmlfile=FILE
 Use another XML file with ISO data.
 (default: /usr/share/xml/iso-codes/iso_3166.xml)
+.TP
+.B \-0, \-\-null
+Separate entries with a NULL character instead of newline.
 .TP
 .B \-h, \-\-help
 Show summary of options.

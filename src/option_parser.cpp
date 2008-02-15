@@ -42,6 +42,7 @@ OptionParser::parse(int argc, char *argv[])
 	name = "name";
 	locale = "";
 	xmlfile = "";
+	use_null_character = false;
 	
 	/* Position of additional arguments, if any */
 	argument_start = 0;
@@ -54,12 +55,13 @@ OptionParser::parse(int argc, char *argv[])
 			{"common_name", no_argument, 0, 'c'},
 			{"locale", required_argument, 0, 'l'},
 			{"xmlfile", required_argument, 0, 'x'},
+			{"null", no_argument, 0, '0'},
 			{"help", no_argument, 0, 'h'},
 			{"version", no_argument, 0, 'v'},
 			{0, 0, 0, 0}
 		};
 		const int opt =
-		  getopt_long(argc, argv, "i:nocl:x:hv", long_options, (int *) 0);
+		  getopt_long(argc, argv, "i:nocl:x:0hv", long_options, (int *) 0);
 		switch (opt) {
 			case -1:
 				/* If there are additional arguments, return
@@ -91,6 +93,10 @@ OptionParser::parse(int argc, char *argv[])
 			case 'x':
 				/* Use this XML file as data source */
 				xmlfile = optarg;
+				break;
+			case '0':
+				/* Use NULL character instead of newline */
+				use_null_character = true;
 				break;
 			case 'h':
 				show_help();
@@ -155,6 +161,8 @@ OptionParser::show_help()
   -l, --locale=LOCALE  Use this locale for output\n\
   -x, --xmlfile=FILE   Use another XML file with ISO data\n\
                        (default: /usr/share/xml/iso-codes/iso_3166.xml)\n\
+  -0, --null           Separate entries with a NULL character instead\n\
+                       of newline\n\
   -h, --help           Show this information\n\
   -v, --version        Show program version and copyright") << endl;
 	exit(EXIT_SUCCESS);

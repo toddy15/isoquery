@@ -118,6 +118,17 @@ XMLData::set_attribute_name(Glib::ustring attr_name)
 
 
 /**
+ * Set use of NULL character instead of newline
+ */
+void
+XMLData::set_use_null_character(bool use_null)
+{
+	use_null_character = use_null;
+}
+
+
+
+/**
  * Return all xpaths, depending on command line options
  */
 vector<Glib::ustring>
@@ -278,7 +289,12 @@ XMLData::print_node(const xmlpp::Element *node)
 			unsetenv("LANGUAGE");
 		}
 	}
-	cout << outputname << endl;
+	cout << outputname;
+	if (use_null_character) {
+		cout << ends;
+	} else {
+		cout << endl;
+	}
 }
 
 
