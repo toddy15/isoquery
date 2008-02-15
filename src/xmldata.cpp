@@ -28,6 +28,7 @@
 #include <iostream>
 #include <fstream>
 #include <libintl.h>
+#include <vector>
 using namespace std;
 
 #define _ gettext
@@ -112,6 +113,83 @@ void
 XMLData::set_attribute_name(Glib::ustring attr_name)
 {
 	name = attr_name;
+}
+
+
+
+/**
+ * Return all xpaths, depending on command line options
+ */
+vector<Glib::ustring>
+XMLData::get_xpaths(Glib::ustring code)
+{
+	vector<Glib::ustring> xpaths;
+	Glib::ustring xpath;
+
+	// There are no arguments on the command line, so show all codes
+	if (code.empty()) {
+		xpath = "iso_" + iso + "_entry";
+		xpaths.push_back(xpath);
+	} else {
+		if (iso == "639") {
+			if (code.length() == 2) {
+				xpath = "//iso_639_entry[@iso_639_1_code='";
+				xpath += code.lowercase();
+				xpath += "']";
+				xpaths.push_back(xpath);
+			} else {
+				xpath = "//iso_639_entry[@iso_639_2B_code='";
+				xpath += code.lowercase();
+				xpath += "']";
+				xpaths.push_back(xpath);
+				xpath = "//iso_639_entry[@iso_639_2T_code='";
+				xpath += code.lowercase();
+				xpath += "']";
+				xpaths.push_back(xpath);
+			}
+		} else if (iso == "4217") {
+			if (isdigit(code.at(0))) {
+				xpath = "//iso_4217_entry[@numeric_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			} else {
+				xpath = "//iso_4217_entry[@letter_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			}
+			xpaths.push_back(xpath);
+		} else if (iso == "15924") {
+			if (isdigit(code.at(0))) {
+				xpath = "//iso_15924_entry[@numeric_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			} else {
+				xpath = "//iso_15924_entry[@alpha_4_code='";
+				xpath += code.substr(0, 1).uppercase();
+				xpath += code.substr(1, code.length()).lowercase();
+				xpath += "']";
+			}
+			xpaths.push_back(xpath);
+		} else {
+			// Default to ISO 3166
+			if (code.length() == 2) {
+				xpath = "//iso_3166_entry[@alpha_2_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			} else if (isdigit(code.at(0))) {
+				xpath = "//iso_3166_entry[@numeric_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			} else {
+				xpath = "//iso_3166_entry[@alpha_3_code='";
+				xpath += code.uppercase();
+				xpath += "']";
+			}
+			xpaths.push_back(xpath);
+		}
+	}
+
+	return xpaths;
 }
 
 
@@ -223,25 +301,22 @@ XMLData::get_next_xpath(Glib::ustring code, bool initialize)
 void
 XMLData::show(Glib::ustring code)
 {
-	Glib::ustring xpath;
+	vector<Glib::ustring> xpaths;
+	vector<Glib::ustring>::iterator xpath;
 	xmlpp::NodeSet nodeset;
 	xmlpp::NodeSet::iterator iter;
 	const xmlpp::Element *current_node;
 	bool found = false;
 
-	xpath = get_next_xpath(code, true);
-	while (!xpath.empty()) {
-		nodeset = parser.get_document()->get_root_node()->find(xpath);
+	xpaths = get_xpaths(code);
+	for (xpath = xpaths.begin(); xpath != xpaths.end(); xpath++) {
+		nodeset = parser.get_document()->get_root_node()->find(*xpath);
 		for (iter = nodeset.begin(); iter != nodeset.end(); iter++) {
 			current_node = dynamic_cast<xmlpp::Element*> (*iter);
 			print_node(current_node);
 			found = true;
 		}
-		if (!found) {
-			xpath = get_next_xpath(code, false);
-		} else {
-			xpath = "";
-		}
+		if (found) break;
 	}
 	// Show a warning if the code was not found
 	if (!found) {
