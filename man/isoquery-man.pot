@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-01-02 17:24+0100\n"
+"POT-Creation-Date: 2008-02-15 16:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 # type: TH
 #: isoquery.1:5
 #, no-wrap
-msgid "January 2, 2008"
+msgid "February 15, 2008"
 msgstr ""
 
 # type: SH
@@ -151,33 +151,44 @@ msgstr ""
 # type: TP
 #: isoquery.1:77
 #, no-wrap
-msgid "B<-h, --help>"
+msgid "B<-0, --null>"
 msgstr ""
 
 # type: Plain text
 #: isoquery.1:80
-msgid "Show summary of options."
+msgid "Separate entries with a NULL character instead of newline."
 msgstr ""
 
 # type: TP
 #: isoquery.1:80
 #, no-wrap
-msgid "B<-v, --version>"
+msgid "B<-h, --help>"
 msgstr ""
 
 # type: Plain text
 #: isoquery.1:83
+msgid "Show summary of options."
+msgstr ""
+
+# type: TP
+#: isoquery.1:83
+#, no-wrap
+msgid "B<-v, --version>"
+msgstr ""
+
+# type: Plain text
+#: isoquery.1:86
 msgid "Show program version and copyright."
 msgstr ""
 
 # type: SH
-#: isoquery.1:84
+#: isoquery.1:87
 #, no-wrap
 msgid "EXAMPLES"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:91
+#: isoquery.1:94
 msgid ""
 "If called without any command line options, B<isoquery> will put out a table "
 "of all ISO 3166 codes.  The first three columns contain the alpha-2 code, "
@@ -186,7 +197,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:96
+#: isoquery.1:99
 #, no-wrap
 msgid ""
 "$ isoquery\n"
@@ -196,14 +207,14 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:99
+#: isoquery.1:102
 msgid ""
 "If you need only some countries, you can specify any of the codes in the "
 "first three columns to cut down the output."
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:104
+#: isoquery.1:107
 #, no-wrap
 msgid ""
 "$ isoquery so nor 484\n"
@@ -213,7 +224,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:109
+#: isoquery.1:112
 msgid ""
 "Should you need the translations of the countries' names, just specify in "
 "which locale you'd like to see the output.  Please note that the original "
@@ -222,7 +233,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:114
+#: isoquery.1:117
 #, no-wrap
 msgid ""
 "$ isoquery --locale=nl fr de es\n"
@@ -232,7 +243,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:120
+#: isoquery.1:123
 msgid ""
 "All of the above works for different ISO standards as well, so you can "
 "switch to language names by using the --iso command line option.  For ISO "
@@ -241,7 +252,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:129
+#: isoquery.1:132
 #, no-wrap
 msgid ""
 "$ isoquery --iso=639\n"
@@ -255,14 +266,14 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:132
+#: isoquery.1:135
 msgid ""
 "You can trim down the results by specifying only some codes. Moreover, the "
 "option to get translated names is also available."
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:137
+#: isoquery.1:140
 #, no-wrap
 msgid ""
 "$ isoquery --iso=639 --locale=pt vi bo kl\n"
@@ -272,7 +283,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:142
+#: isoquery.1:145
 msgid ""
 "You can get selected translations of currency names from the ISO 4217 "
 "standard by using the following command.  The first two columns are the "
@@ -280,7 +291,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:146
+#: isoquery.1:149
 #, no-wrap
 msgid ""
 "$ isoquery --iso=4217 --locale=da cad 392\n"
@@ -289,7 +300,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:150
+#: isoquery.1:153
 msgid ""
 "If you need to get script names, you can use the ISO 15924 table.  The first "
 "two columns are the alpha-4 code and the numerical code assigned to the "
@@ -297,7 +308,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:155
+#: isoquery.1:158
 #, no-wrap
 msgid ""
 "$ isoquery --iso=15924 jpan latn 280\n"
@@ -307,45 +318,45 @@ msgid ""
 msgstr ""
 
 # type: SH
-#: isoquery.1:157
+#: isoquery.1:160
 #, no-wrap
 msgid "FILES"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:160
+#: isoquery.1:163
 msgid ""
 "By default, the XML files provided by the iso-codes package will be used."
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:162
+#: isoquery.1:165
 msgid "I</usr/share/xml/iso-codes/iso_639.xml>"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:164
+#: isoquery.1:167
 msgid "I</usr/share/xml/iso-codes/iso_3166.xml>"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:166
+#: isoquery.1:169
 msgid "I</usr/share/xml/iso-codes/iso_4217.xml>"
 msgstr ""
 
 # type: SH
-#: isoquery.1:167
+#: isoquery.1:170
 #, no-wrap
 msgid "LICENSE"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:169
+#: isoquery.1:172
 msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:174
+#: isoquery.1:177
 msgid ""
 "Isoquery is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -354,7 +365,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:179
+#: isoquery.1:182
 msgid ""
 "Isoquery is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -363,19 +374,19 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:183
+#: isoquery.1:186
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see E<lt>http://www.gnu.org/licenses/E<gt>."
 msgstr ""
 
 # type: SH
-#: isoquery.1:184
+#: isoquery.1:187
 #, no-wrap
 msgid "AUTHOR"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:185
+#: isoquery.1:188
 msgid "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
 msgstr ""
