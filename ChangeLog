@@ -1,3 +1,10 @@
+Isoquery trunk
+==============
+UNRELEASED
+
+* Use C++ vectors for the list of possible xpaths
+
+
 Isoquery 0.12
 =============
 24 January 2008
