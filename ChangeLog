@@ -3,6 +3,8 @@ Isoquery trunk
 UNRELEASED
 
 * Use C++ vectors for the list of possible xpaths
+* New command line options "-0" and "--null" to separate the output
+  with NULL characters instead of newline
 
 
 Isoquery 0.12
