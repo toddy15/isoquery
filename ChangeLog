@@ -5,6 +5,9 @@ UNRELEASED
 * Use C++ vectors for the list of possible xpaths
 * New command line options "-0" and "--null" to separate the output
   with NULL characters instead of newline
+* Translation updates:
+  - French, thanks to Christian Perrier
+  - German, thanks to Tobias Toedter
 
 
 Isoquery 0.12
