@@ -1,6 +1,6 @@
-Isoquery trunk
-==============
-UNRELEASED
+Isoquery 0.13
+=============
+12 March 2008
 
 * Use C++ vectors for the list of possible xpaths
 * New command line options "-0" and "--null" to separate the output
