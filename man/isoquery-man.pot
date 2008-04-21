@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-02-15 16:49+0100\n"
+"POT-Creation-Date: 2008-04-21 16:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -352,7 +352,7 @@ msgstr ""
 
 # type: Plain text
 #: isoquery.1:172
-msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 msgstr ""
 
 # type: Plain text
@@ -388,5 +388,5 @@ msgstr ""
 
 # type: Plain text
 #: isoquery.1:188
-msgid "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgid "Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 msgstr ""

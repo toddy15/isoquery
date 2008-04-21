@@ -1,14 +1,14 @@
 # Translation of Isoquery man page to German
 # This file is distributed under the same license as the Isoquery package.
 #
-# Copyright (C) Tobias Toedter <t.toedter@gmx.net>, 2007, 2008.
+# Copyright (C) Tobias Toedter <toddy@debian.org>, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"Report-Msgid-Bugs-To: Tobias Toedter <t.toedter@gmx.net>\n"
-"POT-Creation-Date: 2008-02-15 16:49+0100\n"
+"Report-Msgid-Bugs-To: Tobias Toedter <toddy@debian.org>\n"
+"POT-Creation-Date: 2008-04-21 16:23+0200\n"
 "PO-Revision-Date: 2008-02-15 16:52+0100\n"
-"Last-Translator: Tobias Toedter <t.toedter@gmx.net>\n"
+"Last-Translator: Tobias Toedter <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -433,8 +433,8 @@ msgstr "LIZENZ"
 
 # type: Plain text
 #: isoquery.1:172
-msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
-msgstr "Copyright (C) 2007-2008 Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>toddy@debian.orgE<gt>"
+msgstr "Copyright (C) 2007-2008 Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 
 # type: Plain text
 #: isoquery.1:177
@@ -480,5 +480,5 @@ msgstr "AUTOR"
 
 # type: Plain text
 #: isoquery.1:188
-msgid "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
-msgstr "Tobias Toedter E<lt>t.toedter@gmx.netE<gt>"
+msgid "Tobias Toedter E<lt>toddy@debian.orgE<gt>"
+msgstr "Tobias Toedter E<lt>toddy@debian.orgE<gt>"
