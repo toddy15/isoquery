@@ -289,7 +289,7 @@ XMLData::print_node(const xmlpp::Element *node)
 			unsetenv("LANGUAGE");
 		}
 	}
-	cout << outputname;
+	cout << outputname.raw();
 	if (use_null_character) {
 		cout << ends;
 	} else {

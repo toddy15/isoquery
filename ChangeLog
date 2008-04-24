@@ -1,3 +1,11 @@
+Isoquery 0.14
+=============
+24 April 2008
+
+* Fix bug which could cause isoquery to throw an Glib::ConvertError.
+  Thanks to George Danchev for the bug report. Closes: #474534
+
+
 Isoquery 0.13
 =============
 12 March 2008
