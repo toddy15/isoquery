@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-04-21 16:23+0200\n"
+"POT-Creation-Date: 2008-04-24 11:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 # type: TH
 #: isoquery.1:5
 #, no-wrap
-msgid "February 15, 2008"
+msgid "April 24, 2008"
 msgstr ""
 
 # type: SH
@@ -344,19 +344,24 @@ msgstr ""
 msgid "I</usr/share/xml/iso-codes/iso_4217.xml>"
 msgstr ""
 
+# type: Plain text
+#: isoquery.1:171
+msgid "I</usr/share/xml/iso-codes/iso_15924.xml>"
+msgstr ""
+
 # type: SH
-#: isoquery.1:170
+#: isoquery.1:172
 #, no-wrap
 msgid "LICENSE"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:172
+#: isoquery.1:174
 msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:177
+#: isoquery.1:179
 msgid ""
 "Isoquery is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -365,7 +370,7 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:182
+#: isoquery.1:184
 msgid ""
 "Isoquery is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -374,19 +379,19 @@ msgid ""
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:186
+#: isoquery.1:188
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see E<lt>http://www.gnu.org/licenses/E<gt>."
 msgstr ""
 
 # type: SH
-#: isoquery.1:187
+#: isoquery.1:189
 #, no-wrap
 msgid "AUTHOR"
 msgstr ""
 
 # type: Plain text
-#: isoquery.1:188
+#: isoquery.1:190
 msgid "Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 msgstr ""

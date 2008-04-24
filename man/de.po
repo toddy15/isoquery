@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Toedter <toddy@debian.org>\n"
-"POT-Creation-Date: 2008-04-21 16:23+0200\n"
-"PO-Revision-Date: 2008-02-15 16:52+0100\n"
+"POT-Creation-Date: 2008-04-24 11:27+0200\n"
+"PO-Revision-Date: 2008-04-24 11:27+0200\n"
 "Last-Translator: Tobias Toedter <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,8 @@ msgstr "ISOQUERY"
 # type: TH
 #: isoquery.1:5
 #, no-wrap
-msgid "February 15, 2008"
-msgstr "15. Februar 2008"
+msgid "April 24, 2008"
+msgstr "24. April 2008"
 
 #
 # type: SH
@@ -425,19 +425,24 @@ msgstr "I</usr/share/xml/iso-codes/iso_3166.xml>"
 msgid "I</usr/share/xml/iso-codes/iso_4217.xml>"
 msgstr "I</usr/share/xml/iso-codes/iso_4217.xml>"
 
+# type: Plain text
+#: isoquery.1:171
+msgid "I</usr/share/xml/iso-codes/iso_15924.xml>"
+msgstr "I</usr/share/xml/iso-codes/iso_15924.xml>"
+
 # type: SH
-#: isoquery.1:170
+#: isoquery.1:172
 #, no-wrap
 msgid "LICENSE"
 msgstr "LIZENZ"
 
 # type: Plain text
-#: isoquery.1:172
+#: isoquery.1:174
 msgid "Copyright (C) 2007-2008 Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 msgstr "Copyright (C) 2007-2008 Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 
 # type: Plain text
-#: isoquery.1:177
+#: isoquery.1:179
 msgid ""
 "Isoquery is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
@@ -450,7 +455,7 @@ msgstr ""
 "(nach Ihrer Option) jeder späteren Version."
 
 # type: Plain text
-#: isoquery.1:182
+#: isoquery.1:184
 msgid ""
 "Isoquery is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -463,7 +468,7 @@ msgstr ""
 "Details finden Sie in der GNU General Public License."
 
 # type: Plain text
-#: isoquery.1:186
+#: isoquery.1:188
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see E<lt>http://www.gnu.org/licenses/E<gt>."
@@ -473,12 +478,12 @@ msgstr ""
 "E<gt>."
 
 # type: SH
-#: isoquery.1:187
+#: isoquery.1:189
 #, no-wrap
 msgid "AUTHOR"
 msgstr "AUTOR"
 
 # type: Plain text
-#: isoquery.1:188
+#: isoquery.1:190
 msgid "Tobias Toedter E<lt>toddy@debian.orgE<gt>"
 msgstr "Tobias Toedter E<lt>toddy@debian.orgE<gt>"
