@@ -1,7 +1,7 @@
 # Command line
 isoquery --version
 # Expected output
-isoquery 0.13
+isoquery 0.14
 Copyright (C) 2007-2008 Tobias Toedter
 
 This program is free software: you can redistribute it and/or modify
