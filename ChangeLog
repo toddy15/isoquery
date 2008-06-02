@@ -1,3 +1,12 @@
+Isoquery trunk
+==============
+UNRELEASED
+
+* Update man page with ISO 15924
+* Fix bug that results in a crash if the environment variable
+  LANGUAGE is not set
+
+
 Isoquery 0.14
 =============
 24 April 2008

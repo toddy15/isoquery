@@ -273,7 +273,10 @@ XMLData::print_node(const xmlpp::Element *node)
 
 	// If locale is set, try to look up the translation
 	if (!locale.empty()) {
-		Glib::ustring language_backup = getenv("LANGUAGE");
+		Glib::ustring language_backup = "";
+		if (getenv("LANGUAGE")) {
+			language_backup = getenv("LANGUAGE");
+		}
 		setenv("LANGUAGE", locale.c_str(), true);
 		
 		Glib::ustring domain = "iso_" + iso;
