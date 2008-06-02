@@ -172,8 +172,8 @@ XBC	957	European Unit of Account 9 (E.U.A.-9)
 XBD	958	European Unit of Account 17 (E.U.A.-17)
 XCD	951	East Caribbean Dollar
 XDR	960	SDR
-XFO	   	Gold-Franc
-XFU	   	UIC-Franc
+XFO		Gold-Franc
+XFU		UIC-Franc
 XOF	952	CFA Franc BCEAO
 XPD	964	Palladium
 XPF	953	CFP Franc
