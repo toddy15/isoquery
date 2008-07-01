@@ -95,8 +95,7 @@ msgstr "Exception libxml++ : %EXCEPTION"
 #: src/xmldata.cpp:88
 #, c-format
 msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
-msgstr ""
-"Le fichier « %FILENAME » ne contient pas de données ISO-%CODE valables."
+msgstr "Le fichier « %FILENAME » ne contient pas de données ISO-%CODE valables."
 
 #: src/xmldata.cpp:239
 #, c-format
