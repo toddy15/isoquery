@@ -27,12 +27,12 @@
 #include <cstring>
 #include <iostream>
 #include <fstream>
-#include <libintl.h>
 #include <vector>
 using namespace std;
+#include "gettext.h"
+#include "xmldata.h"
 
 #define _ gettext
-#include "xmldata.h"
 
 
 

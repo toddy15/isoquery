@@ -24,7 +24,7 @@
 #endif
 
 #include <cstdlib>
-#include <libintl.h>
+#include "gettext.h"
 #include "option_parser.h"
 #include "xmldata.h"
 
