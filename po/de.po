@@ -1,14 +1,14 @@
 # Translation of Isoquery to German
 # This file is distributed under the same license as the Isoquery package.
 #
-# Copyright (C) Tobias Toedter <toddy@debian.org>, 2007, 2008.
+# Copyright (C) Tobias Quathamer <toddy@debian.org>, 2007, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"Report-Msgid-Bugs-To: Tobias Toedter <toddy@debian.org>\n"
-"POT-Creation-Date: 2008-04-21 16:33+0200\n"
-"PO-Revision-Date: 2008-02-15 16:45+0100\n"
-"Last-Translator: Tobias Toedter <toddy@debian.org>\n"
+"Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
+"POT-Creation-Date: 2008-11-26 09:41+0100\n"
+"PO-Revision-Date: 2008-11-26 09:41+0100\n"
+"Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,14 +64,14 @@ msgstr ""
 "  -v, --version        Anzeige der Programmversion und des Copyrights"
 
 #: src/option_parser.cpp:182
-msgid "Copyright (C) 2007-2008 Tobias Toedter"
-msgstr "Copyright (C) 2007-2008 Tobias Toedter"
+msgid "Copyright (C) 2007-2008 Tobias Quathamer"
+msgstr "Copyright (C) 2007-2008 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
 #: src/option_parser.cpp:186
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
-msgstr "Deutsche Übersetzung Copyright (C) 2007-2008 Tobias Toedter"
+msgstr "Deutsche Übersetzung Copyright (C) 2007-2008 Tobias Quathamer"
 
 #: src/xmldata.cpp:51
 #, c-format

@@ -1,7 +1,7 @@
 # Configure options for Isoquery
 # Process this file with autoconf to produce a configure script.
 #
-# Copyright (C) 2007-2008 Tobias Toedter
+# Copyright (C) 2007-2008 Tobias Quathamer
 #
 # This file is part of Isoquery.
 # 
@@ -19,7 +19,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-AC_INIT([isoquery], [0.16], [Tobias Toedter <toddy@debian.org>])
+AC_INIT([isoquery], [0.16], [Tobias Quathamer <toddy@debian.org>])
 AM_MAINTAINER_MODE
 AM_INIT_AUTOMAKE([foreign])
 

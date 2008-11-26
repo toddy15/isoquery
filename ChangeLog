@@ -1,3 +1,10 @@
+Isoquery trunk
+==============
+UNRELEASED
+
+* Change my last name to Quathamer
+
+
 Isoquery 0.16
 =============
 1 July 2008
@@ -32,7 +39,7 @@ Isoquery 0.13
   with NULL characters instead of newline
 * Translation updates:
   - French, thanks to Christian Perrier
-  - German, thanks to Tobias Toedter
+  - German, thanks to Tobias Quathamer
 
 
 Isoquery 0.12
@@ -44,7 +51,7 @@ Isoquery 0.12
 * Better error message if the XML input file cannot be opened
 * Translation updates:
   - French, thanks to Christian Perrier
-  - German, thanks to Tobias Toedter
+  - German, thanks to Tobias Quathamer
 
 
 Isoquery 0.11

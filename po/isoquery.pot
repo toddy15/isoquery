@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Tobias Toedter
+# Copyright (C) YEAR Tobias Quathamer
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: Tobias Toedter <toddy@debian.org>\n"
-"POT-Creation-Date: 2008-04-21 16:33+0200\n"
+"Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
+"POT-Creation-Date: 2008-11-26 09:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 
 #: src/option_parser.cpp:182
-msgid "Copyright (C) 2007-2008 Tobias Toedter"
+msgid "Copyright (C) 2007-2008 Tobias Quathamer"
 msgstr ""
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for

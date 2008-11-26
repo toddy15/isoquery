@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"Report-Msgid-Bugs-To: Tobias Toedter <toddy@debian.org>\n"
-"POT-Creation-Date: 2008-04-21 16:33+0200\n"
-"PO-Revision-Date: 2008-03-11 20:00+0100\n"
+"Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
+"POT-Creation-Date: 2008-11-26 09:41+0100\n"
+"PO-Revision-Date: 2008-11-26 09:41+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,8 +69,8 @@ msgstr ""
 "                        informations de copyright et de licence."
 
 #: src/option_parser.cpp:182
-msgid "Copyright (C) 2007-2008 Tobias Toedter"
-msgstr "Copyright (C) 2007-2008 Tobias Toedter"
+msgid "Copyright (C) 2007-2008 Tobias Quathamer"
+msgstr "Copyright (C) 2007-2008 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
