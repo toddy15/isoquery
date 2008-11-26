@@ -168,7 +168,7 @@ gre	ell	el	Greek, Modern (1453-)
 grn	grn	gn	Guarani
 gsw	gsw		Swiss German; Alemannic; Alsatian
 guj	guj	gu	Gujarati
-gwi	gwi		Gwich´in
+gwi	gwi		Gwich'in
 hai	hai		Haida
 hat	hat	ht	Haitian; Haitian Creole
 hau	hau	ha	Hausa
@@ -181,6 +181,7 @@ hin	hin	hi	Hindi
 hit	hit		Hittite
 hmn	hmn		Hmong
 hmo	hmo	ho	Hiri Motu
+hrv	hrv	hr	Croatian
 hsb	hsb		Upper Sorbian
 hun	hun	hu	Hungarian
 hup	hup		Hupa
@@ -222,7 +223,7 @@ kbd	kbd		Kabardian
 kha	kha		Khasi
 khi	khi		Khoisan (Other)
 khm	khm	km	Central Khmer
-kho	kho		Khotanese
+kho	kho		Khotanese;Sakan
 kik	kik	ki	Kikuyu; Gikuyu
 kin	kin	rw	Kinyarwanda
 kir	kir	ky	Kirghiz; Kyrgyz
@@ -308,17 +309,17 @@ nde	nde	nd	Ndebele, North; North Ndebele
 ndo	ndo	ng	Ndonga
 nds	nds		Low German; Low Saxon; German, Low; Saxon, Low
 nep	nep	ne	Nepali
-new	new		Newari; Nepal Bhasa
+new	new		Nepal Bhasa; Newari
 nia	nia		Nias
 nic	nic		Niger-Kordofanian (Other)
 niu	niu		Niuean
 nno	nno	nn	Norwegian Nynorsk; Nynorsk, Norwegian
-nob	nob	nb	Norwegian Bokmål; Bokmål, Norwegian
+nob	nob	nb	Bokmål, Norwegian; Norwegian Bokmål
 nog	nog		Nogai
 non	non		Norse, Old
 nor	nor	no	Norwegian
-nqo	nqo		N'ko
-nso	nso		Northern Sotho, Pedi; Sepedi
+nqo	nqo		N'Ko
+nso	nso		Pedi; Sepedi; Northern Sotho
 nub	nub		Nubian languages
 nwc	nwc		Classical Newari; Old Newari; Classical Nepal Bhasa
 nya	nya	ny	Chichewa; Chewa; Nyanja
@@ -326,7 +327,7 @@ nym	nym		Nyamwezi
 nyn	nyn		Nyankole
 nyo	nyo		Nyoro
 nzi	nzi		Nzima
-oci	oci	oc	Occitan (post 1500); Provençal
+oci	oci	oc	Occitan (post 1500)
 oji	oji	oj	Ojibwa
 ori	ori	or	Oriya
 orm	orm	om	Oromo
@@ -350,13 +351,13 @@ pol	pol	pl	Polish
 pon	pon		Pohnpeian
 por	por	pt	Portuguese
 pra	pra		Prakrit languages
-pro	pro		Provençal, Old (to 1500)
+pro	pro		Provençal, Old (to 1500); Occitan, Old (to 1500)
 pus	pus	ps	Pushto; Pashto
 qaa-qtz	qaa-qtz		Reserved for local use
 que	que	qu	Quechua
 raj	raj		Rajasthani
 rap	rap		Rapanui
-rar	rar		Rarotongan; Cook Island Maori
+rar	rar		Rarotongan; Cook Islands Maori
 roa	roa		Romance (Other)
 roh	roh	rm	Romansh
 rom	rom		Romany
@@ -373,10 +374,8 @@ sam	sam		Samaritan Aramaic
 san	san	sa	Sanskrit
 sas	sas		Sasak
 sat	sat		Santali
-scc	srp	sr	Serbian
 scn	scn		Sicilian
 sco	sco		Scots
-scr	hrv	hr	Croatian
 sel	sel		Selkup
 sem	sem		Semitic (Other)
 sga	sga		Irish, Old (to 900)
@@ -406,6 +405,7 @@ sot	sot	st	Sotho, Southern
 spa	spa	es	Spanish; Castilian
 srd	srd	sc	Sardinian
 srn	srn		Sranan Tongo
+srp	srp	sr	Serbian
 srr	srr		Serer
 ssa	ssa		Nilo-Saharan (Other)
 ssw	ssw	ss	Swati
@@ -464,7 +464,7 @@ vie	vie	vi	Vietnamese
 vol	vol	vo	Volapük
 vot	vot		Votic
 wak	wak		Wakashan languages
-wal	wal		Walamo
+wal	wal		Wolaitta; Wolaytta
 war	war		Waray
 was	was		Washo
 wel	cym	cy	Welsh

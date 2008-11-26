@@ -3,6 +3,7 @@ Isoquery trunk
 UNRELEASED
 
 * Change my last name to Quathamer
+* Update test suite to pass with current iso-codes (3.4)
 
 
 Isoquery 0.16
