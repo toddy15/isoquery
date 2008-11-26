@@ -19,7 +19,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-AC_INIT([isoquery], [0.16], [Tobias Quathamer <toddy@debian.org>])
+AC_INIT([isoquery], [0.17], [Tobias Quathamer <toddy@debian.org>])
 AM_MAINTAINER_MODE
 AM_INIT_AUTOMAKE([foreign])
 

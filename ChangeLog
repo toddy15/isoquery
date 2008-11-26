@@ -1,6 +1,6 @@
-Isoquery trunk
-==============
-UNRELEASED
+Isoquery 0.17
+=============
+26 November 2008
 
 * Change my last name to Quathamer
 * Update test suite to pass with current iso-codes (3.4)
