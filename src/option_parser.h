@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007-2008 Tobias Quathamer
+ * Copyright (C) 2007-2009 Tobias Quathamer
  * 
  * This file is part of Isoquery.
  * 

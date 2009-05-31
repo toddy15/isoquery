@@ -1,7 +1,7 @@
 # Configure options for Isoquery
 # Process this file with autoconf to produce a configure script.
 #
-# Copyright (C) 2007-2008 Tobias Quathamer
+# Copyright (C) 2007-2009 Tobias Quathamer
 #
 # This file is part of Isoquery.
 # 

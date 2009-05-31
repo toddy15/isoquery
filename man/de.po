@@ -438,8 +438,8 @@ msgstr "LIZENZ"
 
 # type: Plain text
 #: isoquery.1:174
-msgid "Copyright (C) 2007-2008 Tobias Quathamer E<lt>toddy@debian.orgE<gt>"
-msgstr "Copyright (C) 2007-2008 Tobias Quathamer E<lt>toddy@debian.orgE<gt>"
+msgid "Copyright (C) 2007-2009 Tobias Quathamer E<lt>toddy@debian.orgE<gt>"
+msgstr "Copyright (C) 2007-2009 Tobias Quathamer E<lt>toddy@debian.orgE<gt>"
 
 # type: Plain text
 #: isoquery.1:179

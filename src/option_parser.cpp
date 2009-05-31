@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2007-2008 Tobias Quathamer
+ * Copyright (C) 2007-2009 Tobias Quathamer
  * 
  * This file is part of Isoquery.
  * 
@@ -179,7 +179,7 @@ OptionParser::show_version()
 	string translation;
 
 	cout << PACKAGE_STRING << endl;
-	cout << _("Copyright (C) 2007-2008 Tobias Quathamer") << endl;
+	cout << _("Copyright (C) 2007-2009 Tobias Quathamer") << endl;
 
 	/* TRANSLATORS: Please change the uppercase words as appropriate for
 	your language. */

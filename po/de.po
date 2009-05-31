@@ -64,14 +64,14 @@ msgstr ""
 "  -v, --version        Anzeige der Programmversion und des Copyrights"
 
 #: src/option_parser.cpp:182
-msgid "Copyright (C) 2007-2008 Tobias Quathamer"
-msgstr "Copyright (C) 2007-2008 Tobias Quathamer"
+msgid "Copyright (C) 2007-2009 Tobias Quathamer"
+msgstr "Copyright (C) 2007-2009 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
 #: src/option_parser.cpp:186
 msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
-msgstr "Deutsche Übersetzung Copyright (C) 2007-2008 Tobias Quathamer"
+msgstr "Deutsche Übersetzung Copyright (C) 2007-2009 Tobias Quathamer"
 
 #: src/xmldata.cpp:51
 #, c-format
