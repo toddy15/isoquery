@@ -58,7 +58,7 @@ Khmr	355	Khmer
 Knda	345	Kannada
 Kore	287	Korean (alias for Hangul + Han)
 Kthi	317	Kaithi
-Lana	351	Lanna, Tai Tham
+Lana	351	Tai Thal (Lanna)
 Laoo	356	Lao
 Latf	217	Latin (Fraktur variant)
 Latg	216	Latin (Gaelic variant)
@@ -67,6 +67,7 @@ Lepc	335	Lepcha (Róng)
 Limb	336	Limbu
 Lina	400	Linear A
 Linb	401	Linear B
+Lisu	399	Lisu (Fraser)
 Lyci	202	Lycian
 Lydi	116	Lydian
 Mand	140	Mandaic, Mandaean
@@ -78,6 +79,7 @@ Moon	218	Moon (Moon code, Moon script, Moon type)
 Mong	145	Mongolian
 Mtei	337	Meitei Mayek (Meithei, Meetei)
 Mymr	350	Myanmar (Burmese)
+Nkgb	420	Nakhi Geba ('Na-'Khi ²Ggŏ-¹baw, Naxi Geba)
 Nkoo	165	N’Ko
 Ogam	212	Ogham
 Olck	261	Ol Chiki (Ol Cemet’, Ol, Santali)
@@ -90,11 +92,11 @@ Phli	131	Inscriptional Pahlavi
 Phlp	132	Psalter Pahlavi
 Phlv	133	Book Pahlavi
 Phnx	115	Phoenician
-Plrd	282	Pollard Phonetic
+Plrd	282	Miao (Pollard)
 Prti	13O	Inscriptional Parthian
 Qaaa	900	Reserved for private use (start)
 Qabx	949	Reserved for private use (end)
-Rjng	363	Rejang, Redjang, Kaganga
+Rjng	363	Rejang (Redjang, Kaganga)
 Roro	620	Rongorongo
 Runr	211	Runic
 Samr	123	Samaritan
@@ -117,7 +119,7 @@ Tavt	359	Tai Viet
 Telu	340	Telugu
 Teng	290	Tengwar
 Tfng	120	Tifinagh (Berber)
-Tglg	370	Tagalog
+Tglg	370	Tagalog (Baybayin, Alibata)
 Thaa	170	Thaana
 Thai	352	Thai
 Tibt	330	Tibetan
@@ -127,6 +129,7 @@ Visp	280	Visible Speech
 Xpeo	030	Old Persian
 Xsux	020	Cuneiform, Sumero-Akkadian
 Yiii	460	Yi
+Zinh	994	Code for inherited script
 Zmth	995	Mathematical notation
 Zsym	996	Symbols
 Zxxx	997	Code for unwritten documents

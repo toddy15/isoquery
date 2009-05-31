@@ -27,7 +27,7 @@ BZ	BLZ	084	Belize
 BJ	BEN	204	Benin
 BM	BMU	060	Bermuda
 BT	BTN	064	Bhutan
-BO	BOL	068	Bolivia
+BO	BOL	068	Bolivia, Plurinational State of
 BA	BIH	070	Bosnia and Herzegovina
 BW	BWA	072	Botswana
 BV	BVT	074	Bouvet Island
@@ -144,7 +144,7 @@ MU	MUS	480	Mauritius
 YT	MYT	175	Mayotte
 MX	MEX	484	Mexico
 FM	FSM	583	Micronesia, Federated States of
-MD	MDA	498	Moldova
+MD	MDA	498	Moldova, Republic of
 MC	MCO	492	Monaco
 MN	MNG	496	Mongolia
 ME	MNE	499	Montenegro
@@ -238,7 +238,7 @@ UM	UMI	581	United States Minor Outlying Islands
 UY	URY	858	Uruguay
 UZ	UZB	860	Uzbekistan
 VU	VUT	548	Vanuatu
-VE	VEN	862	Venezuela
+VE	VEN	862	Venezuela, Bolivarian republic of
 VN	VNM	704	Viet Nam
 VG	VGB	092	Virgin Islands, British
 VI	VIR	850	Virgin Islands, U.S.

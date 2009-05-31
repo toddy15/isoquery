@@ -134,7 +134,6 @@ SDG	938	Sudanese Pound
 SEK	752	Swedish Krona
 SGD	702	Singapore Dollar
 SHP	654	Saint Helena Pound
-SKK	703	Slovak Koruna
 SLL	694	Leone
 SOS	706	Somali Shilling
 SRD	968	Surinam Dollar
@@ -171,7 +170,7 @@ XBB	956	European Monetary Unit (E.M.U.-6)
 XBC	957	European Unit of Account 9 (E.U.A.-9)
 XBD	958	European Unit of Account 17 (E.U.A.-17)
 XCD	951	East Caribbean Dollar
-XDR	960	SDR
+XDR	960	Special Drawing Rights
 XFO		Gold-Franc
 XFU		UIC-Franc
 XOF	952	CFA Franc BCEAO
