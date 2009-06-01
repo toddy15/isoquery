@@ -1,6 +1,6 @@
-Isoquery trunk
-==============
-UNRELEASED
+Isoquery 0.18
+=============
+1 June 2009
 
 * Use gettext.h instead of libintl.h, as recommended by GNU gettext
 * Update test suite to pass with current iso-codes (3.10)
