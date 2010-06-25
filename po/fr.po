@@ -1,103 +1,148 @@
 # Translation of isoquery to French
 # This file is distributed under the same license as the isoquery package.
 #
-# Copyright (C)
-# Christian Perrier <bubulle@debian.org>, 2006, 2008.
+# Copyright © Christian Perrier <bubulle@debian.org>, 2007, 2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
-"POT-Creation-Date: 2008-11-26 09:41+0100\n"
-"PO-Revision-Date: 2008-11-26 09:41+0100\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2010-06-25 08:36+0200\n"
+"PO-Revision-Date: 2010-06-25 08:43+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/option_parser.cpp:124
-msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
-msgstr "%PROGRAM_NAME : code ISO « %CODE » non géré."
+#: isoquery/cmdline_parser.py:30
+#, fuzzy
+msgid "Usage: %prog [options] [ISO codes]"
+msgstr "Utilisation : %prog [options] [codes ISO]"
 
-#: src/option_parser.cpp:149
-msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
-msgstr "Utilisation : %PROGRAM_NAME [options] [codes ISO]"
+#: isoquery/cmdline_parser.py:36
+#, fuzzy
+msgid "STANDARD"
+msgstr "NORME"
 
-#: src/option_parser.cpp:152
-msgid "Options:"
-msgstr "Options :"
-
-#: src/option_parser.cpp:153
+#: isoquery/cmdline_parser.py:37
+#, fuzzy, python-format
 msgid ""
-"  -i, --iso=NUMBER     The ISO standard to use\n"
-"                       Possible values: 639, 3166, 4217, 15924\n"
-"                       (default: 3166)\n"
-"  -n, --name           Name for the supplied codes (default)\n"
-"  -o, --official_name  Official name for the supplied codes\n"
-"                       This may be the same as --name.\n"
-"  -c, --common_name    Common name for the supplied codes\n"
-"                       This may be the same as --name.\n"
-"  -l, --locale=LOCALE  Use this locale for output\n"
-"  -x, --xmlfile=FILE   Use another XML file with ISO data\n"
-"                       (default: /usr/share/xml/iso-codes/iso_3166.xml)\n"
-"  -0, --null           Separate entries with a NULL character instead\n"
-"                       of newline\n"
-"  -h, --help           Show this information\n"
-"  -v, --version        Show program version and copyright"
+"The ISO standard to use. Possible values: 639, 3166, 4217, 15924. Default "
+"value: %default"
 msgstr ""
-"  -i, --iso=NOMBRE      Norme ISO à utiliser\n"
-"                        Valeurs possibles: 639, 3166, 4217, 15924\n"
-"                        (défaut: 3166) ;\n"
-"  -n, --name            Retourne le nom correspondant au code demandé\n"
-"                        (défaut) ;\n"
-"  -o, --official_name   Retourne le nom officiel correspondant au\n"
-"                        code demandé.\n"
-"                        Cette valeur peut être vide ;\n"
-"  -c, --common_name     Retourne le nom courant correspondant au\n"
-"                        code demandé.\n"
-"                        Cette valeur peut être vide ;\n"
-"  -l, --locale=LOCALE   Utiliser ces paramètres régionaux (« locale »)\n"
-"                        pour la réponse ;\n"
-"  -x, --xmlfile=FICHIER Utiliser ce fichier XML comme source des données "
-"ISO ;\n"
-"                        (par défaut: /usr/share/xml/iso-codes/iso_3166.xml)\n"
-"  -0, --null            Séparer les entrées avec un caractère NULL au lieu\n"
-"                        d'un retour à la ligne ;\n"
-"  -h, --help            Afficher cette aide ;\n"
-"  -v, --version         Afficher la version du programme et les\n"
-"                        informations de copyright et de licence."
+"Norme ISO à utiliser. Valeurs possibles: 639, 3166, 4217, 15924 (défaut: %"
+"default)"
 
-#: src/option_parser.cpp:182
-msgid "Copyright (C) 2007-2009 Tobias Quathamer"
-msgstr "Copyright (C) 2007-2009 Tobias Quathamer"
+#: isoquery/cmdline_parser.py:42
+#, fuzzy
+msgid "FILE"
+msgstr "FICHIER"
+
+#: isoquery/cmdline_parser.py:43
+#, fuzzy, python-format
+msgid "Use specified XML file with ISO data. Default value: %default"
+msgstr ""
+"Utiliser ce fichier XML comme source des données ISO ; (défaut: %default)"
+
+#: isoquery/cmdline_parser.py:47
+#, fuzzy
+msgid "LOCALE"
+msgstr "LOCALE"
+
+#: isoquery/cmdline_parser.py:48
+#, fuzzy
+msgid "Use this locale for output"
+msgstr "Utiliser ces paramètres régionaux (« locale ») pour la réponse"
+
+#: isoquery/cmdline_parser.py:51
+#, fuzzy
+msgid "Display the name for the supplied codes (default)"
+msgstr "Retourne le nom correspondant au code demandé (défaut)"
+
+#: isoquery/cmdline_parser.py:55
+#, fuzzy
+msgid ""
+"Display the official name for the supplied codes. This may be the same as --"
+"name."
+msgstr ""
+"Retourne le nom officiel correspondant au code demandé. Cette valeur peut "
+"être vide."
+
+#: isoquery/cmdline_parser.py:60
+#, fuzzy
+msgid ""
+"Display the common name for the supplied codes. This may be the same as --"
+"name."
+msgstr ""
+"Retourne le nom courant correspondant au code demandé. Cette valeur peut "
+"être vide."
+
+#: isoquery/cmdline_parser.py:66
+#, fuzzy
+msgid "Separate entries with a NULL character instead of newline"
+msgstr ""
+"Séparer les entrées avec un caractère NULL au lieu d'un retour à la ligne"
+
+#: isoquery/cmdline_parser.py:70
+#, fuzzy
+msgid "Show this information"
+msgstr "Afficher cette aide"
+
+#: isoquery/cmdline_parser.py:74
+#, fuzzy
+msgid "Show program version and copyright"
+msgstr ""
+"Afficher la version du programme et les informations de copyright et de "
+"licence."
+
+#: isoquery/cmdline_parser.py:92
+#, fuzzy, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr "isoquery : norme ISO « %(standard)s » non géré.\n"
+
+#: isoquery/cmdline_parser.py:110
+#, fuzzy, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr "isoquery : Le code « %(code)s » n'existe pas dans ISO-%(standard)s.\n"
+
+#: isoquery/cmdline_parser.py:126
+#, fuzzy, python-format
+msgid "isoquery %(version)s"
+msgstr "isoquery %(version)s"
+
+#: isoquery/cmdline_parser.py:127
+msgid "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Copyright © 2007-2010 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
-#: src/option_parser.cpp:186
-msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
-msgstr "Traduction française Copyright (C) Christian Perrier"
+#: isoquery/cmdline_parser.py:130
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgstr "Traduction française Copyright © 2007-2010 Christian Perrier"
 
-#: src/xmldata.cpp:51
-#, c-format
-msgid "The file '%FILENAME' could not be opened."
-msgstr "Le fichier « %FILENAME » n'a pas pu être ouvert."
+#: isoquery/xmlfile.py:42
+#, fuzzy, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgstr "isoquery : Le fichier « %(filename)s » n'a pas pu être ouvert.\n"
 
-#: src/xmldata.cpp:64
-msgid "Error in setting up the parser."
-msgstr "Erreur de mise en place de l'analyseur."
+#: isoquery/xmlfile.py:45
+#, fuzzy, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgstr "isoquery : Le fichier « %(filename)s » ...\n"
 
-#: src/xmldata.cpp:68
-#, c-format
-msgid "libxml++ exception caught: %EXCEPTION"
-msgstr "Exception libxml++ : %EXCEPTION"
+#: isoquery/xmlfile.py:50
+#, fuzzy, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
+msgstr ""
+"isoquery : Le fichier « %(filename)s » ne contient pas de données ISO-%"
+"(standard)s valables.\n"
 
-#: src/xmldata.cpp:88
-#, c-format
-msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
-msgstr "Le fichier « %FILENAME » ne contient pas de données ISO-%CODE valables."
-
-#: src/xmldata.cpp:239
-#, c-format
-msgid "The code '%CODE' is not defined in ISO %STANDARD."
-msgstr "Le code « %CODE » n'existe pas dans ISO-%STANDARD."
+#: isoquery/xmlfile.py:64
+#, fuzzy, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgstr "isoquery : Le code « %(code)s » n'existe pas dans ISO-%(standard)s.\n"

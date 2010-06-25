@@ -1,6 +1,0 @@
-# Command line
-isoquery -i15924 -lfr Glag Perm 330
-# Expected output
-Glag	225	glagolitique
-Perm	227	ancien permien
-Tibt	330	tibétain

@@ -1,0 +1,8 @@
+isoquery-*.tar.bz2
+isoquery-*.tar.bz2.sig
+isoquery-*.tar.gz
+isoquery-*.tar.gz.sig
+isoquery.e4p
+.eric4project
+*.pyc
+.ropeproject

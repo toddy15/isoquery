@@ -1,6 +1,0 @@
-# Command line
-isoquery BEN Bg CmR
-# Expected output
-BJ	BEN	204	Benin
-BG	BGR	100	Bulgaria
-CM	CMR	120	Cameroon

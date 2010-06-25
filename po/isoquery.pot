@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Tobias Quathamer
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -7,76 +7,119 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
-"POT-Creation-Date: 2008-11-26 09:41+0100\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2010-06-25 08:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/option_parser.cpp:124
-msgid "%PROGRAM_NAME: ISO code '%CODE' not supported."
+#: isoquery/cmdline_parser.py:30
+msgid "Usage: %prog [options] [ISO codes]"
 msgstr ""
 
-#: src/option_parser.cpp:149
-msgid "Usage: %PROGRAM_NAME [options] [ISO codes]"
+#: isoquery/cmdline_parser.py:36
+msgid "STANDARD"
 msgstr ""
 
-#: src/option_parser.cpp:152
-msgid "Options:"
-msgstr ""
-
-#: src/option_parser.cpp:153
+#: isoquery/cmdline_parser.py:37
+#, python-format
 msgid ""
-"  -i, --iso=NUMBER     The ISO standard to use\n"
-"                       Possible values: 639, 3166, 4217, 15924\n"
-"                       (default: 3166)\n"
-"  -n, --name           Name for the supplied codes (default)\n"
-"  -o, --official_name  Official name for the supplied codes\n"
-"                       This may be the same as --name.\n"
-"  -c, --common_name    Common name for the supplied codes\n"
-"                       This may be the same as --name.\n"
-"  -l, --locale=LOCALE  Use this locale for output\n"
-"  -x, --xmlfile=FILE   Use another XML file with ISO data\n"
-"                       (default: /usr/share/xml/iso-codes/iso_3166.xml)\n"
-"  -0, --null           Separate entries with a NULL character instead\n"
-"                       of newline\n"
-"  -h, --help           Show this information\n"
-"  -v, --version        Show program version and copyright"
+"The ISO standard to use. Possible values: 639, 3166, 4217, 15924. Default "
+"value: %default"
 msgstr ""
 
-#: src/option_parser.cpp:182
-msgid "Copyright (C) 2007-2009 Tobias Quathamer"
+#: isoquery/cmdline_parser.py:42
+msgid "FILE"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:43
+#, python-format
+msgid "Use specified XML file with ISO data. Default value: %default"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:47
+msgid "LOCALE"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:48
+msgid "Use this locale for output"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:51
+msgid "Display the name for the supplied codes (default)"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:55
+msgid ""
+"Display the official name for the supplied codes. This may be the same as --"
+"name."
+msgstr ""
+
+#: isoquery/cmdline_parser.py:60
+msgid ""
+"Display the common name for the supplied codes. This may be the same as --"
+"name."
+msgstr ""
+
+#: isoquery/cmdline_parser.py:66
+msgid "Separate entries with a NULL character instead of newline"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:70
+msgid "Show this information"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:74
+msgid "Show program version and copyright"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:92
+#, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:110
+#, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:126
+#, python-format
+msgid "isoquery %(version)s"
+msgstr ""
+
+#: isoquery/cmdline_parser.py:127
+msgid "Copyright © 2007-2010 Tobias Quathamer"
 msgstr ""
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
-#: src/option_parser.cpp:186
-msgid "Translation to LANGUAGE Copyright (C) YEAR YOUR-NAME"
+#: isoquery/cmdline_parser.py:130
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
 msgstr ""
 
-#: src/xmldata.cpp:51
-#, c-format
-msgid "The file '%FILENAME' could not be opened."
+#: isoquery/xmlfile.py:42
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
 msgstr ""
 
-#: src/xmldata.cpp:64
-msgid "Error in setting up the parser."
+#: isoquery/xmlfile.py:45
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
 msgstr ""
 
-#: src/xmldata.cpp:68
-#, c-format
-msgid "libxml++ exception caught: %EXCEPTION"
+#: isoquery/xmlfile.py:50
+#, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
 msgstr ""
 
-#: src/xmldata.cpp:88
-#, c-format
-msgid "The file '%FILENAME' does not contain valid ISO %CODE data."
-msgstr ""
-
-#: src/xmldata.cpp:239
-#, c-format
-msgid "The code '%CODE' is not defined in ISO %STANDARD."
+#: isoquery/xmlfile.py:64
+#, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
 msgstr ""

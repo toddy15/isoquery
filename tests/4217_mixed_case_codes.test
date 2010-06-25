@@ -1,6 +1,0 @@
-# Command line
-isoquery -i4217 Eur dkK AUD
-# Expected output
-EUR	978	Euro
-DKK	208	Danish Krone
-AUD	036	Australian Dollar

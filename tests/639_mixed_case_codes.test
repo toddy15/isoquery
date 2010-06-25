@@ -1,7 +1,0 @@
-# Command line
-isoquery -i639 ARM AsT myA Br
-# Expected output
-arm	hye	hy	Armenian
-ast	ast		Asturian; Bable; Leonese; Asturleonese
-bur	mya	my	Burmese
-bre	bre	br	Breton

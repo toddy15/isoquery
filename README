@@ -1,0 +1,36 @@
+Information about the program
+-----------------------------
+
+This is isoquery 1.0, released on 25 June 2010.
+
+Description
+-----------
+
+Search and display ISO codes for countries, languages, currencies, and scripts.
+
+This program can be used to generate a tabular output of the ISO standard
+codes provided by the package iso-codes. It parses the XML files and shows
+all included ISO codes or just matching entries, if specified on the command
+line. Moreover, it's possible to get all available translations for
+the ISO standard.
+
+Dependencies
+------------
+
+This program needs Python 2.6 and python-lxml.
+
+Installation
+------------
+
+Just run "./waf configure", "./waf build", "./waf install".
+
+Author and Copyright
+--------------------
+
+Copyright © Tobias Quathamer <toddy@debian.org>
+
+License
+-------
+
+This program is released under the GNU General Public License version 3,
+see COPYING for details.

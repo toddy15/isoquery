@@ -1,6 +1,0 @@
-# Command line
-isoquery ab abc 123
-# Expected output
-The code 'ab' is not defined in ISO 3166.
-The code 'abc' is not defined in ISO 3166.
-The code '123' is not defined in ISO 3166.

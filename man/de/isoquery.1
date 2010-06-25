@@ -1,0 +1,194 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.\"*******************************************************************
+.\"
+.\" This file was generated with po4a. Translate the source file.
+.\"
+.\"*******************************************************************
+.TH ISOQUERY 1 "26. November 2008"  
+
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.de  VS
+.RS
+.sp
+.nf
+..
+.\"
+.\" Create a verbatim environment
+.de  VE
+.fi
+.sp
+.RE
+..
+
+.SH NAME
+isoquery \- Suche und Anzeige verschiedener ISO\-Codes (Land, Sprache, ...)
+
+.SH SYNOPSIS
+\fBisoquery\fP [\fIOptionen\fP] [\fIDATEI\fP] [\fIISO\-Codes\fP]
+
+.SH BESCHREIBUNG
+Diese Handbuchseite erläutert kurz das Programm \fBisoquery\fP. Es kann dazu
+verwendet werden, die vom Paket iso\-codes zur Verfügung gestellten
+ISO\-Standard\-Codes tabellarisch auszugeben. Es wertet die XML\-Dateien aus
+und zeigt entweder alle enthaltenen ISO\-Codes oder lediglich passende
+Einträge, wenn diese auf der Kommandozeile angegeben werden. Außerdem ist es
+möglich, alle verfügbaren Übersetzungen für den ISO\-Standard zu erhalten.
+
+.SH OPTIONEN
+Dieses Programm folgt dem üblichen Format der GNU Kommandozeilenoptionen, in
+dem lange Optionen mit zwei Minuszeichen beginnen (»\-«). \fBisoquery\fP
+unterstützt die folgenden Optionen:
+.TP 
+\fB\-i, \-\-iso=NUMMER\fP
+Der gewünschte ISO\-Standard. Mögliche Werte: 639, 3166, 4217, 15924
+(Voreinstellung: 3166)
+.TP 
+\fB\-n, \-\-name\fP
+Name der übergebenen Codes (Voreinstellung)
+.TP 
+\fB\-o, \-\-official_name\fP
+Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie
+\-\-name.
+.TP 
+\fB\-c, \-\-common_name\fP
+Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie \-\-name.
+.TP 
+\fB\-l, \-\-locale=LOCALE\fP
+Diese Locale für die Ausgabe verwenden.
+.TP 
+\fB\-x, \-\-xmlfile=DATEI\fP
+Eine andere XML\-Datei mit ISO\-Daten verwenden (Voreinstellung:
+/usr/share/xml/iso\-codes/iso_3166.xml)
+.TP 
+\fB\-0, \-\-null\fP
+Einträge durch ein NULL\-Zeichen anstatt des Zeilenumbruches voneinander
+trennen.
+.TP 
+\fB\-h, \-\-help\fP
+Anzeige dieser Informationen.
+.TP 
+\fB\-v, \-\-version\fP
+Anzeige der Programmversion und des Copyrights.
+
+.SH BEISPIELE
+Wenn \fBisoquery\fP ohne Kommandozeilenoptionen aufgerufen wird, gibt das
+Programm eine Tabelle mit allen ISO 3166 Codes aus. Die ersten drei Spalten
+enthalten den Alpha\-2\-Code, den Alpha\-3\-Code und den nummerischen Code, die
+dem Land zugewiesen sind, das in der vierten Spalte aufgelistet wird.
+.VS
+$ isoquery
+AF      AFG     004     Afghanistan
+[...]
+ZW      ZWE     716     Zimbabwe
+.VE
+Wenn Sie nur einige Länder benötigen, können Sie Codes angeben, die in den
+ersten drei Spalten angezeigt werden. Dadurch wird die Ausgabe auf die
+passenden Einträge beschränkt.
+.VS
+$ isoquery so nor 484
+SO      SOM     706     Somalia
+NO      NOR     578     Norway
+MX      MEX     484     Mexico
+.VE
+Wenn Sie die Übersetzung der Ländernamen brauchen, geben Sie einfach die
+Locale an, in der Sie die Ausgabe benötigen. Bitte beachten Sie, dass der
+ursprüngliche englische Name angezeigt wird, wenn es für die angegebene
+Locale keine Übersetzung gibt.
+.VS
+$ isoquery \-\-locale=nl fr de es
+FR      FRA     250     Frankrijk
+DE      DEU     276     Duitsland
+ES      ESP     724     Spanje
+.VE
+All das oben gesagte funktioniert ebenso für andere ISO\-Standards, so können
+Sie beispielsweise mit der Kommandozeilenoption \-\-iso auf Sprachennamen
+umstellen. Bei ISO 639 enthalten die ersten drei Spalten den ISO 639 2B
+Code, den ISO 639 2T Code und den ISO 639\-1 Code. Die dritte Spalte kann
+leer sein.
+.VS
+$ isoquery \-\-iso=639
+aar     aar     aa      Afar
+abk     abk     ab      Abkhazian
+ace     ace             Achinese
+[...]
+zun     zun             Zuni
+zxx     zxx             No linguistic content
+zza     zza             Zaza; Dimili; Dimli; Kirdki
+.VE
+Sie können die Ergebnisse einschränken, indem Sie nur einzelne Codes
+angeben. Weiterhin ist auch hier die Möglichkeit vorhanden, übersetzte Namen
+zu erhalten.
+.VS
+$ isoquery \-\-iso=639 \-\-locale=pt vi bo kl
+vie     vie     vi      Vietnamita
+tib     bod     bo      tibetano
+kal     kal     kl      Kalaallisut; Greenlandic
+.VE
+Sie können Übersetzungen für ausgewählte Währungsnamen aus dem ISO 4217
+Standard erhalten, wenn Sie den folgenden Befehl eingeben. Die ersten beiden
+Spalten sind der Alpha\-3\-Code und der nummerische Code, die der Währung
+zugewiesen sind.
+.VS
+$ isoquery \-\-iso=4217 \-\-locale=da cad 392
+CAD     124     Canadisk dollar
+JPY     392     Japansk yen
+.VE
+Wenn Sie Skriptnamen benötigen, können Sie die Tabelle für ISO 15924
+verwenden. Die ersten beiden Spalten sind der Alpha\-4\-Code und der
+nummerische Code, die der Währung zugewiesen sind.
+.VS
+$ isoquery \-\-iso=15924 jpan latn 280
+Jpan    413     Japanese (alias for Han + Hiragana + Katakana)
+Latn    215     Latin
+Visp    280     Visible Speech
+.VE
+
+.SH DATEIEN
+In der Voreinstellung werden die Dateien verwendet, die durch das Paket
+iso\-codes zur Verfügung gestellt werden.
+.br
+\fI/usr/share/xml/iso\-codes/iso_639.xml\fP
+.br
+\fI/usr/share/xml/iso\-codes/iso_3166.xml\fP
+.br
+\fI/usr/share/xml/iso\-codes/iso_4217.xml\fP
+.br
+\fI/usr/share/xml/iso\-codes/iso_15924.xml\fP
+
+.SH LIZENZ
+Copyright (C) 2007\-2009 Tobias Quathamer <toddy@debian.org>
+.PP
+Isoquery ist freie Software. Sie können es unter den Bedingungen der GNU
+General Public License, wie von der Free Software Foundation veröffentlicht,
+weitergeben und/oder modifizieren, entweder gemäß Version 3 der Lizenz oder
+(nach Ihrer Option) jeder späteren Version.
+.PP
+Die Veröffentlichung von Isoquery erfolgt in der Hoffnung, dass es Ihnen von
+Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die implizite
+Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN
+ZWECK. Details finden Sie in der GNU General Public License.
+.PP
+Sie sollten ein Exemplar der GNU General Public License zusammen mit diesem
+Programm erhalten haben. Falls nicht, siehe
+<http://www.gnu.org/licenses/>.
+
+.SH AUTOR
+Tobias Quathamer <toddy@debian.org>
+
+.SH ÜBERSETZUNG
+
+Tobias Quathamer <toddy@debian.org>

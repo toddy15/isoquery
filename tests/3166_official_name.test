@@ -1,7 +1,0 @@
-# Command line
-isoquery --official_name dz ar no nf
-# Expected output
-DZ	DZA	012	People's Democratic Republic of Algeria
-AR	ARG	032	Argentine Republic
-NO	NOR	578	Kingdom of Norway
-NF	NFK	574	Norfolk Island

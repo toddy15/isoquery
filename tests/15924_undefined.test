@@ -1,5 +1,0 @@
-# Command line
-isoquery -i15924 Abcd 321
-# Expected output
-The code 'Abcd' is not defined in ISO 15924.
-The code '321' is not defined in ISO 15924.
