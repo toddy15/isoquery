@@ -1,6 +1,4 @@
-# automake options for Isoquery
-#
-# Copyright (C) 2007-2009 Tobias Quathamer
+# Copyright (C) 2007-2010 Tobias Quathamer
 #
 # This file is part of Isoquery.
 # 
@@ -18,28 +16,23 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-all-local: man.stamp
+srcdir=.
 
-# FIXME: Use a stamp file until po4a supports them internally.
-man.stamp:
-	po4a --no-backups --variable srcdir=$(srcdir) \
-		$(srcdir)/isoquery.cfg
-	touch $@
+# Extract the list of languages from the po4a config file.
+LINGUAS = $(shell sed -ne 's/^.*\[po4a_langs\] \(.*\)$$/\1/p' $(srcdir)/isoquery.cfg)
 
-clean-local:
+clean:
 	for lang in $(LINGUAS); do \
 		if [ -d $(srcdir)/$$lang ]; then \
 			rm -rf $(srcdir)/$$lang ; \
 		fi ; \
 		rm -f $(srcdir)/$$lang.po~ ; \
 	done
-	rm -f man.stamp
 
+.PHONY: update-po
 update-po:
 	po4a --no-backups --force --variable srcdir=$(srcdir) ./isoquery.cfg
 
-# Extract the list of languages from the po4a config file.
-LINGUAS = $(shell sed -ne 's/^.*\[po4a_langs\] \(.*\)$$/\1/p' $(srcdir)/isoquery.cfg)
 
 install-data-local:
 	for lang in $(LINGUAS); do \
@@ -75,5 +68,3 @@ dist-hook: man.stamp
 dist_man_MANS = isoquery.1
 
 EXTRA_DIST = isoquery.cfg isoquery-man.pot
-
-.PHONY: update-po
