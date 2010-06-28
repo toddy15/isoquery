@@ -1,5 +1,7 @@
-PO4A-HEADER:mode=after;position=AUTOR;beginboundary=\.SH
+PO4A-HEADER:mode=after;position=AUTOR;beginboundary=FakePo4aBoundary
 
-.SH ÜBERSETZUNG
+
+ÜBERSETZUNG
+===========
 
 Tobias Quathamer <toddy@debian.org>
