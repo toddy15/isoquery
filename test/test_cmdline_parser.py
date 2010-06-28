@@ -37,7 +37,7 @@ class TestCmdlineParser(unittest.TestCase):
 
     def test_02_valid_isostandards(self):
         """Check that all supported ISO standards are parsed correctly"""
-        supported = ["639", "3166", "4217", "15924"]
+        supported = ["639", "639-3",  "3166", "4217", "15924"]
         for standard in supported:
             p = cmdline_parser.CmdlineParser()
             cmdline = "-i" + standard
@@ -49,7 +49,7 @@ class TestCmdlineParser(unittest.TestCase):
 
     def test_03_invalid_isostandards(self):
         """Check that unsupported ISO standards are rejected"""
-        unsupported = ["1234", "letters", "3166-2", "3166_2", "639-3", "639_3"]
+        unsupported = ["1234", "letters", "3166-2", "3166_2"]
         for standard in unsupported:
             p = cmdline_parser.CmdlineParser()
             # Temporarily capture output for testing purposes
@@ -72,12 +72,12 @@ class TestCmdlineParser(unittest.TestCase):
 
     def test_04_default_xmlfiles(self):
         """Check for correct default XML file, depending on ISO standard"""
-        supported = ["639", "3166", "4217", "15924"]
+        supported = ["639", "639-3", "3166", "4217", "15924"]
         xml_path = "/usr/share/xml/iso-codes/iso_"
         for standard in supported:
             p = cmdline_parser.CmdlineParser()
             cmdline = "-i" + standard
-            default_xmlfile = xml_path + standard + ".xml"
+            default_xmlfile = xml_path + standard.replace('-', '_') + ".xml"
             (options, args) = p.parse(cmdline)
             self.assertEqual(options.xmlfile, default_xmlfile)
             cmdline = "--iso=" + standard

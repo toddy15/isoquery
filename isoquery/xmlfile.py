@@ -47,7 +47,7 @@ class XMLFile():
                                "be parsed correctly.\n").encode("utf-8") % {'filename': self.xmlfile})
             sys.exit(1)
         root = self.xml.getroot()
-        expected_tag = "iso_" + self.iso + "_entries"
+        expected_tag = "iso_" + self.iso.replace('-', '_') + "_entries"
         if root.tag != expected_tag:
             sys.stderr.write(_(u"isoquery: The file '%(filename)s' does not contain " \
                                "valid ISO %(standard)s data.\n").encode("utf-8") % \
@@ -71,7 +71,7 @@ class XMLFile():
 
     def show_all_codes(self):
         """Show all codes"""
-        wanted_tag = "iso_" + self.iso + "_entry"
+        wanted_tag = "iso_" + self.iso.replace('-', '_') + "_entry"
         for entry in self.xml.iter():
             if (entry.tag == wanted_tag):
                 self.display_entry(entry)
@@ -95,7 +95,7 @@ class XMLFile():
     def display_entry(self, entry):
         # Set up translation infrastructure, if output locale is provided
         if self.locale != "":
-            t = gettext.translation("iso_" + self.iso,
+            t = gettext.translation("iso_" + self.iso.replace('-', '_'),
                                     languages=[self.locale])
         output = []
         codes = self.get_display_codes()

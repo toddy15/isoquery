@@ -35,7 +35,7 @@ class CmdlineParser():
                                default='3166',
                                metavar=_("STANDARD"),
                                help=_("The ISO standard to use. " \
-                               "Possible values: 639, 3166, 4217, 15924. " \
+                               "Possible values: 639, 639-3, 3166, 4217, 15924. " \
                                "Default value: %default"))
         self.parser.add_option('-x', '--xmlfile',
                                default='/usr/share/xml/iso-codes/iso_3166.xml',
@@ -87,7 +87,7 @@ class CmdlineParser():
         if self.options.show_version is not None:
             self.show_version_and_copyright()
         # Assure a supported ISO standard
-        supported = ["639", "3166", "4217", "15924"]
+        supported = ["639", "639-3", "3166", "4217", "15924"]
         if self.options.iso not in supported:
             sys.stderr.write(_(u"isoquery: ISO standard '%(standard)s' " \
                                "is not supported.\n").encode("utf-8") % \
@@ -97,14 +97,14 @@ class CmdlineParser():
         # we get the default from above, so set the correct file
         if self.options.xmlfile == "/usr/share/xml/iso-codes/iso_3166.xml":
             self.options.xmlfile = "/usr/share/xml/iso-codes/iso_"
-            self.options.xmlfile += self.options.iso
+            self.options.xmlfile += self.options.iso.replace('-', '_')
             self.options.xmlfile += ".xml"
         # Remove extra spaces from locale
         self.options.locale = self.options.locale.strip()
         # Ensure that the locale does exist for the given ISO standard
         if self.options.locale != "":
             try:
-                t = gettext.translation("iso_" + self.options.iso,
+                t = gettext.translation("iso_" + self.options.iso.replace('-', '_'),
                                         languages=[self.options.locale])
             except IOError:
                 sys.stderr.write(_(u"isoquery: The locale '%(locale)s' is not " \
