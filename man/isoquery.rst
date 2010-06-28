@@ -122,6 +122,18 @@ the option to get translated names is also available.
   tib     bod     bo      tibetano
   kal     kal     kl      Kalaallisut; Greenlandic
 
+If you want to use ISO 639-3, the displayed columns are id, scope, type,
+part 1 code, part 2 code, and the language name. Both part 1 and part 2
+may be empty.
+
+::
+
+  $ isoquery -i 639-3 aal new spa guc
+  aal     I       L                       Afade
+  new     I       L               new     Bhasa, Nepal
+  spa     I       L       es      spa     Spanish
+  guc     I       L                       Wayuu
+
 You can get selected translations of currency names from the ISO 4217
 standard by using the following command. The first two columns are the
 alpha-3 code and the numerical code assigned to the currency.
