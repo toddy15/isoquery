@@ -33,6 +33,10 @@ clean:
 update-po:
 	po4a --no-backups --variable srcdir=$(srcdir) ./isoquery.cfg
 
+.PHONY: update-man
+update-man:
+	rst2man isoquery.rst > isoquery.1
+	rst2man de/isoquery.rst > de/isoquery.1
 
 install-data-local:
 	for lang in $(LINGUAS); do \
