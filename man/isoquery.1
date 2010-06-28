@@ -1,122 +1,144 @@
-.TH ISOQUERY 1 "November 26, 2008"
-.\" Please adjust this date whenever revising the manpage.
-.\"
-.\" Some roff macros, for reference:
-.\" .nh        disable hyphenation
-.\" .hy        enable hyphenation
-.\" .ad l      left justify
-.\" .ad b      justify to both left and right margins
-.\" .nf        disable filling
-.\" .fi        enable filling
-.\" .br        insert line break
-.\" .sp <n>    insert n+1 empty lines
-.\" for manpage-specific macros, see man(7)
-
-.\"
-.\" Create a verbatim environment
-.de VS
-.RS
-.sp
-.nf
-..
-.de VE
-.fi
-.sp
-.RE
-..
-
+.\" Man page generated from reStructeredText.
+.
+.TH ISOQUERY 1 "2010-06-28" "1.0" ""
 .SH NAME
 isoquery \- Search and display various ISO codes (country, language, ...)
-
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
 .SH SYNOPSIS
-.B isoquery
-.RI [ options "] [" file "] [" "ISO codes" ]
-
+.sp
+\fBisoquery\fP [\fIoptions\fP] [\fIfile\fP] [\fIISO codes\fP]
 .SH DESCRIPTION
-This manual page documents briefly the
-.B isoquery
-command.
+.sp
+This manual page documents briefly the \fBisoquery\fP command.
 It can be used to generate a tabular output of the ISO standard
-codes provided by the package iso-codes.
+codes provided by the package iso\-codes.
 It parses the XML files and shows all included ISO codes or just
 matching entries, if specified on the command line.
-Moreover, it's possible to get all available translations for
+Moreover, it\(aqs possible to get all available translations for
 the ISO standard.
-
 .SH OPTIONS
-This program follows the usual GNU command line syntax, with long
-options starting with two dashes (`\-').
-.B isoquery
-supports the following options:
+.sp
+This program follows the usual GNU command line syntax, with long options
+starting with two dashes (\(aq\-\(aq). \fBisoquery\fP supports the following options:
+.INDENT 0.0
 .TP
-.B \-i, \-\-iso=NUMBER
-The ISO standard to use.
-Possible values: 639, 3166, 4217, 15924 (default: 3166)
+.BI \-i \ NUMBER, \ \-\-iso\fB= NUMBER
+.
+The ISO standard to use. Possible values: 639,
+639\-3, 3166, 4217, 15924 (default: 3166)
 .TP
-.B \-n, \-\-name
+.B \-n,  \-\-name
+.
 Name for the supplied codes (default)
 .TP
-.B \-o, \-\-official_name
+.B \-o,  \-\-official_name
+.
 Official name for the supplied codes.
 This may be the same as \-\-name.
 .TP
-.B \-c, \-\-common_name
+.B \-c,  \-\-common_name
+.
 Common name for the supplied codes.
 This may be the same as \-\-name.
 .TP
-.B \-l, \-\-locale=LOCALE
+.BI \-l \ LOCALE, \ \-\-locale\fB= LOCALE
+.
 Use this locale for output.
 .TP
-.B \-x, \-\-xmlfile=FILE
+.BI \-x \ FILE, \ \-\-xmlfile\fB= FILE
+.
 Use another XML file with ISO data.
-(default: /usr/share/xml/iso-codes/iso_3166.xml)
+(default: /usr/share/xml/iso\-codes/iso_3166.xml)
 .TP
-.B \-0, \-\-null
-Separate entries with a NULL character instead of newline.
+.B \-0,  \-\-null
+.
+Separate entries with a NULL character instead
+of newline.
 .TP
-.B \-h, \-\-help
+.B \-h,  \-\-help
+.
 Show summary of options.
 .TP
-.B \-v, \-\-version
+.B \-v,  \-\-version
+.
 Show program version and copyright.
-
+.UNINDENT
 .SH EXAMPLES
-If called without any command line options,
-.B isoquery
-will put out a table of all ISO 3166 codes.
-The first three columns contain the alpha\-2 code, the alpha\-3 code,
-and the numerical code assigned to the country listed in the
-fourth column.
-.VS
+.sp
+If called without any command line options, \fBisoquery\fP will put out a
+table of all ISO 3166 codes. The first three columns contain the alpha\-2 code,
+the alpha\-3 code, and the numerical code assigned to the country listed
+in the fourth column.
+.sp
+.nf
+.ft C
 $ isoquery
 AF      AFG     004     Afghanistan
 [...]
 ZW      ZWE     716     Zimbabwe
-.VE
+.ft P
+.fi
+.sp
 If you need only some countries, you can specify any of the codes in
 the first three columns to cut down the output.
-.VS
+.sp
+.nf
+.ft C
 $ isoquery so nor 484
 SO      SOM     706     Somalia
 NO      NOR     578     Norway
 MX      MEX     484     Mexico
-.VE
-Should you need the translations of the countries' names, just specify
-in which locale you'd like to see the output.
+.ft P
+.fi
+.sp
+Should you need the translations of the countries\(aq names, just specify
+in which locale you\(aqd like to see the output.
 Please note that the original English name will be shown if there is no
 translation available for the specified locale.
-.VS
+.sp
+.nf
+.ft C
 $ isoquery \-\-locale=nl fr de es
 FR      FRA     250     Frankrijk
 DE      DEU     276     Duitsland
 ES      ESP     724     Spanje
-.VE
+.ft P
+.fi
+.sp
 All of the above works for different ISO standards as well, so you can
 switch to language names by using the \-\-iso command line option.
 For ISO 639, the first three columns are the ISO 639 2B code, the
 ISO 639 2T code and the ISO 639\-1 code.
 The third column may be empty.
-.VS
+.sp
+.nf
+.ft C
 $ isoquery \-\-iso=639
 aar     aar     aa      Afar
 abk     abk     ab      Abkhazian
@@ -125,62 +147,57 @@ ace     ace             Achinese
 zun     zun             Zuni
 zxx     zxx             No linguistic content
 zza     zza             Zaza; Dimili; Dimli; Kirdki
-.VE
+.ft P
+.fi
+.sp
 You can trim down the results by specifying only some codes. Moreover,
 the option to get translated names is also available.
-.VS
+.sp
+.nf
+.ft C
 $ isoquery \-\-iso=639 \-\-locale=pt vi bo kl
 vie     vie     vi      Vietnamita
 tib     bod     bo      tibetano
 kal     kal     kl      Kalaallisut; Greenlandic
-.VE
+.ft P
+.fi
+.sp
 You can get selected translations of currency names from the ISO 4217
-standard by using the following command.
-The first two columns are the alpha\-3 code and the numerical code
-assigned to the currency.
-.VS
+standard by using the following command. The first two columns are the
+alpha\-3 code and the numerical code assigned to the currency.
+.sp
+.nf
+.ft C
 $ isoquery \-\-iso=4217 \-\-locale=da cad 392
 CAD     124     Canadisk dollar
 JPY     392     Japansk yen
-.VE
+.ft P
+.fi
+.sp
 If you need to get script names, you can use the ISO 15924 table.
 The first two columns are the alpha\-4 code and the numerical code
 assigned to the script.
-.VS
+.sp
+.nf
+.ft C
 $ isoquery \-\-iso=15924 jpan latn 280
 Jpan    413     Japanese (alias for Han + Hiragana + Katakana)
 Latn    215     Latin
 Visp    280     Visible Speech
-.VE
-
+.ft P
+.fi
 .SH FILES
-By default, the XML files provided by the iso-codes package
-will be used.
-.br
-.I /usr/share/xml/iso-codes/iso_639.xml
-.br
-.I /usr/share/xml/iso-codes/iso_3166.xml
-.br
-.I /usr/share/xml/iso-codes/iso_4217.xml
-.br
-.I /usr/share/xml/iso-codes/iso_15924.xml
-
-.SH LICENSE
-Copyright (C) 2007-2009 Tobias Quathamer <toddy@debian.org>
-.PP
-Isoquery is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 3 of the License, or
-(at your option) any later version.
-.PP
-Isoquery is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU General Public License for more details.
-.PP
-You should have received a copy of the GNU General Public License
-along with this program.
-If not, see <http://www.gnu.org/licenses/>.
-
+.sp
+By default, the XML files provided by the iso\-codes package will be used.
+.sp
+\fI/usr/share/xml/iso\-codes/iso_639.xml\fP
+\fI/usr/share/xml/iso\-codes/iso_639_3.xml\fP
+\fI/usr/share/xml/iso\-codes/iso_3166.xml\fP
+\fI/usr/share/xml/iso\-codes/iso_4217.xml\fP
+\fI/usr/share/xml/iso\-codes/iso_15924.xml\fP
 .SH AUTHOR
-Tobias Quathamer <toddy@debian.org>
+.sp
+Tobias Quathamer <\fI\%toddy@debian.org\fP>
+.\" Generated by docutils manpage writer.
+.\" 
+.
