@@ -31,7 +31,7 @@ clean:
 
 .PHONY: update-po
 update-po:
-	po4a --no-backups --force --variable srcdir=$(srcdir) ./isoquery.cfg
+	po4a --no-backups --variable srcdir=$(srcdir) ./isoquery.cfg
 
 
 install-data-local:
