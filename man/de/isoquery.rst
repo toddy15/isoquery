@@ -111,6 +111,18 @@ zu erhalten.
   tib     bod     bo      tibetano
   kal     kal     kl      Kalaallisut; Greenlandic
 
+Wenn Sie ISO 639-3 verwenden wollen, sind die angezeigten Spalten id, scope,
+type, part 1 code, part 2 code sowie der Sprachenname. Sowohl part 1 als
+auch part 2 können leer sein.
+
+::
+
+  $ isoquery -i 639-3 aal new spa guc
+  aal     I       L                       Afade
+  new     I       L               new     Bhasa, Nepal
+  spa     I       L       es      spa     Spanish
+  guc     I       L                       Wayuu
+
 Sie können Übersetzungen für ausgewählte Währungsnamen aus dem ISO 4217
 Standard erhalten, wenn Sie den folgenden Befehl eingeben. Die ersten beiden
 Spalten sind der Alpha-3-Code und der nummerische Code, die der Währung

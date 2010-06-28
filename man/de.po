@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
-"POT-Creation-Date: 2010-06-28 15:39+0300\n"
-"PO-Revision-Date: 2010-06-28 16:09+0100\n"
+"POT-Creation-Date: 2010-06-28 16:38+0300\n"
+"PO-Revision-Date: 2010-06-28 16:39+0100\n"
 "Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -202,7 +202,7 @@ msgstr ""
 
 #. type: Plain text
 #: isoquery.rst:70 isoquery.rst:80 isoquery.rst:92 isoquery.rst:105
-#: isoquery.rst:119 isoquery.rst:130 isoquery.rst:140
+#: isoquery.rst:119 isoquery.rst:130 isoquery.rst:142 isoquery.rst:152
 msgid "::"
 msgstr "::"
 
@@ -340,9 +340,37 @@ msgstr ""
 "  tib     bod     bo      tibetano\n"
 "  kal     kal     kl      Kalaallisut; Greenlandic\n"
 
-# type: Plain text
 #. type: Plain text
 #: isoquery.rst:128
+msgid ""
+"If you want to use ISO 639-3, the displayed columns are id, scope, type, "
+"part 1 code, part 2 code, and the language name. Both part 1 and part 2 may "
+"be empty."
+msgstr ""
+"Wenn Sie ISO 639-3 verwenden wollen, sind die angezeigten Spalten id, scope, "
+"type, part 1 code, part 2 code sowie der Sprachenname. Sowohl part 1 als "
+"auch part 2 können leer sein."
+
+# type: Plain text
+#. type: Plain text
+#: isoquery.rst:136
+#, no-wrap
+msgid ""
+"  $ isoquery -i 639-3 aal new spa guc\n"
+"  aal     I       L                       Afade\n"
+"  new     I       L               new     Bhasa, Nepal\n"
+"  spa     I       L       es      spa     Spanish\n"
+"  guc     I       L                       Wayuu\n"
+msgstr ""
+"  $ isoquery -i 639-3 aal new spa guc\n"
+"  aal     I       L                       Afade\n"
+"  new     I       L               new     Bhasa, Nepal\n"
+"  spa     I       L       es      spa     Spanish\n"
+"  guc     I       L                       Wayuu\n"
+
+# type: Plain text
+#. type: Plain text
+#: isoquery.rst:140
 msgid ""
 "You can get selected translations of currency names from the ISO 4217 "
 "standard by using the following command. The first two columns are the alpha-"
@@ -355,7 +383,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: isoquery.rst:134
+#: isoquery.rst:146
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=4217 --locale=da cad 392\n"
@@ -368,7 +396,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: isoquery.rst:138
+#: isoquery.rst:150
 msgid ""
 "If you need to get script names, you can use the ISO 15924 table.  The first "
 "two columns are the alpha-4 code and the numerical code assigned to the "
@@ -380,7 +408,7 @@ msgstr ""
 
 # type: Plain text
 #. type: Plain text
-#: isoquery.rst:145
+#: isoquery.rst:157
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=15924 jpan latn 280\n"
@@ -395,14 +423,14 @@ msgstr ""
 
 # type: SH
 #. type: Title =
-#: isoquery.rst:148
+#: isoquery.rst:160
 #, no-wrap
 msgid "FILES\n"
 msgstr "DATEIEN\n"
 
 # type: Plain text
 #. type: Plain text
-#: isoquery.rst:151
+#: isoquery.rst:163
 msgid ""
 "By default, the XML files provided by the iso-codes package will be used."
 msgstr ""
@@ -410,7 +438,7 @@ msgstr ""
 "codes zur Verfügung gestellt werden."
 
 #. type: Plain text
-#: isoquery.rst:157
+#: isoquery.rst:169
 #, no-wrap
 msgid ""
 "*/usr/share/xml/iso-codes/iso_639.xml*\n"
@@ -427,13 +455,13 @@ msgstr ""
 
 # type: SH
 #. type: Title =
-#: isoquery.rst:160
+#: isoquery.rst:172
 #, no-wrap
 msgid "AUTHOR\n"
 msgstr "AUTOR\n"
 
 # type: Plain text
 #. type: Plain text
-#: isoquery.rst:162
+#: isoquery.rst:174
 msgid "Tobias Quathamer <toddy@debian.org>"
 msgstr "Tobias Quathamer <toddy@debian.org>"
