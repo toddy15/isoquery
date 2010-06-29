@@ -25,7 +25,7 @@ def configure(conf):
     # Check that required programs are available
     conf.find_program('msgfmt', var='MSGFMT', mandatory=True)
     conf.check_tool('python')
-    conf.check_python_version((2,6))
+    conf.check_python_version((2,4))
 
 def build(bld):
     # Compile python files

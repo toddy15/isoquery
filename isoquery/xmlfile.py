@@ -64,7 +64,10 @@ class XMLFile():
             for code in arguments:
                 try:
                     self.show_single_code(code)
-                except CodeNotDefinedError as code:
+                # TODO: Use 'except CodeNotDefinedError as code:'
+                # when Python 2.5 is no longer supported (currently,
+                # this enables backports to Lenny)
+                except CodeNotDefinedError, code:
                     sys.stderr.write(_(u"isoquery: The code '%(code)s' is not " \
                                        "defined in ISO %(standard)s.\n").encode("utf-8") % \
                                        {"code": code.value, "standard": self.iso})
