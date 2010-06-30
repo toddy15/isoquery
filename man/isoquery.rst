@@ -96,10 +96,20 @@ translation available for the specified locale.
     ES      ESP     724     Spanje
 
 All of the above works for different ISO standards as well, so you can
-switch to language names by using the --iso command line option.
+switch to the more extensive standard ISO 3166-2 by using the --iso command
+line option. The columns are country code, subset type (e.g. State, Province,
+etc.), ISO 3166-2 code, parent, and name. Please note that the fourth column
+(parent) may be empty.
+
+::
+
+  $ isoquery --iso=3166-2
+  AD      Parish  AD-07           Andorra la Vella
+  [...]
+  ZW      Province        ZW-MI           Midlands
+
 For ISO 639, the first three columns are the ISO 639 2B code, the
-ISO 639 2T code and the ISO 639-1 code.
-The third column may be empty.
+ISO 639 2T code and the ISO 639-1 code. The third column may be empty.
 
 ::
 
