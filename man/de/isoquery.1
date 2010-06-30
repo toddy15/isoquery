@@ -50,7 +50,15 @@ unterstützt die folgenden Optionen:
 .TP
 .BI \-i \ NUMMER, \ \-\-iso\fB= NUMMER
 .
-Der gewünschte ISO\-Standard. Mögliche Werte: 639, 639\-3, 3166, 4217, 15924 (Voreinstellung: 3166)
+Der gewünschte ISO\-Standard. Mögliche Werte: 639, 639\-3, 3166, 3166\-2, 4217, 15924 (Voreinstellung: 3166)
+.TP
+.BI \-x \ DATEI, \ \-\-xmlfile\fB= DATEI
+.
+Eine andere XML\-Datei mit ISO\-Daten verwenden (Voreinstellung: /usr/share/xml/iso\-codes/iso_3166.xml)
+.TP
+.BI \-l \ LOCALE, \ \-\-locale\fB= LOCALE
+.
+Diese Locale für die Ausgabe verwenden.
 .TP
 .B \-n,  \-\-name
 .
@@ -58,19 +66,11 @@ Name der übergebenen Codes (Voreinstellung)
 .TP
 .B \-o,  \-\-official_name
 .
-Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie \-\-name.
+Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie \-\-name. (Gilt nur für ISO 3166)
 .TP
 .B \-c,  \-\-common_name
 .
-Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie \-\-name.
-.TP
-.BI \-l \ LOCALE, \ \-\-locale\fB= LOCALE
-.
-Diese Locale für die Ausgabe verwenden.
-.TP
-.BI \-x \ DATEI, \ \-\-xmlfile\fB= DATEI
-.
-Eine andere XML\-Datei mit ISO\-Daten verwenden (Voreinstellung: /usr/share/xml/iso\-codes/iso_3166.xml)
+Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie \-\-name. (Gilt nur für ISO 3166)
 .TP
 .B \-0,  \-\-null
 .
@@ -128,10 +128,23 @@ ES      ESP     724     Spanje
 .fi
 .sp
 All das oben gesagte funktioniert ebenso für andere ISO\-Standards, so können
-Sie beispielsweise mit der Kommandozeilenoption \-\-iso auf Sprachennamen
-umstellen. Bei ISO 639 enthalten die ersten drei Spalten den ISO 639 2B
-Code, den ISO 639 2T Code und den ISO 639\-1 Code. Die dritte Spalte kann
-leer sein.
+Sie beispielsweise mit der Kommandozeilenoption \-\-iso auf den
+ausführlicheren Standard ISO 3166\-2 umstellen. Die Spalten sind Ländercode,
+Art des Unterbereichs (z. B. Bundesstaat, Provinz usw.), der ISO 3166\-2
+Code, der übergeordnete Bereich sowie der Name. Bitte beachten Sie, dass die
+vierte Spalte (übergeordneter Bereich) leer sein kann.
+.sp
+.nf
+.ft C
+$ isoquery \-\-iso=3166\-2
+AD      Parish  AD\-07           Andorra la Vella
+[...]
+ZW      Province        ZW\-MI           Midlands
+.ft P
+.fi
+.sp
+Bei ISO 639 enthalten die ersten drei Spalten den ISO 639 2B Code, den ISO
+639 2T Code und den ISO 639\-1 Code. Die dritte Spalte kann leer sein.
 .sp
 .nf
 .ft C
@@ -156,6 +169,20 @@ $ isoquery \-\-iso=639 \-\-locale=pt vi bo kl
 vie     vie     vi      Vietnamita
 tib     bod     bo      tibetano
 kal     kal     kl      Kalaallisut; Greenlandic
+.ft P
+.fi
+.sp
+Wenn Sie ISO 639\-3 verwenden wollen, sind die angezeigten Spalten id, scope,
+type, part 1 code, part 2 code sowie der Sprachenname. Sowohl part 1 als
+auch part 2 können leer sein.
+.sp
+.nf
+.ft C
+$ isoquery \-i 639\-3 aal new spa guc
+aal     I       L                       Afade
+new     I       L               new     Bhasa, Nepal
+spa     I       L       es      spa     Spanish
+guc     I       L                       Wayuu
 .ft P
 .fi
 .sp

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-06-28 16:38+0300\n"
+"POT-Creation-Date: 2010-06-30 20:02+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,43 +90,46 @@ msgstr ""
 #, no-wrap
 msgid ""
 "-i NUMBER, --iso=NUMBER     The ISO standard to use. Possible values: 639,\n"
-"                            639-3, 3166, 4217, 15924 (default: 3166)\n"
+"                            639-3, 3166, 3166-2, 4217, 15924 (default: "
+"3166)\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:41
+#: ./isoquery.rst:42
+#, no-wrap
+msgid ""
+"-x FILE, --xmlfile=FILE     Use another XML file with ISO data.\n"
+"                            (default: "
+"/usr/share/xml/iso-codes/iso_3166.xml)\n"
+msgstr ""
+
+#. type: Plain text
+#: ./isoquery.rst:44
+msgid "-l LOCALE, --locale=LOCALE Use this locale for output."
+msgstr ""
+
+#. type: Plain text
+#: ./isoquery.rst:46
 #, no-wrap
 msgid "-n, --name                  Name for the supplied codes (default)\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:44
-#, no-wrap
-msgid ""
-"-o, --official_name         Official name for the supplied codes.\n"
-"                            This may be the same as --name.\n"
-msgstr ""
-
-#. type: Plain text
-#: ./isoquery.rst:47
-#, no-wrap
-msgid ""
-"-c, --common_name           Common name for the supplied codes.\n"
-"                            This may be the same as --name.\n"
-msgstr ""
-
-#. type: Plain text
 #: ./isoquery.rst:49
-msgid "-l LOCALE, --locale=LOCALE Use this locale for output."
+#, no-wrap
+msgid ""
+"-o, --official_name         Official name for the supplied codes. This may "
+"be\n"
+"                            the same as --name. (Only applies to ISO 3166)\n"
 msgstr ""
 
 #. type: Plain text
 #: ./isoquery.rst:52
 #, no-wrap
 msgid ""
-"-x FILE, --xmlfile=FILE     Use another XML file with ISO data.\n"
-"                            (default: "
-"/usr/share/xml/iso-codes/iso_3166.xml)\n"
+"-c, --common_name           Common name for the supplied codes. This may "
+"be\n"
+"                            the same as --name. (Only applies to ISO 3166)\n"
 msgstr ""
 
 #. type: Plain text
@@ -165,7 +168,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:70 ./isoquery.rst:80 ./isoquery.rst:92 ./isoquery.rst:105 ./isoquery.rst:119 ./isoquery.rst:130 ./isoquery.rst:142 ./isoquery.rst:152
+#: ./isoquery.rst:70 ./isoquery.rst:80 ./isoquery.rst:92 ./isoquery.rst:105 ./isoquery.rst:115 ./isoquery.rst:129 ./isoquery.rst:140 ./isoquery.rst:152 ./isoquery.rst:162
 msgid "::"
 msgstr ""
 
@@ -219,13 +222,31 @@ msgstr ""
 #: ./isoquery.rst:103
 msgid ""
 "All of the above works for different ISO standards as well, so you can "
-"switch to language names by using the --iso command line option.  For ISO "
-"639, the first three columns are the ISO 639 2B code, the ISO 639 2T code "
-"and the ISO 639-1 code.  The third column may be empty."
+"switch to the more extensive standard ISO 3166-2 by using the --iso command "
+"line option. The columns are country code, subset type (e.g. State, "
+"Province, etc.), ISO 3166-2 code, parent, and name. Please note that the "
+"fourth column (parent) may be empty."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:114
+#: ./isoquery.rst:110
+#, no-wrap
+msgid ""
+"  $ isoquery --iso=3166-2\n"
+"  AD      Parish  AD-07           Andorra la Vella\n"
+"  [...]\n"
+"  ZW      Province        ZW-MI           Midlands\n"
+msgstr ""
+
+#. type: Plain text
+#: ./isoquery.rst:113
+msgid ""
+"For ISO 639, the first three columns are the ISO 639 2B code, the ISO 639 2T "
+"code and the ISO 639-1 code. The third column may be empty."
+msgstr ""
+
+#. type: Plain text
+#: ./isoquery.rst:124
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=639\n"
@@ -239,14 +260,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:117
+#: ./isoquery.rst:127
 msgid ""
 "You can trim down the results by specifying only some codes. Moreover, the "
 "option to get translated names is also available."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:124
+#: ./isoquery.rst:134
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=639 --locale=pt vi bo kl\n"
@@ -256,7 +277,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:128
+#: ./isoquery.rst:138
 msgid ""
 "If you want to use ISO 639-3, the displayed columns are id, scope, type, "
 "part 1 code, part 2 code, and the language name. Both part 1 and part 2 may "
@@ -264,7 +285,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:136
+#: ./isoquery.rst:146
 #, no-wrap
 msgid ""
 "  $ isoquery -i 639-3 aal new spa guc\n"
@@ -275,7 +296,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:140
+#: ./isoquery.rst:150
 msgid ""
 "You can get selected translations of currency names from the ISO 4217 "
 "standard by using the following command. The first two columns are the "
@@ -283,7 +304,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:146
+#: ./isoquery.rst:156
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=4217 --locale=da cad 392\n"
@@ -292,7 +313,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:150
+#: ./isoquery.rst:160
 msgid ""
 "If you need to get script names, you can use the ISO 15924 table.  The first "
 "two columns are the alpha-4 code and the numerical code assigned to the "
@@ -300,7 +321,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:157
+#: ./isoquery.rst:167
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=15924 jpan latn 280\n"
@@ -310,18 +331,18 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:160
+#: ./isoquery.rst:170
 #, no-wrap
 msgid "FILES\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:163
+#: ./isoquery.rst:173
 msgid "By default, the XML files provided by the iso-codes package will be used."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:169
+#: ./isoquery.rst:179
 #, no-wrap
 msgid ""
 "*/usr/share/xml/iso-codes/iso_639.xml*\n"
@@ -332,12 +353,12 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:172
+#: ./isoquery.rst:182
 #, no-wrap
 msgid "AUTHOR\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:174
+#: ./isoquery.rst:184
 msgid "Tobias Quathamer <toddy@debian.org>"
 msgstr ""

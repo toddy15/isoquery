@@ -34,13 +34,13 @@ Dieses Programm folgt dem üblichen Format der GNU Kommandozeilenoptionen, in
 dem lange Optionen mit zwei Minuszeichen beginnen (»-«). **isoquery**
 unterstützt die folgenden Optionen:
 
--i NUMMER, --iso=NUMMER     Der gewünschte ISO-Standard. Mögliche Werte: 639, 639-3, 3166, 4217, 15924 (Voreinstellung: 3166)
--n, --name                  Name der übergebenen Codes (Voreinstellung)
--o, --official_name         Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie --name.
--c, --common_name           Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name.
+-i NUMMER, --iso=NUMMER     Der gewünschte ISO-Standard. Mögliche Werte: 639, 639-3, 3166, 3166-2, 4217, 15924 (Voreinstellung: 3166)
+-x DATEI, --xmlfile=DATEI   Eine andere XML-Datei mit ISO-Daten verwenden (Voreinstellung: /usr/share/xml/iso-codes/iso_3166.xml)
 -l LOCALE, --locale=LOCALE  Diese Locale für die Ausgabe verwenden.
 
--x DATEI, --xmlfile=DATEI   Eine andere XML-Datei mit ISO-Daten verwenden (Voreinstellung: /usr/share/xml/iso-codes/iso_3166.xml)
+-n, --name                  Name der übergebenen Codes (Voreinstellung)
+-o, --official_name         Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie --name. (Gilt nur für ISO 3166)
+-c, --common_name           Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name. (Gilt nur für ISO 3166)
 -0, --null                  Einträge durch ein NULL-Zeichen anstatt des Zeilenumbruches voneinander trennen.
 -h, --help                  Anzeige dieser Informationen.
 -v, --version               Anzeige der Programmversion und des Copyrights.
@@ -84,10 +84,21 @@ Locale keine Übersetzung gibt.
     ES      ESP     724     Spanje
 
 All das oben gesagte funktioniert ebenso für andere ISO-Standards, so können
-Sie beispielsweise mit der Kommandozeilenoption --iso auf Sprachennamen
-umstellen. Bei ISO 639 enthalten die ersten drei Spalten den ISO 639 2B
-Code, den ISO 639 2T Code und den ISO 639-1 Code. Die dritte Spalte kann
-leer sein.
+Sie beispielsweise mit der Kommandozeilenoption --iso auf den
+ausführlicheren Standard ISO 3166-2 umstellen. Die Spalten sind Ländercode,
+Art des Unterbereichs (z. B. Bundesstaat, Provinz usw.), der ISO 3166-2
+Code, der übergeordnete Bereich sowie der Name. Bitte beachten Sie, dass die
+vierte Spalte (übergeordneter Bereich) leer sein kann.
+
+::
+
+  $ isoquery --iso=3166-2
+  AD      Parish  AD-07           Andorra la Vella
+  [...]
+  ZW      Province        ZW-MI           Midlands
+
+Bei ISO 639 enthalten die ersten drei Spalten den ISO 639 2B Code, den ISO
+639 2T Code und den ISO 639-1 Code. Die dritte Spalte kann leer sein.
 
 ::
 

@@ -51,7 +51,16 @@ starting with two dashes (\(aq\-\(aq). \fBisoquery\fP supports the following opt
 .BI \-i \ NUMBER, \ \-\-iso\fB= NUMBER
 .
 The ISO standard to use. Possible values: 639,
-639\-3, 3166, 4217, 15924 (default: 3166)
+639\-3, 3166, 3166\-2, 4217, 15924 (default: 3166)
+.TP
+.BI \-x \ FILE, \ \-\-xmlfile\fB= FILE
+.
+Use another XML file with ISO data.
+(default: /usr/share/xml/iso\-codes/iso_3166.xml)
+.TP
+.BI \-l \ LOCALE, \ \-\-locale\fB= LOCALE
+.
+Use this locale for output.
 .TP
 .B \-n,  \-\-name
 .
@@ -59,22 +68,13 @@ Name for the supplied codes (default)
 .TP
 .B \-o,  \-\-official_name
 .
-Official name for the supplied codes.
-This may be the same as \-\-name.
+Official name for the supplied codes. This may be
+the same as \-\-name. (Only applies to ISO 3166)
 .TP
 .B \-c,  \-\-common_name
 .
-Common name for the supplied codes.
-This may be the same as \-\-name.
-.TP
-.BI \-l \ LOCALE, \ \-\-locale\fB= LOCALE
-.
-Use this locale for output.
-.TP
-.BI \-x \ FILE, \ \-\-xmlfile\fB= FILE
-.
-Use another XML file with ISO data.
-(default: /usr/share/xml/iso\-codes/iso_3166.xml)
+Common name for the supplied codes. This may be
+the same as \-\-name. (Only applies to ISO 3166)
 .TP
 .B \-0,  \-\-null
 .
@@ -132,10 +132,22 @@ ES      ESP     724     Spanje
 .fi
 .sp
 All of the above works for different ISO standards as well, so you can
-switch to language names by using the \-\-iso command line option.
+switch to the more extensive standard ISO 3166\-2 by using the \-\-iso command
+line option. The columns are country code, subset type (e.g. State, Province,
+etc.), ISO 3166\-2 code, parent, and name. Please note that the fourth column
+(parent) may be empty.
+.sp
+.nf
+.ft C
+$ isoquery \-\-iso=3166\-2
+AD      Parish  AD\-07           Andorra la Vella
+[...]
+ZW      Province        ZW\-MI           Midlands
+.ft P
+.fi
+.sp
 For ISO 639, the first three columns are the ISO 639 2B code, the
-ISO 639 2T code and the ISO 639\-1 code.
-The third column may be empty.
+ISO 639 2T code and the ISO 639\-1 code. The third column may be empty.
 .sp
 .nf
 .ft C
