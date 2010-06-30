@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2010-06-25 08:36+0200\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
 "PO-Revision-Date: 2010-06-25 08:43+0100\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -29,8 +29,8 @@ msgstr "NORME"
 #: isoquery/cmdline_parser.py:37
 #, fuzzy, python-format
 msgid ""
-"The ISO standard to use. Possible values: 639, 3166, 4217, 15924. Default "
-"value: %default"
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
 msgstr ""
 "Norme ISO à utiliser. Valeurs possibles: 639, 3166, 4217, 15924 (défaut: %"
 "default)"
@@ -65,7 +65,7 @@ msgstr "Retourne le nom correspondant au code demandé (défaut)"
 #, fuzzy
 msgid ""
 "Display the official name for the supplied codes. This may be the same as --"
-"name."
+"name. (Only applies to ISO 3166)"
 msgstr ""
 "Retourne le nom officiel correspondant au code demandé. Cette valeur peut "
 "être vide."
@@ -74,7 +74,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Display the common name for the supplied codes. This may be the same as --"
-"name."
+"name. (Only applies to ISO 3166)"
 msgstr ""
 "Retourne le nom courant correspondant au code demandé. Cette valeur peut "
 "être vide."
@@ -128,12 +128,12 @@ msgstr "Traduction française Copyright © 2007-2010 Christian Perrier"
 msgid "isoquery: The file '%(filename)s' could not be opened.\n"
 msgstr "isoquery : Le fichier « %(filename)s » n'a pas pu être ouvert.\n"
 
-#: isoquery/xmlfile.py:45
+#: isoquery/xmlfile.py:46
 #, fuzzy, python-format
 msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
 msgstr "isoquery : Le fichier « %(filename)s » ...\n"
 
-#: isoquery/xmlfile.py:50
+#: isoquery/xmlfile.py:52
 #, fuzzy, python-format
 msgid ""
 "isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
@@ -142,7 +142,7 @@ msgstr ""
 "isoquery : Le fichier « %(filename)s » ne contient pas de données ISO-%"
 "(standard)s valables.\n"
 
-#: isoquery/xmlfile.py:64
+#: isoquery/xmlfile.py:71
 #, fuzzy, python-format
 msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
 msgstr "isoquery : Le code « %(code)s » n'existe pas dans ISO-%(standard)s.\n"

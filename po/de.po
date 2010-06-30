@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2010-06-25 08:36+0200\n"
-"PO-Revision-Date: 2010-06-25 08:40+0100\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
+"PO-Revision-Date: 2010-06-30 20:00+0100\n"
 "Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,11 +27,11 @@ msgstr "STANDARD"
 #: isoquery/cmdline_parser.py:37
 #, python-format
 msgid ""
-"The ISO standard to use. Possible values: 639, 3166, 4217, 15924. Default "
-"value: %default"
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
 msgstr ""
-"Der gewünschte ISO-Standard. Mögliche Werte: 639, 3166, 4217, 15924. "
-"Voreingestellter Wert: %default"
+"Der gewünschte ISO-Standard. Mögliche Werte: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Voreingestellter Wert: %default"
 
 #: isoquery/cmdline_parser.py:42
 msgid "FILE"
@@ -59,18 +59,18 @@ msgstr "Anzeigen des Namens der übergebenen Codes (Voreinstellung)"
 #: isoquery/cmdline_parser.py:55
 msgid ""
 "Display the official name for the supplied codes. This may be the same as --"
-"name."
+"name. (Only applies to ISO 3166)"
 msgstr ""
 "Anzeigen des offiziellen Namens der übergebenen Codes. Dies kann das Gleiche "
-"sein wie --name."
+"sein wie --name. (Gilt nur für ISO 3166)"
 
 #: isoquery/cmdline_parser.py:60
 msgid ""
 "Display the common name for the supplied codes. This may be the same as --"
-"name."
+"name. (Only applies to ISO 3166)"
 msgstr ""
 "Anzeigen des üblichen Namens der übergebenen Codes. Dies kann das Gleiche "
-"sein wie --name."
+"sein wie --name. (Gilt nur für ISO 3166)"
 
 #: isoquery/cmdline_parser.py:66
 msgid "Separate entries with a NULL character instead of newline"
@@ -118,13 +118,13 @@ msgstr "Deutsche Übersetzung Copyright © 2007-2010 Tobias Quathamer"
 msgid "isoquery: The file '%(filename)s' could not be opened.\n"
 msgstr "isoquery: Die Datei »%(filename)s« konnte nicht geöffnet werden.\n"
 
-#: isoquery/xmlfile.py:45
+#: isoquery/xmlfile.py:46
 #, python-format
 msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
 msgstr ""
 "isoquery: Die Datei »%(filename)s« konnte nicht korrekt ausgewertet werden.\n"
 
-#: isoquery/xmlfile.py:50
+#: isoquery/xmlfile.py:52
 #, python-format
 msgid ""
 "isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
@@ -133,7 +133,7 @@ msgstr ""
 "isoquery: Die Datei »%(filename)s« enthält keine gültigen ISO %(standard)s "
 "Daten.\n"
 
-#: isoquery/xmlfile.py:64
+#: isoquery/xmlfile.py:71
 #, python-format
 msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
 msgstr ""
