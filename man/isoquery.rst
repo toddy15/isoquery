@@ -5,7 +5,7 @@
 Search and display various ISO codes (country, language, ...)
 -------------------------------------------------------------
 
-:Date:            2010-06-28
+:Date:            2010-06-30
 :Version:         1.0
 :Manual section:  1
 

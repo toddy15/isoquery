@@ -1,7 +1,7 @@
 Information about the program
 -----------------------------
 
-This is isoquery 1.0, released on 25 June 2010.
+This is isoquery 1.0, released on 30 June 2010.
 
 Description
 -----------
@@ -17,7 +17,7 @@ the ISO standard.
 Dependencies
 ------------
 
-This program needs Python 2.6 and python-lxml.
+This program needs Python 2.4 and python-lxml.
 
 Installation
 ------------
