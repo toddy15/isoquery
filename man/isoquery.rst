@@ -35,20 +35,20 @@ This program follows the usual GNU command line syntax, with long options
 starting with two dashes ('-'). **isoquery** supports the following options:
 
 -i NUMBER, --iso=NUMBER     The ISO standard to use. Possible values: 639,
-                            639-3, 3166, 4217, 15924 (default: 3166)
-
--n, --name                  Name for the supplied codes (default)
-
--o, --official_name         Official name for the supplied codes.
-                            This may be the same as --name.
-
--c, --common_name           Common name for the supplied codes.
-                            This may be the same as --name.
-
--l LOCALE, --locale=LOCALE  Use this locale for output.
+                            639-3, 3166, 3166-2, 4217, 15924 (default: 3166)
 
 -x FILE, --xmlfile=FILE     Use another XML file with ISO data.
                             (default: /usr/share/xml/iso-codes/iso_3166.xml)
+
+-l LOCALE, --locale=LOCALE  Use this locale for output.
+
+-n, --name                  Name for the supplied codes (default)
+
+-o, --official_name         Official name for the supplied codes. This may be
+                            the same as --name. (Only applies to ISO 3166)
+
+-c, --common_name           Common name for the supplied codes. This may be
+                            the same as --name. (Only applies to ISO 3166)
 
 -0, --null                  Separate entries with a NULL character instead
                             of newline.
