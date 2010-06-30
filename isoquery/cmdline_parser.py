@@ -54,12 +54,12 @@ class CmdlineParser():
                                action='store_true',
                                help=_("Display the official name for the " \
                                       "supplied codes. This may be the " \
-                                      "same as --name."))
+                                      "same as --name. (Only applies to ISO 3166)"))
         self.parser.add_option('-c', '--common_name',
                                action='store_true',
                                help=_("Display the common name for the " \
                                       "supplied codes. This may be the " \
-                                      "same as --name."))
+                                      "same as --name. (Only applies to ISO 3166)"))
         self.parser.add_option('-0', '--null',
                                action='store_true',
                                dest="use_null_character",
