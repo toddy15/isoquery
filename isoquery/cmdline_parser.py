@@ -35,7 +35,7 @@ class CmdlineParser():
                                default='3166',
                                metavar=_("STANDARD"),
                                help=_("The ISO standard to use. " \
-                               "Possible values: 639, 639-3, 3166, 4217, 15924. " \
+                               "Possible values: 639, 639-3, 3166, 3166-2, 4217, 15924. " \
                                "Default value: %default"))
         self.parser.add_option('-x', '--xmlfile',
                                default='/usr/share/xml/iso-codes/iso_3166.xml',
@@ -87,7 +87,7 @@ class CmdlineParser():
         if self.options.show_version is not None:
             self.show_version_and_copyright()
         # Assure a supported ISO standard
-        supported = ["639", "639-3", "3166", "4217", "15924"]
+        supported = ["639", "639-3", "3166", "3166-2", "4217", "15924"]
         if self.options.iso not in supported:
             sys.stderr.write(_(u"isoquery: ISO standard '%(standard)s' " \
                                "is not supported.\n").encode("utf-8") % \

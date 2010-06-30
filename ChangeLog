@@ -1,8 +1,9 @@
 Isoquery 1.0
 ============
-25 June 2010
+UNRELEASED
 
 * Complete rewrite of program in Python
+* Support of ISO 639-3 and ISO 3166-2
 
 
 Isoquery 0.18

@@ -28,6 +28,9 @@ isoquery_cmdline_parser = cmdline_parser.CmdlineParser()
 if options.iso == "3166":
     from isoquery import xmlfile_3166
     xml = xmlfile_3166.XMLFile_3166(options)
+elif options.iso == "3166-2":
+    from isoquery import xmlfile_3166_2
+    xml = xmlfile_3166_2.XMLFile_3166_2(options)
 elif options.iso == "639":
     from isoquery import xmlfile_639
     xml = xmlfile_639.XMLFile_639(options)
