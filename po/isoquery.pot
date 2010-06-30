@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2010-06-25 08:36+0200\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,8 @@ msgstr ""
 #: isoquery/cmdline_parser.py:37
 #, python-format
 msgid ""
-"The ISO standard to use. Possible values: 639, 3166, 4217, 15924. Default "
-"value: %default"
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
 msgstr ""
 
 #: isoquery/cmdline_parser.py:42
@@ -55,13 +55,13 @@ msgstr ""
 #: isoquery/cmdline_parser.py:55
 msgid ""
 "Display the official name for the supplied codes. This may be the same as --"
-"name."
+"name. (Only applies to ISO 3166)"
 msgstr ""
 
 #: isoquery/cmdline_parser.py:60
 msgid ""
 "Display the common name for the supplied codes. This may be the same as --"
-"name."
+"name. (Only applies to ISO 3166)"
 msgstr ""
 
 #: isoquery/cmdline_parser.py:66
@@ -107,19 +107,19 @@ msgstr ""
 msgid "isoquery: The file '%(filename)s' could not be opened.\n"
 msgstr ""
 
-#: isoquery/xmlfile.py:45
+#: isoquery/xmlfile.py:46
 #, python-format
 msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
 msgstr ""
 
-#: isoquery/xmlfile.py:50
+#: isoquery/xmlfile.py:52
 #, python-format
 msgid ""
 "isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
 
-#: isoquery/xmlfile.py:64
+#: isoquery/xmlfile.py:71
 #, python-format
 msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
 msgstr ""
