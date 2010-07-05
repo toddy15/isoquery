@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
-"POT-Creation-Date: 2010-07-05 14:27+0300\n"
-"PO-Revision-Date: 2010-07-05 14:33+0100\n"
+"POT-Creation-Date: 2010-07-05 14:34+0300\n"
+"PO-Revision-Date: 2010-07-05 14:35+0100\n"
 "Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,18 +19,14 @@ msgstr ""
 #. type: Plain text
 #: isoquery.rst:1
 #, no-wrap
-msgid "==========\n"
-msgstr "==========\n"
+msgid "========\n"
+msgstr "========\n"
 
-#. type: Plain text
+#. type: Title =
 #: isoquery.rst:3
 #, no-wrap
-msgid ""
-" isoquery\n"
-"==========\n"
-msgstr ""
-" isoquery\n"
-"==========\n"
+msgid "isoquery\n"
+msgstr "isoquery\n"
 
 # type: Plain text
 #. type: Title -

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-07-05 14:27+0300\n"
+"POT-Creation-Date: 2010-07-05 14:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,13 @@ msgstr ""
 #. type: Plain text
 #: ./isoquery.rst:1
 #, no-wrap
-msgid "==========\n"
+msgid "========\n"
 msgstr ""
 
-#. type: Plain text
+#. type: Title =
 #: ./isoquery.rst:3
 #, no-wrap
-msgid ""
-" isoquery\n"
-"==========\n"
+msgid "isoquery\n"
 msgstr ""
 
 #. type: Title -

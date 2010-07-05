@@ -1,6 +1,6 @@
-==========
- isoquery
-==========
+========
+isoquery
+========
 
 Search and display various ISO codes (country, language, ...)
 -------------------------------------------------------------
