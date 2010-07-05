@@ -30,6 +30,8 @@ def set_options(opt):
 def configure(conf):
     # Check that required programs are available
     conf.find_program('msgfmt', var='MSGFMT', mandatory=True)
+    conf.find_program('rst2man', var='RST2MAN', mandatory=True)
+    conf.find_program('gzip', var='GZIP', mandatory=True)
     conf.check_tool('python')
     conf.check_python_version((2,4))
     conf.check_tool('gnu_dirs')
@@ -41,11 +43,36 @@ def build(bld):
     obj.install_path = os.path.join('${PYTHONDIR}', 'isoquery')
     # Register installation paths
     bld.install_files('${BINDIR}', [os.path.join('bin', 'isoquery')])
-    bld.install_files(os.path.join('${MANDIR}', 'man1'),
-                      [os.path.join('man', 'isoquery.1')])
-    bld.install_files(os.path.join('${MANDIR}', 'de', 'man1'),
-                      [os.path.join('man', 'de', 'isoquery.1')])
     bld.install_files('${DOCDIR}', ['ChangeLog', 'README', 'TODO', 'AUTHORS'])
+    # Manpages
+    # Generate man page from rst source files
+    bld(
+        name = 'manpage',
+        source = os.path.join('man', 'isoquery.rst'),
+        target = os.path.join('man', 'isoquery.1'),
+        rule = bld.env['RST2MAN'] + ' ${SRC} ${TGT}',
+    )
+    bld(
+        name = 'manpage_de',
+        source = os.path.join('man', 'de', 'isoquery.rst'),
+        target = os.path.join('man', 'de', 'isoquery.1'),
+        rule = bld.env['RST2MAN'] + ' ${SRC} ${TGT}',
+    )
+    # Compress and install man pages
+    bld(
+      source = os.path.join('man', 'isoquery.1'),
+      target = os.path.join('man', 'isoquery.1.gz'),
+      rule = bld.env['GZIP'] + ' --best --stdout ${SRC} > ${TGT}',
+      install_path = os.path.join('${MANDIR}', 'man1'),
+      after = 'manpage',
+    )
+    bld(
+      source = os.path.join('man', 'de', 'isoquery.1'),
+      target = os.path.join('man', 'de', 'isoquery.1.gz'),
+      rule = bld.env['GZIP'] + ' --best --stdout ${SRC} > ${TGT}',
+      install_path = os.path.join('${MANDIR}', 'de', 'man1'),
+      after = 'manpage_de',
+    )
     # Generate .mo files
     for translation in bld.path.ant_glob(os.path.join('po', '*.po')).split():
         # Get locale from basename of the file, without extension (.po)
