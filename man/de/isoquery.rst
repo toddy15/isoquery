@@ -163,11 +163,12 @@ DATEIEN
 In der Voreinstellung werden die Dateien verwendet, die durch das Paket
 iso-codes zur Verfügung gestellt werden.
 
-*/usr/share/xml/iso-codes/iso_639.xml*
-*/usr/share/xml/iso-codes/iso_639_3.xml*
-*/usr/share/xml/iso-codes/iso_3166.xml*
-*/usr/share/xml/iso-codes/iso_4217.xml*
-*/usr/share/xml/iso-codes/iso_15924.xml*
+| */usr/share/xml/iso-codes/iso_639.xml*
+| */usr/share/xml/iso-codes/iso_639_3.xml*
+| */usr/share/xml/iso-codes/iso_3166.xml*
+| */usr/share/xml/iso-codes/iso_3166_2.xml*
+| */usr/share/xml/iso-codes/iso_4217.xml*
+| */usr/share/xml/iso-codes/iso_15924.xml*
 
 
 AUTOR

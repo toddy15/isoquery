@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: Tobias Quathamer <toddy@debian.org>\n"
-"POT-Creation-Date: 2010-06-30 20:25+0300\n"
-"PO-Revision-Date: 2010-06-30 20:25+0100\n"
+"POT-Creation-Date: 2010-07-05 14:27+0300\n"
+"PO-Revision-Date: 2010-07-05 14:33+0100\n"
 "Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "MIME-Version: 1.0\n"
@@ -466,30 +466,29 @@ msgstr ""
 "codes zur Verfügung gestellt werden."
 
 #. type: Plain text
-#: isoquery.rst:179
-#, no-wrap
+#: isoquery.rst:180
 msgid ""
-"*/usr/share/xml/iso-codes/iso_639.xml*\n"
-"*/usr/share/xml/iso-codes/iso_639_3.xml*\n"
-"*/usr/share/xml/iso-codes/iso_3166.xml*\n"
-"*/usr/share/xml/iso-codes/iso_4217.xml*\n"
-"*/usr/share/xml/iso-codes/iso_15924.xml*\n"
+"| */usr/share/xml/iso-codes/iso_639.xml* | */usr/share/xml/iso-codes/"
+"iso_639_3.xml* | */usr/share/xml/iso-codes/iso_3166.xml* | */usr/share/xml/"
+"iso-codes/iso_3166_2.xml* | */usr/share/xml/iso-codes/iso_4217.xml* | */usr/"
+"share/xml/iso-codes/iso_15924.xml*"
 msgstr ""
-"*/usr/share/xml/iso-codes/iso_639.xml*\n"
-"*/usr/share/xml/iso-codes/iso_639_3.xml*\n"
-"*/usr/share/xml/iso-codes/iso_3166.xml*\n"
-"*/usr/share/xml/iso-codes/iso_4217.xml*\n"
-"*/usr/share/xml/iso-codes/iso_15924.xml*\n"
+"| */usr/share/xml/iso-codes/iso_639.xml*\n"
+"| */usr/share/xml/iso-codes/iso_639_3.xml*\n"
+"| */usr/share/xml/iso-codes/iso_3166.xml*\n"
+"| */usr/share/xml/iso-codes/iso_3166_2.xml*\n"
+"| */usr/share/xml/iso-codes/iso_4217.xml*\n"
+"| */usr/share/xml/iso-codes/iso_15924.xml*"
 
 # type: SH
 #. type: Title =
-#: isoquery.rst:182
+#: isoquery.rst:183
 #, no-wrap
 msgid "AUTHOR\n"
 msgstr "AUTOR\n"
 
 # type: Plain text
 #. type: Plain text
-#: isoquery.rst:184
+#: isoquery.rst:185
 msgid "Tobias Quathamer <toddy@debian.org>"
 msgstr "Tobias Quathamer <toddy@debian.org>"
