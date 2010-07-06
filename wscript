@@ -32,6 +32,7 @@ def configure(conf):
     conf.find_program('msgfmt', var='MSGFMT', mandatory=True)
     conf.find_program('rst2man', var='RST2MAN', mandatory=True)
     conf.find_program('gzip', var='GZIP', mandatory=True)
+    conf.find_program('po4a-translate', var='PO4A_TRANSLATE', mandatory=True)
     conf.check_tool('python')
     conf.check_python_version((2,4))
     conf.check_tool('gnu_dirs')
@@ -53,25 +54,41 @@ def build(bld):
         rule = bld.env['RST2MAN'] + ' ${SRC} ${TGT}',
     )
     bld(
+        name = 'generate',
+        source = [os.path.join('man', 'de.add'),
+                  os.path.join('man', 'de.po'),
+                  os.path.join('man', 'isoquery.rst')],
+        target = os.path.join('man', 'de', 'isoquery.rst'),
+        rule = bld.env['PO4A_TRANSLATE'] + \
+               ' --format text ' + \
+               '--option markdown ' + \
+               '--addendum ${SRC[0].srcpath(env)} ' + \
+               '--po ${SRC[1].srcpath(env)} ' + \
+               '--master ${SRC[2].srcpath(env)} ' + \
+               '--master-charset UTF-8 ' + \
+               '--localized ${TGT}',
+    )
+    bld(
         name = 'manpage_de',
         source = os.path.join('man', 'de', 'isoquery.rst'),
         target = os.path.join('man', 'de', 'isoquery.1'),
         rule = bld.env['RST2MAN'] + ' ${SRC} ${TGT}',
+        after = 'generate',
     )
     # Compress and install man pages
     bld(
-      source = os.path.join('man', 'isoquery.1'),
-      target = os.path.join('man', 'isoquery.1.gz'),
-      rule = bld.env['GZIP'] + ' --best --stdout ${SRC} > ${TGT}',
-      install_path = os.path.join('${MANDIR}', 'man1'),
-      after = 'manpage',
+        source = os.path.join('man', 'isoquery.1'),
+        target = os.path.join('man', 'isoquery.1.gz'),
+        rule = bld.env['GZIP'] + ' --best --stdout ${SRC} > ${TGT}',
+        install_path = os.path.join('${MANDIR}', 'man1'),
+        after = 'manpage',
     )
     bld(
-      source = os.path.join('man', 'de', 'isoquery.1'),
-      target = os.path.join('man', 'de', 'isoquery.1.gz'),
-      rule = bld.env['GZIP'] + ' --best --stdout ${SRC} > ${TGT}',
-      install_path = os.path.join('${MANDIR}', 'de', 'man1'),
-      after = 'manpage_de',
+        source = os.path.join('man', 'de', 'isoquery.1'),
+        target = os.path.join('man', 'de', 'isoquery.1.gz'),
+        rule = bld.env['GZIP'] + ' --best --stdout ${SRC} > ${TGT}',
+        install_path = os.path.join('${MANDIR}', 'de', 'man1'),
+        after = 'manpage_de',
     )
     # Generate .mo files
     for translation in bld.path.ant_glob(os.path.join('po', '*.po')).split():
