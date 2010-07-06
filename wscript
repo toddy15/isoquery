@@ -43,7 +43,7 @@ def build(bld):
         install_path = '${PYTHONDIR}/isoquery',
     )
     # Register installation paths
-    bld.install_files('${BINDIR}', 'bin/isoquery')
+    bld.install_files('${BINDIR}', 'bin/isoquery', chmod=0755)
     bld.install_files('${DOCDIR}', ['ChangeLog', 'README', 'TODO', 'AUTHORS'])
 
     # Manpages
