@@ -52,7 +52,7 @@ msgstr ""
 #: isoquery.rst:14
 #, no-wrap
 msgid "SYNOPSIS\n"
-msgstr "SYNOPSIS\n"
+msgstr "ÜBERSICHT\n"
 
 # type: Plain text
 #. type: Plain text
