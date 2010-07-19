@@ -4,6 +4,7 @@ UNRELEASED
 
 * Fix errors in manpages with overlong lines
 * Rewrite generation of manpages with waf build system
+* French translation update, thanks to Christian Perrier. Closes: #589554
 
 
 Isoquery 1.0
