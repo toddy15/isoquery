@@ -1,0 +1,138 @@
+# Translation of isoquery
+# Copyright (C) 2010 Martin Bagge <brother@bsnet.se>
+# This file is distributed under the same license as the isoquery package.
+#
+# Martin Bagge <brother@bsnet.se>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
+"PO-Revision-Date: 2010-07-19 09:39+0100\n"
+"Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
+"Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: Sweden\n"
+
+#: isoquery/cmdline_parser.py:30
+msgid "Usage: %prog [options] [ISO codes]"
+msgstr "Användning: %prog [flaggor] [ISO-koder]"
+
+#: isoquery/cmdline_parser.py:36
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#: isoquery/cmdline_parser.py:37
+#, python-format
+msgid ""
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
+msgstr ""
+"ISO-standard att använda. Möjliga värden:: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Standardvärde: %default"
+
+#: isoquery/cmdline_parser.py:42
+msgid "FILE"
+msgstr "FIL"
+
+#: isoquery/cmdline_parser.py:43
+#, python-format
+msgid "Use specified XML file with ISO data. Default value: %default"
+msgstr "Använd angiven XML-fil med ISO-data. Standardvärde: %default"
+
+#: isoquery/cmdline_parser.py:47
+msgid "LOCALE"
+msgstr "LOKAL"
+
+#: isoquery/cmdline_parser.py:48
+msgid "Use this locale for output"
+msgstr "Använd denna lokal för utdata"
+
+#: isoquery/cmdline_parser.py:51
+msgid "Display the name for the supplied codes (default)"
+msgstr "Visa namn för angivna koder (standard)"
+
+#: isoquery/cmdline_parser.py:55
+msgid ""
+"Display the official name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Visa officiellt namn för angivna koder. Detta kan vara samma som --name. "
+"(Gäller endast ISO 3166)"
+
+#: isoquery/cmdline_parser.py:60
+msgid ""
+"Display the common name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Visa generellt namn för angivna koder. Detta kan vara samma som --name. "
+"(Gäller endast ISO 3166)"
+
+#: isoquery/cmdline_parser.py:66
+msgid "Separate entries with a NULL character instead of newline"
+msgstr "Separera enheter med NULL"
+
+#: isoquery/cmdline_parser.py:70
+msgid "Show this information"
+msgstr "Visa denna information"
+
+#: isoquery/cmdline_parser.py:74
+msgid "Show program version and copyright"
+msgstr "Visar programversion och infomation om upphovsrätt"
+
+#: isoquery/cmdline_parser.py:92
+#, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr "isoquery: ISO-standard \"%(standard)s\" stöds inte.\n"
+
+#: isoquery/cmdline_parser.py:110
+#, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr ""
+"isoquery: Lokalen \"%(locale)s\" är inte tillgänglig för ISO %(standard)s.\n"
+
+#: isoquery/cmdline_parser.py:126
+#, python-format
+msgid "isoquery %(version)s"
+msgstr "isoquery %(version)s"
+
+#: isoquery/cmdline_parser.py:127
+msgid "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Copyright © 2007-2010 Tobias Quathamer"
+
+#. TRANSLATORS: Please change the uppercase words as appropriate for
+#. your language.
+#: isoquery/cmdline_parser.py:130
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgstr ""
+"Översatt till Svenska © 2010 Martin Bagge\n"
+"Skicka synpunkter på översättningen till tp-sv@listor.tp-sv.se."
+
+#: isoquery/xmlfile.py:42
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgstr "isoquery: Filen \"%(filename)s\" kunde inte öppnas.\n"
+
+#: isoquery/xmlfile.py:46
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgstr "isoquery: Filen \"%(filename)s\" kunde inte läsas korrekt.\n"
+
+#: isoquery/xmlfile.py:52
+#, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
+msgstr ""
+"isoquery: Filen \"%(filename)s\" innehåller inte korrekt formaterad ISO %"
+"(standard)s data.\n"
+
+#: isoquery/xmlfile.py:71
+#, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgstr ""
+"isoquery: Koden \"%(code)s\" finns inte definierad i ISO %(standard)s.\n"
