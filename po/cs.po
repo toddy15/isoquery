@@ -1,0 +1,133 @@
+# Czech translation of package isoquery.
+# Copyright (C) 2010 Michal Simunek
+# This file is distributed under the same license as the isoquery package.
+# Michal Simunek <michal.simunek@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
+"PO-Revision-Date: 2010-07-20 11:31+0200\n"
+"Last-Translator: Michal Simunek <michal.simunek@gmail.com>\n"
+"Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: isoquery/cmdline_parser.py:30
+msgid "Usage: %prog [options] [ISO codes]"
+msgstr "Používání: %prog [volby] [ISO kódy]"
+
+#: isoquery/cmdline_parser.py:36
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#: isoquery/cmdline_parser.py:37
+#, python-format
+msgid ""
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
+msgstr ""
+"ISO standard, který se použije. Možné hodnoty: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Výchozí hodnota: %default"
+
+#: isoquery/cmdline_parser.py:42
+msgid "FILE"
+msgstr "SOUBOR"
+
+#: isoquery/cmdline_parser.py:43
+#, python-format
+msgid "Use specified XML file with ISO data. Default value: %default"
+msgstr "Použije zadaný XML soubor s ISO daty. Výchozí hodnota: %default"
+
+#: isoquery/cmdline_parser.py:47
+msgid "LOCALE"
+msgstr "LOCALE"
+
+#: isoquery/cmdline_parser.py:48
+msgid "Use this locale for output"
+msgstr "Pro výstup použije toto locale"
+
+#: isoquery/cmdline_parser.py:51
+msgid "Display the name for the supplied codes (default)"
+msgstr "Zobrazí název dodávaných kódů (výchozí)"
+
+#: isoquery/cmdline_parser.py:55
+msgid ""
+"Display the official name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Zobrazí oficiální název dodávaných kódů. Může být stejný jako  --name. "
+"(Použije se pouze u ISO 3166)"
+
+#: isoquery/cmdline_parser.py:60
+msgid ""
+"Display the common name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Zobrazí obecný název dodávaných kódů. Může být stejný jako  --name. "
+"(Použije se pouze u ISO 3166)"
+
+#: isoquery/cmdline_parser.py:66
+msgid "Separate entries with a NULL character instead of newline"
+msgstr "Oddělí položky mezerou namísto nového řádku"
+
+#: isoquery/cmdline_parser.py:70
+msgid "Show this information"
+msgstr "Zobrazí tyto informace"
+
+#: isoquery/cmdline_parser.py:74
+msgid "Show program version and copyright"
+msgstr "Zobrazí verzi programu a copyright"
+
+#: isoquery/cmdline_parser.py:92
+#, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr "isoquery: ISO standard '%(standard)s' není podporován.\n"
+
+#: isoquery/cmdline_parser.py:110
+#, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr ""
+"isoquery: Locale '%(locale)s' není dostupný pro ISO %(standard)s.\n"
+
+#: isoquery/cmdline_parser.py:126
+#, python-format
+msgid "isoquery %(version)s"
+msgstr "isoquery %(version)s"
+
+#: isoquery/cmdline_parser.py:127
+msgid "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Copyright © 2007-2010 Tobias Quathamer"
+
+#. TRANSLATORS: Please change the uppercase words as appropriate for
+#. your language.
+#: isoquery/cmdline_parser.py:130
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgstr "Translation to Czech Copyright © 2010 Michal Šimůnek"
+
+#: isoquery/xmlfile.py:42
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgstr "isoquery: Soubor '%(filename)s' nelze otevřít.\n"
+
+#: isoquery/xmlfile.py:46
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgstr "isoquery: Soubor '%(filename)s' nelze zpracovat.\n"
+
+#: isoquery/xmlfile.py:52
+#, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
+msgstr ""
+"isoquery: Soubor '%(filename)s' neobsahuje platná ISO %(standard)s "
+"data.\n"
+
+#: isoquery/xmlfile.py:71
+#, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgstr "isoquery: Kód '%(code)s' není v ISO %(standard)s definován.\n"
