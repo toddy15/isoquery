@@ -42,8 +42,8 @@ msgstr "FICHIER"
 #, python-format
 msgid "Use specified XML file with ISO data. Default value: %default"
 msgstr ""
-"Utiliser ce fichier XML comme source des données ISO. Valeur par défaut : "
-"%default"
+"Utiliser ce fichier XML comme source des données ISO. Valeur par défaut : %"
+"default"
 
 #: isoquery/cmdline_parser.py:47
 msgid "LOCALE"
@@ -122,8 +122,7 @@ msgstr "isoquery : Le fichier « %(filename)s » n'a pas pu être ouvert.\n"
 #, python-format
 msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
 msgstr ""
-"isoquery : Le fichier « %(filename)s » n'a pas pu être analysé "
-"correctement.\n"
+"isoquery : Le fichier « %(filename)s » n'a pas pu être analysé correctement.\n"
 
 #: isoquery/xmlfile.py:52
 #, python-format
@@ -131,8 +130,8 @@ msgid ""
 "isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
-"isoquery : Le fichier « %(filename)s » ne contient pas de données ISO-"
-"%(standard)s valables.\n"
+"isoquery : Le fichier « %(filename)s » ne contient pas de données ISO-%"
+"(standard)s valables.\n"
 
 #: isoquery/xmlfile.py:71
 #, python-format

@@ -29,8 +29,8 @@ msgid ""
 "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
 "15924. Default value: %default"
 msgstr ""
-"ISO standard, který se použije. Možné hodnoty: 639, 639-3, 3166, 3166-2, 4217, "
-"15924. Výchozí hodnota: %default"
+"ISO standard, který se použije. Možné hodnoty: 639, 639-3, 3166, 3166-2, "
+"4217, 15924. Výchozí hodnota: %default"
 
 #: isoquery/cmdline_parser.py:42
 msgid "FILE"
@@ -66,8 +66,8 @@ msgid ""
 "Display the common name for the supplied codes. This may be the same as --"
 "name. (Only applies to ISO 3166)"
 msgstr ""
-"Zobrazí obecný název dodávaných kódů. Může být stejný jako  --name. "
-"(Použije se pouze u ISO 3166)"
+"Zobrazí obecný název dodávaných kódů. Může být stejný jako  --name. (Použije "
+"se pouze u ISO 3166)"
 
 #: isoquery/cmdline_parser.py:66
 msgid "Separate entries with a NULL character instead of newline"
@@ -90,8 +90,7 @@ msgstr "isoquery: ISO standard '%(standard)s' není podporován.\n"
 #, python-format
 msgid ""
 "isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
-msgstr ""
-"isoquery: Locale '%(locale)s' není dostupný pro ISO %(standard)s.\n"
+msgstr "isoquery: Locale '%(locale)s' není dostupný pro ISO %(standard)s.\n"
 
 #: isoquery/cmdline_parser.py:126
 #, python-format
@@ -124,8 +123,7 @@ msgid ""
 "isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
-"isoquery: Soubor '%(filename)s' neobsahuje platná ISO %(standard)s "
-"data.\n"
+"isoquery: Soubor '%(filename)s' neobsahuje platná ISO %(standard)s data.\n"
 
 #: isoquery/xmlfile.py:71
 #, python-format

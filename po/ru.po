@@ -14,8 +14,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: isoquery/cmdline_parser.py:30
 msgid "Usage: %prog [options] [ISO codes]"
@@ -32,8 +32,7 @@ msgid ""
 "15924. Default value: %default"
 msgstr ""
 "Использовать стандарт ISO. Возможные значения: 639, 639-3, 3166, 3166-2, "
-"4217, "
-"15924. Значение по умолчанию: %default"
+"4217, 15924. Значение по умолчанию: %default"
 
 #: isoquery/cmdline_parser.py:42
 msgid "FILE"
@@ -43,8 +42,7 @@ msgstr "ФАЙЛ"
 #, python-format
 msgid "Use specified XML file with ISO data. Default value: %default"
 msgstr ""
-"Использовать заданный файл XML с данными ISO. Значение по умолчанию: "
-"%default"
+"Использовать заданный файл XML с данными ISO. Значение по умолчанию: %default"
 
 #: isoquery/cmdline_parser.py:47
 msgid "LOCALE"
@@ -63,16 +61,16 @@ msgid ""
 "Display the official name for the supplied codes. This may be the same as --"
 "name. (Only applies to ISO 3166)"
 msgstr ""
-"Показать официальные имена имеющих кодов. "
-"Может быть тоже, что и с --name (применимо только к ISO 3166)."
+"Показать официальные имена имеющих кодов. Может быть тоже, что и с --name "
+"(применимо только к ISO 3166)."
 
 #: isoquery/cmdline_parser.py:60
 msgid ""
 "Display the common name for the supplied codes. This may be the same as --"
 "name. (Only applies to ISO 3166)"
 msgstr ""
-"Показать общие имена имеющих кодов. "
-"Может быть тоже, что и с --name (применимо только к ISO 3166)."
+"Показать общие имена имеющих кодов. Может быть тоже, что и с --name "
+"(применимо только к ISO 3166)."
 
 #: isoquery/cmdline_parser.py:66
 msgid "Separate entries with a NULL character instead of newline"
@@ -135,4 +133,3 @@ msgstr ""
 #, python-format
 msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
 msgstr "isoquery: Код %(code)s не определён в ISO %(standard)s.\n"
-
