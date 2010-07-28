@@ -1,6 +1,6 @@
-Isoquery trunk
-==============
-UNRELEASED
+Isoquery 1.1
+============
+28 July 2010
 
 * Fix errors in manpages with overlong lines
 * Rewrite generation of manpages with waf build system
