@@ -1,3 +1,11 @@
+Isoquery 1.2
+============
+31 July 2010
+
+* Fix invalid syntax for Python 2.4. Thanks to Cristian Ionescu-Idbohrn
+  for the bug report and patch. Closes: #591035
+
+
 Isoquery 1.1
 ============
 28 July 2010

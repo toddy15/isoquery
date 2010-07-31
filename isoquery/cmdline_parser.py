@@ -24,7 +24,7 @@ from isoquery import __version__
 translation = gettext.translation('isoquery', fallback=True)
 _ = translation.ugettext
 
-class CmdlineParser():
+class CmdlineParser:
     def __init__(self):
         # Set up Parser
         usage = _("Usage: %prog [options] [ISO codes]")

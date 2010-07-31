@@ -24,7 +24,7 @@ from code_not_defined_error import CodeNotDefinedError
 translation = gettext.translation('isoquery', fallback=True)
 _ = translation.ugettext
 
-class XMLFile():
+class XMLFile:
     """Generic class to handle common operations on XML files"""
     def __init__(self, options):
         self.xmlfile = options.xmlfile
