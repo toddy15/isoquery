@@ -1,0 +1,139 @@
+# Translation of isoquery messages to Portuguese
+# Copyright (C) 2010 The isoquery copyright holder
+# This file is distributed under the same license as the isoquery package.
+#
+# Américo Monteiro <a_monteiro@netcabo.pt>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery 1.2-1\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
+"PO-Revision-Date: 2010-08-10 02:38+0100\n"
+"Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: isoquery/cmdline_parser.py:30
+msgid "Usage: %prog [options] [ISO codes]"
+msgstr "Utilização: %prog [opções] [códigos ISO]"
+
+#: isoquery/cmdline_parser.py:36
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#: isoquery/cmdline_parser.py:37
+#, python-format
+msgid ""
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
+msgstr ""
+"O standard ISO a usar: Valores possíveis: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Valor predefinido: %default"
+
+#: isoquery/cmdline_parser.py:42
+msgid "FILE"
+msgstr "FICHEIRO"
+
+#: isoquery/cmdline_parser.py:43
+#, python-format
+msgid "Use specified XML file with ISO data. Default value: %default"
+msgstr ""
+"Usa ficheiro XML especificado com dados ISO. Valor predefinido: %default"
+
+#: isoquery/cmdline_parser.py:47
+msgid "LOCALE"
+msgstr "LOCALE"
+
+#: isoquery/cmdline_parser.py:48
+msgid "Use this locale for output"
+msgstr "Usa este locale para os resultados"
+
+#: isoquery/cmdline_parser.py:51
+msgid "Display the name for the supplied codes (default)"
+msgstr "Mostra os nomes dos códigos fornecidos (predefinição)"
+
+#: isoquery/cmdline_parser.py:55
+msgid ""
+"Display the official name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Mostra o nome oficial para os códigos fornecidos. Isto pode ser o mesmo que "
+"--name. (Apenas se aplica ao ISO 3166)"
+
+#: isoquery/cmdline_parser.py:60
+msgid ""
+"Display the common name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Mostra o nome comum para os códigos fornecidos. Isto pode ser o mesmo que "
+"--name. (Apenas se aplica ao ISO 3166)"
+
+#: isoquery/cmdline_parser.py:66
+msgid "Separate entries with a NULL character instead of newline"
+msgstr "Separa as entradas com o caractere NULO em vez de nova linha"
+
+#: isoquery/cmdline_parser.py:70
+msgid "Show this information"
+msgstr "Mostra esta informação"
+
+#: isoquery/cmdline_parser.py:74
+msgid "Show program version and copyright"
+msgstr "Mostra a versão do programa e o copyright"
+
+#: isoquery/cmdline_parser.py:92
+#, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr "isoquery: O ISO standard '%(standard)s' não é suportado.\n"
+
+#: isoquery/cmdline_parser.py:110
+#, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr ""
+"isoquery: O locale '%(locale)s' não está disponível para ISO %(standard)s.\n"
+
+#: isoquery/cmdline_parser.py:126
+#, python-format
+msgid "isoquery %(version)s"
+msgstr "isoquery %(version)s"
+
+#: isoquery/cmdline_parser.py:127
+msgid "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Copyright © 2007-2010 Tobias Quathamer"
+
+#. TRANSLATORS: Please change the uppercase words as appropriate for
+#. your language.
+#: isoquery/cmdline_parser.py:130
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgstr "Tradução para Português Copyright © 2010 Américo Monteiro"
+
+#: isoquery/xmlfile.py:42
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgstr "isoquery: O ficheiro '%(filename)s' não pôde ser aberto.\n"
+
+#: isoquery/xmlfile.py:46
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgstr ""
+"isoquery: O ficheiro '%(filename)s' não pôde ser analisado correctamente.\n"
+
+#: isoquery/xmlfile.py:52
+#, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
+msgstr ""
+"isoquery: O ficheiro '%(filename)s' não contém dados de ISO %(standard)s "
+"válidos.\n"
+
+#: isoquery/xmlfile.py:71
+#, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgstr ""
+"isoquery: O código '%(code)s' não está definido em ISO %(standard)s.\n"
+
