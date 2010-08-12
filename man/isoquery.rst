@@ -104,7 +104,7 @@ etc.), ISO 3166-2 code, parent, and name. Please note that the fourth column
 ::
 
   $ isoquery --iso=3166-2
-  AD      Parish  AD-07           Andorra la Vella
+  AD      Parish          AD-07           Andorra la Vella
   [...]
   ZW      Province        ZW-MI           Midlands
 
