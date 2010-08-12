@@ -66,8 +66,25 @@ def build(bld):
                '--localized ${TGT}',
     )
     bld(
+        source = 'man/pt.add man/pt.po man/isoquery.rst',
+        target = 'man/pt/isoquery.rst',
+        rule = '${PO4A_TRANSLATE} ' + \
+               '--format text ' + \
+               '--option markdown ' + \
+               '--addendum ${SRC[0].bldpath()} ' + \
+               '--po ${SRC[1].bldpath()} ' + \
+               '--master ${SRC[2].bldpath()} ' + \
+               '--master-charset UTF-8 ' + \
+               '--localized ${TGT}',
+    )
+    bld(
         source = 'man/de/isoquery.rst',
         target = 'man/de/isoquery.1',
+        rule = '${RST2MAN} ${SRC} ${TGT}',
+    )
+    bld(
+        source = 'man/pt/isoquery.rst',
+        target = 'man/pt/isoquery.1',
         rule = '${RST2MAN} ${SRC} ${TGT}',
     )
     # Compress and install man pages
@@ -83,6 +100,12 @@ def build(bld):
         rule = '${GZIP} --best --stdout ${SRC} > ${TGT}',
     )
     bld.install_files('${MANDIR}/de/man1', 'man/de/isoquery.1.gz')
+    bld(
+        source = 'man/pt/isoquery.1',
+        target = 'man/pt/isoquery.1.gz',
+        rule = '${GZIP} --best --stdout ${SRC} > ${TGT}',
+    )
+    bld.install_files('${MANDIR}/pt/man1', 'man/pt/isoquery.1.gz')
 
     # Generate .mo files
     for translation in bld.path.ant_glob('po/*.po'):
