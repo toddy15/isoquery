@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery-man 1.2-1\n"
-"POT-Creation-Date: 2010-08-15 18:05+0200\n"
-"PO-Revision-Date: 2010-08-15 18:05+0100\n"
+"POT-Creation-Date: 2010-10-02 21:45+0200\n"
+"PO-Revision-Date: 2010-10-02 21:45+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,12 +38,12 @@ msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)\n"
 #: isoquery.rst:11
 #, no-wrap
 msgid ""
-":Date:            2010-08-15\n"
-":Version:         1.3\n"
+":Date:            2010-10-02\n"
+":Version:         1.4\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            2010-08-15\n"
-":Version:         1.3\n"
+":Date:            2010-10-02\n"
+":Version:         1.4\n"
 ":Manual section:  1\n"
 
 #. type: Title =
