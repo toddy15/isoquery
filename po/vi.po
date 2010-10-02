@@ -1,0 +1,141 @@
+# Vietnamese translation for IsoQuery.
+# Copyright © 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the isoquery package.
+# Clytie Siddall <clytie@riverland.net.au>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2010-06-30 19:58+0200\n"
+"PO-Revision-Date: 2010-09-30 23:02+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.8\n"
+
+#: isoquery/cmdline_parser.py:30
+msgid "Usage: %prog [options] [ISO codes]"
+msgstr "Sử dụng: %prog [tùy_chọn] [mã_ISO]"
+
+#: isoquery/cmdline_parser.py:36
+msgid "STANDARD"
+msgstr "TIÊU CHUẨN"
+
+#: isoquery/cmdline_parser.py:37
+#, python-format
+msgid ""
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Default value: %default"
+msgstr ""
+"Tiêu chuẩn ISO cần dùng. Giá trị có thể là: 639, 639-3, 3166, 3166-2, 4217, "
+"15924. Giá trị mặc định: %default"
+
+#: isoquery/cmdline_parser.py:42
+msgid "FILE"
+msgstr "TỆP"
+
+#: isoquery/cmdline_parser.py:43
+#, python-format
+msgid "Use specified XML file with ISO data. Default value: %default"
+msgstr "Dùng tập tin XML đưa ra với dữ liệu ISO. Giá trị mặc định: %default"
+
+#: isoquery/cmdline_parser.py:47
+msgid "LOCALE"
+msgstr "MIỀN ĐỊA PHƯƠNG"
+
+#: isoquery/cmdline_parser.py:48
+msgid "Use this locale for output"
+msgstr "Dùng miền địa phương này cho kết xuất"
+
+#: isoquery/cmdline_parser.py:51
+msgid "Display the name for the supplied codes (default)"
+msgstr "Hiển thị tên cho mã được cung cấp (mặc định)"
+
+#: isoquery/cmdline_parser.py:55
+msgid ""
+"Display the official name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Hiển thị tên chính thức cho mã được cung cấp. Giá trị này có thể trùng với « "
+"--name ». (Chỉ áp dụng cho ISO 3166.)"
+
+#: isoquery/cmdline_parser.py:60
+msgid ""
+"Display the common name for the supplied codes. This may be the same as --"
+"name. (Only applies to ISO 3166)"
+msgstr ""
+"Hiển thị tên chung cho mã được cung cấp. Giá trị này có thể trùng với « --"
+"name ». (Chỉ áp dụng cho ISO 3166.)"
+
+#: isoquery/cmdline_parser.py:66
+msgid "Separate entries with a NULL character instead of newline"
+msgstr ""
+"Định giới các mục nhập bằng một ký tự vô giá trị (NULL) thay cho một ký tự "
+"dòng mới"
+
+#: isoquery/cmdline_parser.py:70
+msgid "Show this information"
+msgstr "Hiển thị thông tin này"
+
+#: isoquery/cmdline_parser.py:74
+msgid "Show program version and copyright"
+msgstr "Hiển thị phiên bản chương trình và tác quyền"
+
+#: isoquery/cmdline_parser.py:92
+#, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr "isoquery: Tiêu chuẩn ISO « %(standard)s » không phải được hỗ trợ.\n"
+
+#: isoquery/cmdline_parser.py:110
+#, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr ""
+"isoquery: Miền địa phương « %(locale)s » không sẫn sàng cho ISO %(standard)"
+"s.\n"
+
+# Variable: don't translate; Biến: đừng dịch
+#: isoquery/cmdline_parser.py:126
+#, python-format
+msgid "isoquery %(version)s"
+msgstr "isoquery %(version)s"
+
+#: isoquery/cmdline_parser.py:127
+msgid "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Tác quyền © năm 2007-2010 của Tobias Quathamer"
+
+#. TRANSLATORS: Please change the uppercase words as appropriate for
+#. your language.
+#: isoquery/cmdline_parser.py:130
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgstr ""
+"Bản dịch tiếng Việt của Clytie Siddall (tác quyền © 2010 của Tổ chức Phần "
+"mềm Tự do)"
+
+#: isoquery/xmlfile.py:42
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgstr "isoquery: Tập tin « %(filename)s » không mở được.\n"
+
+#: isoquery/xmlfile.py:46
+#, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgstr "isoquery: Tập tin « %(filename)s » không phân tích được.\n"
+
+#: isoquery/xmlfile.py:52
+#, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
+msgstr ""
+"isoquery: Tập tin « %(filename)s » không chứa dữ liệu ISO %(standard)s đúng.\n"
+
+#: isoquery/xmlfile.py:71
+#, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgstr ""
+"isoquery: Mã « %(code)s » không phải được xác định trong ISO %(standard)s.\n"
