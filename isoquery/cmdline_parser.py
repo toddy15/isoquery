@@ -101,7 +101,8 @@ class CmdlineParser:
             self.options.xmlfile += ".xml"
         # Remove extra spaces from locale
         self.options.locale = self.options.locale.strip()
-        # Ensure that the locale does exist for the given ISO standard
+        # If the locale does not exist for the given ISO standard, print a
+        # warning message and use the untranslated (thus English) strings.
         if self.options.locale != "":
             try:
                 t = gettext.translation("iso_" + self.options.iso.replace('-', '_'),
@@ -111,7 +112,7 @@ class CmdlineParser:
                                    "available for ISO %(standard)s.\n").encode("utf-8") % \
                                    {"locale": self.options.locale,
                                    "standard": self.options.iso})
-                sys.exit(1)
+                self.options.locale = ""
         # Set default display attribute to 'name'
         self.options.display_name = "name"
         if self.options.official_name == True:

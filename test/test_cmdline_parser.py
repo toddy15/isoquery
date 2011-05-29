@@ -115,7 +115,7 @@ class TestCmdlineParser(unittest.TestCase):
         orig_stderr = sys.stderr
         sys.stderr = output = StringIO.StringIO()
         cmdline = "-l " + locale
-        self.assertRaises(SystemExit, p.parse, cmdline)
+        (options, args) = p.parse(cmdline)
         self.assertEqual(output.getvalue(),
                          _("isoquery: The locale '%(locale)s' is not " \
                            "available for ISO %(standard)s.\n") % \
@@ -123,7 +123,7 @@ class TestCmdlineParser(unittest.TestCase):
         # Re-open a new output for the next comparison
         sys.stderr = output = StringIO.StringIO()
         cmdline = "--locale=" + locale
-        self.assertRaises(SystemExit, p.parse, cmdline)
+        (options, args) = p.parse(cmdline)
         self.assertEqual(output.getvalue(),
                          _("isoquery: The locale '%(locale)s' is not " \
                            "available for ISO %(standard)s.\n") % \
