@@ -7,34 +7,30 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-10-02 21:45+0200\n"
+"POT-Creation-Date: 2011-05-29 14:39+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: ENCODING"
 
 #. type: Plain text
-#: ./isoquery.rst:1
 #, no-wrap
 msgid "========\n"
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:3
 #, no-wrap
 msgid "isoquery\n"
 msgstr ""
 
 #. type: Title -
-#: ./isoquery.rst:6
 #, no-wrap
 msgid "Search and display various ISO codes (country, language, ...)\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:11
 #, no-wrap
 msgid ""
 ":Date:            2010-10-02\n"
@@ -43,25 +39,21 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:14
 #, no-wrap
 msgid "SYNOPSIS\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:17
 #, no-wrap
 msgid "**isoquery** [*options*] [*file*] [*ISO codes*]\n"
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:20
 #, no-wrap
 msgid "DESCRIPTION\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:29
 msgid ""
 "This manual page documents briefly the **isoquery** command.  It can be used "
 "to generate a tabular output of the ISO standard codes provided by the "
@@ -71,20 +63,17 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:32
 #, no-wrap
 msgid "OPTIONS\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:36
 msgid ""
 "This program follows the usual GNU command line syntax, with long options "
 "starting with two dashes ('-'). **isoquery** supports the following options:"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:39
 #, no-wrap
 msgid ""
 "-i NUMBER, --iso=NUMBER     The ISO standard to use. Possible values: 639,\n"
@@ -93,7 +82,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:42
 #, no-wrap
 msgid ""
 "-x FILE, --xmlfile=FILE     Use another XML file with ISO data.\n"
@@ -102,18 +90,15 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:44
 msgid "-l LOCALE, --locale=LOCALE Use this locale for output."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:46
 #, no-wrap
 msgid "-n, --name                  Name for the supplied codes (default)\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:49
 #, no-wrap
 msgid ""
 "-o, --official_name         Official name for the supplied codes. This may "
@@ -122,7 +107,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:52
 #, no-wrap
 msgid ""
 "-c, --common_name           Common name for the supplied codes. This may "
@@ -131,7 +115,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:55
 #, no-wrap
 msgid ""
 "-0, --null                  Separate entries with a NULL character instead\n"
@@ -139,25 +122,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:57
 #, no-wrap
 msgid "-h, --help                  Show summary of options.\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:59
 #, no-wrap
 msgid "-v, --version               Show program version and copyright.\n"
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:62
 #, no-wrap
 msgid "EXAMPLES\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:68
 msgid ""
 "If called without any command line options, **isoquery** will put out a "
 "table of all ISO 3166 codes. The first three columns contain the alpha-2 "
@@ -166,12 +145,10 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:70 ./isoquery.rst:80 ./isoquery.rst:92 ./isoquery.rst:105 ./isoquery.rst:115 ./isoquery.rst:129 ./isoquery.rst:140 ./isoquery.rst:152 ./isoquery.rst:162
 msgid "::"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:75
 #, no-wrap
 msgid ""
 "  $ isoquery\n"
@@ -181,14 +158,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:78
 msgid ""
 "If you need only some countries, you can specify any of the codes in the "
 "first three columns to cut down the output."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:85
 #, no-wrap
 msgid ""
 "  $ isoquery so nor 484\n"
@@ -198,7 +173,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:90
 msgid ""
 "Should you need the translations of the countries' names, just specify in "
 "which locale you'd like to see the output.  Please note that the original "
@@ -207,7 +181,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:97
 #, no-wrap
 msgid ""
 "    $ isoquery --locale=nl fr de es\n"
@@ -217,7 +190,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:103
 msgid ""
 "All of the above works for different ISO standards as well, so you can "
 "switch to the more extensive standard ISO 3166-2 by using the --iso command "
@@ -227,7 +199,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:110
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=3166-2\n"
@@ -237,14 +208,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:113
 msgid ""
 "For ISO 639, the first three columns are the ISO 639 2B code, the ISO 639 2T "
 "code and the ISO 639-1 code. The third column may be empty."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:124
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=639\n"
@@ -258,14 +227,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:127
 msgid ""
 "You can trim down the results by specifying only some codes. Moreover, the "
 "option to get translated names is also available."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:134
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=639 --locale=pt vi bo kl\n"
@@ -275,7 +242,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:138
 msgid ""
 "If you want to use ISO 639-3, the displayed columns are id, scope, type, "
 "part 1 code, part 2 code, and the language name. Both part 1 and part 2 may "
@@ -283,7 +249,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:146
 #, no-wrap
 msgid ""
 "  $ isoquery -i 639-3 aal new spa guc\n"
@@ -294,7 +259,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:150
 msgid ""
 "You can get selected translations of currency names from the ISO 4217 "
 "standard by using the following command. The first two columns are the "
@@ -302,7 +266,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:156
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=4217 --locale=da cad 392\n"
@@ -311,7 +274,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:160
 msgid ""
 "If you need to get script names, you can use the ISO 15924 table.  The first "
 "two columns are the alpha-4 code and the numerical code assigned to the "
@@ -319,7 +281,6 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:167
 #, no-wrap
 msgid ""
 "  $ isoquery --iso=15924 jpan latn 280\n"
@@ -329,18 +290,15 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:170
 #, no-wrap
 msgid "FILES\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:173
 msgid "By default, the XML files provided by the iso-codes package will be used."
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:180
 msgid ""
 "| */usr/share/xml/iso-codes/iso_639.xml* | "
 "*/usr/share/xml/iso-codes/iso_639_3.xml* | "
@@ -351,12 +309,10 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#: ./isoquery.rst:183
 #, no-wrap
 msgid "AUTHOR\n"
 msgstr ""
 
 #. type: Plain text
-#: ./isoquery.rst:185
 msgid "Tobias Quathamer <toddy@debian.org>"
 msgstr ""
