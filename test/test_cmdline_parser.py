@@ -22,8 +22,8 @@ import sys
 import StringIO
 import gettext
 from isoquery import cmdline_parser
-translation = gettext.translation('isoquery')
-_ = translation.ugettext
+translation = gettext.translation('isoquery', fallback=True)
+_ = translation.gettext
 
 class TestCmdlineParser(unittest.TestCase):
     def test_01_empty_commandline(self):

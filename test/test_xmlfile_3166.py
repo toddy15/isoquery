@@ -290,7 +290,7 @@ TW\tTWN\t158\tTaiwan
         xml.show_all_codes()
         self.assertEqual(output.getvalue(),
 """\
-DE\tDEU\t276\tФедеративна Республiка Німеччина
+DE\tDEU\t276\tФедеративна Республіка Німеччина
 FR\tFRA\t250\tФранцузька Республіка
 ES\tESP\t724\tКоролівство Іспанія
 TW\tTWN\t158\tТайвань, провінція Китаю

@@ -22,8 +22,8 @@ import sys
 import StringIO
 import gettext
 from isoquery import xmlfile
-translation = gettext.translation('isoquery')
-_ = translation.ugettext
+translation = gettext.translation('isoquery', fallback=True)
+_ = translation.gettext
 
 class Options:
     """Empty class to construct the command line options"""
