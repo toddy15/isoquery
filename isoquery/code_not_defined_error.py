@@ -1,6 +1,6 @@
 # - encoding: UTF-8 -
 #
-# Copyright © 2007-2010 Tobias Quathamer
+# Copyright © 2007-2011 Tobias Quathamer
 #
 # This file is part of isoquery.
 #
