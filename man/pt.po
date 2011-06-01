@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2011-05-29 14:49+0300\n"
-"PO-Revision-Date: 2011-06-01 12:54+0100\n"
+"POT-Creation-Date: 2011-06-01 23:21+0300\n"
+"PO-Revision-Date: 2011-06-01 23:28+0200\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.1\n"
 
 #. type: Plain text
 #, no-wrap
@@ -91,35 +91,36 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-i number, --iso=number     The ISO standard to use. Possible values: 639,\n"
-"                            639-3, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
+"-i standard, --iso=standard  The ISO standard to use. Possible values: 639,\n"
+"                             639-3, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
 msgstr ""
-"-i numero, --iso=numero     O ISO standard a usar. Valores possíveis: 639,\n"
+"-i standard, --iso=standard     O ISO standard a usar. Valores possíveis: 639,\n"
 "                            639-3, 3166, 3166-2, 4217, 15924 (predefinição: 3166).\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-x file, --xmlfile=file     Use another XML *file* with ISO data\n"
-"                            (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
+"-x file, --xmlfile=file      Use another XML *file* with ISO data\n"
+"                             (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
 msgstr ""
 "-x ficheiro, --xmlfile=ficheiro     Usa outro *ficheiro* XML com dados ISO\n"
 "                            (predefinição: /usr/share/xml/iso-codes/iso_3166.xml).\n"
 
 #. type: Plain text
-msgid "-l locale, --locale=locale Use this *locale* for output."
+#, no-wrap
+msgid "-l locale, --locale=locale   Use this *locale* for output.\n"
 msgstr "-l locale, --locale=locale  Use este *locale* para os resultados."
 
 #. type: Plain text
 #, no-wrap
-msgid "-n, --name                  Name for the supplied codes (default).\n"
+msgid "-n, --name                   Name for the supplied codes (default).\n"
 msgstr "-n, --name                  Nome para os códigos fornecidos (predefinição).\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-o, --official_name         Official name for the supplied codes. This may be\n"
-"                            the same as --name (only applies to ISO 3166).\n"
+"-o, --official_name          Official name for the supplied codes. This may be\n"
+"                             the same as --name (only applies to ISO 3166).\n"
 msgstr ""
 "-o, --official_name         Nome oficial dos códigos fornecidos. Isto pode ser\n"
 "                            o mesmo que --name (apenas se aplica ao ISO 3166).\n"
@@ -127,8 +128,8 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-c, --common_name           Common name for the supplied codes. This may be\n"
-"                            the same as --name (only applies to ISO 3166).\n"
+"-c, --common_name            Common name for the supplied codes. This may be\n"
+"                             the same as --name (only applies to ISO 3166).\n"
 msgstr ""
 "-c, --common_name           Nome comum dos códigos fornecidos. Isto pode ser\n"
 "                            o mesmo que --name (apenas se aplica ao ISO 3166).\n"
@@ -136,20 +137,20 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-0, --null                  Separate entries with a NULL character instead\n"
-"                            of newline.\n"
+"-0, --null                   Separate entries with a NULL character instead\n"
+"                             of newline.\n"
 msgstr ""
 "-0, --null                  Separa as entradas com um caractere NULO em vez de\n"
 "                            nova linha.\n"
 
 #. type: Plain text
 #, no-wrap
-msgid "-h, --help                  Show summary of options.\n"
+msgid "-h, --help                   Show summary of options.\n"
 msgstr "-h, --help                  Mostra o sumário de opções.\n"
 
 #. type: Plain text
 #, no-wrap
-msgid "-v, --version               Show program version and copyright.\n"
+msgid "-v, --version                Show program version and copyright.\n"
 msgstr "-v, --version               Mostra a versão do programa e o copyright.\n"
 
 #. type: Title =

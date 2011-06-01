@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2011-05-29 14:49+0300\n"
-"PO-Revision-Date: 2011-06-01 21:22+0200\n"
+"POT-Creation-Date: 2011-06-01 23:21+0300\n"
+"PO-Revision-Date: 2011-06-01 23:27+0200\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -92,55 +92,56 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-i number, --iso=number     The ISO standard to use. Possible values: 639,\n"
-"                            639-3, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
-msgstr "-i nombre, --iso=nombre     La norme ISO à utiliser. Valeurs disponibles : 639, 639-3, 3166, 3166-2, 4217, 15924 (3166 par défaut).\n"
+"-i standard, --iso=standard  The ISO standard to use. Possible values: 639,\n"
+"                             639-3, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
+msgstr "-i norme, --iso=norme     La norme ISO à utiliser. Valeurs disponibles : 639, 639-3, 3166, 3166-2, 4217, 15924 (3166 par défaut).\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-x file, --xmlfile=file     Use another XML *file* with ISO data\n"
-"                            (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
+"-x file, --xmlfile=file      Use another XML *file* with ISO data\n"
+"                             (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
 msgstr "-x fichier, --xmlfile=fichier  Utiliser un autre *fichier* XML avec les données ISO (/usr/share/xml/iso-codes/iso_3166.xml par défaut).\n"
 
 #. type: Plain text
-msgid "-l locale, --locale=locale Use this *locale* for output."
+#, no-wrap
+msgid "-l locale, --locale=locale   Use this *locale* for output.\n"
 msgstr "-l locale, --locale=locale  Utiliser cette *locale* pour l'affichage."
 
 #. type: Plain text
 #, no-wrap
-msgid "-n, --name                  Name for the supplied codes (default).\n"
+msgid "-n, --name                   Name for the supplied codes (default).\n"
 msgstr "-n, --name  Nom des codes fournis (par défaut).\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-o, --official_name         Official name for the supplied codes. This may be\n"
-"                            the same as --name (only applies to ISO 3166).\n"
+"-o, --official_name          Official name for the supplied codes. This may be\n"
+"                             the same as --name (only applies to ISO 3166).\n"
 msgstr "-o, --official_name  Nom officiel correspondant aux codes demandés. Il peut être identique à --name. Cette option n'est utile que pour ISO 3166.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-c, --common_name           Common name for the supplied codes. This may be\n"
-"                            the same as --name (only applies to ISO 3166).\n"
+"-c, --common_name            Common name for the supplied codes. This may be\n"
+"                             the same as --name (only applies to ISO 3166).\n"
 msgstr "-c, --common_name  Nom courant correspondant aux codes demandés. Il peut être identique à --name. Cette option n'est utile que pour ISO 3166.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-0, --null                  Separate entries with a NULL character instead\n"
-"                            of newline.\n"
+"-0, --null                   Separate entries with a NULL character instead\n"
+"                             of newline.\n"
 msgstr "-0, --null  Séparer les entrées avec un caractère NULL au lieu d'un retour à la ligne.\n"
 
 #. type: Plain text
 #, no-wrap
-msgid "-h, --help                  Show summary of options.\n"
+msgid "-h, --help                   Show summary of options.\n"
 msgstr "-h, --help  Afficher un résumé des options.\n"
 
 #. type: Plain text
 #, no-wrap
-msgid "-v, --version               Show program version and copyright.\n"
+msgid "-v, --version                Show program version and copyright.\n"
 msgstr "-v, --version  Afficher la version du programme et les renseignements de copyright.\n"
 
 #. type: Title =
