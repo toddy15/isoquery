@@ -7,6 +7,7 @@ UNRELEASED
 * Review isoquery manpage, thanks to David Prévot. Closes: #627577
 * New manpage translation:
   - French, thanks to David Prévot. Closes: #628841
+* Update test suite to pass with current iso-codes (3.26)
 
 
 Isoquery 1.4
