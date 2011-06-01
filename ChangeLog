@@ -4,6 +4,9 @@ UNRELEASED
 
 * If the locale does not exist for the given ISO standard, print a warning
   message and use the untranslated (thus English) strings. Closes: #624147
+* Review isoquery manpage, thanks to David Prévot. Closes: #627577
+* New manpage translation:
+  - French, thanks to David Prévot. Closes: #628841
 
 
 Isoquery 1.4
