@@ -1,11 +1,11 @@
-# Translation of Isoquery man page to Portuguese
-# This file is distributed under the same license as the Isoquery package.
+# Translation of isoquery manpage to Portuguese
+# This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
 # Américo Monteiro <a_monteiro@netcabo.pt>, 2010, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: isoquery-man 1.2-1\n"
+"Project-Id-Version: isoquery\n"
 "POT-Creation-Date: 2011-05-29 14:49+0300\n"
 "PO-Revision-Date: 2011-06-01 12:54+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"

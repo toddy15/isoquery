@@ -1,5 +1,5 @@
-# Translation of Isoquery man page to German
-# This file is distributed under the same license as the Isoquery package.
+# Translation of isoquery manpage to German
+# This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
 # Tobias Quathamer <toddy@debian.org>, 2007, 2008, 2010, 2011.
