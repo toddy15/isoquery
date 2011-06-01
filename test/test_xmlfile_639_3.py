@@ -168,8 +168,8 @@ nbs\tI\tL\t\t\tNamibian Sign Language
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-deu\tI\tL\tde\tger\tAllemand
-aae\tI\tL\t\t\tAlbanais, Arbëreshë
+deu\tI\tL\tde\tger\tallemand
+aae\tI\tL\t\t\tarbërisht
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -187,9 +187,9 @@ aae\tI\tL\t\t\tAlbanais, Arbëreshë
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-aae\tI\tL\t\t\tAlbanais, Arbëreshë
-deu\tI\tL\tde\tger\tAllemand
-nbs\tI\tL\t\t\tLangue des signes namibienne
+aae\tI\tL\t\t\tarbërisht
+deu\tI\tL\tde\tger\tallemand
+nbs\tI\tL\t\t\tlangue des signes namibienne
 """)
         # Revert output capturing
         sys.stdout = orig_stdout

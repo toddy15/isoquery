@@ -41,11 +41,11 @@ class TestXMLFile_3166_2(unittest.TestCase):
 <iso_3166_country code="MW">
 <iso_3166_subset type="Region">
 	<iso_3166_2_entry
-		code="MW C"	name="Central" />
+		code="MW C"	name="Central Region" />
 	<iso_3166_2_entry
-		code="MW N"	name="Northern" />
+		code="MW N"	name="Northern Region" />
 	<iso_3166_2_entry
-		code="MW S"	name="Southern (Malawi)" />
+		code="MW S"	name="Southern Region" />
 </iso_3166_subset>
 <iso_3166_subset type="District">
 	<iso_3166_2_entry
@@ -67,7 +67,7 @@ class TestXMLFile_3166_2(unittest.TestCase):
 	<iso_3166_2_entry
 		code="MW-KS"	name="Kasungu"	parent="C" />
 	<iso_3166_2_entry
-		code="MW-LK"	name="Likoma Island"	parent="N" />
+		code="MW-LK"	name="Likoma"	parent="N" />
 	<iso_3166_2_entry
 		code="MW-LI"	name="Lilongwe"	parent="C" />
 	<iso_3166_2_entry
@@ -82,6 +82,8 @@ class TestXMLFile_3166_2(unittest.TestCase):
 		code="MW-MW"	name="Mwanza"	parent="S" />
 	<iso_3166_2_entry
 		code="MW-MZ"	name="Mzimba"	parent="N" />
+	<iso_3166_2_entry
+		code="MW-NE"	name="Neno"	parent="N" />
 	<iso_3166_2_entry
 		code="MW-NB"	name="Nkhata Bay"	parent="N" />
 	<iso_3166_2_entry
@@ -106,41 +108,51 @@ class TestXMLFile_3166_2(unittest.TestCase):
 </iso_3166_country>
 	<!-- New Zealand -->
 <iso_3166_country code="NZ">
+<iso_3166_subset type="Island">
+	<iso_3166_2_entry
+		code="NZ-N"	name="North Island" />
+	<iso_3166_2_entry
+		code="NZ-S"	name="South Island" />
+</iso_3166_subset>
 <iso_3166_subset type="Regional council">
 	<iso_3166_2_entry
-		code="NZ-AUK"	name="Auckland" />
+		code="NZ-AUK"	name="Auckland"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-BOP"	name="Bay of Plenty" />
+		code="NZ-BOP"	name="Bay of Plenty"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-CAN"	name="Canterbury" />
+		code="NZ-CAN"	name="Canterbury"	parent="S" />
 	<iso_3166_2_entry
-		code="NZ-HKB"	name="Hawkes Bay" />
+		code="NZ-HKB"	name="Hawke's Bay"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-MWT"	name="Manawatu-Wanganui" />
+		code="NZ-MWT"	name="Manawatu-Wanganui"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-NTL"	name="Northland" />
+		code="NZ-NTL"	name="Northland"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-OTA"	name="Otago" />
+		code="NZ-OTA"	name="Otago"	parent="S" />
 	<iso_3166_2_entry
-		code="NZ-STL"	name="Southland" />
+		code="NZ-STL"	name="Southland"	parent="S" />
 	<iso_3166_2_entry
-		code="NZ-TKI"	name="Taranaki" />
+		code="NZ-TKI"	name="Taranaki"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-WKO"	name="Waikato" />
+		code="NZ-WKO"	name="Waikato"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-WGN"	name="Wellington" />
+		code="NZ-WGN"	name="Wellington"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-WTC"	name="West Coast" />
+		code="NZ-WTC"	name="West Coast"	parent="S" />
 </iso_3166_subset>
 <iso_3166_subset type="Unitary authority">
 	<iso_3166_2_entry
-		code="NZ-GIS"	name="Gisborne" />
+		code="NZ-GIS"	name="Gisborne District"	parent="N" />
 	<iso_3166_2_entry
-		code="NZ-MBH"	name="Marlborough" />
+		code="NZ-MBH"	name="Marlborough District"	parent="S" />
 	<iso_3166_2_entry
-		code="NZ-NSN"	name="Nelson" />
+		code="NZ-NSN"	name="Nelson City"	parent="S" />
 	<iso_3166_2_entry
-		code="NZ-TAS"	name="Tasman" />
+		code="NZ-TAS"	name="Tasman District"	parent="S" />
+</iso_3166_subset>
+<iso_3166_subset type="Special island authority">
+	<iso_3166_2_entry
+		code="NZ-CIT"	name="Chatham Islands Territory" />
 </iso_3166_subset>
 </iso_3166_country>
 </iso_3166_2_entries>""")
@@ -155,9 +167,9 @@ class TestXMLFile_3166_2(unittest.TestCase):
         xml.show_all_codes()
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW C\t\tCentral
-MW\tRegion\tMW N\t\tNorthern
-MW\tRegion\tMW S\t\tSouthern (Malawi)
+MW\tRegion\tMW C\t\tCentral Region
+MW\tRegion\tMW N\t\tNorthern Region
+MW\tRegion\tMW S\t\tSouthern Region
 MW\tDistrict\tMW-BA\tS\tBalaka
 MW\tDistrict\tMW-BL\tS\tBlantyre
 MW\tDistrict\tMW-CK\tS\tChikwawa
@@ -167,7 +179,7 @@ MW\tDistrict\tMW-DE\tC\tDedza
 MW\tDistrict\tMW-DO\tC\tDowa
 MW\tDistrict\tMW-KR\tN\tKaronga
 MW\tDistrict\tMW-KS\tC\tKasungu
-MW\tDistrict\tMW-LK\tN\tLikoma Island
+MW\tDistrict\tMW-LK\tN\tLikoma
 MW\tDistrict\tMW-LI\tC\tLilongwe
 MW\tDistrict\tMW-MH\tS\tMachinga
 MW\tDistrict\tMW-MG\tS\tMangochi
@@ -175,6 +187,7 @@ MW\tDistrict\tMW-MC\tC\tMchinji
 MW\tDistrict\tMW-MU\tS\tMulanje
 MW\tDistrict\tMW-MW\tS\tMwanza
 MW\tDistrict\tMW-MZ\tN\tMzimba
+MW\tDistrict\tMW-NE\tN\tNeno
 MW\tDistrict\tMW-NB\tN\tNkhata Bay
 MW\tDistrict\tMW-NK\tC\tNkhotakota
 MW\tDistrict\tMW-NS\tS\tNsanje
@@ -185,22 +198,25 @@ MW\tDistrict\tMW-RU\tN\tRumphi
 MW\tDistrict\tMW-SA\tC\tSalima
 MW\tDistrict\tMW-TH\tS\tThyolo
 MW\tDistrict\tMW-ZO\tS\tZomba
-NZ\tRegional council\tNZ-AUK\t\tAuckland
-NZ\tRegional council\tNZ-BOP\t\tBay of Plenty
-NZ\tRegional council\tNZ-CAN\t\tCanterbury
-NZ\tRegional council\tNZ-HKB\t\tHawkes Bay
-NZ\tRegional council\tNZ-MWT\t\tManawatu-Wanganui
-NZ\tRegional council\tNZ-NTL\t\tNorthland
-NZ\tRegional council\tNZ-OTA\t\tOtago
-NZ\tRegional council\tNZ-STL\t\tSouthland
-NZ\tRegional council\tNZ-TKI\t\tTaranaki
-NZ\tRegional council\tNZ-WKO\t\tWaikato
-NZ\tRegional council\tNZ-WGN\t\tWellington
-NZ\tRegional council\tNZ-WTC\t\tWest Coast
-NZ\tUnitary authority\tNZ-GIS\t\tGisborne
-NZ\tUnitary authority\tNZ-MBH\t\tMarlborough
-NZ\tUnitary authority\tNZ-NSN\t\tNelson
-NZ\tUnitary authority\tNZ-TAS\t\tTasman
+NZ\tIsland\tNZ-N\t\tNorth Island
+NZ\tIsland\tNZ-S\t\tSouth Island
+NZ\tRegional council\tNZ-AUK\tN\tAuckland
+NZ\tRegional council\tNZ-BOP\tN\tBay of Plenty
+NZ\tRegional council\tNZ-CAN\tS\tCanterbury
+NZ\tRegional council\tNZ-HKB\tN\tHawke's Bay
+NZ\tRegional council\tNZ-MWT\tN\tManawatu-Wanganui
+NZ\tRegional council\tNZ-NTL\tN\tNorthland
+NZ\tRegional council\tNZ-OTA\tS\tOtago
+NZ\tRegional council\tNZ-STL\tS\tSouthland
+NZ\tRegional council\tNZ-TKI\tN\tTaranaki
+NZ\tRegional council\tNZ-WKO\tN\tWaikato
+NZ\tRegional council\tNZ-WGN\tN\tWellington
+NZ\tRegional council\tNZ-WTC\tS\tWest Coast
+NZ\tUnitary authority\tNZ-GIS\tN\tGisborne District
+NZ\tUnitary authority\tNZ-MBH\tS\tMarlborough District
+NZ\tUnitary authority\tNZ-NSN\tS\tNelson City
+NZ\tUnitary authority\tNZ-TAS\tS\tTasman District
+NZ\tSpecial island authority\tNZ-CIT\t\tChatham Islands Territory
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -216,8 +232,8 @@ NZ\tUnitary authority\tNZ-TAS\t\tTasman
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-NZ\tRegional council\tNZ-AUK\t\tAuckland
-MW\tRegion\tMW C\t\tCentral
+NZ\tRegional council\tNZ-AUK\tN\tAuckland
+MW\tRegion\tMW C\t\tCentral Region
 MW\tDistrict\tMW-RU\tN\tRumphi
 """)
         # Revert output capturing
@@ -234,9 +250,9 @@ MW\tDistrict\tMW-RU\tN\tRumphi
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW N\t\tNorthern
-NZ\tRegional council\tNZ-WGN\t\tWellington
-NZ\tRegional council\tNZ-OTA\t\tOtago
+MW\tRegion\tMW N\t\tNorthern Region
+NZ\tRegional council\tNZ-WGN\tN\tWellington
+NZ\tRegional council\tNZ-OTA\tS\tOtago
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -265,7 +281,7 @@ NZ\tRegional council\tNZ-OTA\t\tOtago
         # Ensure that the correct ISO codes generate an output
         self.assertEqual(output.getvalue(),
 """\
-NZ\tRegional council\tNZ-HKB\t\tHawkes Bay
+NZ\tRegional council\tNZ-HKB\tN\tHawke's Bay
 MW\tDistrict\tMW-NK\tC\tNkhotakota
 """)
         # Revert output capturing
@@ -282,9 +298,9 @@ MW\tDistrict\tMW-NK\tC\tNkhotakota
         xml.show_all_codes()
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW C\t\tCentral
-MW\tRegion\tMW N\t\tNord
-MW\tRegion\tMW S\t\tSud
+MW\tRegion\tMW C\t\tRégion centrale
+MW\tRegion\tMW N\t\tRégion septentrionale
+MW\tRegion\tMW S\t\tRégion méridionale
 MW\tDistrict\tMW-BA\tS\tBalaka
 MW\tDistrict\tMW-BL\tS\tBlantyre
 MW\tDistrict\tMW-CK\tS\tChikwawa
@@ -294,7 +310,7 @@ MW\tDistrict\tMW-DE\tC\tDedza
 MW\tDistrict\tMW-DO\tC\tDowa
 MW\tDistrict\tMW-KR\tN\tKaronga
 MW\tDistrict\tMW-KS\tC\tKasungu
-MW\tDistrict\tMW-LK\tN\tÎle Likoma
+MW\tDistrict\tMW-LK\tN\tLikoma
 MW\tDistrict\tMW-LI\tC\tLilongwe
 MW\tDistrict\tMW-MH\tS\tMachinga
 MW\tDistrict\tMW-MG\tS\tMangochi
@@ -302,6 +318,7 @@ MW\tDistrict\tMW-MC\tC\tMchinji
 MW\tDistrict\tMW-MU\tS\tMulanje
 MW\tDistrict\tMW-MW\tS\tMwanza
 MW\tDistrict\tMW-MZ\tN\tMzimba
+MW\tDistrict\tMW-NE\tN\tNeno
 MW\tDistrict\tMW-NB\tN\tBaie de Nkhata
 MW\tDistrict\tMW-NK\tC\tNkhotakota
 MW\tDistrict\tMW-NS\tS\tNsanje
@@ -312,22 +329,25 @@ MW\tDistrict\tMW-RU\tN\tRumphi
 MW\tDistrict\tMW-SA\tC\tSalima
 MW\tDistrict\tMW-TH\tS\tThyolo
 MW\tDistrict\tMW-ZO\tS\tZomba
-NZ\tRegional council\tNZ-AUK\t\tAuckland
-NZ\tRegional council\tNZ-BOP\t\tBaie de Plenty
-NZ\tRegional council\tNZ-CAN\t\tCanterbury
-NZ\tRegional council\tNZ-HKB\t\tBaie de Hawkes
-NZ\tRegional council\tNZ-MWT\t\tManawatu-Wanganui
-NZ\tRegional council\tNZ-NTL\t\tPays du Nord
-NZ\tRegional council\tNZ-OTA\t\tOtago
-NZ\tRegional council\tNZ-STL\t\tPays du Sud
-NZ\tRegional council\tNZ-TKI\t\tTaranaki
-NZ\tRegional council\tNZ-WKO\t\tWaikato
-NZ\tRegional council\tNZ-WGN\t\tWellington
-NZ\tRegional council\tNZ-WTC\t\tCôte occidentale
-NZ\tUnitary authority\tNZ-GIS\t\tGisborne
-NZ\tUnitary authority\tNZ-MBH\t\tMarlborough
-NZ\tUnitary authority\tNZ-NSN\t\tNelson
-NZ\tUnitary authority\tNZ-TAS\t\tTasman
+NZ\tIsland\tNZ-N\t\tÎle du Nord
+NZ\tIsland\tNZ-S\t\tÎle du Sud
+NZ\tRegional council\tNZ-AUK\tN\tAuckland
+NZ\tRegional council\tNZ-BOP\tN\tBaie de Plenty
+NZ\tRegional council\tNZ-CAN\tS\tCanterbury
+NZ\tRegional council\tNZ-HKB\tN\tBaie de Hawke
+NZ\tRegional council\tNZ-MWT\tN\tManawatu-Wanganui
+NZ\tRegional council\tNZ-NTL\tN\tPays du Nord
+NZ\tRegional council\tNZ-OTA\tS\tOtago
+NZ\tRegional council\tNZ-STL\tS\tPays du Sud
+NZ\tRegional council\tNZ-TKI\tN\tTaranaki
+NZ\tRegional council\tNZ-WKO\tN\tWaikato
+NZ\tRegional council\tNZ-WGN\tN\tWellington
+NZ\tRegional council\tNZ-WTC\tS\tCôte occidentale
+NZ\tUnitary authority\tNZ-GIS\tN\tDistrict de Gisborne
+NZ\tUnitary authority\tNZ-MBH\tS\tDistrict de Marlborough
+NZ\tUnitary authority\tNZ-NSN\tS\tNelson City
+NZ\tUnitary authority\tNZ-TAS\tS\tDistrict de Tasmanie
+NZ\tSpecial island authority\tNZ-CIT\t\tTerritoire des îles Chatham
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -344,9 +364,9 @@ NZ\tUnitary authority\tNZ-TAS\t\tTasman
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW S\t\tSud
-MW\tDistrict\tMW-LK\tN\tÎle Likoma
-NZ\tRegional council\tNZ-WTC\t\tCôte occidentale
+MW\tRegion\tMW S\t\tRégion méridionale
+MW\tDistrict\tMW-LK\tN\tLikoma
+NZ\tRegional council\tNZ-WTC\tS\tCôte occidentale
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -364,9 +384,9 @@ NZ\tRegional council\tNZ-WTC\t\tCôte occidentale
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW S\t\tSud
-MW\tDistrict\tMW-LK\tN\tÎle Likoma
-NZ\tRegional council\tNZ-WTC\t\tCôte occidentale
+MW\tRegion\tMW S\t\tRégion méridionale
+MW\tDistrict\tMW-LK\tN\tLikoma
+NZ\tRegional council\tNZ-WTC\tS\tCôte occidentale
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -397,8 +417,8 @@ NZ\tRegional council\tNZ-WTC\t\tCôte occidentale
         # Ensure that the correct ISO codes generate an output
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW S\t\tSud
-MW\tDistrict\tMW-LK\tN\tÎle Likoma
+MW\tRegion\tMW S\t\tRégion méridionale
+MW\tDistrict\tMW-LK\tN\tLikoma
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
@@ -414,9 +434,9 @@ MW\tDistrict\tMW-LK\tN\tÎle Likoma
         xml.show_all_codes()
         self.assertEqual(output.getvalue(),
 """\
-MW\tRegion\tMW C\t\tCentral\0\
-MW\tRegion\tMW N\t\tNorthern\0\
-MW\tRegion\tMW S\t\tSouthern (Malawi)\0\
+MW\tRegion\tMW C\t\tCentral Region\0\
+MW\tRegion\tMW N\t\tNorthern Region\0\
+MW\tRegion\tMW S\t\tSouthern Region\0\
 MW\tDistrict\tMW-BA\tS\tBalaka\0\
 MW\tDistrict\tMW-BL\tS\tBlantyre\0\
 MW\tDistrict\tMW-CK\tS\tChikwawa\0\
@@ -426,7 +446,7 @@ MW\tDistrict\tMW-DE\tC\tDedza\0\
 MW\tDistrict\tMW-DO\tC\tDowa\0\
 MW\tDistrict\tMW-KR\tN\tKaronga\0\
 MW\tDistrict\tMW-KS\tC\tKasungu\0\
-MW\tDistrict\tMW-LK\tN\tLikoma Island\0\
+MW\tDistrict\tMW-LK\tN\tLikoma\0\
 MW\tDistrict\tMW-LI\tC\tLilongwe\0\
 MW\tDistrict\tMW-MH\tS\tMachinga\0\
 MW\tDistrict\tMW-MG\tS\tMangochi\0\
@@ -434,6 +454,7 @@ MW\tDistrict\tMW-MC\tC\tMchinji\0\
 MW\tDistrict\tMW-MU\tS\tMulanje\0\
 MW\tDistrict\tMW-MW\tS\tMwanza\0\
 MW\tDistrict\tMW-MZ\tN\tMzimba\0\
+MW\tDistrict\tMW-NE\tN\tNeno\0\
 MW\tDistrict\tMW-NB\tN\tNkhata Bay\0\
 MW\tDistrict\tMW-NK\tC\tNkhotakota\0\
 MW\tDistrict\tMW-NS\tS\tNsanje\0\
@@ -444,22 +465,25 @@ MW\tDistrict\tMW-RU\tN\tRumphi\0\
 MW\tDistrict\tMW-SA\tC\tSalima\0\
 MW\tDistrict\tMW-TH\tS\tThyolo\0\
 MW\tDistrict\tMW-ZO\tS\tZomba\0\
-NZ\tRegional council\tNZ-AUK\t\tAuckland\0\
-NZ\tRegional council\tNZ-BOP\t\tBay of Plenty\0\
-NZ\tRegional council\tNZ-CAN\t\tCanterbury\0\
-NZ\tRegional council\tNZ-HKB\t\tHawkes Bay\0\
-NZ\tRegional council\tNZ-MWT\t\tManawatu-Wanganui\0\
-NZ\tRegional council\tNZ-NTL\t\tNorthland\0\
-NZ\tRegional council\tNZ-OTA\t\tOtago\0\
-NZ\tRegional council\tNZ-STL\t\tSouthland\0\
-NZ\tRegional council\tNZ-TKI\t\tTaranaki\0\
-NZ\tRegional council\tNZ-WKO\t\tWaikato\0\
-NZ\tRegional council\tNZ-WGN\t\tWellington\0\
-NZ\tRegional council\tNZ-WTC\t\tWest Coast\0\
-NZ\tUnitary authority\tNZ-GIS\t\tGisborne\0\
-NZ\tUnitary authority\tNZ-MBH\t\tMarlborough\0\
-NZ\tUnitary authority\tNZ-NSN\t\tNelson\0\
-NZ\tUnitary authority\tNZ-TAS\t\tTasman\0\
+NZ\tIsland\tNZ-N\t\tNorth Island\0\
+NZ\tIsland\tNZ-S\t\tSouth Island\0\
+NZ\tRegional council\tNZ-AUK\tN\tAuckland\0\
+NZ\tRegional council\tNZ-BOP\tN\tBay of Plenty\0\
+NZ\tRegional council\tNZ-CAN\tS\tCanterbury\0\
+NZ\tRegional council\tNZ-HKB\tN\tHawke's Bay\0\
+NZ\tRegional council\tNZ-MWT\tN\tManawatu-Wanganui\0\
+NZ\tRegional council\tNZ-NTL\tN\tNorthland\0\
+NZ\tRegional council\tNZ-OTA\tS\tOtago\0\
+NZ\tRegional council\tNZ-STL\tS\tSouthland\0\
+NZ\tRegional council\tNZ-TKI\tN\tTaranaki\0\
+NZ\tRegional council\tNZ-WKO\tN\tWaikato\0\
+NZ\tRegional council\tNZ-WGN\tN\tWellington\0\
+NZ\tRegional council\tNZ-WTC\tS\tWest Coast\0\
+NZ\tUnitary authority\tNZ-GIS\tN\tGisborne District\0\
+NZ\tUnitary authority\tNZ-MBH\tS\tMarlborough District\0\
+NZ\tUnitary authority\tNZ-NSN\tS\tNelson City\0\
+NZ\tUnitary authority\tNZ-TAS\tS\tTasman District\0\
+NZ\tSpecial island authority\tNZ-CIT\t\tChatham Islands Territory\0\
 """)
         # Revert output capturing
         sys.stdout = orig_stdout

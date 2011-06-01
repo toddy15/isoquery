@@ -175,8 +175,8 @@ tib\tbod\tbo\tTibetisch
             xml.show_single_code(code)
         self.assertEqual(output.getvalue(),
 """\
-heb\theb\the\tHébreu
-alg\talg\t\tAlgonquines, langues
+heb\theb\the\thébreu
+alg\talg\t\talgonquines, langues
 """)
         # Revert output capturing
         sys.stdout = orig_stdout
