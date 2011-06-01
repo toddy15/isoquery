@@ -34,28 +34,28 @@ OPTIONS
 This program follows the usual GNU command line syntax, with long options
 starting with two dashes ('**-**'). **isoquery** supports the following options:
 
--i number, --iso=number     The ISO standard to use. Possible values: 639,
-                            639-3, 3166, 3166-2, 4217, 15924 (default: 3166).
+-i standard, --iso=standard  The ISO standard to use. Possible values: 639,
+                             639-3, 3166, 3166-2, 4217, 15924 (default: 3166).
 
--x file, --xmlfile=file     Use another XML *file* with ISO data
-                            (default: /usr/share/xml/iso-codes/iso_3166.xml).
+-x file, --xmlfile=file      Use another XML *file* with ISO data
+                             (default: /usr/share/xml/iso-codes/iso_3166.xml).
 
--l locale, --locale=locale  Use this *locale* for output.
+-l locale, --locale=locale   Use this *locale* for output.
 
--n, --name                  Name for the supplied codes (default).
+-n, --name                   Name for the supplied codes (default).
 
--o, --official_name         Official name for the supplied codes. This may be
-                            the same as --name (only applies to ISO 3166).
+-o, --official_name          Official name for the supplied codes. This may be
+                             the same as --name (only applies to ISO 3166).
 
--c, --common_name           Common name for the supplied codes. This may be
-                            the same as --name (only applies to ISO 3166).
+-c, --common_name            Common name for the supplied codes. This may be
+                             the same as --name (only applies to ISO 3166).
 
--0, --null                  Separate entries with a NULL character instead
-                            of newline.
+-0, --null                   Separate entries with a NULL character instead
+                             of newline.
 
--h, --help                  Show summary of options.
+-h, --help                   Show summary of options.
 
--v, --version               Show program version and copyright.
+-v, --version                Show program version and copyright.
 
 
 EXAMPLES
