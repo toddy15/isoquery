@@ -7,7 +7,7 @@ pot:
 
 update-po:
 	for i in po/*.po; do \
-		msgmerge $$i po/isoquery.pot > tmp.po && mv tmp.po $$i ; \
+		msgmerge --previous $$i po/isoquery.pot > tmp.po && mv tmp.po $$i ; \
 	done
 .PHONY: update-po
 
