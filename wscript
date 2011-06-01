@@ -66,6 +66,18 @@ def build(bld):
                '--localized ${TGT}',
     )
     bld(
+        source = 'man/fr.add man/fr.po man/isoquery.rst',
+        target = 'man/fr/isoquery.rst',
+        rule = '${PO4A_TRANSLATE} ' + \
+            '--format text ' + \
+            '--option markdown ' + \
+            '--addendum ${SRC[0].bldpath()} ' + \
+            '--po ${SRC[1].bldpath()} ' + \
+            '--master ${SRC[2].bldpath()} ' + \
+            '--master-charset UTF-8 ' + \
+            '--localized ${TGT}',
+    )
+    bld(
         source = 'man/pt.add man/pt.po man/isoquery.rst',
         target = 'man/pt/isoquery.rst',
         rule = '${PO4A_TRANSLATE} ' + \
@@ -81,6 +93,11 @@ def build(bld):
         source = 'man/de/isoquery.rst',
         target = 'man/de/isoquery.1',
         rule = '${RST2MAN} ${SRC} ${TGT}',
+    )
+    bld(
+	    source = 'man/fr/isoquery.rst',
+	    target = 'man/fr/isoquery.1',
+	    rule = '${RST2MAN} ${SRC} ${TGT}',
     )
     bld(
         source = 'man/pt/isoquery.rst',
@@ -100,6 +117,12 @@ def build(bld):
         rule = '${GZIP} --best --stdout ${SRC} > ${TGT}',
     )
     bld.install_files('${MANDIR}/de/man1', 'man/de/isoquery.1.gz')
+    bld(
+	    source = 'man/fr/isoquery.1',
+	    target = 'man/fr/isoquery.1.gz',
+	    rule = '${GZIP} --best --stdout ${SRC} > ${TGT}',
+    )
+    bld.install_files('${MANDIR}/fr/man1', 'man/fr/isoquery.1.gz')
     bld(
         source = 'man/pt/isoquery.1',
         target = 'man/pt/isoquery.1.gz',
