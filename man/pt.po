@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Isoquery package.
 #
 # Copyright ©
-# Américo Monteiro <a_monteiro@netcabo.pt>, 2010.
+# Américo Monteiro <a_monteiro@netcabo.pt>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery-man 1.2-1\n"
 "POT-Creation-Date: 2011-05-29 14:49+0300\n"
-"PO-Revision-Date: 2011-06-01 12:16+0200\n"
+"PO-Revision-Date: 2011-06-01 12:54+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.2\n"
 
 #. type: Plain text
 #, no-wrap
@@ -233,13 +233,6 @@ msgstr ""
 "    ES      ESP     724     Spanje\n"
 
 #. type: Plain text
-#, fuzzy
-#| msgid ""
-#| "All of the above works for different ISO standards as well, so you can "
-#| "switch to the more extensive standard ISO 3166-2 by using the --iso "
-#| "command line option. The columns are country code, subset type (e.g. "
-#| "State, Province, etc.), ISO 3166-2 code, parent, and name. Please note "
-#| "that the fourth column (parent) may be empty."
 msgid ""
 "All of the above works for different ISO standards as well, so you can "
 "switch to the more extensive standard ISO 3166-2 by using the **--iso** "
@@ -250,8 +243,8 @@ msgstr ""
 "Tudo em cima funciona também para diferentes ISO standards, portanto você "
 "pode mudar para o standard ISO 3166-2 mais extensivo usando a opção **--"
 "iso** na linha de comandos. A colunas são código de país, tipo de "
-"subconjunto (ex. Estado, Província, etc), código ISO 3166-2, pai e nome. Por "
-"favor note que a quarta coluna (pai) pode estar vazia."
+"subconjunto (ex. Estado, Província, etc), código ISO 3166-2, pai e nome. A "
+"quarta coluna (pai) pode estar vazia."
 
 #. type: Plain text
 #, no-wrap
@@ -300,7 +293,7 @@ msgid ""
 "You can trim down the results by specifying only some codes. Moreover, the "
 "option to get translated names is also available."
 msgstr ""
-"Você pode 'aparar' os resultados ao especificar apenas alguns códigos. Mais "
+"Você pode estreitar os resultados ao especificar apenas alguns códigos. Mais "
 "ainda, a opção para obter nomes traduzidos está também disponível."
 
 #. type: Plain text
