@@ -1,21 +1,21 @@
 # Translation of isoquery messages to Portuguese
-# Copyright (C) 2010 The isoquery copyright holder
 # This file is distributed under the same license as the isoquery package.
 #
-# Américo Monteiro <a_monteiro@netcabo.pt>, 2010.
+# Copyright ©
+# Américo Monteiro <a_monteiro@netcabo.pt>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery 1.2-1\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2011-06-01 23:46+0200\n"
-"PO-Revision-Date: 2010-08-10 02:38+0100\n"
+"PO-Revision-Date: 2011-06-01 23:54+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: isoquery/cmdline_parser.py:30
@@ -24,86 +24,65 @@ msgstr "Utilização: %prog [opções] [códigos ISO]"
 
 #: isoquery/cmdline_parser.py:36
 msgid "standard"
-msgstr ""
+msgstr "standard"
 
 #: isoquery/cmdline_parser.py:37
-#, fuzzy, python-format
-#| msgid ""
-#| "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
-#| "15924. Default value: %default"
+#, python-format
 msgid ""
 "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
 "15924 (default: %default)."
 msgstr ""
 "O standard ISO a usar: Valores possíveis: 639, 639-3, 3166, 3166-2, 4217, "
-"15924. Valor predefinido: %default"
+"15924. (Predefinição: %default)."
 
 #: isoquery/cmdline_parser.py:42
 msgid "file"
-msgstr ""
+msgstr "ficheiro"
 
 #: isoquery/cmdline_parser.py:43
-#, fuzzy, python-format
-#| msgid "Use specified XML file with ISO data. Default value: %default"
+#, python-format
 msgid "Use another XML file with ISO data (default: %default)."
-msgstr ""
-"Usa ficheiro XML especificado com dados ISO. Valor predefinido: %default"
+msgstr "Usa ficheiro XML especificado com dados ISO. (Predefinição: %default)."
 
 #: isoquery/cmdline_parser.py:47
 msgid "locale"
-msgstr ""
+msgstr "locale"
 
 #: isoquery/cmdline_parser.py:48
-#, fuzzy
-#| msgid "Use this locale for output"
 msgid "Use this locale for output."
-msgstr "Usa este locale para os resultados"
+msgstr "Usa este locale para os resultados."
 
 #: isoquery/cmdline_parser.py:51
-#, fuzzy
-#| msgid "Display the name for the supplied codes (default)"
 msgid "Name for the supplied codes (default)."
-msgstr "Mostra os nomes dos códigos fornecidos (predefinição)"
+msgstr "Nome para os códigos fornecidos (predefinição)."
 
 #: isoquery/cmdline_parser.py:54
-#, fuzzy
-#| msgid ""
-#| "Display the official name for the supplied codes. This may be the same as "
-#| "--name. (Only applies to ISO 3166)"
 msgid ""
 "Official name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166)."
 msgstr ""
-"Mostra o nome oficial para os códigos fornecidos. Isto pode ser o mesmo que "
-"--name. (Apenas se aplica ao ISO 3166)"
+"Nome oficial para os códigos fornecidos. Isto pode ser o mesmo que --name "
+"(apenas se aplica ao ISO 3166)."
 
 #: isoquery/cmdline_parser.py:59
-#, fuzzy
-#| msgid ""
-#| "Display the common name for the supplied codes. This may be the same as --"
-#| "name. (Only applies to ISO 3166)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166)."
 msgstr ""
-"Mostra o nome comum para os códigos fornecidos. Isto pode ser o mesmo que --"
-"name. (Apenas se aplica ao ISO 3166)"
+"Nome comum para os códigos fornecidos. Isto pode ser o mesmo que --name "
+"(apenas se aplica ao ISO 3166)."
 
 #: isoquery/cmdline_parser.py:65
-#, fuzzy
-#| msgid "Separate entries with a NULL character instead of newline"
 msgid "Separate entries with a NULL character instead of newline."
-msgstr "Separa as entradas com o caractere NULO em vez de nova linha"
+msgstr "Separa as entradas com o caractere NULO em vez de nova linha."
 
 #: isoquery/cmdline_parser.py:69
 msgid "Show summary of options."
-msgstr ""
+msgstr "Mostra o sumário de opções."
 
 #: isoquery/cmdline_parser.py:73
-#, fuzzy
-#| msgid "Show program version and copyright"
 msgid "Show program version and copyright."
-msgstr "Mostra a versão do programa e o copyright"
+msgstr "Mostra a versão do programa e o copyright."
 
 #: isoquery/cmdline_parser.py:91
 #, python-format
@@ -123,16 +102,14 @@ msgid "isoquery %(version)s"
 msgstr "isoquery %(version)s"
 
 #: isoquery/cmdline_parser.py:127
-#, fuzzy
-#| msgid "Copyright © 2007-2010 Tobias Quathamer"
 msgid "Copyright © 2007-2011 Tobias Quathamer"
-msgstr "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Copyright © 2007-2011 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
 #: isoquery/cmdline_parser.py:130
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
-msgstr "Tradução para Português Copyright © 2010 Américo Monteiro"
+msgstr "Tradução para Português Copyright © 2010-2011 Américo Monteiro"
 
 #: isoquery/xmlfile.py:42
 #, python-format
@@ -158,15 +135,3 @@ msgstr ""
 #, python-format
 msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
 msgstr "isoquery: O código '%(code)s' não está definido em ISO %(standard)s.\n"
-
-#~ msgid "STANDARD"
-#~ msgstr "STANDARD"
-
-#~ msgid "FILE"
-#~ msgstr "FICHEIRO"
-
-#~ msgid "LOCALE"
-#~ msgstr "LOCALE"
-
-#~ msgid "Show this information"
-#~ msgstr "Mostra esta informação"

@@ -8,6 +8,9 @@ UNRELEASED
 * New manpage translation:
   - French, thanks to David Prévot. Closes: #628841
 * Update test suite to pass with current iso-codes (3.26)
+* Updated translations:
+  - German, thanks to Tobias Quathamer.
+  - Portuguese, thanks to Américo Monteiro.
 
 
 Isoquery 1.4
