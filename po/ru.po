@@ -1,13 +1,14 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Russian translation of package isoquery.
+# This file is distributed under the same license as the isoquery package.
 #
-# Yuri Kozlov <yuray@komyakino.ru>, 2010.
+# Copyright ©
+# Yuri Kozlov <yuray@komyakino.ru>, 2010, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2011-06-01 23:46+0200\n"
-"PO-Revision-Date: 2010-07-18 17:04+0400\n"
+"PO-Revision-Date: 2011-06-02 20:33+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
@@ -24,52 +25,39 @@ msgstr "Использование: %prog [параметры] [коды ISO]"
 
 #: isoquery/cmdline_parser.py:36
 msgid "standard"
-msgstr ""
+msgstr "стандарт"
 
 #: isoquery/cmdline_parser.py:37
-#, fuzzy, python-format
-#| msgid ""
-#| "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
-#| "15924. Default value: %default"
+#, python-format
 msgid ""
 "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
 "15924 (default: %default)."
 msgstr ""
 "Использовать стандарт ISO. Возможные значения: 639, 639-3, 3166, 3166-2, "
-"4217, 15924. Значение по умолчанию: %default"
+"4217, 15924 (по умолчанию: %default)."
 
 #: isoquery/cmdline_parser.py:42
 msgid "file"
-msgstr ""
+msgstr "файл"
 
 #: isoquery/cmdline_parser.py:43
-#, fuzzy, python-format
-#| msgid "Use specified XML file with ISO data. Default value: %default"
+#, python-format
 msgid "Use another XML file with ISO data (default: %default)."
-msgstr ""
-"Использовать заданный файл XML с данными ISO. Значение по умолчанию: %default"
+msgstr "Использовать заданный файл XML с данными ISO (по умолчанию: %default)."
 
 #: isoquery/cmdline_parser.py:47
 msgid "locale"
-msgstr ""
+msgstr "локаль"
 
 #: isoquery/cmdline_parser.py:48
-#, fuzzy
-#| msgid "Use this locale for output"
 msgid "Use this locale for output."
-msgstr "Использовать данную локаль при выводе"
+msgstr "Использовать данную локаль при выводе."
 
 #: isoquery/cmdline_parser.py:51
-#, fuzzy
-#| msgid "Display the name for the supplied codes (default)"
 msgid "Name for the supplied codes (default)."
-msgstr "Показать имена имеющих кодов (по умолчанию)"
+msgstr "Показать имена имеющих кодов (по умолчанию)."
 
 #: isoquery/cmdline_parser.py:54
-#, fuzzy
-#| msgid ""
-#| "Display the official name for the supplied codes. This may be the same as "
-#| "--name. (Only applies to ISO 3166)"
 msgid ""
 "Official name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166)."
@@ -78,10 +66,6 @@ msgstr ""
 "(применимо только к ISO 3166)."
 
 #: isoquery/cmdline_parser.py:59
-#, fuzzy
-#| msgid ""
-#| "Display the common name for the supplied codes. This may be the same as --"
-#| "name. (Only applies to ISO 3166)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166)."
@@ -90,31 +74,27 @@ msgstr ""
 "(применимо только к ISO 3166)."
 
 #: isoquery/cmdline_parser.py:65
-#, fuzzy
-#| msgid "Separate entries with a NULL character instead of newline"
 msgid "Separate entries with a NULL character instead of newline."
-msgstr "Разделять элементы символом NULL, а не символом новой строки"
+msgstr "Разделять элементы символом NULL, а не символом новой строки."
 
 #: isoquery/cmdline_parser.py:69
 msgid "Show summary of options."
-msgstr ""
+msgstr "Показать справку по параметрам."
 
 #: isoquery/cmdline_parser.py:73
-#, fuzzy
-#| msgid "Show program version and copyright"
 msgid "Show program version and copyright."
-msgstr "Показать версию программы и ифн. об авторском праве"
+msgstr "Показать версию программы и инф. об авторском праве."
 
 #: isoquery/cmdline_parser.py:91
 #, python-format
 msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
-msgstr "isoquery: Стандарт ISO %(standard)s не поддерживается.\n"
+msgstr "isoquery: Стандарт ISO «%(standard)s» не поддерживается.\n"
 
 #: isoquery/cmdline_parser.py:110
 #, python-format
 msgid ""
 "isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
-msgstr "isoquery: Локаль %(locale)s недоступна для ISO %(standard)s.\n"
+msgstr "isoquery: Локаль «%(locale)s» недоступна для ISO %(standard)s.\n"
 
 #: isoquery/cmdline_parser.py:126
 #, python-format
@@ -122,26 +102,24 @@ msgid "isoquery %(version)s"
 msgstr "isoquery %(version)s"
 
 #: isoquery/cmdline_parser.py:127
-#, fuzzy
-#| msgid "Copyright © 2007-2010 Tobias Quathamer"
 msgid "Copyright © 2007-2011 Tobias Quathamer"
-msgstr "Copyright © 2007-2010 Tobias Quathamer"
+msgstr "Copyright © 2007-2011 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
 #: isoquery/cmdline_parser.py:130
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
-msgstr "Перевод на русский Copyright © 2010 Юрий Козлов"
+msgstr "Перевод на русский Copyright © 2010-2011 Юрий Козлов"
 
 #: isoquery/xmlfile.py:42
 #, python-format
 msgid "isoquery: The file '%(filename)s' could not be opened.\n"
-msgstr "isoquery: Не удалось открыть файл %(filename)s.\n"
+msgstr "isoquery: Не удалось открыть файл «%(filename)s».\n"
 
 #: isoquery/xmlfile.py:46
 #, python-format
 msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
-msgstr "isoquery: Не удалось проанализировать файл %(filename)s.\n"
+msgstr "isoquery: Не удалось проанализировать файл «%(filename)s».\n"
 
 #: isoquery/xmlfile.py:52
 #, python-format
@@ -149,22 +127,10 @@ msgid ""
 "isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
-"isoquery: Файл %(filename)s не содержит допустимых данных ISO %(standard)s "
-"data.\n"
+"isoquery: Файл «%(filename)s» не содержит допустимых данных ISO "
+"%(standard)s.\n"
 
 #: isoquery/xmlfile.py:71
 #, python-format
 msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
-msgstr "isoquery: Код %(code)s не определён в ISO %(standard)s.\n"
-
-#~ msgid "STANDARD"
-#~ msgstr "СТАНДАРТ"
-
-#~ msgid "FILE"
-#~ msgstr "ФАЙЛ"
-
-#~ msgid "LOCALE"
-#~ msgstr "ЛОКАЛЬ"
-
-#~ msgid "Show this information"
-#~ msgstr "Показать эту справку"
+msgstr "isoquery: Код «%(code)s» не определён в ISO %(standard)s.\n"
