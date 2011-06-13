@@ -40,7 +40,7 @@ msgid ""
 ":Version:         1.5\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            14 juin 2011\n"
+":Date:            14 juin 2011\n"
 ":Version:         1.5\n"
 ":Manual section:  1\n"
 
