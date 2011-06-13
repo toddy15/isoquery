@@ -1,6 +1,6 @@
 Isoquery 1.5
 ============
-UNRELEASED
+14 June 2011
 
 * If the locale does not exist for the given ISO standard, print a warning
   message and use the untranslated (thus English) strings. Closes: #624147
