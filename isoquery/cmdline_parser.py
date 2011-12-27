@@ -129,7 +129,7 @@ class CmdlineParser:
         # your language.
         translation = _(u"Translation to LANGUAGE Copyright © YEAR YOUR-NAME")
         if translation.find("LANGUAGE") == -1:
-            print(translation)
+            print(translation).encode("utf-8")
         print("""
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
