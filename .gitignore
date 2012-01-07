@@ -6,3 +6,5 @@ isoquery.e4p
 .eric4project
 *.pyc
 .ropeproject
+MANIFEST
+build/*
