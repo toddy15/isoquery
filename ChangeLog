@@ -3,6 +3,8 @@ UNRELEASED
 
 * Fix a UnicodeEncodeError in version output, thanks to David Prévot.
   Closes: #650746
+* Use standard distutils setup.py file for building and installing
+  the package, remove waf build system completely
 * Updated translations:
   - Sinhala, thanks to Danishka Navin <danishka@gmail.com>.
 

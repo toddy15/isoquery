@@ -12,12 +12,14 @@ the ISO standard.
 Dependencies
 ------------
 
-This program needs Python 2.4 and python-lxml.
+This program needs Python 2.4 and python-lxml for execution.
+In order to build the program from source, you need also rst2man
+and gettext.
 
 Installation
 ------------
 
-Just run "./waf configure", "./waf build", "./waf install".
+Just run "python setup.py install".
 
 Author and Copyright
 --------------------
