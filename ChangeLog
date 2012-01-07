@@ -1,5 +1,6 @@
-UNRELEASED
-==========
+Isoquery 1.6
+============
+8 January 2012
 
 * Fix a UnicodeEncodeError in version output, thanks to David Prévot.
   Closes: #650746
