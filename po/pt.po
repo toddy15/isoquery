@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery 1.2-1\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2011-06-01 23:46+0200\n"
+"POT-Creation-Date: 2012-01-07 23:33+0100\n"
 "PO-Revision-Date: 2011-06-01 23:54+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -102,8 +102,8 @@ msgid "isoquery %(version)s"
 msgstr "isoquery %(version)s"
 
 #: isoquery/cmdline_parser.py:127
-msgid "Copyright © 2007-2011 Tobias Quathamer"
-msgstr "Copyright © 2007-2011 Tobias Quathamer"
+msgid "Copyright © 2007-2012 Tobias Quathamer"
+msgstr "Copyright © 2007-2012 Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.

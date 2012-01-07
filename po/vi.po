@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2011-06-01 23:46+0200\n"
+"POT-Creation-Date: 2012-01-07 23:33+0100\n"
 "PO-Revision-Date: 2010-09-30 23:02+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -126,10 +126,8 @@ msgid "isoquery %(version)s"
 msgstr "isoquery %(version)s"
 
 #: isoquery/cmdline_parser.py:127
-#, fuzzy
-#| msgid "Copyright © 2007-2010 Tobias Quathamer"
-msgid "Copyright © 2007-2011 Tobias Quathamer"
-msgstr "Tác quyền © năm 2007-2010 của Tobias Quathamer"
+msgid "Copyright © 2007-2012 Tobias Quathamer"
+msgstr "Tác quyền © năm 2007-2012 của Tobias Quathamer"
 
 #. TRANSLATORS: Please change the uppercase words as appropriate for
 #. your language.
