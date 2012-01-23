@@ -109,7 +109,7 @@ class custom_build(build):
                 if result != 0:
                     sys.stderr.write("Fatal error: the manpage could not be compressed with gzip.\n")
                     sys.exit(1)
-            directory = os.path.join("share", "man", "man1", locale)
+            directory = os.path.join("share", "man", locale, "man1")
             data_files.append((directory, [os.path.join("build", "man", locale, "isoquery.1.gz")]))
 
 
