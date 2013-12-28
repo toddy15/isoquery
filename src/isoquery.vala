@@ -20,6 +20,10 @@ using libisocodes;
 
 public class Isoquery : Object {
     public static int main(string[] args) {
+        // Set up I18N infrastructure
+        Intl.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset(Config.GETTEXT_PACKAGE, "UTF-8");
+        Intl.setlocale(LocaleCategory.ALL, "");
         var a = new ISO_3166();
         foreach (var i in a.find_all()) {
             stdout.printf("%s\n", i.name);
