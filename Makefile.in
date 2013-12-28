@@ -77,7 +77,7 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	TODO build-aux/compile build-aux/config.guess \
 	build-aux/config.rpath build-aux/config.sub build-aux/depcomp \
 	build-aux/install-sh build-aux/missing isoquery_vala.stamp \
-	src/isoquery.c
+	src/isoquery.c src/optionparser.c
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
 	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/intlmacosx.m4 \
@@ -96,7 +96,8 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_isoquery_OBJECTS = src/isoquery-isoquery.$(OBJEXT)
+am_isoquery_OBJECTS = src/isoquery-isoquery.$(OBJEXT) \
+	src/isoquery-optionparser.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 am__DEPENDENCIES_1 =
 isoquery_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -322,7 +323,8 @@ ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = po
 EXTRA_DIST = vapi/config.vapi
 isoquery_SOURCES = \
-	src/isoquery.vala
+	src/isoquery.vala \
+	src/optionparser.vala
 
 VALAFLAGS = \
 	--pkg libisocodes \
@@ -435,6 +437,8 @@ src/$(DEPDIR)/$(am__dirstamp):
 	@: > src/$(DEPDIR)/$(am__dirstamp)
 src/isoquery-isoquery.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
+src/isoquery-optionparser.$(OBJEXT): src/$(am__dirstamp) \
+	src/$(DEPDIR)/$(am__dirstamp)
 isoquery$(EXEEXT): $(isoquery_OBJECTS) $(isoquery_DEPENDENCIES) $(EXTRA_isoquery_DEPENDENCIES) 
 	@rm -f isoquery$(EXEEXT)
 	$(AM_V_CCLD)$(isoquery_LINK) $(isoquery_OBJECTS) $(isoquery_LDADD) $(LIBS)
@@ -442,11 +446,13 @@ isoquery$(EXEEXT): $(isoquery_OBJECTS) $(isoquery_DEPENDENCIES) $(EXTRA_isoquery
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 	-rm -f src/isoquery-isoquery.$(OBJEXT)
+	-rm -f src/isoquery-optionparser.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-isoquery.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-optionparser.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -477,14 +483,33 @@ src/isoquery-isoquery.obj: src/isoquery.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/isoquery.c' object='src/isoquery-isoquery.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-isoquery.obj `if test -f 'src/isoquery.c'; then $(CYGPATH_W) 'src/isoquery.c'; else $(CYGPATH_W) '$(srcdir)/src/isoquery.c'; fi`
+
+src/isoquery-optionparser.o: src/optionparser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-optionparser.o -MD -MP -MF src/$(DEPDIR)/isoquery-optionparser.Tpo -c -o src/isoquery-optionparser.o `test -f 'src/optionparser.c' || echo '$(srcdir)/'`src/optionparser.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-optionparser.Tpo src/$(DEPDIR)/isoquery-optionparser.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/optionparser.c' object='src/isoquery-optionparser.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-optionparser.o `test -f 'src/optionparser.c' || echo '$(srcdir)/'`src/optionparser.c
+
+src/isoquery-optionparser.obj: src/optionparser.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-optionparser.obj -MD -MP -MF src/$(DEPDIR)/isoquery-optionparser.Tpo -c -o src/isoquery-optionparser.obj `if test -f 'src/optionparser.c'; then $(CYGPATH_W) 'src/optionparser.c'; else $(CYGPATH_W) '$(srcdir)/src/optionparser.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-optionparser.Tpo src/$(DEPDIR)/isoquery-optionparser.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/optionparser.c' object='src/isoquery-optionparser.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-optionparser.obj `if test -f 'src/optionparser.c'; then $(CYGPATH_W) 'src/optionparser.c'; else $(CYGPATH_W) '$(srcdir)/src/optionparser.c'; fi`
 $(srcdir)/src/isoquery.c: $(srcdir)/isoquery_vala.stamp
 	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
 	@if test -f $@; then :; else \
 	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
 	fi
-$(srcdir)/isoquery_vala.stamp: src/isoquery.vala
+$(srcdir)/src/optionparser.c: $(srcdir)/isoquery_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
+	@if test -f $@; then :; else \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
+	fi
+$(srcdir)/isoquery_vala.stamp: src/isoquery.vala src/optionparser.vala
 	$(AM_V_at)rm -f $@ && echo stamp > $@-t
-	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C src/isoquery.vala
+	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C src/isoquery.vala src/optionparser.vala
 	$(AM_V_at)mv -f $@-t $@
 
 # This directory's subdirectories are mostly independent; you can cd
@@ -850,6 +875,7 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 	-rm -f isoquery_vala.stamp
 	-rm -f src/isoquery.c
+	-rm -f src/optionparser.c
 clean: clean-recursive
 
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
@@ -942,9 +968,6 @@ uninstall-am: uninstall-binPROGRAMS
 	mostlyclean-generic pdf pdf-am ps ps-am tags tags-recursive \
 	uninstall uninstall-am uninstall-binPROGRAMS
 
-
-#DISTCLEANFILES = libisocodes.pc
-#MAINTAINERCLEANFILES = config.h.in~ libisocodes.h libisocodes.vapi libisocodes-$(VERSION).gir
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

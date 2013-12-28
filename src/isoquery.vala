@@ -24,6 +24,8 @@ public class Isoquery : Object {
         Intl.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
         Intl.bind_textdomain_codeset(Config.GETTEXT_PACKAGE, "UTF-8");
         Intl.setlocale(LocaleCategory.ALL, "");
+        // Parse command line options.
+        Options.parse_arguments(args);
         var a = new ISO_3166();
         try {
             foreach (var i in a.find_all()) {

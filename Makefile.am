@@ -28,7 +28,8 @@ EXTRA_DIST = vapi/config.vapi
 bin_PROGRAMS = isoquery
 
 isoquery_SOURCES = \
-	src/isoquery.vala
+	src/isoquery.vala \
+	src/optionparser.vala
 
 VALAFLAGS = \
 	--pkg libisocodes \
@@ -38,6 +39,3 @@ VALAFLAGS = \
 isoquery_CPPFLAGS = -include config.h -DLOCALEDIR=\""$(localedir)"\"
 isoquery_CFLAGS = $(GOBJECT_CFLAGS) $(GLIB_CFLAGS) $(LIBISOCODES_CFLAGS)
 isoquery_LDADD = $(GOBJECT_LIBS) $(GLIB_LIBS) $(LIBISOCODES_LIBS)
-
-#DISTCLEANFILES = libisocodes.pc
-#MAINTAINERCLEANFILES = config.h.in~ libisocodes.h libisocodes.vapi libisocodes-$(VERSION).gir
