@@ -23,7 +23,7 @@ ACLOCAL_AMFLAGS = -I m4
 # po/Makefile.in.in for a non-recursive approach.
 SUBDIRS = po
 
-#EXTRA_DIST = 	vapi/config.vapi
+EXTRA_DIST = vapi/config.vapi
 
 bin_PROGRAMS = isoquery
 
@@ -31,8 +31,8 @@ isoquery_SOURCES = \
 	src/isoquery.vala
 
 VALAFLAGS = \
-	--pkg libisocodes
-#	--vapidir=vapi --pkg config
+	--pkg libisocodes \
+	--vapidir=vapi --pkg config
 
 # Here are two quotes needed due to expansion by libtool
 isoquery_CPPFLAGS = -include config.h -DLOCALEDIR=\""$(localedir)"\"

@@ -320,13 +320,14 @@ ACLOCAL_AMFLAGS = -I m4
 # This is needed for gettext, it is too much work to rewrite
 # po/Makefile.in.in for a non-recursive approach.
 SUBDIRS = po
+EXTRA_DIST = vapi/config.vapi
 isoquery_SOURCES = \
 	src/isoquery.vala
 
 VALAFLAGS = \
-	--pkg libisocodes
+	--pkg libisocodes \
+	--vapidir=vapi --pkg config
 
-#	--vapidir=vapi --pkg config
 
 # Here are two quotes needed due to expansion by libtool
 isoquery_CPPFLAGS = -include config.h -DLOCALEDIR=\""$(localedir)"\"
