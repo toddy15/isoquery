@@ -1,5 +1,0 @@
-include AUTHORS ChangeLog COPYING TODO
-include man/*
-include po/isoquery.pot
-include po/*po
-include test/*py
