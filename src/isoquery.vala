@@ -25,8 +25,13 @@ public class Isoquery : Object {
         Intl.bind_textdomain_codeset(Config.GETTEXT_PACKAGE, "UTF-8");
         Intl.setlocale(LocaleCategory.ALL, "");
         var a = new ISO_3166();
-        foreach (var i in a.find_all()) {
-            stdout.printf("%s\n", i.name);
+        try {
+            foreach (var i in a.find_all()) {
+                stdout.printf("%s\n", i.name);
+            }
+        }
+        catch (ISOCodesError err) {
+            stderr.printf("isoquery: %s\n", err.message);
         }
         return 0;
     }
