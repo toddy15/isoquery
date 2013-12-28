@@ -31,7 +31,8 @@ public class Isoquery : Object {
             }
         }
         catch (ISOCodesError err) {
-            stderr.printf("isoquery: %s\n", err.message);
+            // TRANSLATORS: This is an error message.
+            stderr.printf(_("isoquery: %s\n"), err.message);
         }
         return 0;
     }
