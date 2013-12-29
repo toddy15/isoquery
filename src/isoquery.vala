@@ -25,7 +25,7 @@ public class Isoquery : Object {
         Intl.bind_textdomain_codeset(Config.GETTEXT_PACKAGE, "UTF-8");
         Intl.setlocale(LocaleCategory.ALL, "");
         // Parse command line options.
-        if (!Options.parse_arguments(args)) {
+        if (!Options.parse_arguments(ref args)) {
             // There was an error in the command line parsing,
             // exit the program with an error status.
             return 1;

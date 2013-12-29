@@ -27,7 +27,7 @@ public class Options : Object {
         { null }
     };
 
-    public static bool parse_arguments(string[] args) {
+    public static bool parse_arguments(ref unowned string[] args) {
         bool success = true;
         try {
             var opt_context = new OptionContext("[ISO codes]");
