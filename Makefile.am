@@ -33,6 +33,7 @@ isoquery_SOURCES = \
 
 VALAFLAGS = \
 	--pkg libisocodes \
+	--pkg posix \
 	--vapidir=vapi --pkg config
 
 # Here are two quotes needed due to expansion by libtool

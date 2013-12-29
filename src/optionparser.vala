@@ -27,8 +27,7 @@ public class Options : Object {
         { null }
     };
 
-    public static bool parse_arguments(ref unowned string[] args) {
-        bool success = true;
+    public static void parse_arguments(ref unowned string[] args) {
         try {
             var opt_context = new OptionContext("[ISO codes]");
             opt_context.set_help_enabled(true);
@@ -39,8 +38,29 @@ public class Options : Object {
             stderr.printf(_("isoquery: %s\n"), err.message);
             stderr.printf(_("Run '%s --help' to see a full list of available command line options.\n"), args[0]);
             // Exit the program with an error status.
-            success = false;
+            Posix.exit(Posix.EXIT_FAILURE);
         }
-        return success;
+        check_options();
+    }
+
+    public static void check_options() {
+        // Ensure the default ISO standard is set
+        if (Options.iso == null) {
+            Options.iso = "3166";
+        }
+        // Ensure a valid and supported standard
+        string[] supported_standards = { "639", "639-3", "3166", "3166-2", "4217", "15924" };
+        bool supported = false;
+        foreach (var standard in supported_standards) {
+            if (Options.iso == standard) {
+                supported = true;
+                break;
+            }
+        }
+        if (!supported) {
+            // TRANSLATORS: This is an error message.
+            stderr.printf(_("isoquery: ISO standard '%s' is not supported.\n"), Options.iso);
+            Posix.exit(Posix.EXIT_FAILURE);
+        }
     }
 }

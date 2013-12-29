@@ -25,11 +25,7 @@ public class Isoquery : Object {
         Intl.bind_textdomain_codeset(Config.GETTEXT_PACKAGE, "UTF-8");
         Intl.setlocale(LocaleCategory.ALL, "");
         // Parse command line options.
-        if (!Options.parse_arguments(ref args)) {
-            // There was an error in the command line parsing,
-            // exit the program with an error status.
-            return 1;
-        }
+        Options.parse_arguments(ref args);
         var a = new ISO_3166();
         try {
             foreach (var i in a.find_all()) {
@@ -40,6 +36,6 @@ public class Isoquery : Object {
             // TRANSLATORS: This is an error message.
             stderr.printf(_("isoquery: %s\n"), err.message);
         }
-        return 0;
+        return Posix.EXIT_SUCCESS;
     }
 }

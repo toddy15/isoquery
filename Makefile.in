@@ -328,6 +328,7 @@ isoquery_SOURCES = \
 
 VALAFLAGS = \
 	--pkg libisocodes \
+	--pkg posix \
 	--vapidir=vapi --pkg config
 
 
