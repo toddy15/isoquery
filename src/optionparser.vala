@@ -27,7 +27,8 @@ public class Options : Object {
         { null }
     };
 
-    public static void parse_arguments(string[] args) {
+    public static bool parse_arguments(string[] args) {
+        bool success = true;
         try {
             var opt_context = new OptionContext("[ISO codes]");
             opt_context.set_help_enabled(true);
@@ -37,6 +38,9 @@ public class Options : Object {
             // TRANSLATORS: This is an error message.
             stderr.printf(_("isoquery: %s\n"), err.message);
             stderr.printf(_("Run '%s --help' to see a full list of available command line options.\n"), args[0]);
+            // Exit the program with an error status.
+            success = false;
         }
+        return success;
     }
 }
