@@ -44,6 +44,11 @@ public class Options : Object {
     }
 
     public static void check_options() {
+        // Display version and copyright.
+        if (Options.version == true) {
+            show_version_and_copyright();
+            Posix.exit(Posix.EXIT_SUCCESS);
+        }
         // Ensure the default ISO standard is set
         if (Options.iso == null) {
             Options.iso = "3166";
@@ -62,5 +67,30 @@ public class Options : Object {
             stderr.printf(_("isoquery: ISO standard '%s' is not supported.\n"), Options.iso);
             Posix.exit(Posix.EXIT_FAILURE);
         }
+    }
+
+    public static void show_version_and_copyright() {
+        stdout.printf(_("isoquery %s\n"), Config.VERSION);
+        stdout.printf(_("Copyright © 2007-2013 Tobias Quathamer\n"));
+        // TRANSLATORS: Please change the uppercase words as appropriate for
+        // your language.
+        var translation = _("Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n");
+        if (!("LANGUAGE" in translation)) {
+            stdout.printf(translation);
+        }
+        stdout.printf("""
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+""");
     }
 }

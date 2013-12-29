@@ -18,6 +18,7 @@
 
 [CCode (prefix = "", lower_case_cprefix = "", cheader_filename = "config.h")]
 namespace Config {
+    public const string VERSION;
     public const string GETTEXT_PACKAGE;
     // LOCALEDIR is not defined in config.h, but on the command line via -D
     public const string LOCALEDIR;
