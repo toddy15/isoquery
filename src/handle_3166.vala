@@ -20,9 +20,11 @@ using libisocodes;
 
 public class Handle_3166 : Object {
     private ISO_3166 iso;
+    private ProgramOptions options;
     
     public void setup(ProgramOptions options) {
         this.iso = new ISO_3166();
+        this.options = options;
         if (options.filepath != null) {
             this.iso.set_filepath(options.filepath);
         }
@@ -35,7 +37,15 @@ public class Handle_3166 : Object {
 		stdout.printf("%s\t", item.alpha_2_code);
 		stdout.printf("%s\t", item.alpha_3_code);
 		stdout.printf("%s\t", item.numeric_code);
-		stdout.printf("%s\n", item.name);
+		if (options.official_name && item.official_name != "") {
+			stdout.printf("%s\n", item.official_name);
+		}
+		else if (options.common_name && item.common_name != "") {
+			stdout.printf("%s\n", item.common_name);
+		}
+		else {
+			stdout.printf("%s\n", item.name);
+		}
 	}
 	
     public void show(string[] codes) {

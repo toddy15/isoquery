@@ -22,6 +22,9 @@ public struct ProgramOptions {
     string iso;
     string filepath;
     string locale;
+    bool name;
+    bool official_name;
+    bool common_name;
     bool version;
 }
 
@@ -95,7 +98,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         Intl.setlocale(LocaleCategory.ALL, "");
         // Setup the possible command line options.
         var options = ProgramOptions();
-        var commandline_options = new OptionEntry[5];
+        var commandline_options = new OptionEntry[8];
         commandline_options[0] = {
             "iso", 'i', 0, OptionArg.STRING, ref options.iso, _("The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, 15924 (default: 3166)."), "STANDARD"
         };
@@ -106,10 +109,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             "locale", 'l', 0, OptionArg.STRING, ref options.locale, "Use this locale for output.", "LOCALE"
         };
         commandline_options[3] = {
+            "name", 'n', 0, OptionArg.NONE, ref options.name, "Name for the supplied codes (default)."
+        };
+        commandline_options[4] = {
+            "official_name", 'o', 0, OptionArg.NONE, ref options.official_name, "Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166)."
+        };
+        commandline_options[5] = {
+            "common_name", 'c', 0, OptionArg.NONE, ref options.common_name, "Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166)."
+        };
+        commandline_options[6] = {
             "version", 'v', 0, OptionArg.NONE, ref options.version, "Show program version and copyright.", null
         };
         // Terminate list of options.
-        commandline_options[4] = { null };
+        commandline_options[7] = { null };
         // Parse command line options.
         try {
             var opt_context = new OptionContext("[ISO codes]");
