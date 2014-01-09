@@ -26,15 +26,19 @@ public class Isoquery : Object {
         Intl.setlocale(LocaleCategory.ALL, "");
         // Parse command line options.
         Options.parse_arguments(ref args);
-        var a = new ISO_3166();
-        try {
-            foreach (var i in a.find_all()) {
-                stdout.printf("%s\n", i.name);
-            }
-        }
-        catch (ISOCodesError err) {
-            // TRANSLATORS: This is an error message.
-            stderr.printf(_("isoquery: %s\n"), err.message);
+        // Remove the program name from the argument list.
+        args = args[1:args.length];
+        switch (Options.iso) {
+            case "3166":
+                var b = new Handle_3166();
+                b.setup(Options.filepath, Options.locale);
+                b.show(args);
+                break;
+            default:
+                // We should normally never reach this, as all supported
+                // ISO codes are checked during the option parsing.
+                stderr.printf(_("isoquery: Internal error. Please report this bug.\n"));
+                return Posix.EXIT_FAILURE;
         }
         return Posix.EXIT_SUCCESS;
     }

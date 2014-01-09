@@ -29,6 +29,7 @@ bin_PROGRAMS = isoquery
 
 isoquery_SOURCES = \
 	src/isoquery.vala \
+	src/handle_3166.vala \
 	src/optionparser.vala
 
 VALAFLAGS = \

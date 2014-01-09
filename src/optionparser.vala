@@ -18,10 +18,14 @@
 
 public class Options : Object {
     internal static string iso;
+    internal static string filepath;
+    internal static string locale;
     internal static bool version;
 
     private const OptionEntry[] options = {
         { "iso", 'i', 0, OptionArg.STRING, ref iso, "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, 15924 (default: 3166).", "STANDARD" },
+        { "xmlfile", 'x', 0, OptionArg.STRING, ref filepath, "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/iso_3166.xml)", "FILE" },
+        { "locale", 'l', 0, OptionArg.STRING, ref locale, "Use this locale for output.", "LOCALE" },
         { "version", 'v', 0, OptionArg.NONE, ref version, "Show program version and copyright.", null },
         // Terminate list of options
         { null }
