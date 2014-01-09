@@ -31,12 +31,19 @@ public class Handle_3166 : Object {
         }
     }
     
+    private void _show_item(ISO_3166_Item item) {
+		stdout.printf("%s\t", item.alpha_2_code);
+		stdout.printf("%s\t", item.alpha_3_code);
+		stdout.printf("%s\t", item.numeric_code);
+		stdout.printf("%s\n", item.name);
+	}
+	
     public void show(string[] codes) {
         if (codes.length == 0) {
             try {
                 var items = this.iso.find_all();
                 foreach (var item in items) {
-                    stdout.printf("%s\n", item.name);
+                    _show_item(item);
                 }
             }
             catch (ISOCodesError err) {
@@ -50,7 +57,7 @@ public class Handle_3166 : Object {
             foreach (var code in codes) {
                 try {
                     var item = this.iso.find_code(code);
-                    stdout.printf("%s\n", item.name);
+                    _show_item(item);
                 }
                 catch (ISOCodesError err) {
                     // TRANSLATORS: This is an error message.
