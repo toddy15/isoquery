@@ -19,21 +19,22 @@
 using libisocodes;
 
 public class Handle_3166 : Object {
-    private ISO_3166 iso;
-    private ProgramOptions options;
+    private static ProgramOptions options;
+    private static ISO_3166 iso;
     
-    public void setup(ProgramOptions options) {
-        this.iso = new ISO_3166();
-        this.options = options;
+    public static void show(ProgramOptions opts, string[] codes) {
+        iso = new ISO_3166();
+        options = opts;
         if (options.filepath != null) {
-            this.iso.set_filepath(options.filepath);
+            iso.set_filepath(options.filepath);
         }
         if (options.locale != null) {
-            this.iso.set_locale(options.locale);
+            iso.set_locale(options.locale);
         }
+        _show_codes(codes);
     }
-    
-    private void _show_item(ISO_3166_Item item) {
+
+    private static void _show_item(ISO_3166_Item item) {
         stdout.printf("%s\t", item.alpha_2_code);
         stdout.printf("%s\t", item.alpha_3_code);
         stdout.printf("%s\t", item.numeric_code);
@@ -53,11 +54,11 @@ public class Handle_3166 : Object {
             stdout.printf("\n");
         }
     }
-    
-    public void show(string[] codes) {
+
+    private static void _show_codes(string[] codes) {
         if (codes.length == 0) {
             try {
-                var items = this.iso.find_all();
+                var items = iso.find_all();
                 foreach (var item in items) {
                     _show_item(item);
                 }
@@ -72,7 +73,7 @@ public class Handle_3166 : Object {
         else {
             foreach (var code in codes) {
                 try {
-                    var item = this.iso.find_code(code);
+                    var item = iso.find_code(code);
                     _show_item(item);
                 }
                 catch (ISOCodesError err) {

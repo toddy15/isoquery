@@ -134,9 +134,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         args = args[1:args.length];
         switch (options.iso) {
             case "3166":
-                var b = new Handle_3166();
-                b.setup(options);
-                b.show(args);
+                Handle_3166.show(options, args);
                 break;
             default:
                 // We should normally never reach this, as all supported
