@@ -18,18 +18,18 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Set up autoconf
-AC_PREREQ(2.68)
+AC_PREREQ(2.69)
 AC_INIT([isoquery], [1.8], [toddy@debian.org])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 
 # Set up automake
-AM_INIT_AUTOMAKE([1.11 foreign subdir-objects silent-rules no-dist-gzip dist-xz])
+AM_INIT_AUTOMAKE([1.13 foreign subdir-objects silent-rules no-dist-gzip dist-xz])
 AM_MAINTAINER_MODE
 
 # Check for compilers and pkg-config
-AM_PROG_VALAC([0.16])
+AM_PROG_VALAC([0.20])
 AC_PROG_CC
 AM_PROG_CC_C_O
 PKG_PROG_PKG_CONFIG
