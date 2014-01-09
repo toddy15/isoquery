@@ -90,34 +90,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         var options = ProgramOptions();
         var commandline_options = new OptionEntry[9];
         commandline_options[0] = {
-            "iso", 'i', 0, OptionArg.STRING, ref options.iso, _("The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, 15924 (default: 3166)."), "STANDARD"
+            "iso", 'i', 0, OptionArg.STRING, ref options.iso, _("The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, 15924 (default: 3166)."), _("STANDARD")
         };
         commandline_options[1] = {
-            "xmlfile", 'x', 0, OptionArg.STRING, ref options.filepath, "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/iso_3166.xml)", "FILE"
+            "xmlfile", 'x', 0, OptionArg.STRING, ref options.filepath, _("Use another XML file with ISO data (default: /usr/share/xml/iso-codes/iso_3166.xml)"), _("FILE")
         };
         commandline_options[2] = {
-            "locale", 'l', 0, OptionArg.STRING, ref options.locale, "Use this locale for output.", "LOCALE"
+            "locale", 'l', 0, OptionArg.STRING, ref options.locale, _("Use this locale for output."), _("LOCALE")
         };
         commandline_options[3] = {
-            "name", 'n', 0, OptionArg.NONE, ref options.name, "Name for the supplied codes (default)."
+            "name", 'n', 0, OptionArg.NONE, ref options.name, _("Name for the supplied codes (default).")
         };
         commandline_options[4] = {
-            "official_name", 'o', 0, OptionArg.NONE, ref options.official_name, "Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166)."
+            "official_name", 'o', 0, OptionArg.NONE, ref options.official_name, _("Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166).")
         };
         commandline_options[5] = {
-            "common_name", 'c', 0, OptionArg.NONE, ref options.common_name, "Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166)."
+            "common_name", 'c', 0, OptionArg.NONE, ref options.common_name, _("Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166).")
         };
         commandline_options[6] = {
-            "null", '0', 0, OptionArg.NONE, ref options.use_null_separator, "Separate entries with a NULL character instead of newline."
+            "null", '0', 0, OptionArg.NONE, ref options.use_null_separator, _("Separate entries with a NULL character instead of newline.")
         };
         commandline_options[7] = {
-            "version", 'v', 0, OptionArg.NONE, ref options.version, "Show program version and copyright."
+            "version", 'v', 0, OptionArg.NONE, ref options.version, _("Show program version and copyright.")
         };
         // Terminate list of options.
         commandline_options[8] = { null };
         // Parse command line options.
         try {
-            var opt_context = new OptionContext("[ISO codes]");
+            var opt_context = new OptionContext(_("[ISO codes]"));
             opt_context.set_help_enabled(true);
             opt_context.add_main_entries(commandline_options, null);
             opt_context.parse(ref args);
