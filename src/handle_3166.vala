@@ -34,20 +34,26 @@ public class Handle_3166 : Object {
     }
     
     private void _show_item(ISO_3166_Item item) {
-		stdout.printf("%s\t", item.alpha_2_code);
-		stdout.printf("%s\t", item.alpha_3_code);
-		stdout.printf("%s\t", item.numeric_code);
-		if (options.official_name && item.official_name != "") {
-			stdout.printf("%s\n", item.official_name);
-		}
-		else if (options.common_name && item.common_name != "") {
-			stdout.printf("%s\n", item.common_name);
-		}
-		else {
-			stdout.printf("%s\n", item.name);
-		}
-	}
-	
+        stdout.printf("%s\t", item.alpha_2_code);
+        stdout.printf("%s\t", item.alpha_3_code);
+        stdout.printf("%s\t", item.numeric_code);
+        if (options.official_name && item.official_name != "") {
+            stdout.printf("%s", item.official_name);
+        }
+        else if (options.common_name && item.common_name != "") {
+            stdout.printf("%s", item.common_name);
+        }
+        else {
+            stdout.printf("%s", item.name);
+        }
+        if (options.use_null_separator) {
+            stdout.printf("%c", 0);
+        }
+        else {
+            stdout.printf("\n");
+        }
+    }
+    
     public void show(string[] codes) {
         if (codes.length == 0) {
             try {
