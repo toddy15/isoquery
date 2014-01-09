@@ -1,4 +1,4 @@
-/* Copyright © 2013 Tobias Quathamer
+/* Copyright © 2013-2014 Tobias Quathamer
  *
  * This file is part of isoquery.
  *
@@ -58,7 +58,7 @@ public class Isoquery : Object {
 
     private static void _show_version_and_copyright() {
         stdout.printf(_("isoquery %s\n"), Config.VERSION);
-        stdout.printf(_("Copyright © 2007-2013 Tobias Quathamer\n"));
+        stdout.printf(_("Copyright © 2007-2014 Tobias Quathamer\n"));
         // TRANSLATORS: Please change the uppercase words as appropriate for
         // your language.
         var translation = _("Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n");

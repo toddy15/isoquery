@@ -1,6 +1,6 @@
 ## Process this file with automake to produce Makefile.in.
 #
-# Copyright © 2013 Tobias Quathamer
+# Copyright © 2013-2014 Tobias Quathamer
 #
 # This file is part of isoquery.
 #
