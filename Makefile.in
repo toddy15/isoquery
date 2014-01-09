@@ -101,9 +101,9 @@ subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
 	$(srcdir)/config.h.in src/isoquery.c src/handle_3166.c \
-	src/optionparser.c $(top_srcdir)/build-aux/depcomp \
-	$(srcdir)/isoquery_vala.stamp ABOUT-NLS AUTHORS COPYING \
-	ChangeLog README TODO build-aux/compile build-aux/config.guess \
+	$(top_srcdir)/build-aux/depcomp $(srcdir)/isoquery_vala.stamp \
+	ABOUT-NLS AUTHORS COPYING ChangeLog README TODO \
+	build-aux/compile build-aux/config.guess \
 	build-aux/config.rpath build-aux/config.sub build-aux/depcomp \
 	build-aux/install-sh build-aux/missing \
 	$(top_srcdir)/build-aux/compile \
@@ -131,8 +131,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am_isoquery_OBJECTS = src/isoquery-isoquery.$(OBJEXT) \
-	src/isoquery-handle_3166.$(OBJEXT) \
-	src/isoquery-optionparser.$(OBJEXT)
+	src/isoquery-handle_3166.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 am__DEPENDENCIES_1 =
 isoquery_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -394,8 +393,7 @@ SUBDIRS = po
 EXTRA_DIST = vapi/config.vapi
 isoquery_SOURCES = \
 	src/isoquery.vala \
-	src/handle_3166.vala \
-	src/optionparser.vala
+	src/handle_3166.vala
 
 VALAFLAGS = \
 	--pkg libisocodes \
@@ -513,8 +511,6 @@ src/isoquery-isoquery.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
 src/isoquery-handle_3166.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
-src/isoquery-optionparser.$(OBJEXT): src/$(am__dirstamp) \
-	src/$(DEPDIR)/$(am__dirstamp)
 
 isoquery$(EXEEXT): $(isoquery_OBJECTS) $(isoquery_DEPENDENCIES) $(EXTRA_isoquery_DEPENDENCIES) 
 	@rm -f isoquery$(EXEEXT)
@@ -529,7 +525,6 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_3166.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-isoquery.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-optionparser.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -574,20 +569,6 @@ src/isoquery-handle_3166.obj: src/handle_3166.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_3166.c' object='src/isoquery-handle_3166.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_3166.obj `if test -f 'src/handle_3166.c'; then $(CYGPATH_W) 'src/handle_3166.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_3166.c'; fi`
-
-src/isoquery-optionparser.o: src/optionparser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-optionparser.o -MD -MP -MF src/$(DEPDIR)/isoquery-optionparser.Tpo -c -o src/isoquery-optionparser.o `test -f 'src/optionparser.c' || echo '$(srcdir)/'`src/optionparser.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-optionparser.Tpo src/$(DEPDIR)/isoquery-optionparser.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/optionparser.c' object='src/isoquery-optionparser.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-optionparser.o `test -f 'src/optionparser.c' || echo '$(srcdir)/'`src/optionparser.c
-
-src/isoquery-optionparser.obj: src/optionparser.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-optionparser.obj -MD -MP -MF src/$(DEPDIR)/isoquery-optionparser.Tpo -c -o src/isoquery-optionparser.obj `if test -f 'src/optionparser.c'; then $(CYGPATH_W) 'src/optionparser.c'; else $(CYGPATH_W) '$(srcdir)/src/optionparser.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-optionparser.Tpo src/$(DEPDIR)/isoquery-optionparser.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/optionparser.c' object='src/isoquery-optionparser.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-optionparser.obj `if test -f 'src/optionparser.c'; then $(CYGPATH_W) 'src/optionparser.c'; else $(CYGPATH_W) '$(srcdir)/src/optionparser.c'; fi`
 $(srcdir)/src/isoquery.c: $(srcdir)/isoquery_vala.stamp
 	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
 	@if test -f $@; then :; else \
@@ -598,14 +579,9 @@ $(srcdir)/src/handle_3166.c: $(srcdir)/isoquery_vala.stamp
 	@if test -f $@; then :; else \
 	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
 	fi
-$(srcdir)/src/optionparser.c: $(srcdir)/isoquery_vala.stamp
-	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
-	@if test -f $@; then :; else \
-	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
-	fi
-$(srcdir)/isoquery_vala.stamp: src/isoquery.vala src/handle_3166.vala src/optionparser.vala
+$(srcdir)/isoquery_vala.stamp: src/isoquery.vala src/handle_3166.vala
 	$(AM_V_at)rm -f $@ && echo stamp > $@-t
-	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C src/isoquery.vala src/handle_3166.vala src/optionparser.vala
+	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C src/isoquery.vala src/handle_3166.vala
 	$(AM_V_at)mv -f $@-t $@
 
 # This directory's subdirectories are mostly independent; you can cd
@@ -937,10 +913,8 @@ maintainer-clean-generic:
 	-rm -f $(srcdir)/isoquery_vala.stamp
 	-rm -f $(srcdir)/src/handle_3166.c
 	-rm -f $(srcdir)/src/isoquery.c
-	-rm -f $(srcdir)/src/optionparser.c
 	-rm -f src/handle_3166.c
 	-rm -f src/isoquery.c
-	-rm -f src/optionparser.c
 clean: clean-recursive
 
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am

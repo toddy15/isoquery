@@ -1,3 +1,3 @@
 # List of source files which contain translatable strings.
 src/isoquery.vala
-src/optionparser.vala
+src/handle_3166.vala

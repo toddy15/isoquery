@@ -21,13 +21,13 @@ using libisocodes;
 public class Handle_3166 : Object {
     private ISO_3166 iso;
     
-    public void setup(string? filepath, string? locale) {
+    public void setup(ProgramOptions options) {
         this.iso = new ISO_3166();
-        if (filepath != null) {
-            this.iso.set_filepath(filepath);
+        if (options.filepath != null) {
+            this.iso.set_filepath(options.filepath);
         }
-        if (locale != null) {
-            this.iso.set_locale(locale);
+        if (options.locale != null) {
+            this.iso.set_locale(options.locale);
         }
     }
     
