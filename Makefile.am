@@ -45,3 +45,17 @@ VALAFLAGS = \
 isoquery_CPPFLAGS = -include config.h -DLOCALEDIR=\""$(localedir)"\"
 isoquery_CFLAGS = $(GOBJECT_CFLAGS) $(GLIB_CFLAGS) $(LIBISOCODES_CFLAGS)
 isoquery_LDADD = $(GOBJECT_LIBS) $(GLIB_LIBS) $(LIBISOCODES_LIBS)
+
+# Some convenience targets for manpage generation
+pot-man:
+	po4a-gettextize --format text --option markdown \
+	--master man/isoquery.rst --master-charset UTF-8 \
+	--po man/isoquery-man.pot
+	sed -i -e "/^#: /d" man/isoquery-man.pot
+.PHONY: pot-man
+
+update-po-man:
+	for i in man/*.po; do \
+		msgmerge --previous --no-location $$i man/isoquery-man.pot > tmp.po && mv tmp.po $$i ; \
+	done
+.PHONY: update-po-man
