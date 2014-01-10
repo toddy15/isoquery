@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery 1.8\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-01-10 22:35+0100\n"
+"POT-Creation-Date: 2014-01-10 23:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/isoquery.vala:56
 #, python-format
-msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
 msgstr ""
 
 #: src/isoquery.vala:64
@@ -100,7 +100,8 @@ msgstr ""
 
 #: src/isoquery.vala:143
 msgid ""
-"Run 'isoquery --help' to see a full list of available command line options.\n"
+"Run \"isoquery --help\" to see a full list of available command line "
+"options.\n"
 msgstr ""
 
 #: src/isoquery.vala:173
