@@ -23,7 +23,8 @@ ACLOCAL_AMFLAGS = -I m4
 # po/Makefile.in.in for a non-recursive approach.
 SUBDIRS = po
 
-EXTRA_DIST = vapi/config.vapi
+EXTRA_DIST = vapi/config.vapi \
+	man/isoquery.rst
 
 bin_PROGRAMS = isoquery
 
@@ -47,15 +48,22 @@ isoquery_CFLAGS = $(GOBJECT_CFLAGS) $(GLIB_CFLAGS) $(LIBISOCODES_CFLAGS)
 isoquery_LDADD = $(GOBJECT_LIBS) $(GLIB_LIBS) $(LIBISOCODES_LIBS)
 
 # Some convenience targets for manpage generation
+man1_MANS = isoquery.1
+
+CLEANFILES = isoquery.1
+
+isoquery.1:
+	$(RST2MAN) $(top_srcdir)/man/isoquery.rst isoquery.1
+
 pot-man:
 	po4a-gettextize --format text --option markdown \
-	--master man/isoquery.rst --master-charset UTF-8 \
-	--po man/isoquery-man.pot
-	sed -i -e "/^#: /d" man/isoquery-man.pot
+	--master $(top_srcdir)/man/isoquery.rst --master-charset UTF-8 \
+	--po $(top_srcdir)/man/isoquery-man.pot
+	sed -i -e "/^#: /d" $(top_srcdir)/man/isoquery-man.pot
 .PHONY: pot-man
 
 update-po-man:
-	for i in man/*.po; do \
-		msgmerge --previous --no-location $$i man/isoquery-man.pot > tmp.po && mv tmp.po $$i ; \
+	for i in $(top_srcdir)/man/*.po; do \
+		msgmerge --previous --no-location $$i $(top_srcdir)/man/isoquery-man.pot > tmp.po && mv tmp.po $$i ; \
 	done
 .PHONY: update-po-man

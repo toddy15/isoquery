@@ -44,6 +44,16 @@ PKG_CHECK_MODULES([GOBJECT], [gobject-2.0])
 PKG_CHECK_MODULES([GLIB], [glib-2.0])
 PKG_CHECK_MODULES([LIBISOCODES], [libisocodes])
 
+# Detect some programs needed for building
+AC_PATH_PROG([RST2MAN], [rst2man], [no])
+if test x"$RST2MAN" == x"no" ; then
+    AC_MSG_ERROR([rst2man is required.])
+fi
+AC_PATH_PROG([PO4A], [po4a], [no])
+if test x"$PO4A" == x"no" ; then
+    AC_MSG_ERROR([po4a is required.])
+fi
+
 # Write configuration files
 AC_CONFIG_FILES([
 	Makefile
