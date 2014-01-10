@@ -50,7 +50,6 @@ public class Isoquery : Object {
             }
         }
         if (!supported) {
-            // TRANSLATORS: This is an error message.
             stderr.printf(_("isoquery: ISO standard '%s' is not supported.\n"), options.iso);
             Posix.exit(Posix.EXIT_FAILURE);
         }
