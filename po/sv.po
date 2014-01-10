@@ -86,13 +86,13 @@ msgstr "Visa programversion och infomation om upphovsrätt."
 
 #: isoquery/cmdline_parser.py:91
 #, python-format
-msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
 msgstr "isoquery: ISO-standard \"%(standard)s\" stöds inte.\n"
 
 #: isoquery/cmdline_parser.py:110
 #, python-format
 msgid ""
-"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+"isoquery: The locale \"%(locale)s\" is not available for ISO %(standard)s.\n"
 msgstr ""
 "isoquery: Lokalen \"%(locale)s\" är inte tillgänglig för ISO %(standard)s.\n"
 
@@ -115,18 +115,18 @@ msgstr ""
 
 #: isoquery/xmlfile.py:42
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
 msgstr "isoquery: Filen \"%(filename)s\" kunde inte öppnas.\n"
 
 #: isoquery/xmlfile.py:46
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 msgstr "isoquery: Filen \"%(filename)s\" kunde inte läsas korrekt.\n"
 
 #: isoquery/xmlfile.py:52
 #, python-format
 msgid ""
-"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
 "isoquery: Filen \"%(filename)s\" innehåller inte korrekt formaterad ISO "
@@ -134,6 +134,6 @@ msgstr ""
 
 #: isoquery/xmlfile.py:71
 #, python-format
-msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
 msgstr ""
 "isoquery: Koden \"%(code)s\" finns inte definierad i ISO %(standard)s.\n"

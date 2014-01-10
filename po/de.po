@@ -89,13 +89,13 @@ msgstr "Anzeige der Programmversion und des Copyrights."
 
 #: isoquery/cmdline_parser.py:91
 #, python-format
-msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
 msgstr "isoquery: Der ISO-Standard »%(standard)s« wird nicht unterstützt.\n"
 
 #: isoquery/cmdline_parser.py:110
 #, python-format
 msgid ""
-"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+"isoquery: The locale \"%(locale)s\" is not available for ISO %(standard)s.\n"
 msgstr ""
 "isoquery: Die Locale »%(locale)s« ist für ISO %(standard)s nicht verfügbar.\n"
 
@@ -116,19 +116,19 @@ msgstr "Deutsche Übersetzung Copyright © 2007-2011 Tobias Quathamer"
 
 #: isoquery/xmlfile.py:42
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
 msgstr "isoquery: Die Datei »%(filename)s« konnte nicht geöffnet werden.\n"
 
 #: isoquery/xmlfile.py:46
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 msgstr ""
 "isoquery: Die Datei »%(filename)s« konnte nicht korrekt ausgewertet werden.\n"
 
 #: isoquery/xmlfile.py:52
 #, python-format
 msgid ""
-"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
 "isoquery: Die Datei »%(filename)s« enthält keine gültigen ISO %(standard)s "
@@ -136,6 +136,6 @@ msgstr ""
 
 #: isoquery/xmlfile.py:71
 #, python-format
-msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
 msgstr ""
 "isoquery: Der Code »%(code)s« ist in ISO %(standard)s nicht definiert.\n"

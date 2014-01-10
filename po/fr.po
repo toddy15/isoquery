@@ -89,13 +89,13 @@ msgstr "Afficher la version du programme et les informations de copyright."
 
 #: isoquery/cmdline_parser.py:91
 #, python-format
-msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
 msgstr "isoquery : norme ISO « %(standard)s » non gérée.\n"
 
 #: isoquery/cmdline_parser.py:110
 #, python-format
 msgid ""
-"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+"isoquery: The locale \"%(locale)s\" is not available for ISO %(standard)s.\n"
 msgstr ""
 "isoquery : La locale « %(locale)s » n'existe pas dans ISO-%(standard)s.\n"
 
@@ -116,12 +116,12 @@ msgstr "Traduction française Copyright © 2007-2011 Christian Perrier"
 
 #: isoquery/xmlfile.py:42
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
 msgstr "isoquery : Le fichier « %(filename)s » n'a pas pu être ouvert.\n"
 
 #: isoquery/xmlfile.py:46
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 msgstr ""
 "isoquery : Le fichier « %(filename)s » n'a pas pu être analysé "
 "correctement.\n"
@@ -129,7 +129,7 @@ msgstr ""
 #: isoquery/xmlfile.py:52
 #, python-format
 msgid ""
-"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
 "isoquery : Le fichier « %(filename)s » ne contient pas de données ISO-"
@@ -137,5 +137,5 @@ msgstr ""
 
 #: isoquery/xmlfile.py:71
 #, python-format
-msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
 msgstr "isoquery : Le code « %(code)s » n'existe pas dans ISO-%(standard)s.\n"

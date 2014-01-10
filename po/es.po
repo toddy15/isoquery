@@ -134,13 +134,13 @@ msgstr "Muestra la versión del programa y los derechos de autor"
 
 #: isoquery/cmdline_parser.py:91
 #, python-format
-msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
 msgstr "isoquery: No se acepta el estándar ISO «%(standard)s».\n"
 
 #: isoquery/cmdline_parser.py:110
 #, python-format
 msgid ""
-"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+"isoquery: The locale \"%(locale)s\" is not available for ISO %(standard)s.\n"
 msgstr ""
 "isoquery: La locale «%(locale)s» no está disponible para la ISO "
 "%(standard)s.\n"
@@ -162,19 +162,19 @@ msgstr "Traducción al español. Derechos de autor © 2010 Omar Campagne"
 
 #: isoquery/xmlfile.py:42
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
 msgstr "isoquery: No se pudo abrir el fichero «%(filename)s».\n"
 
 #: isoquery/xmlfile.py:46
 #, python-format
-msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 msgstr ""
 "isoquery: El fichero «%(filename)s» no se pudo analizar adecuadamente.\n"
 
 #: isoquery/xmlfile.py:52
 #, python-format
 msgid ""
-"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s "
 "data.\n"
 msgstr ""
 "isoquery: El fichero «%(filename)s» no contiene datos ISO %(standard)s "
@@ -182,7 +182,7 @@ msgstr ""
 
 #: isoquery/xmlfile.py:71
 #, python-format
-msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
 msgstr ""
 "isoquery: El código «%(code)s» no está definido en la ISO %(standard)s.\n"
 
