@@ -100,7 +100,9 @@ bin_PROGRAMS = isoquery$(EXEEXT)
 subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/config.h.in src/isoquery.c src/handle_3166.c \
+	$(srcdir)/config.h.in src/isoquery.c src/handle_639.c \
+	src/handle_639_3.c src/handle_3166.c src/handle_3166_2.c \
+	src/handle_4217.c src/handle_15924.c \
 	$(top_srcdir)/build-aux/depcomp $(srcdir)/isoquery_vala.stamp \
 	ABOUT-NLS AUTHORS COPYING ChangeLog README TODO \
 	build-aux/compile build-aux/config.guess \
@@ -131,7 +133,12 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am_isoquery_OBJECTS = src/isoquery-isoquery.$(OBJEXT) \
-	src/isoquery-handle_3166.$(OBJEXT)
+	src/isoquery-handle_639.$(OBJEXT) \
+	src/isoquery-handle_639_3.$(OBJEXT) \
+	src/isoquery-handle_3166.$(OBJEXT) \
+	src/isoquery-handle_3166_2.$(OBJEXT) \
+	src/isoquery-handle_4217.$(OBJEXT) \
+	src/isoquery-handle_15924.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 am__DEPENDENCIES_1 =
 isoquery_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -393,7 +400,12 @@ SUBDIRS = po
 EXTRA_DIST = vapi/config.vapi
 isoquery_SOURCES = \
 	src/isoquery.vala \
-	src/handle_3166.vala
+	src/handle_639.vala \
+	src/handle_639_3.vala \
+	src/handle_3166.vala \
+	src/handle_3166_2.vala \
+	src/handle_4217.vala \
+	src/handle_15924.vala
 
 VALAFLAGS = \
 	--pkg libisocodes \
@@ -509,7 +521,17 @@ src/$(DEPDIR)/$(am__dirstamp):
 	@: > src/$(DEPDIR)/$(am__dirstamp)
 src/isoquery-isoquery.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
+src/isoquery-handle_639.$(OBJEXT): src/$(am__dirstamp) \
+	src/$(DEPDIR)/$(am__dirstamp)
+src/isoquery-handle_639_3.$(OBJEXT): src/$(am__dirstamp) \
+	src/$(DEPDIR)/$(am__dirstamp)
 src/isoquery-handle_3166.$(OBJEXT): src/$(am__dirstamp) \
+	src/$(DEPDIR)/$(am__dirstamp)
+src/isoquery-handle_3166_2.$(OBJEXT): src/$(am__dirstamp) \
+	src/$(DEPDIR)/$(am__dirstamp)
+src/isoquery-handle_4217.$(OBJEXT): src/$(am__dirstamp) \
+	src/$(DEPDIR)/$(am__dirstamp)
+src/isoquery-handle_15924.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
 
 isoquery$(EXEEXT): $(isoquery_OBJECTS) $(isoquery_DEPENDENCIES) $(EXTRA_isoquery_DEPENDENCIES) 
@@ -523,7 +545,12 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_15924.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_3166.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_3166_2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_4217.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_639.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-handle_639_3.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@src/$(DEPDIR)/isoquery-isoquery.Po@am__quote@
 
 .c.o:
@@ -556,6 +583,34 @@ src/isoquery-isoquery.obj: src/isoquery.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-isoquery.obj `if test -f 'src/isoquery.c'; then $(CYGPATH_W) 'src/isoquery.c'; else $(CYGPATH_W) '$(srcdir)/src/isoquery.c'; fi`
 
+src/isoquery-handle_639.o: src/handle_639.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_639.o -MD -MP -MF src/$(DEPDIR)/isoquery-handle_639.Tpo -c -o src/isoquery-handle_639.o `test -f 'src/handle_639.c' || echo '$(srcdir)/'`src/handle_639.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_639.Tpo src/$(DEPDIR)/isoquery-handle_639.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_639.c' object='src/isoquery-handle_639.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_639.o `test -f 'src/handle_639.c' || echo '$(srcdir)/'`src/handle_639.c
+
+src/isoquery-handle_639.obj: src/handle_639.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_639.obj -MD -MP -MF src/$(DEPDIR)/isoquery-handle_639.Tpo -c -o src/isoquery-handle_639.obj `if test -f 'src/handle_639.c'; then $(CYGPATH_W) 'src/handle_639.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_639.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_639.Tpo src/$(DEPDIR)/isoquery-handle_639.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_639.c' object='src/isoquery-handle_639.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_639.obj `if test -f 'src/handle_639.c'; then $(CYGPATH_W) 'src/handle_639.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_639.c'; fi`
+
+src/isoquery-handle_639_3.o: src/handle_639_3.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_639_3.o -MD -MP -MF src/$(DEPDIR)/isoquery-handle_639_3.Tpo -c -o src/isoquery-handle_639_3.o `test -f 'src/handle_639_3.c' || echo '$(srcdir)/'`src/handle_639_3.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_639_3.Tpo src/$(DEPDIR)/isoquery-handle_639_3.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_639_3.c' object='src/isoquery-handle_639_3.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_639_3.o `test -f 'src/handle_639_3.c' || echo '$(srcdir)/'`src/handle_639_3.c
+
+src/isoquery-handle_639_3.obj: src/handle_639_3.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_639_3.obj -MD -MP -MF src/$(DEPDIR)/isoquery-handle_639_3.Tpo -c -o src/isoquery-handle_639_3.obj `if test -f 'src/handle_639_3.c'; then $(CYGPATH_W) 'src/handle_639_3.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_639_3.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_639_3.Tpo src/$(DEPDIR)/isoquery-handle_639_3.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_639_3.c' object='src/isoquery-handle_639_3.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_639_3.obj `if test -f 'src/handle_639_3.c'; then $(CYGPATH_W) 'src/handle_639_3.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_639_3.c'; fi`
+
 src/isoquery-handle_3166.o: src/handle_3166.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_3166.o -MD -MP -MF src/$(DEPDIR)/isoquery-handle_3166.Tpo -c -o src/isoquery-handle_3166.o `test -f 'src/handle_3166.c' || echo '$(srcdir)/'`src/handle_3166.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_3166.Tpo src/$(DEPDIR)/isoquery-handle_3166.Po
@@ -569,7 +624,59 @@ src/isoquery-handle_3166.obj: src/handle_3166.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_3166.c' object='src/isoquery-handle_3166.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_3166.obj `if test -f 'src/handle_3166.c'; then $(CYGPATH_W) 'src/handle_3166.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_3166.c'; fi`
+
+src/isoquery-handle_3166_2.o: src/handle_3166_2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_3166_2.o -MD -MP -MF src/$(DEPDIR)/isoquery-handle_3166_2.Tpo -c -o src/isoquery-handle_3166_2.o `test -f 'src/handle_3166_2.c' || echo '$(srcdir)/'`src/handle_3166_2.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_3166_2.Tpo src/$(DEPDIR)/isoquery-handle_3166_2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_3166_2.c' object='src/isoquery-handle_3166_2.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_3166_2.o `test -f 'src/handle_3166_2.c' || echo '$(srcdir)/'`src/handle_3166_2.c
+
+src/isoquery-handle_3166_2.obj: src/handle_3166_2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_3166_2.obj -MD -MP -MF src/$(DEPDIR)/isoquery-handle_3166_2.Tpo -c -o src/isoquery-handle_3166_2.obj `if test -f 'src/handle_3166_2.c'; then $(CYGPATH_W) 'src/handle_3166_2.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_3166_2.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_3166_2.Tpo src/$(DEPDIR)/isoquery-handle_3166_2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_3166_2.c' object='src/isoquery-handle_3166_2.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_3166_2.obj `if test -f 'src/handle_3166_2.c'; then $(CYGPATH_W) 'src/handle_3166_2.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_3166_2.c'; fi`
+
+src/isoquery-handle_4217.o: src/handle_4217.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_4217.o -MD -MP -MF src/$(DEPDIR)/isoquery-handle_4217.Tpo -c -o src/isoquery-handle_4217.o `test -f 'src/handle_4217.c' || echo '$(srcdir)/'`src/handle_4217.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_4217.Tpo src/$(DEPDIR)/isoquery-handle_4217.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_4217.c' object='src/isoquery-handle_4217.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_4217.o `test -f 'src/handle_4217.c' || echo '$(srcdir)/'`src/handle_4217.c
+
+src/isoquery-handle_4217.obj: src/handle_4217.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_4217.obj -MD -MP -MF src/$(DEPDIR)/isoquery-handle_4217.Tpo -c -o src/isoquery-handle_4217.obj `if test -f 'src/handle_4217.c'; then $(CYGPATH_W) 'src/handle_4217.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_4217.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_4217.Tpo src/$(DEPDIR)/isoquery-handle_4217.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_4217.c' object='src/isoquery-handle_4217.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_4217.obj `if test -f 'src/handle_4217.c'; then $(CYGPATH_W) 'src/handle_4217.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_4217.c'; fi`
+
+src/isoquery-handle_15924.o: src/handle_15924.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_15924.o -MD -MP -MF src/$(DEPDIR)/isoquery-handle_15924.Tpo -c -o src/isoquery-handle_15924.o `test -f 'src/handle_15924.c' || echo '$(srcdir)/'`src/handle_15924.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_15924.Tpo src/$(DEPDIR)/isoquery-handle_15924.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_15924.c' object='src/isoquery-handle_15924.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_15924.o `test -f 'src/handle_15924.c' || echo '$(srcdir)/'`src/handle_15924.c
+
+src/isoquery-handle_15924.obj: src/handle_15924.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -MT src/isoquery-handle_15924.obj -MD -MP -MF src/$(DEPDIR)/isoquery-handle_15924.Tpo -c -o src/isoquery-handle_15924.obj `if test -f 'src/handle_15924.c'; then $(CYGPATH_W) 'src/handle_15924.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_15924.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) src/$(DEPDIR)/isoquery-handle_15924.Tpo src/$(DEPDIR)/isoquery-handle_15924.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='src/handle_15924.c' object='src/isoquery-handle_15924.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(isoquery_CPPFLAGS) $(CPPFLAGS) $(isoquery_CFLAGS) $(CFLAGS) -c -o src/isoquery-handle_15924.obj `if test -f 'src/handle_15924.c'; then $(CYGPATH_W) 'src/handle_15924.c'; else $(CYGPATH_W) '$(srcdir)/src/handle_15924.c'; fi`
 $(srcdir)/src/isoquery.c: $(srcdir)/isoquery_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
+	@if test -f $@; then :; else \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
+	fi
+$(srcdir)/src/handle_639.c: $(srcdir)/isoquery_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
+	@if test -f $@; then :; else \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
+	fi
+$(srcdir)/src/handle_639_3.c: $(srcdir)/isoquery_vala.stamp
 	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
 	@if test -f $@; then :; else \
 	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
@@ -579,9 +686,24 @@ $(srcdir)/src/handle_3166.c: $(srcdir)/isoquery_vala.stamp
 	@if test -f $@; then :; else \
 	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
 	fi
-$(srcdir)/isoquery_vala.stamp: src/isoquery.vala src/handle_3166.vala
+$(srcdir)/src/handle_3166_2.c: $(srcdir)/isoquery_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
+	@if test -f $@; then :; else \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
+	fi
+$(srcdir)/src/handle_4217.c: $(srcdir)/isoquery_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
+	@if test -f $@; then :; else \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
+	fi
+$(srcdir)/src/handle_15924.c: $(srcdir)/isoquery_vala.stamp
+	@if test -f $@; then :; else rm -f $(srcdir)/isoquery_vala.stamp; fi
+	@if test -f $@; then :; else \
+	  $(MAKE) $(AM_MAKEFLAGS) $(srcdir)/isoquery_vala.stamp; \
+	fi
+$(srcdir)/isoquery_vala.stamp: src/isoquery.vala src/handle_639.vala src/handle_639_3.vala src/handle_3166.vala src/handle_3166_2.vala src/handle_4217.vala src/handle_15924.vala
 	$(AM_V_at)rm -f $@ && echo stamp > $@-t
-	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C src/isoquery.vala src/handle_3166.vala
+	$(AM_V_VALAC)$(am__cd) $(srcdir) && $(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) -C src/isoquery.vala src/handle_639.vala src/handle_639_3.vala src/handle_3166.vala src/handle_3166_2.vala src/handle_4217.vala src/handle_15924.vala
 	$(AM_V_at)mv -f $@-t $@
 
 # This directory's subdirectories are mostly independent; you can cd
@@ -911,9 +1033,19 @@ maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 	-rm -f $(srcdir)/isoquery_vala.stamp
+	-rm -f $(srcdir)/src/handle_15924.c
 	-rm -f $(srcdir)/src/handle_3166.c
+	-rm -f $(srcdir)/src/handle_3166_2.c
+	-rm -f $(srcdir)/src/handle_4217.c
+	-rm -f $(srcdir)/src/handle_639.c
+	-rm -f $(srcdir)/src/handle_639_3.c
 	-rm -f $(srcdir)/src/isoquery.c
+	-rm -f src/handle_15924.c
 	-rm -f src/handle_3166.c
+	-rm -f src/handle_3166_2.c
+	-rm -f src/handle_4217.c
+	-rm -f src/handle_639.c
+	-rm -f src/handle_639_3.c
 	-rm -f src/isoquery.c
 clean: clean-recursive
 

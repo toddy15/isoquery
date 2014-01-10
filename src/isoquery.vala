@@ -133,8 +133,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         // Remove the program name from the argument list.
         args = args[1:args.length];
         switch (options.iso) {
+            case "639":
+                Handle_639.show(options, args);
+                break;
+            case "639-3":
+                Handle_639_3.show(options, args);
+                break;
             case "3166":
                 Handle_3166.show(options, args);
+                break;
+            case "3166-2":
+                Handle_3166_2.show(options, args);
+                break;
+            case "4217":
+                Handle_4217.show(options, args);
+                break;
+            case "15924":
+                Handle_15924.show(options, args);
                 break;
             default:
                 // We should normally never reach this, as all supported
