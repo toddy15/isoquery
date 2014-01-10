@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
-# Tobias Quathamer <toddy@debian.org>, 2007, 2008, 2009, 2010, 2011.
+# Tobias Quathamer <toddy@debian.org>, 2007-2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2014-01-10 23:19+0100\n"
-"PO-Revision-Date: 2011-06-01 23:50+0200\n"
+"PO-Revision-Date: 2014-01-10 23:29+0100\n"
 "Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: src/isoquery.vala:56
 #, python-format
@@ -24,53 +24,43 @@ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
 msgstr "isoquery: Der ISO-Standard »%(standard)s« wird nicht unterstützt.\n"
 
 #: src/isoquery.vala:64
-#, fuzzy, python-format
-#| msgid "isoquery %(version)s"
+#, python-format
 msgid "isoquery %(version)s\n"
-msgstr "isoquery %(version)s"
+msgstr "isoquery %(version)s\n"
 
 #: src/isoquery.vala:66
-#, fuzzy
-#| msgid "Copyright © 2007-2012 Tobias Quathamer"
 msgid "Copyright © 2007-2014 Tobias Quathamer\n"
-msgstr "Copyright © 2007-2012 Tobias Quathamer"
+msgstr "Copyright © 2007-2014 Tobias Quathamer\n"
 
 #. TRANSLATORS: Please change the uppercase words as
 #. appropriate for your language.
 #: src/isoquery.vala:69
-#, fuzzy
-#| msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
-msgstr "Deutsche Übersetzung Copyright © 2007-2011 Tobias Quathamer"
+msgstr "Deutsche Übersetzung Copyright © 2007-2014 Tobias Quathamer\n"
 
 #: src/isoquery.vala:99
-#, fuzzy
-#| msgid ""
-#| "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
-#| "15924 (default: %default)."
 msgid ""
 "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
 "15924 (default: 3166)."
 msgstr ""
 "Der gewünschte ISO-Standard. Mögliche Werte: 639, 639-3, 3166, 3166-2, 4217, "
-"15924 (Voreinstellung: %default)."
+"15924 (Voreinstellung: 3166)."
 
 #: src/isoquery.vala:100
 msgid "STANDARD"
-msgstr ""
+msgstr "STANDARD"
 
 #: src/isoquery.vala:104
-#, fuzzy
-#| msgid "Use another XML file with ISO data (default: %default)."
 msgid ""
 "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
 "iso_3166.xml)"
 msgstr ""
-"Eine andere XML-Datei mit ISO-Daten verwenden (Voreinstellung: %default)."
+"Eine andere XML-Datei mit ISO-Daten verwenden (Voreinstellung: /usr/share/"
+"xml/iso-codes/iso_3166.xml)"
 
 #: src/isoquery.vala:105
 msgid "FILE"
-msgstr ""
+msgstr "DATEI"
 
 #: src/isoquery.vala:109
 msgid "Use this locale for output."
@@ -78,7 +68,7 @@ msgstr "Diese Locale für die Ausgabe verwenden."
 
 #: src/isoquery.vala:110
 msgid "LOCALE"
-msgstr ""
+msgstr "LOCALE"
 
 #: src/isoquery.vala:114
 msgid "Name for the supplied codes (default)."
@@ -112,23 +102,24 @@ msgstr "Anzeige der Programmversion und des Copyrights."
 
 #: src/isoquery.vala:136
 msgid "[ISO codes]"
-msgstr ""
+msgstr "[ISO-Codes]"
 
 #: src/isoquery.vala:141
-#, fuzzy, python-format
-#| msgid "isoquery %(version)s"
+#, python-format
 msgid "isoquery: %(error_msg)s\n"
-msgstr "isoquery %(version)s"
+msgstr "isoquery: %(error_msg)s\n"
 
 #: src/isoquery.vala:143
 msgid ""
 "Run \"isoquery --help\" to see a full list of available command line "
 "options.\n"
 msgstr ""
+"Rufen Sie »isoquery --help« auf, um eine Liste aller Befehlszeilenoptionen "
+"angezeigt zu bekommen.\n"
 
 #: src/isoquery.vala:173
 msgid "isoquery: Internal error. Please report this bug.\n"
-msgstr ""
+msgstr "isoquery: Interner Fehler. Bitte berichten Sie diesen Fehler.\n"
 
 #: src/handle_639.vala:81 src/handle_639_3.vala:88 src/handle_3166.vala:89
 #: src/handle_3166_2.vala:82 src/handle_4217.vala:80 src/handle_15924.vala:80
@@ -159,25 +150,3 @@ msgstr ""
 msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
 msgstr ""
 "isoquery: Der Code »%(code)s« ist in ISO %(standard)s nicht definiert.\n"
-
-#~ msgid "Usage: %prog [options] [ISO codes]"
-#~ msgstr "Aufruf: %prog [Optionen] [ISO-Codes]"
-
-#~ msgid "standard"
-#~ msgstr "Standard"
-
-#~ msgid "file"
-#~ msgstr "Datei"
-
-#~ msgid "locale"
-#~ msgstr "Locale"
-
-#~ msgid "Show summary of options."
-#~ msgstr "Zusammenfassung der Optionen anzeigen."
-
-#~ msgid ""
-#~ "isoquery: The locale \"%(locale)s\" is not available for ISO "
-#~ "%(standard)s.\n"
-#~ msgstr ""
-#~ "isoquery: Die Locale »%(locale)s« ist für ISO %(standard)s nicht "
-#~ "verfügbar.\n"
