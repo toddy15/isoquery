@@ -1,0 +1,163 @@
+# English translations for isoquery package.
+# Copyright (C) 2014 THE isoquery'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the isoquery package.
+# Automatically generated, 2014.
+#
+# All this catalog "translates" are quotation characters.
+# The msgids must be ASCII and therefore cannot contain real quotation
+# characters, only substitutes like grave accent (0x60), apostrophe (0x27)
+# and double quote (0x22). These substitutes look strange; see
+# http://www.cl.cam.ac.uk/~mgk25/ucs/quotes.html
+#
+# This catalog translates grave accent (0x60) and apostrophe (0x27) to
+# left single quotation mark (U+2018) and right single quotation mark (U+2019).
+# It also translates pairs of apostrophe (0x27) to
+# left single quotation mark (U+2018) and right single quotation mark (U+2019)
+# and pairs of quotation mark (0x22) to
+# left double quotation mark (U+201C) and right double quotation mark (U+201D).
+#
+# When output to an UTF-8 terminal, the quotation characters appear perfectly.
+# When output to an ISO-8859-1 terminal, the single quotation marks are
+# transliterated to apostrophes (by iconv in glibc 2.2 or newer) or to
+# grave/acute accent (by libiconv), and the double quotation marks are
+# transliterated to 0x22.
+# When output to an ASCII terminal, the single quotation marks are
+# transliterated to apostrophes, and the double quotation marks are
+# transliterated to 0x22.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery 1.8\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2012-01-07 23:33+0100\n"
+"PO-Revision-Date: 2012-01-07 23:33+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en@quot\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: isoquery/cmdline_parser.py:30
+msgid "Usage: %prog [options] [ISO codes]"
+msgstr "Usage: %prog [options] [ISO codes]"
+
+#: isoquery/cmdline_parser.py:36
+msgid "standard"
+msgstr "standard"
+
+#: isoquery/cmdline_parser.py:37
+#, fuzzy, python-format
+msgid ""
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924 (default: %default)."
+msgstr ""
+"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+"15924 (default: %default)."
+
+#: isoquery/cmdline_parser.py:42
+msgid "file"
+msgstr "file"
+
+#: isoquery/cmdline_parser.py:43
+#, fuzzy, python-format
+msgid "Use another XML file with ISO data (default: %default)."
+msgstr "Use another XML file with ISO data (default: %default)."
+
+#: isoquery/cmdline_parser.py:47
+msgid "locale"
+msgstr "locale"
+
+#: isoquery/cmdline_parser.py:48
+msgid "Use this locale for output."
+msgstr "Use this locale for output."
+
+#: isoquery/cmdline_parser.py:51
+msgid "Name for the supplied codes (default)."
+msgstr "Name for the supplied codes (default)."
+
+#: isoquery/cmdline_parser.py:54
+msgid ""
+"Official name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166)."
+msgstr ""
+"Official name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166)."
+
+#: isoquery/cmdline_parser.py:59
+msgid ""
+"Common name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166)."
+msgstr ""
+"Common name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166)."
+
+#: isoquery/cmdline_parser.py:65
+msgid "Separate entries with a NULL character instead of newline."
+msgstr "Separate entries with a NULL character instead of newline."
+
+#: isoquery/cmdline_parser.py:69
+msgid "Show summary of options."
+msgstr "Show summary of options."
+
+#: isoquery/cmdline_parser.py:73
+msgid "Show program version and copyright."
+msgstr "Show program version and copyright."
+
+#: isoquery/cmdline_parser.py:91
+#, python-format
+msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgstr "isoquery: ISO standard ‘%(standard)s’ is not supported.\n"
+
+#: isoquery/cmdline_parser.py:110
+#, python-format
+msgid ""
+"isoquery: The locale '%(locale)s' is not available for ISO %(standard)s.\n"
+msgstr ""
+"isoquery: The locale ‘%(locale)s’ is not available for ISO %(standard)s.\n"
+
+#: isoquery/cmdline_parser.py:126
+#, fuzzy, python-format
+msgid "isoquery %(version)s"
+msgstr "isoquery %(version)s"
+
+#: isoquery/cmdline_parser.py:127
+#, fuzzy
+msgid "Copyright © 2007-2012 Tobias Quathamer"
+msgstr "Copyright © 2007-2012 Tobias Quathamer"
+
+#. TRANSLATORS: Please change the uppercase words as appropriate for
+#. your language.
+#: isoquery/cmdline_parser.py:130
+#, fuzzy
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgstr "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+
+#: isoquery/xmlfile.py:42
+#, fuzzy, python-format
+msgid "isoquery: The file '%(filename)s' could not be opened.\n"
+msgstr "isoquery: The file ‘%(filename)s’ could not be opened.\n"
+
+#: isoquery/xmlfile.py:46
+#, fuzzy, python-format
+msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
+msgstr "isoquery: The file ‘%(filename)s’ could not be parsed correctly.\n"
+
+#: isoquery/xmlfile.py:52
+#, fuzzy, python-format
+msgid ""
+"isoquery: The file '%(filename)s' does not contain valid ISO %(standard)s "
+"data.\n"
+msgstr ""
+"isoquery: The file ‘%(filename)s’ does not contain valid ISO %(standard)s "
+"data.\n"
+
+#: isoquery/xmlfile.py:71
+#, fuzzy, python-format
+msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgstr "isoquery: The code ‘%(code)s’ is not defined in ISO %(standard)s.\n"
+
+#, fuzzy
+#~ msgid "isoquery: %(error_msg)s\n"
+#~ msgstr "isoquery %(version)s"
