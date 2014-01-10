@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2012-01-07 23:33+0100\n"
+"POT-Creation-Date: 2014-01-10 23:19+0100\n"
 "PO-Revision-Date: 2011-06-01 23:50+0200\n"
 "Last-Translator: Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
@@ -18,46 +18,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.1\n"
 
-#: isoquery/cmdline_parser.py:30
-msgid "Usage: %prog [options] [ISO codes]"
-msgstr "Aufruf: %prog [Optionen] [ISO-Codes]"
-
-#: isoquery/cmdline_parser.py:36
-msgid "standard"
-msgstr "Standard"
-
-#: isoquery/cmdline_parser.py:37
+#: src/isoquery.vala:56
 #, python-format
+msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+msgstr "isoquery: Der ISO-Standard »%(standard)s« wird nicht unterstützt.\n"
+
+#: src/isoquery.vala:64
+#, fuzzy, python-format
+#| msgid "isoquery %(version)s"
+msgid "isoquery %(version)s\n"
+msgstr "isoquery %(version)s"
+
+#: src/isoquery.vala:66
+#, fuzzy
+#| msgid "Copyright © 2007-2012 Tobias Quathamer"
+msgid "Copyright © 2007-2014 Tobias Quathamer\n"
+msgstr "Copyright © 2007-2012 Tobias Quathamer"
+
+#. TRANSLATORS: Please change the uppercase words as
+#. appropriate for your language.
+#: src/isoquery.vala:69
+#, fuzzy
+#| msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
+msgstr "Deutsche Übersetzung Copyright © 2007-2011 Tobias Quathamer"
+
+#: src/isoquery.vala:99
+#, fuzzy
+#| msgid ""
+#| "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
+#| "15924 (default: %default)."
 msgid ""
 "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
-"15924 (default: %default)."
+"15924 (default: 3166)."
 msgstr ""
 "Der gewünschte ISO-Standard. Mögliche Werte: 639, 639-3, 3166, 3166-2, 4217, "
 "15924 (Voreinstellung: %default)."
 
-#: isoquery/cmdline_parser.py:42
-msgid "file"
-msgstr "Datei"
+#: src/isoquery.vala:100
+msgid "STANDARD"
+msgstr ""
 
-#: isoquery/cmdline_parser.py:43
-#, python-format
-msgid "Use another XML file with ISO data (default: %default)."
+#: src/isoquery.vala:104
+#, fuzzy
+#| msgid "Use another XML file with ISO data (default: %default)."
+msgid ""
+"Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
+"iso_3166.xml)"
 msgstr ""
 "Eine andere XML-Datei mit ISO-Daten verwenden (Voreinstellung: %default)."
 
-#: isoquery/cmdline_parser.py:47
-msgid "locale"
-msgstr "Locale"
+#: src/isoquery.vala:105
+msgid "FILE"
+msgstr ""
 
-#: isoquery/cmdline_parser.py:48
+#: src/isoquery.vala:109
 msgid "Use this locale for output."
 msgstr "Diese Locale für die Ausgabe verwenden."
 
-#: isoquery/cmdline_parser.py:51
+#: src/isoquery.vala:110
+msgid "LOCALE"
+msgstr ""
+
+#: src/isoquery.vala:114
 msgid "Name for the supplied codes (default)."
 msgstr "Name der übergebenen Codes (Voreinstellung)."
 
-#: isoquery/cmdline_parser.py:54
+#: src/isoquery.vala:118
 msgid ""
 "Official name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166)."
@@ -65,7 +92,7 @@ msgstr ""
 "Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie --"
 "name (gilt nur für ISO 3166)."
 
-#: isoquery/cmdline_parser.py:59
+#: src/isoquery.vala:122
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166)."
@@ -73,59 +100,51 @@ msgstr ""
 "Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name "
 "(gilt nur für ISO 3166)."
 
-#: isoquery/cmdline_parser.py:65
+#: src/isoquery.vala:126
 msgid "Separate entries with a NULL character instead of newline."
 msgstr ""
 "Einträge durch ein NULL-Zeichen anstatt des Zeilenumbruches voneinander "
 "trennen."
 
-#: isoquery/cmdline_parser.py:69
-msgid "Show summary of options."
-msgstr "Zusammenfassung der Optionen anzeigen."
-
-#: isoquery/cmdline_parser.py:73
+#: src/isoquery.vala:130
 msgid "Show program version and copyright."
 msgstr "Anzeige der Programmversion und des Copyrights."
 
-#: isoquery/cmdline_parser.py:91
-#, python-format
-msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-msgstr "isoquery: Der ISO-Standard »%(standard)s« wird nicht unterstützt.\n"
-
-#: isoquery/cmdline_parser.py:110
-#, python-format
-msgid ""
-"isoquery: The locale \"%(locale)s\" is not available for ISO %(standard)s.\n"
+#: src/isoquery.vala:136
+msgid "[ISO codes]"
 msgstr ""
-"isoquery: Die Locale »%(locale)s« ist für ISO %(standard)s nicht verfügbar.\n"
 
-#: isoquery/cmdline_parser.py:126
-#, python-format
-msgid "isoquery %(version)s"
+#: src/isoquery.vala:141
+#, fuzzy, python-format
+#| msgid "isoquery %(version)s"
+msgid "isoquery: %(error_msg)s\n"
 msgstr "isoquery %(version)s"
 
-#: isoquery/cmdline_parser.py:127
-msgid "Copyright © 2007-2012 Tobias Quathamer"
-msgstr "Copyright © 2007-2012 Tobias Quathamer"
+#: src/isoquery.vala:143
+msgid ""
+"Run \"isoquery --help\" to see a full list of available command line "
+"options.\n"
+msgstr ""
 
-#. TRANSLATORS: Please change the uppercase words as appropriate for
-#. your language.
-#: isoquery/cmdline_parser.py:130
-msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
-msgstr "Deutsche Übersetzung Copyright © 2007-2011 Tobias Quathamer"
+#: src/isoquery.vala:173
+msgid "isoquery: Internal error. Please report this bug.\n"
+msgstr ""
 
-#: isoquery/xmlfile.py:42
+#: src/handle_639.vala:81 src/handle_639_3.vala:88 src/handle_3166.vala:89
+#: src/handle_3166_2.vala:82 src/handle_4217.vala:80 src/handle_15924.vala:80
 #, python-format
 msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
 msgstr "isoquery: Die Datei »%(filename)s« konnte nicht geöffnet werden.\n"
 
-#: isoquery/xmlfile.py:46
+#: src/handle_639.vala:87 src/handle_639_3.vala:94 src/handle_3166.vala:95
+#: src/handle_3166_2.vala:88 src/handle_4217.vala:86 src/handle_15924.vala:86
 #, python-format
 msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 msgstr ""
 "isoquery: Die Datei »%(filename)s« konnte nicht korrekt ausgewertet werden.\n"
 
-#: isoquery/xmlfile.py:52
+#: src/handle_639.vala:93 src/handle_639_3.vala:100 src/handle_3166.vala:101
+#: src/handle_3166_2.vala:94 src/handle_4217.vala:92 src/handle_15924.vala:92
 #, python-format
 msgid ""
 "isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s "
@@ -134,8 +153,31 @@ msgstr ""
 "isoquery: Die Datei »%(filename)s« enthält keine gültigen ISO %(standard)s "
 "Daten.\n"
 
-#: isoquery/xmlfile.py:71
+#: src/handle_639.vala:100 src/handle_639_3.vala:107 src/handle_3166.vala:108
+#: src/handle_3166_2.vala:101 src/handle_4217.vala:99 src/handle_15924.vala:99
 #, python-format
 msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
 msgstr ""
 "isoquery: Der Code »%(code)s« ist in ISO %(standard)s nicht definiert.\n"
+
+#~ msgid "Usage: %prog [options] [ISO codes]"
+#~ msgstr "Aufruf: %prog [Optionen] [ISO-Codes]"
+
+#~ msgid "standard"
+#~ msgstr "Standard"
+
+#~ msgid "file"
+#~ msgstr "Datei"
+
+#~ msgid "locale"
+#~ msgstr "Locale"
+
+#~ msgid "Show summary of options."
+#~ msgstr "Zusammenfassung der Optionen anzeigen."
+
+#~ msgid ""
+#~ "isoquery: The locale \"%(locale)s\" is not available for ISO "
+#~ "%(standard)s.\n"
+#~ msgstr ""
+#~ "isoquery: Die Locale »%(locale)s« ist für ISO %(standard)s nicht "
+#~ "verfügbar.\n"
