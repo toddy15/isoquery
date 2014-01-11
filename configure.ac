@@ -18,7 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Set up autoconf
-AC_PREREQ(2.69)
+AC_PREREQ([2.69])
 AC_INIT([isoquery], [1.8], [toddy@debian.org])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([build-aux])
@@ -49,9 +49,13 @@ AC_PATH_PROG([RST2MAN], [rst2man], [no])
 if test x"$RST2MAN" == x"no" ; then
     AC_MSG_ERROR([rst2man is required.])
 fi
-AC_PATH_PROG([PO4A], [po4a], [no])
-if test x"$PO4A" == x"no" ; then
-    AC_MSG_ERROR([po4a is required.])
+AC_PATH_PROG([PO4A_TRANSLATE], [po4a-translate], [no])
+if test x"$PO4A_TRANSLATE" == x"no" ; then
+    AC_MSG_ERROR([po4a-translate is required.])
+fi
+AC_PATH_PROG([PO4A_GETTEXTIZE], [po4a-gettextize], [no])
+if test x"$PO4A_GETTEXTIZE" == x"no" ; then
+    AC_MSG_ERROR([po4a-gettextize is required.])
 fi
 
 # Write configuration files
