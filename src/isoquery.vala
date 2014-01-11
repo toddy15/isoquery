@@ -138,8 +138,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             opt_context.add_main_entries(commandline_options, null);
             opt_context.parse(ref args);
         } catch (OptionError err) {
-            stderr.printf(_("isoquery: %(error_msg)s\n")
-              .replace("%(error_msg)s", err.message));
+            stderr.printf(_("isoquery: %(error_message)s\n")
+              .replace("%(error_message)s", err.message));
             stderr.printf(_("Run \"isoquery --help\" to see a full list of available command line options.\n"));
             // Exit the program with an error status.
             Posix.exit(Posix.EXIT_FAILURE);

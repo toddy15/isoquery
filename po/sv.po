@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-01-10 23:19+0100\n"
+"POT-Creation-Date: 2014-01-11 19:03+0100\n"
 "PO-Revision-Date: 2011-06-02 01:45+0100\n"
 "Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
@@ -116,7 +116,7 @@ msgstr ""
 #: src/isoquery.vala:141
 #, fuzzy, python-format
 #| msgid "isoquery %(version)s"
-msgid "isoquery: %(error_msg)s\n"
+msgid "isoquery: %(error_message)s\n"
 msgstr "isoquery %(version)s"
 
 #: src/isoquery.vala:143
