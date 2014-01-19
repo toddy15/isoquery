@@ -65,7 +65,10 @@ public class Handle_639_3 : Object {
                 }
             }
             catch (ISOCodesError err) {
-                _handle_errors(err, null);
+                stderr.printf(_("isoquery: %(error_message)s\n")
+                  .replace("%(error_message)s", err.message));
+                // Exit the program with an error status.
+                Posix.exit(Posix.EXIT_FAILURE);
             }
         }
         else {
@@ -75,45 +78,15 @@ public class Handle_639_3 : Object {
                     _show_item(item);
                 }
                 catch (ISOCodesError err) {
-                    _handle_errors(err, code);
+                    stderr.printf(_("isoquery: %(error_message)s\n")
+                      .replace("%(error_message)s", err.message));
+                    // Exit the program with an error status,
+                    // unless the error is "CODE_NOT_DEFINED".
+                    if (!(err is ISOCodesError.CODE_NOT_DEFINED)) {
+                        Posix.exit(Posix.EXIT_FAILURE);
+                    }
                 }
             }
-        }
-    }
-
-    private static void _handle_errors(ISOCodesError err, string? code) {
-        var fatal_error = true;
-        if (err is ISOCodesError.FILE_DOES_NOT_EXIST) {
-            stderr.printf(
-              _("isoquery: The file \"%(filename)s\" could not be opened.\n")
-              .replace("%(filename)s", iso.get_filepath())
-            );
-        }
-        if (err is ISOCodesError.CANNOT_PARSE_FILE) {
-            stderr.printf(
-              _("isoquery: The file \"%(filename)s\" could not be parsed correctly.\n")
-              .replace("%(filename)s", iso.get_filepath())
-            );
-        }
-        if (err is ISOCodesError.FILE_DOES_NOT_CONTAIN_ISO_DATA) {
-            stderr.printf(
-              _("isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s data.\n")
-              .replace("%(filename)s", iso.get_filepath())
-              .replace("%(standard)s", standard)
-            );
-        }
-        if (err is ISOCodesError.CODE_NOT_DEFINED) {
-            stderr.printf(
-              _("isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n")
-              .replace("%(code)s", code)
-              .replace("%(standard)s", standard)
-            );
-            fatal_error = false;
-        }
-        // Exit the program with an error status,
-        // unless the error is "CODE_NOT_DEFINED".
-        if (fatal_error) {
-            Posix.exit(Posix.EXIT_FAILURE);
         }
     }
 }
