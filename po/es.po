@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-01-11 19:03+0100\n"
+"POT-Creation-Date: 2014-01-19 17:23+0100\n"
 "PO-Revision-Date: 2010-07-17 18:18+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
@@ -155,7 +155,11 @@ msgstr "Muestra la versión del programa y los derechos de autor"
 msgid "[ISO codes]"
 msgstr ""
 
-#: src/isoquery.vala:141
+#: src/isoquery.vala:141 src/handle_639.vala:61 src/handle_639.vala:74
+#: src/handle_639_3.vala:68 src/handle_639_3.vala:81 src/handle_3166.vala:69
+#: src/handle_3166.vala:82 src/handle_3166_2.vala:62 src/handle_3166_2.vala:75
+#: src/handle_4217.vala:60 src/handle_4217.vala:73 src/handle_15924.vala:60
+#: src/handle_15924.vala:73
 #, fuzzy, python-format
 #| msgid "isoquery %(version)s"
 msgid "isoquery: %(error_message)s\n"
@@ -171,35 +175,24 @@ msgstr ""
 msgid "isoquery: Internal error. Please report this bug.\n"
 msgstr ""
 
-#: src/handle_639.vala:81 src/handle_639_3.vala:88 src/handle_3166.vala:89
-#: src/handle_3166_2.vala:82 src/handle_4217.vala:80 src/handle_15924.vala:80
-#, python-format
-msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
-msgstr "isoquery: No se pudo abrir el fichero «%(filename)s».\n"
+#~ msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
+#~ msgstr "isoquery: No se pudo abrir el fichero «%(filename)s».\n"
 
-#: src/handle_639.vala:87 src/handle_639_3.vala:94 src/handle_3166.vala:95
-#: src/handle_3166_2.vala:88 src/handle_4217.vala:86 src/handle_15924.vala:86
-#, python-format
-msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
-msgstr ""
-"isoquery: El fichero «%(filename)s» no se pudo analizar adecuadamente.\n"
+#~ msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
+#~ msgstr ""
+#~ "isoquery: El fichero «%(filename)s» no se pudo analizar adecuadamente.\n"
 
-#: src/handle_639.vala:93 src/handle_639_3.vala:100 src/handle_3166.vala:101
-#: src/handle_3166_2.vala:94 src/handle_4217.vala:92 src/handle_15924.vala:92
-#, python-format
-msgid ""
-"isoquery: The file \"%(filename)s\" does not contain valid ISO %(standard)s "
-"data.\n"
-msgstr ""
-"isoquery: El fichero «%(filename)s» no contiene datos ISO %(standard)s "
-"válidos.\n"
+#~ msgid ""
+#~ "isoquery: The file \"%(filename)s\" does not contain valid ISO "
+#~ "%(standard)s data.\n"
+#~ msgstr ""
+#~ "isoquery: El fichero «%(filename)s» no contiene datos ISO %(standard)s "
+#~ "válidos.\n"
 
-#: src/handle_639.vala:100 src/handle_639_3.vala:107 src/handle_3166.vala:108
-#: src/handle_3166_2.vala:101 src/handle_4217.vala:99 src/handle_15924.vala:99
-#, python-format
-msgid "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
-msgstr ""
-"isoquery: El código «%(code)s» no está definido en la ISO %(standard)s.\n"
+#~ msgid ""
+#~ "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
+#~ msgstr ""
+#~ "isoquery: El código «%(code)s» no está definido en la ISO %(standard)s.\n"
 
 #~ msgid "Usage: %prog [options] [ISO codes]"
 #~ msgstr "Uso: %prog [opciones] [códigos ISO]"
