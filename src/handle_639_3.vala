@@ -27,12 +27,8 @@ public class Handle_639_3 : Object {
         options = opts;
         iso = new ISO_639_3();
         standard = "639-3";
-        if (options.filepath != null) {
-            iso.set_filepath(options.filepath);
-        }
-        if (options.locale != null) {
-            iso.set_locale(options.locale);
-        }
+        iso.set_filepath(options.filepath);
+        iso.set_locale(options.locale);
         _show_codes(codes);
     }
 

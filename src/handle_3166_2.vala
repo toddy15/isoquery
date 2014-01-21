@@ -27,12 +27,8 @@ public class Handle_3166_2 : Object {
         options = opts;
         iso = new ISO_3166_2();
         standard = "3166_2";
-        if (options.filepath != null) {
-            iso.set_filepath(options.filepath);
-        }
-        if (options.locale != null) {
-            iso.set_locale(options.locale);
-        }
+        iso.set_filepath(options.filepath);
+        iso.set_locale(options.locale);
         _show_codes(codes);
     }
 
