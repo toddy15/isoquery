@@ -5,8 +5,8 @@ isoquery
 Search and display various ISO codes (country, language, ...)
 -------------------------------------------------------------
 
-:Date:            2012-01-23
-:Version:         1.7
+:Date:            2014-03-25
+:Version:         2.0
 :Manual section:  1
 
 
@@ -140,7 +140,7 @@ may be empty.
 
   $ isoquery -i 639-3 aal new spa guc
   aal     I       L                       Afade
-  new     I       L               new     Bhasa, Nepal
+  new     I       L               new     Newari
   spa     I       L       es      spa     Spanish
   guc     I       L                       Wayuu
 
