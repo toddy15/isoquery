@@ -19,7 +19,7 @@
 
 # Set up autoconf
 AC_PREREQ([2.69])
-AC_INIT([isoquery], [1.8], [toddy@debian.org])
+AC_INIT([isoquery], [2.0], [toddy@debian.org])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])

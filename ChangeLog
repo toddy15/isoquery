@@ -1,3 +1,12 @@
+Isoquery 2.0
+============
+25 March 2014
+
+* Complete rewrite in Vala, significantly faster than
+  previous Python implementation
+* Uses libisocodes to access iso-codes XML data
+
+
 Isoquery 1.7
 ============
 23 January 2012

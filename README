@@ -12,14 +12,14 @@ the ISO standard.
 Dependencies
 ------------
 
-This program needs Python 2.4 and python-lxml for execution.
+This program needs libisocodes-1.1 for execution.
 In order to build the program from source, you need also rst2man
 and gettext.
 
 Installation
 ------------
 
-Just run "python setup.py install".
+Just run "./configure && make install".
 
 Author and Copyright
 --------------------
