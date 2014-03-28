@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2014-03-25 10:42+0100\n"
+"POT-Creation-Date: 2014-03-29 00:15+0100\n"
 "PO-Revision-Date: 2011-06-01 23:27+0200\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -93,8 +93,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "-i standard, --iso=standard  The ISO standard to use. Possible values: 639,\n"
-"                             639-3, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
-msgstr "-i norme, --iso=norme     La norme ISO à utiliser. Valeurs disponibles : 639, 639-3, 3166, 3166-2, 4217, 15924 (3166 par défaut).\n"
+"                             639-3, 639-5, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
+msgstr "-i norme, --iso=norme     La norme ISO à utiliser. Valeurs disponibles : 639, 639-3, 639-5, 3166, 3166-2, 4217, 15924 (3166 par défaut).\n"
 
 #. type: Plain text
 #, no-wrap
@@ -325,6 +325,23 @@ msgstr ""
 "  new     I       L               new     Newari\n"
 "  spa     I       L       es      spa     Spanish\n"
 "  guc     I       L                       Wayuu\n"
+
+#. type: Plain text
+msgid ""
+"ISO 639-5 is also available. The displayed columns are id, parents, and "
+"name. The parents column may be empty."
+msgstr ""
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  $ isoquery -i 639-5 aus tut\n"
+"  aus             Australian languages\n"
+"  tut             Altaic languages\n"
+msgstr ""
+"  $ isoquery -i 639-5 aus tut\n"
+"  aus             Australian languages\n"
+"  tut             Altaic languages\n"
 
 #. type: Plain text
 msgid ""

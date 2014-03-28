@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-03-25 10:42+0100\n"
+"POT-Creation-Date: 2014-03-29 00:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,8 +80,8 @@ msgstr ""
 msgid ""
 "-i standard, --iso=standard  The ISO standard to use. Possible values: "
 "639,\n"
-"                             639-3, 3166, 3166-2, 4217, 15924 (default: "
-"3166).\n"
+"                             639-3, 639-5, 3166, 3166-2, 4217, 15924 "
+"(default: 3166).\n"
 msgstr ""
 
 #. type: Plain text
@@ -263,6 +263,20 @@ msgid ""
 "  new     I       L               new     Newari\n"
 "  spa     I       L       es      spa     Spanish\n"
 "  guc     I       L                       Wayuu\n"
+msgstr ""
+
+#. type: Plain text
+msgid ""
+"ISO 639-5 is also available. The displayed columns are id, parents, and "
+"name. The parents column may be empty."
+msgstr ""
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  $ isoquery -i 639-5 aus tut\n"
+"  aus             Australian languages\n"
+"  tut             Altaic languages\n"
 msgstr ""
 
 #. type: Plain text
