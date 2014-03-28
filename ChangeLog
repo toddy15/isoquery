@@ -5,6 +5,7 @@ Isoquery 2.0
 * Complete rewrite in Vala, significantly faster than
   previous Python implementation
 * Uses libisocodes to access iso-codes XML data
+* Supports the newly added ISO 639-5 codes
 
 
 Isoquery 1.7

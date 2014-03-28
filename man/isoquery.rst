@@ -35,7 +35,7 @@ This program follows the usual GNU command line syntax, with long options
 starting with two dashes ('**-**'). **isoquery** supports the following options:
 
 -i standard, --iso=standard  The ISO standard to use. Possible values: 639,
-                             639-3, 3166, 3166-2, 4217, 15924 (default: 3166).
+                             639-3, 639-5, 3166, 3166-2, 4217, 15924 (default: 3166).
 
 -x file, --xmlfile=file      Use another XML *file* with ISO data
                              (default: /usr/share/xml/iso-codes/iso_3166.xml).
@@ -143,6 +143,15 @@ may be empty.
   new     I       L               new     Newari
   spa     I       L       es      spa     Spanish
   guc     I       L                       Wayuu
+
+ISO 639-5 is also available. The displayed columns are id, parents,
+and name. The parents column may be empty.
+
+::
+
+  $ isoquery -i 639-5 aus tut
+  aus             Australian languages
+  tut             Altaic languages
 
 You can get selected translations of currency names from the ISO 4217
 standard by using the following command. The first two columns are the

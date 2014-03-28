@@ -12,7 +12,7 @@ the ISO standard.
 Dependencies
 ------------
 
-This program needs libisocodes-1.1 for execution.
+This program needs libisocodes-1.2 for execution.
 In order to build the program from source, you need also rst2man
 and gettext.
 

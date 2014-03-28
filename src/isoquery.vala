@@ -42,7 +42,7 @@ public class Isoquery : Object {
         }
         // Ensure a valid and supported standard
         string[] supported_standards = {
-            "639", "639-3", "3166", "3166-2", "4217", "15924"
+            "639", "639-3", "639-5", "3166", "3166-2", "4217", "15924"
         };
         bool supported = false;
         foreach (var standard in supported_standards) {
@@ -96,7 +96,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         var commandline_options = new OptionEntry[9];
         commandline_options[0] = {
             "iso", 'i', 0, OptionArg.STRING, ref options.iso,
-            _("The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, 15924 (default: 3166)."),
+            _("The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, 4217, 15924 (default: 3166)."),
             _("STANDARD")
         };
         commandline_options[1] = {
@@ -154,6 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 break;
             case "639-3":
                 Handle_639_3.show(options, codes);
+                break;
+            case "639-5":
+                Handle_639_5.show(options, codes);
                 break;
             case "3166":
                 Handle_3166.show(options, codes);

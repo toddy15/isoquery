@@ -31,6 +31,7 @@ isoquery_SOURCES = \
 	src/isoquery.vala \
 	src/handle_639.vala \
 	src/handle_639_3.vala \
+	src/handle_639_5.vala \
 	src/handle_3166.vala \
 	src/handle_3166_2.vala \
 	src/handle_4217.vala \
