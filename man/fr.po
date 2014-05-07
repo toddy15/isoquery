@@ -106,7 +106,7 @@ msgstr "-x fichier, --xmlfile=fichier  Utiliser un autre *fichier* XML avec les 
 #. type: Plain text
 #, no-wrap
 msgid "-l locale, --locale=locale   Use this *locale* for output.\n"
-msgstr "-l locale, --locale=locale  Utiliser cette *locale* pour l'affichage."
+msgstr "-l locale, --locale=locale  Utiliser cette *locale* pour l'affichage.\n"
 
 #. type: Plain text
 #, no-wrap

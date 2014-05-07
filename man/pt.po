@@ -109,7 +109,7 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid "-l locale, --locale=locale   Use this *locale* for output.\n"
-msgstr "-l locale, --locale=locale  Use este *locale* para os resultados."
+msgstr "-l locale, --locale=locale  Use este *locale* para os resultados.\n"
 
 #. type: Plain text
 #, no-wrap

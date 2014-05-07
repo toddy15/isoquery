@@ -106,7 +106,7 @@ msgstr "-x Datei, --xmlfile=Datei   Eine andere XML-*Datei* mit ISO-Daten verwen
 #. type: Plain text
 #, no-wrap
 msgid "-l locale, --locale=locale   Use this *locale* for output.\n"
-msgstr "-l Locale, --locale=Locale  Diese *Locale* für die Ausgabe verwenden."
+msgstr "-l Locale, --locale=Locale  Diese *Locale* für die Ausgabe verwenden.\n"
 
 #. type: Plain text
 #, no-wrap
@@ -132,17 +132,17 @@ msgstr "-c, --common_name           Üblicher Name der übergebenen Codes. Dies 
 msgid ""
 "-0, --null                   Separate entries with a NULL character instead\n"
 "                             of newline.\n"
-msgstr "-0, --null                  Einträge durch ein NULL-Zeichen anstatt des Zeilenumbruches voneinander trennen."
+msgstr "-0, --null                  Einträge durch ein NULL-Zeichen anstatt des Zeilenumbruches voneinander trennen.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "-h, --help                   Show summary of options.\n"
-msgstr "-h, --help                  Zusammenfassung der Optionen anzeigen."
+msgstr "-h, --help                  Zusammenfassung der Optionen anzeigen.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "-v, --version                Show program version and copyright.\n"
-msgstr "-v, --version               Anzeige der Programmversion und des Copyrights."
+msgstr "-v, --version               Anzeige der Programmversion und des Copyrights.\n"
 
 #. type: Title =
 #, no-wrap
