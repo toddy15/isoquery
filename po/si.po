@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-01-19 17:23+0100\n"
+"POT-Creation-Date: 2014-05-08 10:15+0200\n"
 "PO-Revision-Date: 2011-12-28 06:29+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -50,8 +50,8 @@ msgstr "සිංහල වෙත පරිවර්තනය හිමිකම
 #| "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
 #| "15924 (default: %default)."
 msgid ""
-"The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
-"15924 (default: 3166)."
+"The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, "
+"4217, 15924 (default: 3166)."
 msgstr ""
 "භාවිත කරන ISO සම්මතයන්. විය හැකි අගයන්: 639, 639-3, 3166, 3166-2, 4217, 15924. "
 "(පෙරනිමිය: %default)"
@@ -110,11 +110,11 @@ msgstr "වැඩසටහන් වෙළුම හා හිමිකම් �
 msgid "[ISO codes]"
 msgstr ""
 
-#: src/isoquery.vala:141 src/handle_639.vala:61 src/handle_639.vala:74
-#: src/handle_639_3.vala:68 src/handle_639_3.vala:81 src/handle_3166.vala:69
-#: src/handle_3166.vala:82 src/handle_3166_2.vala:62 src/handle_3166_2.vala:75
-#: src/handle_4217.vala:60 src/handle_4217.vala:73 src/handle_15924.vala:60
-#: src/handle_15924.vala:73
+#: src/isoquery.vala:141 src/handle_639.vala:57 src/handle_639.vala:70
+#: src/handle_639_3.vala:64 src/handle_639_3.vala:77 src/handle_639_5.vala:56
+#: src/handle_639_5.vala:69 src/handle_3166.vala:65 src/handle_3166.vala:78
+#: src/handle_3166_2.vala:58 src/handle_3166_2.vala:71 src/handle_4217.vala:56
+#: src/handle_4217.vala:69 src/handle_15924.vala:56 src/handle_15924.vala:69
 #, fuzzy, python-format
 #| msgid "isoquery %(version)s"
 msgid "isoquery: %(error_message)s\n"
@@ -126,7 +126,7 @@ msgid ""
 "options.\n"
 msgstr ""
 
-#: src/isoquery.vala:173
+#: src/isoquery.vala:176
 msgid "isoquery: Internal error. Please report this bug.\n"
 msgstr ""
 
