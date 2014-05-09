@@ -3,19 +3,19 @@
 #
 # Copyright ©
 # Debian French l10n team <debian-l10n-french@lists.debian.org>, 2011.
-# David Prévot <david@tilapin.org>, 2011.
+# David Prévot <david@tilapin.org>, 2011, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2014-03-29 00:15+0100\n"
-"PO-Revision-Date: 2011-06-01 23:27+0200\n"
+"POT-Creation-Date: 2014-05-10 00:27+0200\n"
+"PO-Revision-Date: 2014-05-08 11:57-0400\n"
 "Last-Translator: David Prévot <david@tilapin.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. type: Plain text
@@ -331,6 +331,8 @@ msgid ""
 "ISO 639-5 is also available. The displayed columns are id, parents, and "
 "name. The parents column may be empty."
 msgstr ""
+"ISO 639-5 est aussi disponible. Les colonnes affichées sont l'identifiant, "
+"les parents et le nom. La colonne des parents peut être vide."
 
 #. type: Plain text
 #, no-wrap
@@ -401,12 +403,13 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "| */usr/share/xml/iso-codes/iso_639.xml* | */usr/share/xml/iso-codes/"
-"iso_639_3.xml* | */usr/share/xml/iso-codes/iso_3166.xml* | */usr/share/xml/"
-"iso-codes/iso_3166_2.xml* | */usr/share/xml/iso-codes/iso_4217.xml* | */usr/"
-"share/xml/iso-codes/iso_15924.xml*"
+"iso_639_3.xml* | */usr/share/xml/iso-codes/iso_639_5.xml* | */usr/share/xml/"
+"iso-codes/iso_3166.xml* | */usr/share/xml/iso-codes/iso_3166_2.xml* | */usr/"
+"share/xml/iso-codes/iso_4217.xml* | */usr/share/xml/iso-codes/iso_15924.xml*"
 msgstr ""
 "| */usr/share/xml/iso-codes/iso_639.xml*\n"
 "| */usr/share/xml/iso-codes/iso_639_3.xml*\n"
+"| */usr/share/xml/iso-codes/iso_639_5.xml*\n"
 "| */usr/share/xml/iso-codes/iso_3166.xml*\n"
 "| */usr/share/xml/iso-codes/iso_3166_2.xml*\n"
 "| */usr/share/xml/iso-codes/iso_4217.xml*\n"
