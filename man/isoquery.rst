@@ -182,6 +182,7 @@ By default, the XML files provided by the **iso-codes** package will be used.
 
 | */usr/share/xml/iso-codes/iso_639.xml*
 | */usr/share/xml/iso-codes/iso_639_3.xml*
+| */usr/share/xml/iso-codes/iso_639_5.xml*
 | */usr/share/xml/iso-codes/iso_3166.xml*
 | */usr/share/xml/iso-codes/iso_3166_2.xml*
 | */usr/share/xml/iso-codes/iso_4217.xml*
