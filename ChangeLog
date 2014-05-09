@@ -6,6 +6,8 @@ Isoquery 2.0
   previous Python implementation
 * Uses libisocodes to access iso-codes XML data
 * Supports the newly added ISO 639-5 codes
+* Updated translations:
+  - Danish, thanks to Joe Hansen
 
 
 Isoquery 1.7
