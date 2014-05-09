@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
-# Américo Monteiro <a_monteiro@netcabo.pt>, 2010, 2011.
+# Américo Monteiro <a_monteiro@gmx.com>, 2010, 2011, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2014-03-29 00:15+0100\n"
-"PO-Revision-Date: 2011-06-01 23:28+0200\n"
-"Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
+"POT-Creation-Date: 2014-05-10 00:27+0200\n"
+"PO-Revision-Date: 2014-05-08 18:11+0100\n"
+"Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.4\n"
 
 #. type: Plain text
 #, no-wrap
@@ -244,8 +244,8 @@ msgstr ""
 "Tudo em cima funciona também para diferentes ISO standards, portanto você "
 "pode mudar para o standard ISO 3166-2 mais extensivo usando a opção **--"
 "iso** na linha de comandos. A colunas são código de país, tipo de "
-"subconjunto (ex. Estado, Província, etc), código ISO 3166-2, pai e nome. A "
-"quarta coluna (pai) pode estar vazia."
+"subconjunto (ex. Estado, Província, etc), código ISO 3166-2, parente e nome. "
+"A quarta coluna (parente) pode estar vazia."
 
 #. type: Plain text
 #, no-wrap
@@ -340,6 +340,8 @@ msgid ""
 "ISO 639-5 is also available. The displayed columns are id, parents, and "
 "name. The parents column may be empty."
 msgstr ""
+"Também está disponível ISO 639-5. As colunas mostradas são id, parentes, e "
+"nome. A coluna parentes por estar vazia."
 
 #. type: Plain text
 #, no-wrap
@@ -411,12 +413,13 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "| */usr/share/xml/iso-codes/iso_639.xml* | */usr/share/xml/iso-codes/"
-"iso_639_3.xml* | */usr/share/xml/iso-codes/iso_3166.xml* | */usr/share/xml/"
-"iso-codes/iso_3166_2.xml* | */usr/share/xml/iso-codes/iso_4217.xml* | */usr/"
-"share/xml/iso-codes/iso_15924.xml*"
+"iso_639_3.xml* | */usr/share/xml/iso-codes/iso_639_5.xml* | */usr/share/xml/"
+"iso-codes/iso_3166.xml* | */usr/share/xml/iso-codes/iso_3166_2.xml* | */usr/"
+"share/xml/iso-codes/iso_4217.xml* | */usr/share/xml/iso-codes/iso_15924.xml*"
 msgstr ""
 "| */usr/share/xml/iso-codes/iso_639.xml*\n"
 "| */usr/share/xml/iso-codes/iso_639_3.xml*\n"
+"| */usr/share/xml/iso-codes/iso_639_5.xml*\n"
 "| */usr/share/xml/iso-codes/iso_3166.xml*\n"
 "| */usr/share/xml/iso-codes/iso_3166_2.xml*\n"
 "| */usr/share/xml/iso-codes/iso_4217.xml*\n"
