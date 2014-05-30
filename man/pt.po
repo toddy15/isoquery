@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2014-05-10 00:27+0200\n"
+"POT-Creation-Date: 2014-05-30 20:17+0200\n"
 "PO-Revision-Date: 2014-05-08 18:11+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -35,11 +35,11 @@ msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)\n"
 #. type: Plain text
 #, no-wrap
 msgid ""
-":Date:            2014-03-25\n"
+":Date:            2014-05-30\n"
 ":Version:         2.0\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            2014-03-25\n"
+":Date:            2014-05-30\n"
 ":Version:         2.0\n"
 ":Manual section:  1\n"
 

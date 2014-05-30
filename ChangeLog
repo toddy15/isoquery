@@ -1,6 +1,6 @@
 Isoquery 2.0
 ============
-25 March 2014
+30 May 2014
 
 * Complete rewrite in Vala, significantly faster than
   previous Python implementation
