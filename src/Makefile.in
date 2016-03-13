@@ -91,7 +91,8 @@ POST_UNINSTALL = :
 bin_PROGRAMS = isoquery$(EXEEXT)
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/build/m4/glibtests.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(am__DIST_COMMON)
@@ -234,6 +235,8 @@ htmldir = @htmldir@
 includedir = @includedir@
 infodir = @infodir@
 install_sh = @install_sh@
+installed_test_metadir = @installed_test_metadir@
+installed_testdir = @installed_testdir@
 libdir = @libdir@
 libexecdir = @libexecdir@
 localedir = @localedir@

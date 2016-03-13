@@ -585,6 +585,12 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+installed_testdir
+installed_test_metadir
+ENABLE_ALWAYS_BUILD_TESTS_FALSE
+ENABLE_ALWAYS_BUILD_TESTS_TRUE
+ENABLE_INSTALLED_TESTS_FALSE
+ENABLE_INSTALLED_TESTS_TRUE
 JSON_LIBS
 JSON_CFLAGS
 GIO_LIBS
@@ -685,6 +691,8 @@ enable_option_checking
 enable_silent_rules
 enable_maintainer_mode
 enable_dependency_tracking
+enable_installed_tests
+enable_always_build_tests
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1326,6 +1334,10 @@ Optional Features:
                           do not reject slow dependency extractors
   --disable-dependency-tracking
                           speeds up one-time build
+  --enable-installed-tests
+                          Enable installation of some test cases
+  --enable-always-build-tests
+                          Enable always building tests during 'make all'
 
 Some influential environment variables:
   CC          C compiler command
@@ -3888,7 +3900,48 @@ $as_echo "yes" >&6; }
 fi
 
 # Use testsuite
-GLIB_TESTS
+
+  # Check whether --enable-installed-tests was given.
+if test "${enable_installed_tests+set}" = set; then :
+  enableval=$enable_installed_tests; case ${enableval} in
+                  yes) ENABLE_INSTALLED_TESTS="1"  ;;
+                  no)  ENABLE_INSTALLED_TESTS="" ;;
+                  *) as_fn_error $? "bad value ${enableval} for --enable-installed-tests" "$LINENO" 5 ;;
+                 esac
+fi
+
+   if test "$ENABLE_INSTALLED_TESTS" = "1"; then
+  ENABLE_INSTALLED_TESTS_TRUE=
+  ENABLE_INSTALLED_TESTS_FALSE='#'
+else
+  ENABLE_INSTALLED_TESTS_TRUE='#'
+  ENABLE_INSTALLED_TESTS_FALSE=
+fi
+
+  # Check whether --enable-always-build-tests was given.
+if test "${enable_always_build_tests+set}" = set; then :
+  enableval=$enable_always_build_tests; case ${enableval} in
+                  yes) ENABLE_ALWAYS_BUILD_TESTS="1"  ;;
+                  no)  ENABLE_ALWAYS_BUILD_TESTS="" ;;
+                  *) as_fn_error $? "bad value ${enableval} for --enable-always-build-tests" "$LINENO" 5 ;;
+                 esac
+fi
+
+   if test "$ENABLE_ALWAYS_BUILD_TESTS" = "1"; then
+  ENABLE_ALWAYS_BUILD_TESTS_TRUE=
+  ENABLE_ALWAYS_BUILD_TESTS_FALSE='#'
+else
+  ENABLE_ALWAYS_BUILD_TESTS_TRUE='#'
+  ENABLE_ALWAYS_BUILD_TESTS_FALSE=
+fi
+
+  if test "$ENABLE_INSTALLED_TESTS" = "1"; then
+    installed_test_metadir=${datadir}/installed-tests/isoquery
+
+    installed_testdir=${libexecdir}/installed-tests/isoquery
+
+  fi
+
 
 # Output
 ac_config_files="$ac_config_files Makefile src/Makefile"
@@ -4065,6 +4118,14 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${am__fastdepCC_TRUE}" && test -z "${am__fastdepCC_FALSE}"; then
   as_fn_error $? "conditional \"am__fastdepCC\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${ENABLE_INSTALLED_TESTS_TRUE}" && test -z "${ENABLE_INSTALLED_TESTS_FALSE}"; then
+  as_fn_error $? "conditional \"ENABLE_INSTALLED_TESTS\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${ENABLE_ALWAYS_BUILD_TESTS_TRUE}" && test -z "${ENABLE_ALWAYS_BUILD_TESTS_FALSE}"; then
+  as_fn_error $? "conditional \"ENABLE_ALWAYS_BUILD_TESTS\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 
