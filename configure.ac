@@ -1,12 +1,8 @@
-# Process this file with autoconf to produce a configure script.
+# Copyright © 2016 Dr. Tobias Quathamer <toddy@debian.org>
 #
-# Copyright © 2013-2014 Tobias Quathamer
-#
-# This file is part of isoquery.
-#
-# This program is free software; you can redistribute it and/or modify
+# This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 3 of the License, or
+# the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -17,52 +13,30 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Set up autoconf
-AC_PREREQ([2.69])
-AC_INIT([isoquery], [2.0], [toddy@debian.org])
-AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_AUX_DIR([build-aux])
-AC_CONFIG_MACRO_DIR([m4])
+AC_INIT([isoquery],[2.1.0])
 
-# Set up automake
-AM_INIT_AUTOMAKE([1.13 foreign subdir-objects silent-rules no-dist-gzip dist-xz])
+AC_CONFIG_AUX_DIR([build])
+AC_CONFIG_MACRO_DIR([build/m4])
+
+AM_INIT_AUTOMAKE([dist-xz no-dist-gzip foreign subdir-objects])
 AM_MAINTAINER_MODE
 
-# Check for compilers and pkg-config
-AM_PROG_VALAC([0.20])
+# Check for required programs
 AC_PROG_CC
-AM_PROG_CC_C_O
 PKG_PROG_PKG_CONFIG
 
-# Set up gettext
-AM_GNU_GETTEXT([external])
-AM_GNU_GETTEXT_VERSION([0.18])
-AC_DEFINE([GETTEXT_PACKAGE], ["isoquery"], [Gettext package name.])
-
-# Detect the needed libraries
-PKG_CHECK_MODULES([GOBJECT], [gobject-2.0])
+# Required libraries
 PKG_CHECK_MODULES([GLIB], [glib-2.0])
-PKG_CHECK_MODULES([LIBISOCODES], [libisocodes])
+PKG_CHECK_MODULES([GIO], [gio-2.0])
+PKG_CHECK_MODULES([JSON], [json-glib-1.0])
 
-# Detect some programs needed for building
-AC_PATH_PROG([RST2MAN], [rst2man], [no])
-if test x"$RST2MAN" == x"no" ; then
-    AC_MSG_ERROR([rst2man is required.])
-fi
-AC_PATH_PROG([PO4A_TRANSLATE], [po4a-translate], [no])
-if test x"$PO4A_TRANSLATE" == x"no" ; then
-    AC_MSG_ERROR([po4a-translate is required.])
-fi
-AC_PATH_PROG([PO4A_GETTEXTIZE], [po4a-gettextize], [no])
-if test x"$PO4A_GETTEXTIZE" == x"no" ; then
-    AC_MSG_ERROR([po4a-gettextize is required.])
-fi
+# Use testsuite
+GLIB_TESTS
 
-# Write configuration files
+# Output
 AC_CONFIG_FILES([
-	Makefile
-	po/Makefile.in
+  Makefile
+  src/Makefile
 ])
 
-# Terminate script
 AC_OUTPUT
