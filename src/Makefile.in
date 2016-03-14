@@ -104,6 +104,9 @@ PROGRAMS = $(bin_PROGRAMS)
 am_isoquery_OBJECTS = iso.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 isoquery_LDADD = $(LDADD)
+am__DEPENDENCIES_1 =
+isoquery_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -299,6 +302,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = tests
+AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
+LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
 isoquery_SOURCES = iso.c iso.h
 all: all-recursive
 

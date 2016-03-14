@@ -1,3 +1,5 @@
+#include <glib.h>
+
 int get_number()
 {
 	return 42;

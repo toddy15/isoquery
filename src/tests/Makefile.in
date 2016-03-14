@@ -172,6 +172,9 @@ PROGRAMS = $(installed_test_PROGRAMS) $(noinst_PROGRAMS)
 getnumber_SOURCES = getnumber.c
 getnumber_OBJECTS = getnumber.$(OBJEXT)
 getnumber_LDADD = $(LDADD)
+am__DEPENDENCIES_1 =
+getnumber_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
 SCRIPTS = $(installed_test_SCRIPTS) $(noinst_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -512,8 +515,8 @@ TESTS_ENVIRONMENT = \
 	MALLOC_CHECK_=2 			\
 	MALLOC_PERTURB_=$$(($${RANDOM:-256} % 256))
 
-LOG_DRIVER = env AM_TAP_AWK='$(AWK)' $(SHELL) $(top_srcdir)/tap-driver.sh
-LOG_COMPILER = $(top_srcdir)/tap-test
+LOG_DRIVER = env AM_TAP_AWK='$(AWK)' $(SHELL) $(top_srcdir)/build/tap-driver.sh
+LOG_COMPILER = $(top_srcdir)/build/tap-test
 NULL = 
 
 # initialize variables for unconditional += appending
@@ -556,6 +559,8 @@ all_test_ltlibs = $(test_ltlibraries) $(uninstalled_test_ltlibraries) $(installe
 @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
 
 @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
+AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
+LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
 
 # test binaries
 test_programs = getnumber
