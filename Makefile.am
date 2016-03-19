@@ -1,6 +1,6 @@
 # Copyright © 2016 Dr. Tobias Quathamer
 
-SUBDIRS = src
+SUBDIRS = src tests
 
 # Create and install english manpage
 EXTRA_DIST += man/isoquery.rst man/isoquery-man.pot
