@@ -1,5 +1,5 @@
 #include <glib.h>
-#include "../number.h"
+#include "number.h"
 
 void test_foo(void)
 {

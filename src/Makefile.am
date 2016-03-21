@@ -5,4 +5,7 @@ LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
 
 bin_PROGRAMS = isoquery
 
-isoquery_SOURCES = iso.c number.c number.h
+isoquery_SOURCES = \
+	iso.c \
+	number.c \
+	number.h

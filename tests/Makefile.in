@@ -14,6 +14,8 @@
 
 @SET_MAKE@
 
+# Copyright © 2016 Dr. Tobias Quathamer
+
 # GLIB - Library of useful C routines
 
 
@@ -120,7 +122,7 @@ check_PROGRAMS = $(am__EXEEXT_3)
 @ENABLE_INSTALLED_TESTS_TRUE@	$(dist_installed_test_data)
 @ENABLE_INSTALLED_TESTS_TRUE@am__append_12 = $(test_ltlibraries) $(installed_test_ltlibraries)
 @ENABLE_INSTALLED_TESTS_TRUE@am__append_13 = $(installed_test_meta_DATA)
-subdir = src/tests
+subdir = tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/build/m4/glibtests.m4 \
 	$(top_srcdir)/configure.ac
@@ -174,7 +176,7 @@ getnumber_OBJECTS = getnumber.$(OBJEXT)
 getnumber_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 getnumber_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(top_srcdir)/src/number.o
 SCRIPTS = $(installed_test_SCRIPTS) $(noinst_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -559,8 +561,10 @@ all_test_ltlibs = $(test_ltlibraries) $(uninstalled_test_ltlibraries) $(installe
 @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
 
 @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
-AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
+AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
+LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS) \
+	$(top_srcdir)/src/number.o
+
 
 # test binaries
 test_programs = getnumber
@@ -578,9 +582,9 @@ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am $(top_srcdir
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign src/tests/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign tests/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign src/tests/Makefile
+	  $(AUTOMAKE) --foreign tests/Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
 	  *config.status*) \
@@ -1219,8 +1223,6 @@ uninstall-am: uninstall-installed_testLTLIBRARIES \
 @ENABLE_INSTALLED_TESTS_TRUE@	echo 'Exec=$(installed_testdir)/$(notdir $<) --tap' >> $@.tmp; \
 @ENABLE_INSTALLED_TESTS_TRUE@	echo 'Output=TAP' >> $@.tmp; \
 @ENABLE_INSTALLED_TESTS_TRUE@	mv $@.tmp $@)
-
-#getnumber_SOURCES = getnumber.c ../number.c ../number.h
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
