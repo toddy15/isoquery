@@ -7,5 +7,5 @@ bin_PROGRAMS = isoquery
 
 isoquery_SOURCES = \
 	iso.c \
-	number.c \
-	number.h
+	options.c \
+	options.h
