@@ -14,7 +14,20 @@
 
 @SET_MAKE@
 
-# Copyright © 2016 Dr. Tobias Quathamer
+# Copyright © 2016 Dr. Tobias Quathamer <toddy@debian.org>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # GLIB - Library of useful C routines
 
@@ -165,18 +178,18 @@ am__installdirs = "$(DESTDIR)$(installed_testdir)" \
 	"$(DESTDIR)$(installed_test_metadir)" \
 	"$(DESTDIR)$(installed_testdir)"
 LTLIBRARIES = $(installed_test_LTLIBRARIES) $(noinst_LTLIBRARIES)
-am__EXEEXT_1 = getnumber$(EXEEXT)
+am__EXEEXT_1 = options$(EXEEXT)
 am__EXEEXT_2 = $(am__EXEEXT_1)
 @ENABLE_ALWAYS_BUILD_TESTS_FALSE@am__EXEEXT_3 = $(am__EXEEXT_2)
 @ENABLE_INSTALLED_TESTS_TRUE@am__EXEEXT_4 = $(am__EXEEXT_1)
 @ENABLE_ALWAYS_BUILD_TESTS_TRUE@am__EXEEXT_5 = $(am__EXEEXT_2)
 PROGRAMS = $(installed_test_PROGRAMS) $(noinst_PROGRAMS)
-getnumber_SOURCES = getnumber.c
-getnumber_OBJECTS = getnumber.$(OBJEXT)
-getnumber_LDADD = $(LDADD)
+options_SOURCES = options.c
+options_OBJECTS = options.$(OBJEXT)
+options_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-getnumber_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(top_srcdir)/src/number.o
+options_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(top_srcdir)/src/options.o
 SCRIPTS = $(installed_test_SCRIPTS) $(noinst_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -206,8 +219,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = getnumber.c
-DIST_SOURCES = getnumber.c
+SOURCES = options.c
+DIST_SOURCES = options.c
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -563,11 +576,11 @@ all_test_ltlibs = $(test_ltlibraries) $(uninstalled_test_ltlibraries) $(installe
 @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
 AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
 LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS) \
-	$(top_srcdir)/src/number.o
+	$(top_srcdir)/src/options.o
 
 
 # test binaries
-test_programs = getnumber
+test_programs = options
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -709,9 +722,9 @@ clean-installed_testPROGRAMS:
 clean-noinstPROGRAMS:
 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
 
-getnumber$(EXEEXT): $(getnumber_OBJECTS) $(getnumber_DEPENDENCIES) $(EXTRA_getnumber_DEPENDENCIES) 
-	@rm -f getnumber$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(getnumber_OBJECTS) $(getnumber_LDADD) $(LIBS)
+options$(EXEEXT): $(options_OBJECTS) $(options_DEPENDENCIES) $(EXTRA_options_DEPENDENCIES) 
+	@rm -f options$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(options_OBJECTS) $(options_LDADD) $(LIBS)
 install-installed_testSCRIPTS: $(installed_test_SCRIPTS)
 	@$(NORMAL_INSTALL)
 	@list='$(installed_test_SCRIPTS)'; test -n "$(installed_testdir)" || list=; \
@@ -754,7 +767,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/getnumber.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/options.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -1010,9 +1023,9 @@ recheck: all $(check_LTLIBRARIES) $(check_PROGRAMS) $(check_SCRIPTS) $(check_DAT
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-getnumber.log: getnumber$(EXEEXT)
-	@p='getnumber$(EXEEXT)'; \
-	b='getnumber'; \
+options.log: options$(EXEEXT)
+	@p='options$(EXEEXT)'; \
+	b='options'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

@@ -14,7 +14,20 @@
 
 @SET_MAKE@
 
-# Copyright © 2016 Dr. Tobias Quathamer
+# Copyright © 2016 Dr. Tobias Quathamer <toddy@debian.org>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 VPATH = @srcdir@
 am__is_gnu_make = { \
@@ -101,7 +114,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_isoquery_OBJECTS = iso.$(OBJEXT) number.$(OBJEXT)
+am_isoquery_OBJECTS = iso.$(OBJEXT) options.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 isoquery_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -261,7 +274,11 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
 LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
-isoquery_SOURCES = iso.c number.c number.h
+isoquery_SOURCES = \
+	iso.c \
+	options.c \
+	options.h
+
 all: all-am
 
 .SUFFIXES:
@@ -349,7 +366,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/iso.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/number.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/options.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
