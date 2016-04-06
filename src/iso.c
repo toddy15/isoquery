@@ -18,9 +18,10 @@
 #include <glib.h>
 #include "options.h"
 
-int main(int argc, char *argv[])
+int main(int argc, gchar ** argv)
 {
-    options_parse_command_line(argc, argv);
-    options_free();
+    gchar **arguments = g_strdupv(argv);
+    options_parse_command_line(arguments);
+    g_strfreev(arguments);
     return 0;
 }

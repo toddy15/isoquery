@@ -20,25 +20,18 @@
 #include "options.h"
 
 /**
- * Return a pointer to the allocated option struct.
- *
- * @return Pointer to allocated option struct.
+ * Global variables to hold the program options.
  */
-struct options *options_get_options()
-{
-    static struct options *opts = NULL;
-    if (!opts) {
-        opts = g_new0(struct options, 1);
-        // Provide default values
-        opts->iso = "3166-1";
-    }
-    return opts;
-}
+gchar *option_standard = "3166-1";
 
-void options_free()
-{
-    g_free(options_get_options());
-}
+/**
+ * Define the program command line options.
+ */
+static GOptionEntry entries[] = {
+    {"iso", 'i', 0, G_OPTION_ARG_STRING, &option_standard,
+     "ISO standard to use", "NUMBER"},
+    {NULL}
+};
 
 /**
  * Parse the command line arguments.
@@ -46,17 +39,17 @@ void options_free()
  * @param argc Argument count
  * @param argv Array of arguments
  */
-void options_parse_command_line(int argc, char *argv[])
+void options_parse_command_line(gchar ** arguments)
 {
     GError *error = NULL;
     GOptionContext *context;
-    struct options *opts;
 
-    opts = options_get_options();
     context = g_option_context_new("[ISO codes]");
+    // @TODO: Use GETTEXT_PACKAGE
+    g_option_context_add_main_entries(context, entries, "");
 
-    if (!g_option_context_parse(context, &argc, &argv, &error)) {
-        g_print("option parsing failed: %s\n", error->message);
+    if (!g_option_context_parse_strv(context, &arguments, &error)) {
+        g_print("Option parsing failed: %s\n", error->message);
         exit(1);
     }
 }

@@ -16,12 +16,8 @@
  */
 
 /**
- * Structure to hold program options.
+ * Global variables to hold program options.
  */
-struct options {
-    gchar *iso;
-};
+extern gchar *option_standard;
 
-struct options *options_get_options();
-void options_free();
-void options_parse_command_line(int argc, char *argv[]);
+void options_parse_command_line(gchar ** arguments);
