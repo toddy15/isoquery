@@ -19,10 +19,9 @@
  * Structure to hold program options.
  */
 struct options {
-    int version;
-    int file;
+    gchar *iso;
 };
 
 struct options *options_get_options();
 void options_free();
-void options_parse_command_line(int argc, char* argv[]);
+void options_parse_command_line(int argc, char *argv[]);

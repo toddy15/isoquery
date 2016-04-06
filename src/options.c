@@ -29,6 +29,8 @@ struct options *options_get_options()
     static struct options *opts = NULL;
     if (!opts) {
         opts = g_new0(struct options, 1);
+        // Provide default values
+        opts->iso = "3166-1";
     }
     return opts;
 }
