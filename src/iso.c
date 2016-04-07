@@ -33,7 +33,8 @@ int main(int argument_count, gchar ** arguments)
 
     // Parse command line and report possible errors
     if (!options_parse_command_line(arguments, &error)) {
-        printf("isoquery: %s\n", error->message);
+        fprintf(stderr, "isoquery: %s\n", error->message);
+        fprintf(stderr, _("Run \"isoquery --help\" to see a full list of available command line options.\n"));
         g_error_free(error);
         return 1;
     }
