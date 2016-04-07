@@ -6602,7 +6602,7 @@ $as_echo "#define GETTEXT_PACKAGE \"isoquery\"" >>confdefs.h
 
 
 # Output
-ac_config_files="$ac_config_files Makefile po/Makefile src/Makefile tests/Makefile"
+ac_config_files="$ac_config_files Makefile po/Makefile.in src/Makefile tests/Makefile"
 
 
 cat >confcache <<\_ACEOF
@@ -7368,7 +7368,7 @@ do
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
     "po-directories") CONFIG_COMMANDS="$CONFIG_COMMANDS po-directories" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-    "po/Makefile") CONFIG_FILES="$CONFIG_FILES po/Makefile" ;;
+    "po/Makefile.in") CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
     "tests/Makefile") CONFIG_FILES="$CONFIG_FILES tests/Makefile" ;;
 
