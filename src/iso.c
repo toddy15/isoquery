@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <locale.h>
 #include <json-glib/json-glib.h>
 #include "options.h"
 
