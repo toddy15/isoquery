@@ -37,7 +37,9 @@ int main(int argument_count, gchar ** arguments)
     if (!options_parse_command_line(arguments, &error)) {
         // TRANSLATORS: This is an error message.
         g_printerr(_("isoquery: %s\n"), error->message);
-        g_printerr(_("Run \"isoquery --help\" to see a full list of available command line options.\n"));
+        if (error->domain == g_quark_from_string("g-option-context-error-quark")) {
+            g_printerr(_("Run \"isoquery --help\" to see a full list of available command line options.\n"));
+        }
         g_error_free(error);
         return EXIT_FAILURE;
     }

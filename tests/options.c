@@ -91,6 +91,26 @@ void test_opt_filename_provided(void)
 }
 
 /**
+ * Test default value for filename from other standard.
+ */
+void test_opt_filename_from_standard(void)
+{
+    GError *error = NULL;
+    gboolean result = FALSE;
+
+    gchar **command_line = g_strsplit("isoquery -i 15924", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
+
+    g_assert_true(result);
+    g_assert_null(error);
+    g_assert_nonnull(option_standard);
+    g_assert_cmpstr(option_standard, ==, "15924");
+    g_assert_nonnull(option_filename);
+    g_assert_cmpstr(option_filename, ==, "/usr/share/iso-codes/json/iso_15924.json");
+}
+
+/**
  * Test invalid option.
  */
 void test_opt_invalid_option(void)
@@ -114,6 +134,7 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/options/standard_provided", test_opt_standard_provided);
     g_test_add_func("/options/filename_default", test_opt_filename_default);
     g_test_add_func("/options/filename_provided", test_opt_filename_provided);
+    g_test_add_func("/options/filename_from_standard", test_opt_filename_from_standard);
     g_test_add_func("/options/invalid_option", test_opt_invalid_option);
     return g_test_run();
 }

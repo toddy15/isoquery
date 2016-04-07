@@ -48,7 +48,6 @@ static GOptionEntry entries[] = {
 gboolean options_parse_command_line(gchar ** arguments, GError ** error)
 {
     int argc;
-    gboolean result;
     GOptionContext *context;
 
     // Ensure that there are sensible default options.
@@ -61,8 +60,15 @@ gboolean options_parse_command_line(gchar ** arguments, GError ** error)
     while (arguments[argc] != NULL) {
         argc++;
     }
-    result = g_option_context_parse(context, &argc, &arguments, error);
-    return result;
+    // If the parsing fails, return with error.
+    if (!g_option_context_parse(context, &argc, &arguments, error)) {
+        return FALSE;
+    }
+    // Validate options
+    if (!options_validate(error)) {
+        return FALSE;
+    }
+    return TRUE;
 }
 
 /**
@@ -72,4 +78,27 @@ void options_set_default_values(void)
 {
     option_standard = "3166-1";
     option_filename = "/usr/share/iso-codes/json/iso_3166-1.json";
+}
+
+/**
+ * Validate values of options.
+ */
+gboolean options_validate(GError ** error)
+{
+    // Check that the given standard is supported
+    int i;
+    gboolean supported = FALSE;
+    gchar *supported_standards[] = { "3166-1", "3166-2", "3166-3", NULL };
+    while (supported_standards[i]) {
+        if (!g_strcmp0(supported_standards[i], option_standard)) {
+            supported = TRUE;
+        }
+        i++;
+    }
+    if (!supported) {
+        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, "ISO standard \"%s\" is not supported.",
+                    option_standard);
+        return FALSE;
+    }
+    return TRUE;
 }
