@@ -1,13 +1,25 @@
-Makefile
+# building
 .deps/
 autom4te.cache/
 config.log
 config.status
 *.o
-src/isoquery
-po/*\.gmo
+Makefile
+
+# backups
+*~
+
+# gettext
 po/Makefile.in
 po/stamp-po
 po/POTFILES
 po/remove-potcdate.sed
-*~
+po/*\.gmo
+
+# test output
+tests/options
+tests/*.log
+tests/*.trs
+
+# binaries
+src/isoquery
