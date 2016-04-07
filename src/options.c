@@ -31,7 +31,7 @@ gchar *option_standard = "3166-1";
 static GOptionEntry entries[] = {
     {"iso", 'i', 0, G_OPTION_ARG_STRING, &option_standard,
      N_
-     ("The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, 4217, 15924 (default: 3166)."),
+     ("The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (default: 3166-1)."),
      N_("STANDARD")},
     {NULL}
 };
