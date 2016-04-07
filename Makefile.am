@@ -78,3 +78,7 @@ update-po-man:
 		msgmerge --previous --no-location $$i $(top_srcdir)/man/isoquery-man.pot > tmp.po && mv tmp.po $$i ; \
 	done
 .PHONY: update-po-man
+
+.PHONY: indent
+indent:
+	find -name "*\.[ch]" | xargs indent -kr -nut -l120

@@ -807,6 +807,10 @@ uninstall-am:
 .PRECIOUS: Makefile
 
 
+.PHONY: indent
+indent:
+	find -name "*\.[ch]" | xargs indent -kr -nut -l120
+
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
