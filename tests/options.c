@@ -23,10 +23,15 @@
  */
 void test_opt_standard_default(void)
 {
+    GError *error = NULL;
+    gboolean result = FALSE;
+
     gchar **command_line = g_strsplit("isoquery", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
 
-    options_parse_command_line(command_line);
-
+    g_assert_true(result);
+    g_assert_null(error);
     g_assert_nonnull(option_standard);
     g_assert_cmpstr(option_standard, ==, "3166-1");
 }
@@ -36,10 +41,15 @@ void test_opt_standard_default(void)
  */
 void test_opt_standard_provided(void)
 {
+    GError *error = NULL;
+    gboolean result = FALSE;
+
     gchar **command_line = g_strsplit("isoquery -i 639-2", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
 
-    options_parse_command_line(command_line);
-
+    g_assert_true(result);
+    g_assert_null(error);
     g_assert_nonnull(option_standard);
     g_assert_cmpstr(option_standard, ==, "639-2");
 }

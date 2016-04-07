@@ -20,4 +20,4 @@
  */
 extern gchar *option_standard;
 
-void options_parse_command_line(gchar ** arguments);
+gboolean options_parse_command_line(gchar ** arguments, GError ** error);

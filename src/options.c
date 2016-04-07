@@ -38,16 +38,17 @@ static GOptionEntry entries[] = {
  *
  * @param arguments Array of arguments
  */
-void options_parse_command_line(gchar ** arguments)
+gboolean options_parse_command_line(gchar ** arguments, GError ** error)
 {
-    GError *error = NULL;
+    int argc;
+    gboolean result;
     GOptionContext *context;
 
     context = g_option_context_new("[ISO codes]");
     g_option_context_add_main_entries(context, entries, GETTEXT_PACKAGE);
 
-    if (!g_option_context_parse_strv(context, &arguments, &error)) {
-        g_print("Option parsing failed: %s\n", error->message);
-        exit(1);
-    }
+    // Count the number of arguments supplied.
+    while (arguments[argc] != NULL) argc++;
+    result = g_option_context_parse(context, &argc, &arguments, error);
+    return result;
 }
