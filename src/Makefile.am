@@ -21,4 +21,7 @@ bin_PROGRAMS = isoquery
 isoquery_SOURCES = \
 	isoquery.c \
 	options.c \
-	options.h
+	options.h \
+	isocodes.c \
+	isocodes.h \
+	(NULL)

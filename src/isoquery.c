@@ -21,6 +21,7 @@
 #include <locale.h>
 #include <json-glib/json-glib.h>
 #include "options.h"
+#include "isocodes.h"
 
 int main(int argument_count, gchar ** arguments)
 {
@@ -47,6 +48,15 @@ int main(int argument_count, gchar ** arguments)
     // Try opening and parsing the given file
     parser = json_parser_new();
     if (!json_parser_load_from_file(parser, option_filename, &error)) {
+        // TRANSLATORS: This is an error message.
+        g_printerr(_("isoquery: %s\n"), error->message);
+        g_error_free(error);
+        g_object_unref(parser);
+        return EXIT_FAILURE;
+    }
+    // The file could be parsed, now see if there's
+    // valid iso-codes data in it.
+    if (!isocodes_validate(parser, &error)) {
         // TRANSLATORS: This is an error message.
         g_printerr(_("isoquery: %s\n"), error->message);
         g_error_free(error);
