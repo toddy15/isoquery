@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-SUBDIRS = src tests
+SUBDIRS = po src tests
 
 # Create and install english manpage
 EXTRA_DIST += man/isoquery.rst man/isoquery-man.pot

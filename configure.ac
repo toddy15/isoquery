@@ -34,9 +34,15 @@ PKG_CHECK_MODULES([JSON], [json-glib-1.0])
 # Use testsuite
 GLIB_TESTS
 
+# Set up gettext
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19])
+AC_DEFINE([GETTEXT_PACKAGE], ["isoquery"], [Gettext package name.])
+
 # Output
 AC_CONFIG_FILES([
   Makefile
+  po/Makefile
   src/Makefile
   tests/Makefile
 ])
