@@ -5,3 +5,7 @@ config.log
 config.status
 *.o
 src/isoquery
+po/*\.gmo
+po/Makefile.in
+po/stamp-po
+po/POTFILES
