@@ -25,7 +25,6 @@ int main(int argument_count, gchar ** arguments)
 {
     GError *error = NULL;
     JsonParser *parser;
-    gchar *option_filename = "../iso-codes/data/iso_3166-1.json";
 
     // Set up I18N infrastructure
     // @TODO: Use LOCALEDIR

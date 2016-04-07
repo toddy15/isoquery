@@ -55,6 +55,42 @@ void test_opt_standard_provided(void)
 }
 
 /**
+ * Test default value for filename.
+ */
+void test_opt_filename_default(void)
+{
+    GError *error = NULL;
+    gboolean result = FALSE;
+
+    gchar **command_line = g_strsplit("isoquery", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
+
+    g_assert_true(result);
+    g_assert_null(error);
+    g_assert_nonnull(option_filename);
+    g_assert_cmpstr(option_filename, ==, "/usr/share/iso-codes/json/iso_3166-1.json");
+}
+
+/**
+ * Test provided value for filename.
+ */
+void test_opt_filename_provided(void)
+{
+    GError *error = NULL;
+    gboolean result = FALSE;
+
+    gchar **command_line = g_strsplit("isoquery -f /path/to/another_filename", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
+
+    g_assert_true(result);
+    g_assert_null(error);
+    g_assert_nonnull(option_filename);
+    g_assert_cmpstr(option_filename, ==, "/path/to/another_filename");
+}
+
+/**
  * Test invalid option.
  */
 void test_opt_invalid_option(void)
@@ -76,6 +112,8 @@ int main(int argc, gchar * argv[])
     g_test_init(&argc, &argv, NULL);
     g_test_add_func("/options/standard_default", test_opt_standard_default);
     g_test_add_func("/options/standard_provided", test_opt_standard_provided);
+    g_test_add_func("/options/filename_default", test_opt_filename_default);
+    g_test_add_func("/options/filename_provided", test_opt_filename_provided);
     g_test_add_func("/options/invalid_option", test_opt_invalid_option);
     return g_test_run();
 }
