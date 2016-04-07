@@ -86,12 +86,16 @@ void options_set_default_values(void)
  */
 gboolean options_validate(GError ** error)
 {
-    // Handle obsolete standards gracefully
+    // Handle deprecated standards gracefully
     if (!g_strcmp0("3166", option_standard)) {
         option_standard = "3166-1";
+        // Print a small warning
+        g_printerr("isoquery: The standard 3166 is deprecated, please use 3166-1 instead.\n");
     }
     if (!g_strcmp0("639", option_standard)) {
         option_standard = "639-2";
+        // Print a small warning
+        g_printerr("isoquery: The standard 639 is deprecated, please use 639-2 instead.\n");
     }
     // Check that the given standard is supported
     int i = 0;

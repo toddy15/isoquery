@@ -55,9 +55,9 @@ void test_opt_standard_provided(void)
 }
 
 /**
- * Test obsolete provided value for ISO standard.
+ * Test deprecated provided value for ISO standard.
  */
-void test_opt_standard_obsolete_639(void)
+void test_opt_standard_deprecated_639(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
@@ -73,9 +73,9 @@ void test_opt_standard_obsolete_639(void)
 }
 
 /**
- * Test obsolete provided value for ISO standard.
+ * Test deprecated provided value for ISO standard.
  */
-void test_opt_standard_obsolete_3166(void)
+void test_opt_standard_deprecated_3166(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
@@ -168,8 +168,8 @@ int main(int argc, gchar * argv[])
     g_test_init(&argc, &argv, NULL);
     g_test_add_func("/options/standard_default", test_opt_standard_default);
     g_test_add_func("/options/standard_provided", test_opt_standard_provided);
-    g_test_add_func("/options/standard_obsolete_639", test_opt_standard_obsolete_639);
-    g_test_add_func("/options/standard_obsolete_3166", test_opt_standard_obsolete_3166);
+    g_test_add_func("/options/standard_deprecated_639", test_opt_standard_deprecated_639);
+    g_test_add_func("/options/standard_deprecated_3166", test_opt_standard_deprecated_3166);
     g_test_add_func("/options/filename_default", test_opt_filename_default);
     g_test_add_func("/options/filename_provided", test_opt_filename_provided);
     g_test_add_func("/options/filename_from_standard", test_opt_filename_from_standard);
