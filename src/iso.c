@@ -15,15 +15,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <stdio.h>
+#include <stdlib.h>
 #include <glib.h>
 #include <glib/gi18n.h>
-#include <libintl.h>
+#include <json-glib/json-glib.h>
 #include "options.h"
 
 int main(int argument_count, gchar ** arguments)
 {
     GError *error = NULL;
+    JsonParser *parser;
+    gchar *option_filename = "../iso-codes/data/iso_3166-1.json";
 
     // Set up I18N infrastructure
     // @TODO: Use LOCALEDIR
@@ -35,12 +37,21 @@ int main(int argument_count, gchar ** arguments)
     // Parse command line and report possible errors
     if (!options_parse_command_line(arguments, &error)) {
         // TRANSLATORS: This is an error message.
-        fprintf(stderr, _("isoquery: %s\n"), error->message);
-        fprintf(stderr, _("Run \"isoquery --help\" to see a full list of available command line options.\n"));
+        g_printerr(_("isoquery: %s\n"), error->message);
+        g_printerr(_("Run \"isoquery --help\" to see a full list of available command line options.\n"));
         g_error_free(error);
-        return 1;
+        return EXIT_FAILURE;
     }
-    // Show the entries for the requested standard
-
-    return 0;
+    // Try opening and parsing the given file
+    parser = json_parser_new();
+    if (!json_parser_load_from_file(parser, option_filename, &error)) {
+        // TRANSLATORS: This is an error message.
+        g_printerr(_("isoquery: %s\n"), error->message);
+        g_error_free(error);
+        g_object_unref(parser);
+        return EXIT_FAILURE;
+    }
+    // Cleanup and exit
+    g_object_unref(parser);
+    return EXIT_SUCCESS;
 }

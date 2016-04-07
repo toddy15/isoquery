@@ -68,6 +68,7 @@ void test_opt_invalid_option(void)
 
     g_assert_false(result);
     g_assert_nonnull(error);
+    g_assert_cmpint(error->code, ==, G_OPTION_ERROR_UNKNOWN_OPTION);
 }
 
 int main(int argc, gchar * argv[])
