@@ -23,7 +23,7 @@
 /**
  * Global variables to hold the program options.
  */
-gchar *option_standard = "3166-1";
+gchar *option_standard;
 
 /**
  * Define the program command line options.
@@ -47,6 +47,9 @@ gboolean options_parse_command_line(gchar ** arguments, GError ** error)
     gboolean result;
     GOptionContext *context;
 
+    // Ensure that there are sensible default options.
+    options_set_default_values();
+
     context = g_option_context_new(_("[ISO codes]"));
     g_option_context_add_main_entries(context, entries, GETTEXT_PACKAGE);
 
@@ -56,4 +59,12 @@ gboolean options_parse_command_line(gchar ** arguments, GError ** error)
     }
     result = g_option_context_parse(context, &argc, &arguments, error);
     return result;
+}
+
+/**
+ * Set default values for options.
+ */
+void options_set_default_values(void)
+{
+    option_standard = "3166-1";
 }

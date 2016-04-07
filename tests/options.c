@@ -54,10 +54,27 @@ void test_opt_standard_provided(void)
     g_assert_cmpstr(option_standard, ==, "639-2");
 }
 
+/**
+ * Test invalid option.
+ */
+void test_opt_invalid_option(void)
+{
+    GError *error = NULL;
+    gboolean result = FALSE;
+
+    gchar **command_line = g_strsplit("isoquery -t", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
+
+    g_assert_false(result);
+    g_assert_nonnull(error);
+}
+
 int main(int argc, gchar * argv[])
 {
     g_test_init(&argc, &argv, NULL);
-    g_test_add_func("/options/iso_default", test_opt_standard_default);
-    g_test_add_func("/options/iso_provided", test_opt_standard_provided);
+    g_test_add_func("/options/standard_default", test_opt_standard_default);
+    g_test_add_func("/options/standard_provided", test_opt_standard_provided);
+    g_test_add_func("/options/invalid_option", test_opt_invalid_option);
     return g_test_run();
 }

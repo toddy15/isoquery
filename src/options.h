@@ -21,3 +21,4 @@
 extern gchar *option_standard;
 
 gboolean options_parse_command_line(gchar ** arguments, GError ** error);
+void options_set_default_values(void);

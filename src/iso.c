@@ -26,6 +26,7 @@ int main(int argument_count, gchar ** arguments)
     GError *error = NULL;
 
     // Set up I18N infrastructure
+    // @TODO: Use LOCALEDIR
     bindtextdomain(GETTEXT_PACKAGE, "/usr/share/locale");
     bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
     textdomain(GETTEXT_PACKAGE);
@@ -39,6 +40,7 @@ int main(int argument_count, gchar ** arguments)
         g_error_free(error);
         return 1;
     }
+    // Show the entries for the requested standard
 
     return 0;
 }
