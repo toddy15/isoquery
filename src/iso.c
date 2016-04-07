@@ -15,15 +15,28 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <stdio.h>
 #include <glib.h>
+#include <glib/gi18n.h>
+#include <libintl.h>
 #include "options.h"
 
 int main(int argument_count, gchar ** arguments)
 {
     GError *error = NULL;
+
+    // Set up I18N infrastructure
+    bindtextdomain(GETTEXT_PACKAGE, "/usr/share/locale");
+    bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+    textdomain(GETTEXT_PACKAGE);
+    setlocale(LC_ALL, "");
+
+    // Parse command line and report possible errors
     if (!options_parse_command_line(arguments, &error)) {
-        printf("%s\n", error->message);
+        printf("isoquery: %s\n", error->message);
+        g_error_free(error);
         return 1;
     }
+
     return 0;
 }

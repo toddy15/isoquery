@@ -17,6 +17,7 @@
 
 #include <stdlib.h>
 #include <glib.h>
+#include <glib/gi18n.h>
 #include "options.h"
 
 /**
@@ -29,7 +30,9 @@ gchar *option_standard = "3166-1";
  */
 static GOptionEntry entries[] = {
     {"iso", 'i', 0, G_OPTION_ARG_STRING, &option_standard,
-     "ISO standard to use", "NUMBER"},
+     N_
+     ("The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, 4217, 15924 (default: 3166)."),
+     N_("STANDARD")},
     {NULL}
 };
 
@@ -44,11 +47,13 @@ gboolean options_parse_command_line(gchar ** arguments, GError ** error)
     gboolean result;
     GOptionContext *context;
 
-    context = g_option_context_new("[ISO codes]");
+    context = g_option_context_new(_("[ISO codes]"));
     g_option_context_add_main_entries(context, entries, GETTEXT_PACKAGE);
 
     // Count the number of arguments supplied.
-    while (arguments[argc] != NULL) argc++;
+    while (arguments[argc] != NULL) {
+        argc++;
+    }
     result = g_option_context_parse(context, &argc, &arguments, error);
     return result;
 }
