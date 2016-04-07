@@ -36,8 +36,7 @@ static GOptionEntry entries[] = {
 /**
  * Parse the command line arguments.
  *
- * @param argc Argument count
- * @param argv Array of arguments
+ * @param arguments Array of arguments
  */
 void options_parse_command_line(gchar ** arguments)
 {
@@ -45,8 +44,7 @@ void options_parse_command_line(gchar ** arguments)
     GOptionContext *context;
 
     context = g_option_context_new("[ISO codes]");
-    // @TODO: Use GETTEXT_PACKAGE
-    g_option_context_add_main_entries(context, entries, "");
+    g_option_context_add_main_entries(context, entries, GETTEXT_PACKAGE);
 
     if (!g_option_context_parse_strv(context, &arguments, &error)) {
         g_print("Option parsing failed: %s\n", error->message);
