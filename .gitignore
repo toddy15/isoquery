@@ -9,3 +9,4 @@ po/*\.gmo
 po/Makefile.in
 po/stamp-po
 po/POTFILES
+po/remove-potcdate.sed
