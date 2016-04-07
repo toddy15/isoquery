@@ -18,3 +18,4 @@
 #include <json-glib/json-glib.h>
 
 gboolean isocodes_validate(JsonParser * parser, GError ** error);
+void isocodes_set_validation_error(GError ** error);

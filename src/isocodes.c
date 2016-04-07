@@ -22,7 +22,7 @@
 #include "options.h"
 
 /**
- * Open the given file.
+ * Validate the given JSON data.
  */
 gboolean isocodes_validate(JsonParser * parser, GError ** error)
 {
@@ -30,32 +30,32 @@ gboolean isocodes_validate(JsonParser * parser, GError ** error)
     JsonNode *root = json_parser_get_root(parser);
     // Ensure that the root element is an object
     if (g_strcmp0(json_node_type_name(root), "JsonObject")) {
-        // TRANSLATORS:
-        // The first placeholder is a filename, including the directory path.
-        // The second placeholder is an ISO standard, e.g. 3166 or 639-3.
-        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
-                    _("The file \"%s\" does not contain valid ISO %s data."), option_filename, option_standard);
+        isocodes_set_validation_error(error);
         return FALSE;
     }
     // Get the root object
     JsonObject *root_object = json_node_get_object(root);
     // Ensure that the root object has only one member
     if (json_object_get_size(root_object) != 1) {
-        // TRANSLATORS:
-        // The first placeholder is a filename, including the directory path.
-        // The second placeholder is an ISO standard, e.g. 3166 or 639-3.
-        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
-                    _("The file \"%s\" does not contain valid ISO %s data."), option_filename, option_standard);
+        isocodes_set_validation_error(error);
         return FALSE;
     }
     // The root object must have the standard as only member
     if (!json_object_has_member(root_object, option_standard)) {
-        // TRANSLATORS:
-        // The first placeholder is a filename, including the directory path.
-        // The second placeholder is an ISO standard, e.g. 3166 or 639-3.
-        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
-                    _("The file \"%s\" does not contain valid ISO %s data."), option_filename, option_standard);
+        isocodes_set_validation_error(error);
         return FALSE;
     }
     return TRUE;
+}
+
+/**
+ * Helper function to set the GError
+ */
+void isocodes_set_validation_error(GError ** error)
+{
+    // TRANSLATORS:
+    // The first placeholder is a filename, including the directory path.
+    // The second placeholder is an ISO standard, e.g. 3166 or 639-3.
+    g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
+                _("The file \"%s\" does not contain valid ISO %s data."), option_filename, option_standard);
 }
