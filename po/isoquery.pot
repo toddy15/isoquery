@@ -1,113 +1,45 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Tobias Quathamer
+# Copyright (C) YEAR Dr. Tobias Quathamer
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: isoquery 2.0\n"
+"Project-Id-Version: isoquery 2.1.0\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-05-08 10:15+0200\n"
+"POT-Creation-Date: 2016-04-07 11:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/isoquery.vala:56
-#, python-format
-msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+#. TRANSLATORS: This is an error message.
+#: src/iso.c:37
+#, c-format
+msgid "isoquery: %s\n"
 msgstr ""
 
-#: src/isoquery.vala:64
-#, python-format
-msgid "isoquery %(version)s\n"
-msgstr ""
-
-#: src/isoquery.vala:66
-msgid "Copyright © 2007-2014 Tobias Quathamer\n"
-msgstr ""
-
-#. TRANSLATORS: Please change the uppercase words as
-#. appropriate for your language.
-#: src/isoquery.vala:69
-msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
-msgstr ""
-
-#: src/isoquery.vala:99
-msgid ""
-"The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, "
-"4217, 15924 (default: 3166)."
-msgstr ""
-
-#: src/isoquery.vala:100
-msgid "STANDARD"
-msgstr ""
-
-#: src/isoquery.vala:104
-msgid ""
-"Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
-"iso_3166.xml)"
-msgstr ""
-
-#: src/isoquery.vala:105
-msgid "FILE"
-msgstr ""
-
-#: src/isoquery.vala:109
-msgid "Use this locale for output."
-msgstr ""
-
-#: src/isoquery.vala:110
-msgid "LOCALE"
-msgstr ""
-
-#: src/isoquery.vala:114
-msgid "Name for the supplied codes (default)."
-msgstr ""
-
-#: src/isoquery.vala:118
-msgid ""
-"Official name for the supplied codes. This may be the same as --name (only "
-"applies to ISO 3166)."
-msgstr ""
-
-#: src/isoquery.vala:122
-msgid ""
-"Common name for the supplied codes. This may be the same as --name (only "
-"applies to ISO 3166)."
-msgstr ""
-
-#: src/isoquery.vala:126
-msgid "Separate entries with a NULL character instead of newline."
-msgstr ""
-
-#: src/isoquery.vala:130
-msgid "Show program version and copyright."
-msgstr ""
-
-#: src/isoquery.vala:136
-msgid "[ISO codes]"
-msgstr ""
-
-#: src/isoquery.vala:141 src/handle_639.vala:57 src/handle_639.vala:70
-#: src/handle_639_3.vala:64 src/handle_639_3.vala:77 src/handle_639_5.vala:56
-#: src/handle_639_5.vala:69 src/handle_3166.vala:65 src/handle_3166.vala:78
-#: src/handle_3166_2.vala:58 src/handle_3166_2.vala:71 src/handle_4217.vala:56
-#: src/handle_4217.vala:69 src/handle_15924.vala:56 src/handle_15924.vala:69
-#, python-format
-msgid "isoquery: %(error_message)s\n"
-msgstr ""
-
-#: src/isoquery.vala:143
+#: src/iso.c:38
+#, c-format
 msgid ""
 "Run \"isoquery --help\" to see a full list of available command line "
 "options.\n"
 msgstr ""
 
-#: src/isoquery.vala:176
-msgid "isoquery: Internal error. Please report this bug.\n"
+#: src/options.c:34
+msgid ""
+"The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (default: 3166-1)."
+msgstr ""
+
+#: src/options.c:35
+msgid "STANDARD"
+msgstr ""
+
+#: src/options.c:50
+msgid "[ISO codes]"
 msgstr ""
