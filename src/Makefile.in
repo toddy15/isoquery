@@ -123,7 +123,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_isoquery_OBJECTS = iso.$(OBJEXT) options.$(OBJEXT)
+am_isoquery_OBJECTS = isoquery.$(OBJEXT) options.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 isoquery_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -313,7 +313,7 @@ top_srcdir = @top_srcdir@
 AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
 LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
 isoquery_SOURCES = \
-	iso.c \
+	isoquery.c \
 	options.c \
 	options.h
 
@@ -403,7 +403,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/iso.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/isoquery.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/options.Po@am__quote@
 
 .c.o:
