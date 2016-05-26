@@ -28,6 +28,7 @@ int main(int argument_count, gchar ** arguments)
     GError *error = NULL;
     JsonParser *parser;
     gchar *filename;
+    gchar **codes;
 
     // Set up I18N infrastructure
     // @TODO: Use LOCALEDIR
@@ -67,6 +68,13 @@ int main(int argument_count, gchar ** arguments)
         g_object_unref(parser);
         return EXIT_FAILURE;
     }
+    // Remove the program name from the arguments and collect
+    // remaining arguments as codes to search for.
+    codes = &arguments[1];
+
+    // Finally, show the codes
+    isocodes_show_codes(parser, filename, codes);
+
     // Cleanup and exit
     g_free(filename);
     g_object_unref(parser);

@@ -64,3 +64,21 @@ void isocodes_set_validation_error(GError ** error)
     g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
                 _("The file \"%s\" does not contain valid ISO %s data."), options_get_filename(), option_standard);
 }
+
+/**
+ * Show codes from ISO standard
+ */
+void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
+{
+    // Get the root node, object, and entries array
+    JsonNode *root = json_parser_get_root(parser);
+    JsonObject *root_object = json_node_get_object(root);
+    JsonNode *entries = json_object_get_member(root_object, option_standard);
+
+    // Are there any codes?
+    int i = 0;
+    while (codes[i]) {
+        g_printf("Given code: %s\n", codes[i]);
+        i++;
+    }
+}
