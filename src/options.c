@@ -25,18 +25,31 @@
  */
 gchar *option_standard;
 gchar *option_pathname;
+gchar *option_namefield;
+
+// Helper variables, not to be accessed directly.
+gboolean *option_name;
+gboolean *option_officialname;
+gboolean *option_commonname;
 
 /**
  * Define the program command line options.
  */
 static GOptionEntry entries[] = {
-    {"iso", 'i', 0, G_OPTION_ARG_STRING, &option_standard,
+    {"iso", 'i', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, &option_standard,
      N_
      ("The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (default: 3166-1)."),
      N_("STANDARD")},
-    {"pathname", 'p', 0, G_OPTION_ARG_FILENAME, &option_pathname,
+    {"pathname", 'p', G_OPTION_FLAG_NONE, G_OPTION_ARG_FILENAME, &option_pathname,
      N_("Use pathname as prefix for the data files (default: /usr/share/iso-codes/json)"),
      N_("PATHNAME")},
+    {"name", 'n', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_name,
+     N_("Name for the supplied codes (default)."), NULL},
+    {"official_name", 'o', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_officialname,
+     N_("Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)."),
+     NULL},
+    {"common_name", 'c', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_commonname,
+     N_("Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)."), NULL},
     {NULL}
 };
 
@@ -78,6 +91,7 @@ void options_set_default_values(void)
 {
     option_standard = "3166-1";
     option_pathname = "/usr/share/iso-codes/json";
+    option_namefield = "name";
 }
 
 /**
@@ -111,10 +125,6 @@ gboolean options_validate(GError ** error)
         g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, "ISO standard \"%s\" is not supported.",
                     option_standard);
         return FALSE;
-    }
-    // Ensure the correct filename for the standard
-    if (!option_pathname) {
-        option_pathname = g_strdup_printf("/usr/share/iso-codes/json/iso_%s.json", option_standard);
     }
     return TRUE;
 }

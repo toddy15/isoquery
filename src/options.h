@@ -20,6 +20,7 @@
  */
 extern gchar *option_standard;
 extern gchar *option_pathname;
+extern gchar *option_namefield;
 
 gboolean options_parse_command_line(gchar ** arguments, GError ** error);
 void options_set_default_values(void);
