@@ -128,8 +128,7 @@ am_isoquery_OBJECTS = isoquery.$(OBJEXT) options.$(OBJEXT) \
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 isoquery_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-isoquery_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+isoquery_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -207,8 +206,6 @@ ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@
-GIO_CFLAGS = @GIO_CFLAGS@
-GIO_LIBS = @GIO_LIBS@
 GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMSGFMT = @GMSGFMT@
@@ -311,8 +308,8 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
+AM_CPPFLAGS = $(GLIB_CFLAGS) $(JSON_CFLAGS)
+LDADD = $(GLIB_LIBS) $(JSON_LIBS)
 isoquery_SOURCES = \
 	isoquery.c \
 	options.c \

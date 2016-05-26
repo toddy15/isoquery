@@ -198,7 +198,7 @@ options_OBJECTS = options.$(OBJEXT)
 options_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 options_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(top_srcdir)/src/options.o
+	$(top_srcdir)/src/options.o
 SCRIPTS = $(installed_test_SCRIPTS) $(noinst_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -457,8 +457,6 @@ ECHO_T = @ECHO_T@
 EGREP = @EGREP@
 EXEEXT = @EXEEXT@
 GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@
-GIO_CFLAGS = @GIO_CFLAGS@
-GIO_LIBS = @GIO_LIBS@
 GLIB_CFLAGS = @GLIB_CFLAGS@
 GLIB_LIBS = @GLIB_LIBS@
 GMSGFMT = @GMSGFMT@
@@ -612,8 +610,8 @@ all_test_ltlibs = $(test_ltlibraries) $(uninstalled_test_ltlibraries) $(installe
 @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
 
 @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
-AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS) \
+AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(JSON_CFLAGS)
+LDADD = $(GLIB_LIBS) $(JSON_LIBS) \
 	$(top_srcdir)/src/options.o
 
 
