@@ -120,6 +120,7 @@ void test_opt_pathname_provided(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
+    gchar *filename;
 
     gchar **command_line = g_strsplit("isoquery -p /path/to/another_directory", " ", -1);
     result = options_parse_command_line(command_line, &error);
@@ -129,6 +130,10 @@ void test_opt_pathname_provided(void)
     g_assert_null(error);
     g_assert_nonnull(option_pathname);
     g_assert_cmpstr(option_pathname, ==, "/path/to/another_directory");
+
+    filename = options_get_filename();
+    g_assert_nonnull(filename);
+    g_assert_cmpstr(filename, ==, "/path/to/another_directory/iso_3166-1.json");
 }
 
 /**
@@ -138,15 +143,20 @@ void test_opt_pathname_provided_with_dir_separator(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
+    gchar *filename;
 
-    gchar **command_line = g_strsplit("isoquery -p /path/to/another_directory", " ", -1);
+    gchar **command_line = g_strsplit("isoquery -p /path/to/another_directory/", " ", -1);
     result = options_parse_command_line(command_line, &error);
     g_strfreev(command_line);
 
     g_assert_true(result);
     g_assert_null(error);
     g_assert_nonnull(option_pathname);
-    g_assert_cmpstr(option_pathname, ==, "/path/to/another_directory");
+    g_assert_cmpstr(option_pathname, ==, "/path/to/another_directory/");
+
+    filename = options_get_filename();
+    g_assert_nonnull(filename);
+    g_assert_cmpstr(filename, ==, "/path/to/another_directory/iso_3166-1.json");
 }
 
 /**
@@ -156,6 +166,7 @@ void test_opt_pathname_from_standard(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
+    gchar *filename;
 
     gchar **command_line = g_strsplit("isoquery -i 15924", " ", -1);
     result = options_parse_command_line(command_line, &error);
@@ -167,6 +178,10 @@ void test_opt_pathname_from_standard(void)
     g_assert_cmpstr(option_standard, ==, "15924");
     g_assert_nonnull(option_pathname);
     g_assert_cmpstr(option_pathname, ==, "/usr/share/iso-codes/json");
+
+    filename = options_get_filename();
+    g_assert_nonnull(filename);
+    g_assert_cmpstr(filename, ==, "/usr/share/iso-codes/json/iso_15924.json");
 }
 
 /**
