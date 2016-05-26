@@ -77,8 +77,7 @@ gboolean options_parse_command_line(gchar ** arguments, GError ** error)
 void options_set_default_values(void)
 {
     option_standard = "3166-1";
-    g_free(option_pathname);
-    option_pathname = NULL;
+    option_pathname = "/usr/share/iso-codes/json";
 }
 
 /**
@@ -118,4 +117,18 @@ gboolean options_validate(GError ** error)
         option_pathname = g_strdup_printf("/usr/share/iso-codes/json/iso_%s.json", option_standard);
     }
     return TRUE;
+}
+
+/**
+ * Construct the filename for JSON data, given the pathname and ISO standard.
+ *
+ * @return gchar * Filename, has to be free'd by the caller.
+ */
+gchar *options_get_filename(void)
+{
+    gchar *filename, *complete_path;
+    filename = g_strdup_printf("iso_%s.json", option_standard);
+    complete_path = g_build_filename(option_pathname, filename, NULL);
+    g_free(filename);
+    return complete_path;
 }

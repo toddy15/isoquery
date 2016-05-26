@@ -24,3 +24,4 @@ extern gchar *option_pathname;
 gboolean options_parse_command_line(gchar ** arguments, GError ** error);
 void options_set_default_values(void);
 gboolean options_validate(GError ** error);
+gchar *options_get_filename(void);

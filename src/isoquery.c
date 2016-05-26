@@ -27,6 +27,7 @@ int main(int argument_count, gchar ** arguments)
 {
     GError *error = NULL;
     JsonParser *parser;
+    gchar *filename;
 
     // Set up I18N infrastructure
     // @TODO: Use LOCALEDIR
@@ -47,10 +48,12 @@ int main(int argument_count, gchar ** arguments)
     }
     // Try opening and parsing the given file
     parser = json_parser_new();
-    if (!json_parser_load_from_file(parser, option_pathname, &error)) {
+    filename = options_get_filename();
+    if (!json_parser_load_from_file(parser, filename, &error)) {
         // TRANSLATORS: This is an error message.
         g_printerr(_("isoquery: %s\n"), error->message);
         g_error_free(error);
+        g_free(filename);
         g_object_unref(parser);
         return EXIT_FAILURE;
     }
@@ -60,10 +63,12 @@ int main(int argument_count, gchar ** arguments)
         // TRANSLATORS: This is an error message.
         g_printerr(_("isoquery: %s\n"), error->message);
         g_error_free(error);
+        g_free(filename);
         g_object_unref(parser);
         return EXIT_FAILURE;
     }
     // Cleanup and exit
+    g_free(filename);
     g_object_unref(parser);
     return EXIT_SUCCESS;
 }
