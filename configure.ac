@@ -28,7 +28,6 @@ PKG_PROG_PKG_CONFIG
 
 # Required libraries
 PKG_CHECK_MODULES([GLIB], [glib-2.0])
-PKG_CHECK_MODULES([GIO], [gio-2.0])
 PKG_CHECK_MODULES([JSON], [json-glib-1.0])
 
 # Use testsuite

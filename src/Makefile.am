@@ -13,8 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-AM_CPPFLAGS = $(GLIB_CFLAGS) $(GIO_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(GIO_LIBS) $(JSON_LIBS)
+AM_CPPFLAGS = $(GLIB_CFLAGS) $(JSON_CFLAGS)
+LDADD = $(GLIB_LIBS) $(JSON_LIBS)
 
 bin_PROGRAMS = isoquery
 
