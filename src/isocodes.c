@@ -103,7 +103,6 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
 void isocodes_show_entry(JsonObject * entry)
 {
     gchar **fields = isocodes_get_fields();
-    const gchar *output;
 
     // Ensure that we've got fields to display
     if (!fields) {
@@ -112,26 +111,19 @@ void isocodes_show_entry(JsonObject * entry)
     // Cycle through all fields
     int i = 0;
     while (fields[i]) {
-        // Use the correct name field
-        if (!g_strcmp0(fields[i], "name")) {
-            if (json_object_has_member(entry, option_namefield)) {
-                output = json_object_get_string_member(entry, option_namefield);
-            } else {
-                output = json_object_get_string_member(entry, "name");
-            }
-        } else {
-            // Handle optional fields gracefully
-            if (json_object_has_member(entry, fields[i])) {
-                output = json_object_get_string_member(entry, fields[i]);
-            }
+        // Handle optional fields gracefully
+        if (json_object_has_member(entry, fields[i])) {
+            g_printf("%s", json_object_get_string_member(entry, fields[i]));
         }
-        g_printf("%s", output);
-        // Print a tab separator if this is not the last field
-        if (fields[i + 1]) {
-            g_printf("\t");
-        }
+        // Always add the tab as separator
+        g_printf("\t");
         i++;
     }
+
+    // Special case for the name:
+    // switching which field to display,
+    // translate the name
+    isocodes_show_name(entry);
     g_printf("\n");
     g_strfreev(fields);
 }
@@ -144,44 +136,60 @@ gchar **isocodes_get_fields(void)
     gchar **fields = NULL;
     if (!g_strcmp0(option_standard, "639-2")) {
         gchar *f[] = {
-            "alpha_3", "bibliographic", "alpha_2", "name", NULL
+            "alpha_3", "bibliographic", "alpha_2", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "639-3")) {
         gchar *f[] = {
-            "alpha_3", "scope", "type", "alpha_2", "bibliographic", "name", NULL
+            "alpha_3", "scope", "type", "alpha_2", "bibliographic", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "639-5")) {
         gchar *f[] = {
-            "alpha_3", "name", NULL
+            "alpha_3", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "3166-1")) {
         gchar *f[] = {
-            "alpha_2", "alpha_3", "numeric", "name", NULL
+            "alpha_2", "alpha_3", "numeric", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "3166-2")) {
         gchar *f[] = {
-            "code", "type", "parent", "name", NULL
+            "code", "type", "parent", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "3166-3")) {
         gchar *f[] = {
-            "alpha_3", "alpha_4", "numeric", "comment", "withdrawal_date", "name", NULL
+            "alpha_3", "alpha_4", "numeric", "comment", "withdrawal_date", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "4217")) {
         gchar *f[] = {
-            "alpha_3", "numeric", "name", NULL
+            "alpha_3", "numeric", NULL
         };
         fields = g_strdupv(f);
     } else if (!g_strcmp0(option_standard, "15924")) {
         gchar *f[] = {
-            "alpha_4", "numeric", "name", NULL
+            "alpha_4", "numeric", NULL
         };
         fields = g_strdupv(f);
     }
     return fields;
+}
+
+/**
+ * Special handling for the name fields
+ */
+void isocodes_show_name(JsonObject * entry)
+{
+    const gchar *output;
+    // Use the correct name field
+    if (json_object_has_member(entry, option_namefield)) {
+        output = json_object_get_string_member(entry, option_namefield);
+    } else {
+        // Fallback: use the "name" field, which is mandatory
+        output = json_object_get_string_member(entry, "name");
+    }
+    g_printf("%s", output);
 }
