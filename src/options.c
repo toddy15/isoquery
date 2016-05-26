@@ -126,6 +126,13 @@ gboolean options_validate(GError ** error)
                     option_standard);
         return FALSE;
     }
+    // Set the value for the name field
+    if (option_officialname) {
+        option_namefield = "official_name";
+    }
+    if (option_commonname) {
+        option_namefield = "common_name";
+    }
     return TRUE;
 }
 
