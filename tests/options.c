@@ -91,9 +91,9 @@ void test_opt_standard_deprecated_3166(void)
 }
 
 /**
- * Test default value for filename.
+ * Test default value for pathname.
  */
-void test_opt_filename_default(void)
+void test_opt_pathname_default(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
@@ -104,32 +104,32 @@ void test_opt_filename_default(void)
 
     g_assert_true(result);
     g_assert_null(error);
-    g_assert_nonnull(option_filename);
-    g_assert_cmpstr(option_filename, ==, "/usr/share/iso-codes/json/iso_3166-1.json");
+    g_assert_nonnull(option_pathname);
+    g_assert_cmpstr(option_pathname, ==, "/usr/share/iso-codes/json/iso_3166-1.json");
 }
 
 /**
- * Test provided value for filename.
+ * Test provided value for pathname.
  */
-void test_opt_filename_provided(void)
+void test_opt_pathname_provided(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
 
-    gchar **command_line = g_strsplit("isoquery -f /path/to/another_filename", " ", -1);
+    gchar **command_line = g_strsplit("isoquery -p /path/to/another_filename", " ", -1);
     result = options_parse_command_line(command_line, &error);
     g_strfreev(command_line);
 
     g_assert_true(result);
     g_assert_null(error);
-    g_assert_nonnull(option_filename);
-    g_assert_cmpstr(option_filename, ==, "/path/to/another_filename");
+    g_assert_nonnull(option_pathname);
+    g_assert_cmpstr(option_pathname, ==, "/path/to/another_filename");
 }
 
 /**
- * Test default value for filename from other standard.
+ * Test default value for pathname from other standard.
  */
-void test_opt_filename_from_standard(void)
+void test_opt_pathname_from_standard(void)
 {
     GError *error = NULL;
     gboolean result = FALSE;
@@ -142,8 +142,8 @@ void test_opt_filename_from_standard(void)
     g_assert_null(error);
     g_assert_nonnull(option_standard);
     g_assert_cmpstr(option_standard, ==, "15924");
-    g_assert_nonnull(option_filename);
-    g_assert_cmpstr(option_filename, ==, "/usr/share/iso-codes/json/iso_15924.json");
+    g_assert_nonnull(option_pathname);
+    g_assert_cmpstr(option_pathname, ==, "/usr/share/iso-codes/json/iso_15924.json");
 }
 
 /**
@@ -170,9 +170,9 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/options/standard_provided", test_opt_standard_provided);
     g_test_add_func("/options/standard_deprecated_639", test_opt_standard_deprecated_639);
     g_test_add_func("/options/standard_deprecated_3166", test_opt_standard_deprecated_3166);
-    g_test_add_func("/options/filename_default", test_opt_filename_default);
-    g_test_add_func("/options/filename_provided", test_opt_filename_provided);
-    g_test_add_func("/options/filename_from_standard", test_opt_filename_from_standard);
+    g_test_add_func("/options/pathname_default", test_opt_pathname_default);
+    g_test_add_func("/options/pathname_provided", test_opt_pathname_provided);
+    g_test_add_func("/options/pathname_from_standard", test_opt_pathname_from_standard);
     g_test_add_func("/options/invalid_option", test_opt_invalid_option);
     return g_test_run();
 }

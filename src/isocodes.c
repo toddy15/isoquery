@@ -57,5 +57,5 @@ void isocodes_set_validation_error(GError ** error)
     // The first placeholder is a filename, including the directory path.
     // The second placeholder is an ISO standard, e.g. 3166 or 639-3.
     g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
-                _("The file \"%s\" does not contain valid ISO %s data."), option_filename, option_standard);
+                _("The file \"%s\" does not contain valid ISO %s data."), option_pathname, option_standard);
 }

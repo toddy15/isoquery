@@ -47,7 +47,7 @@ int main(int argument_count, gchar ** arguments)
     }
     // Try opening and parsing the given file
     parser = json_parser_new();
-    if (!json_parser_load_from_file(parser, option_filename, &error)) {
+    if (!json_parser_load_from_file(parser, option_pathname, &error)) {
         // TRANSLATORS: This is an error message.
         g_printerr(_("isoquery: %s\n"), error->message);
         g_error_free(error);

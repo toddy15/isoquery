@@ -19,7 +19,7 @@
  * Global variables to hold program options.
  */
 extern gchar *option_standard;
-extern gchar *option_filename;
+extern gchar *option_pathname;
 
 gboolean options_parse_command_line(gchar ** arguments, GError ** error);
 void options_set_default_values(void);

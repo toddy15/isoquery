@@ -24,7 +24,7 @@
  * Global variables to hold the program options.
  */
 gchar *option_standard;
-gchar *option_filename;
+gchar *option_pathname;
 
 /**
  * Define the program command line options.
@@ -34,9 +34,9 @@ static GOptionEntry entries[] = {
      N_
      ("The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (default: 3166-1)."),
      N_("STANDARD")},
-    {"filename", 'f', 0, G_OPTION_ARG_FILENAME, &option_filename,
-     N_("Use another JSON file with ISO data (default: /usr/share/iso-codes/json/iso_3166-1.json)"),
-     N_("FILE")},
+    {"pathname", 'p', 0, G_OPTION_ARG_FILENAME, &option_pathname,
+     N_("Use pathname as prefix for the data files (default: /usr/share/iso-codes/json)"),
+     N_("PATHNAME")},
     {NULL}
 };
 
@@ -77,8 +77,8 @@ gboolean options_parse_command_line(gchar ** arguments, GError ** error)
 void options_set_default_values(void)
 {
     option_standard = "3166-1";
-    g_free(option_filename);
-    option_filename = NULL;
+    g_free(option_pathname);
+    option_pathname = NULL;
 }
 
 /**
@@ -114,8 +114,8 @@ gboolean options_validate(GError ** error)
         return FALSE;
     }
     // Ensure the correct filename for the standard
-    if (!option_filename) {
-        option_filename = g_strdup_printf("/usr/share/iso-codes/json/iso_%s.json", option_standard);
+    if (!option_pathname) {
+        option_pathname = g_strdup_printf("/usr/share/iso-codes/json/iso_%s.json", option_standard);
     }
     return TRUE;
 }
