@@ -84,7 +84,7 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
     // Show all entries
     while (list_entry) {
         entry = json_node_get_object(list_entry->data);
-        g_printf("Alpha-2: %s\n", json_object_get_string_member(entry, "alpha_2"));
+        isocodes_show_entry(entry);
         list_entry = g_list_next(list_entry);
     }
     // Are there any codes?
@@ -95,4 +95,82 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
     }
 
     g_list_free(entries_list);
+}
+
+/**
+ * Print the given entry to stdout
+ */
+void isocodes_show_entry(JsonObject * entry)
+{
+    gchar **fields = isocodes_get_fields();
+
+    // Ensure that we've got fields to display
+    if (!fields) {
+        return;
+    }
+    // Cycle through all fields
+    int i = 0;
+    while (fields[i]) {
+        // Handle optional fields gracefully
+        if (json_object_has_member(entry, fields[i])) {
+            g_printf("%s", json_object_get_string_member(entry, fields[i]));
+        }
+        // Print a tab separator if this is not the last field
+        if (fields[i + 1]) {
+            g_printf("\t");
+        }
+        i++;
+    }
+    g_printf("\n");
+    g_strfreev(fields);
+}
+
+/**
+ * Returns a list of the fields in the current ISO standard
+ */
+gchar **isocodes_get_fields(void)
+{
+    gchar **fields = NULL;
+    if (!g_strcmp0(option_standard, "639-2")) {
+        gchar *f[] = {
+            "alpha_3", "bibliographic", "alpha_2", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "639-3")) {
+        gchar *f[] = {
+            "alpha_3", "scope", "type", "alpha_2", "bibliographic", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "639-5")) {
+        gchar *f[] = {
+            "alpha_3", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "3166-1")) {
+        gchar *f[] = {
+            "alpha_2", "alpha_3", "numeric", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "3166-2")) {
+        gchar *f[] = {
+            "code", "type", "parent", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "3166-3")) {
+        gchar *f[] = {
+            "alpha_3", "alpha_4", "numeric", "comment", "withdrawal_date", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "4217")) {
+        gchar *f[] = {
+            "alpha_3", "numeric", "name", NULL
+        };
+        fields = g_strdupv(f);
+    } else if (!g_strcmp0(option_standard, "15924")) {
+        gchar *f[] = {
+            "alpha_4", "numeric", "name", NULL
+        };
+        fields = g_strdupv(f);
+    }
+    return fields;
 }

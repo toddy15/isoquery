@@ -20,3 +20,5 @@
 gboolean isocodes_validate(JsonParser * parser, GError ** error);
 void isocodes_set_validation_error(GError ** error);
 void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes);
+void isocodes_show_entry(JsonObject * entry);
+gchar **isocodes_get_fields(void);
