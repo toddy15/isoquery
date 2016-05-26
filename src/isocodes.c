@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <glib/gprintf.h>
 #include "isocodes.h"
 #include "options.h"
 
@@ -73,12 +74,25 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
     // Get the root node, object, and entries array
     JsonNode *root = json_parser_get_root(parser);
     JsonObject *root_object = json_node_get_object(root);
-    JsonNode *entries = json_object_get_member(root_object, option_standard);
+    JsonNode *standard = json_object_get_member(root_object, option_standard);
+    JsonArray *entries_array = json_node_get_array(standard);
+    GList *entries_list = json_array_get_elements(entries_array);
+    GList *list_entry = g_list_first(entries_list);
 
+    // Set up a JSON object for an entry
+    JsonObject *entry;
+    // Show all entries
+    while (list_entry) {
+        entry = json_node_get_object(list_entry->data);
+        g_printf("Alpha-2: %s\n", json_object_get_string_member(entry, "alpha_2"));
+        list_entry = g_list_next(list_entry);
+    }
     // Are there any codes?
     int i = 0;
     while (codes[i]) {
         g_printf("Given code: %s\n", codes[i]);
         i++;
     }
+
+    g_list_free(entries_list);
 }
