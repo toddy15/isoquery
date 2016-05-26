@@ -91,6 +91,22 @@ void test_opt_standard_deprecated_3166(void)
 }
 
 /**
+ * Test invalid provided value for ISO standard.
+ */
+void test_opt_standard_invalid(void)
+{
+    GError *error = NULL;
+    gboolean result = FALSE;
+
+    gchar **command_line = g_strsplit("isoquery -i 1234", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
+
+    g_assert_false(result);
+    g_assert_error(error, g_quark_from_string("isoquery"), G_OPTION_ERROR_UNKNOWN_OPTION);
+}
+
+/**
  * Test default value for pathname.
  */
 void test_opt_pathname_default(void)
@@ -201,6 +217,9 @@ void test_opt_invalid_option(void)
     g_assert_cmpint(error->code, ==, G_OPTION_ERROR_UNKNOWN_OPTION);
 }
 
+/**
+ * Initializing all test functions
+ */
 int main(int argc, gchar * argv[])
 {
     g_test_init(&argc, &argv, NULL);
@@ -208,6 +227,7 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/options/standard_provided", test_opt_standard_provided);
     g_test_add_func("/options/standard_deprecated_639", test_opt_standard_deprecated_639);
     g_test_add_func("/options/standard_deprecated_3166", test_opt_standard_deprecated_3166);
+    g_test_add_func("/options/standard_invalid", test_opt_standard_invalid);
     g_test_add_func("/options/pathname_default", test_opt_pathname_default);
     g_test_add_func("/options/pathname_provided", test_opt_pathname_provided);
     g_test_add_func("/options/pathname_provided_with_dir_separator", test_opt_pathname_provided_with_dir_separator);
