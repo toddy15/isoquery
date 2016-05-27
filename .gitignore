@@ -18,6 +18,7 @@ po/*\.gmo
 
 # test output
 tests/options
+tests/integration
 tests/*.log
 tests/*.trs
 

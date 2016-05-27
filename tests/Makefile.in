@@ -187,16 +187,21 @@ am__installdirs = "$(DESTDIR)$(installed_testdir)" \
 	"$(DESTDIR)$(installed_test_metadir)" \
 	"$(DESTDIR)$(installed_testdir)"
 LTLIBRARIES = $(installed_test_LTLIBRARIES) $(noinst_LTLIBRARIES)
-am__EXEEXT_1 = options$(EXEEXT)
+am__EXEEXT_1 = options$(EXEEXT) integration$(EXEEXT)
 am__EXEEXT_2 = $(am__EXEEXT_1)
 @ENABLE_ALWAYS_BUILD_TESTS_FALSE@am__EXEEXT_3 = $(am__EXEEXT_2)
 @ENABLE_INSTALLED_TESTS_TRUE@am__EXEEXT_4 = $(am__EXEEXT_1)
 @ENABLE_ALWAYS_BUILD_TESTS_TRUE@am__EXEEXT_5 = $(am__EXEEXT_2)
 PROGRAMS = $(installed_test_PROGRAMS) $(noinst_PROGRAMS)
+integration_SOURCES = integration.c
+integration_OBJECTS = integration.$(OBJEXT)
+integration_LDADD = $(LDADD)
+am__DEPENDENCIES_1 =
+integration_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(top_srcdir)/src/options.o
 options_SOURCES = options.c
 options_OBJECTS = options.$(OBJEXT)
 options_LDADD = $(LDADD)
-am__DEPENDENCIES_1 =
 options_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(top_srcdir)/src/options.o
 SCRIPTS = $(installed_test_SCRIPTS) $(noinst_SCRIPTS)
@@ -228,8 +233,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = options.c
-DIST_SOURCES = options.c
+SOURCES = integration.c options.c
+DIST_SOURCES = integration.c options.c
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -616,7 +621,7 @@ LDADD = $(GLIB_LIBS) $(JSON_LIBS) \
 
 
 # test binaries
-test_programs = options
+test_programs = options integration
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -758,6 +763,10 @@ clean-installed_testPROGRAMS:
 clean-noinstPROGRAMS:
 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
 
+integration$(EXEEXT): $(integration_OBJECTS) $(integration_DEPENDENCIES) $(EXTRA_integration_DEPENDENCIES) 
+	@rm -f integration$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(integration_OBJECTS) $(integration_LDADD) $(LIBS)
+
 options$(EXEEXT): $(options_OBJECTS) $(options_DEPENDENCIES) $(EXTRA_options_DEPENDENCIES) 
 	@rm -f options$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(options_OBJECTS) $(options_LDADD) $(LIBS)
@@ -803,6 +812,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/integration.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/options.Po@am__quote@
 
 .c.o:
@@ -1062,6 +1072,13 @@ recheck: all $(check_LTLIBRARIES) $(check_PROGRAMS) $(check_SCRIPTS) $(check_DAT
 options.log: options$(EXEEXT)
 	@p='options$(EXEEXT)'; \
 	b='options'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+integration.log: integration$(EXEEXT)
+	@p='integration$(EXEEXT)'; \
+	b='integration'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \

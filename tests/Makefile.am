@@ -20,4 +20,4 @@ LDADD = $(GLIB_LIBS) $(JSON_LIBS) \
 	$(top_srcdir)/src/options.o
 
 # test binaries
-test_programs = options
+test_programs = options integration
