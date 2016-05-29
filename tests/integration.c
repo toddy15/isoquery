@@ -70,6 +70,26 @@ void test_integration_all_localized(gconstpointer data)
 }
 
 /**
+ * Test invocation without arguments, should be the same as ISO 3166-1.
+ */
+void test_integration_simple_call(void)
+{
+    gchar *expected_output = NULL;
+    GError *error = NULL;
+    g_file_get_contents("expected/iso_3166-1_all.txt", &expected_output, NULL, &error);
+    g_assert_null(error);
+    g_assert_nonnull(expected_output);
+
+    if (g_test_subprocess()) {
+        execl(ISOQUERY_CALL, NULL);
+        return;
+    }
+    g_test_trap_subprocess(NULL, 0, 0);
+    g_test_trap_assert_passed();
+    g_test_trap_assert_stdout(expected_output);
+}
+
+/**
  * Initializing all test functions
  */
 int main(int argc, gchar * argv[])
@@ -80,7 +100,7 @@ int main(int argc, gchar * argv[])
 
     g_test_init(&argc, &argv, NULL);
 
-    // Add tests for various standards
+    // Add common tests for various standards
     while (standards[i]) {
         testpath = g_strdup_printf("/integration/%s/all", standards[i]);
         g_test_add_data_func(testpath, standards[i], test_integration_all);
@@ -92,6 +112,8 @@ int main(int argc, gchar * argv[])
 
         i++;
     }
+
+    g_test_add_func("/integration/simple_call", test_integration_simple_call);
 
     return g_test_run();
 }
