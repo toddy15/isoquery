@@ -18,6 +18,7 @@
 #include <stdlib.h>
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <glib/gprintf.h>
 #include "options.h"
 
 /**
@@ -27,6 +28,7 @@ gchar *option_standard;
 gchar *option_pathname;
 gchar *option_namefield;
 gchar *option_locale;
+gboolean *option_version;
 
 // Helper variables, not to be accessed directly.
 gboolean *option_name;
@@ -54,6 +56,8 @@ static GOptionEntry entries[] = {
      NULL},
     {"common_name", 'c', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_commonname,
      N_("Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)."), NULL},
+    {"version", 'v', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_version,
+     N_("Show program version and copyright."), NULL},
     {NULL}
 };
 
@@ -153,4 +157,33 @@ gchar *options_get_filename(void)
     complete_path = g_build_filename(option_pathname, filename, NULL);
     g_free(filename);
     return complete_path;
+}
+
+/**
+ * Show program version and copyright
+ */
+void options_show_version(void)
+{
+    // TRANSLATORS: The string is the version identifier.
+    g_printf(_("isoquery %s\n"), VERSION);
+    g_printf(_("Copyright © 2007-2016 Dr. Tobias Quathamer\n"));
+    // TRANSLATORS: Please change the uppercase words as
+    // appropriate for your language.
+    gchar *translation = _("Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n");
+    if (!g_strrstr(translation, "LANGUAGE")) {
+        g_printf("%s", translation);
+    }
+    g_print("\n");
+    g_print("This program is free software: you can redistribute it and/or modify\n");
+    g_print("it under the terms of the GNU General Public License as published by\n");
+    g_print("the Free Software Foundation, either version 3 of the License, or\n");
+    g_print("(at your option) any later version.\n");
+    g_print("\n");
+    g_print("This program is distributed in the hope that it will be useful,\n");
+    g_print("but WITHOUT ANY WARRANTY; without even the implied warranty of\n");
+    g_print("MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n");
+    g_print("GNU General Public License for more details.\n");
+    g_print("\n");
+    g_print("You should have received a copy of the GNU General Public License\n");
+    g_print("along with this program.  If not, see <http://www.gnu.org/licenses/>.\n");
 }

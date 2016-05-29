@@ -47,6 +47,11 @@ int main(int argument_count, gchar ** arguments)
         g_error_free(error);
         return EXIT_FAILURE;
     }
+    // Show program version and copyright
+    if (option_version) {
+        options_show_version();
+        return EXIT_SUCCESS;
+    }
     // Try opening and parsing the given file
     parser = json_parser_new();
     filename = options_get_filename();

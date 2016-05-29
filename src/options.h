@@ -22,8 +22,10 @@ extern gchar *option_standard;
 extern gchar *option_pathname;
 extern gchar *option_namefield;
 extern gchar *option_locale;
+extern gboolean *option_version;
 
 gboolean options_parse_command_line(gchar ** arguments, GError ** error);
 void options_set_default_values(void);
 gboolean options_validate(GError ** error);
 gchar *options_get_filename(void);
+void options_show_version(void);
