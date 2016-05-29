@@ -26,6 +26,7 @@
 gchar *option_standard;
 gchar *option_pathname;
 gchar *option_namefield;
+gchar *option_locale;
 
 // Helper variables, not to be accessed directly.
 gboolean *option_name;
@@ -41,8 +42,11 @@ static GOptionEntry entries[] = {
      ("The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (default: 3166-1)."),
      N_("STANDARD")},
     {"pathname", 'p', G_OPTION_FLAG_NONE, G_OPTION_ARG_FILENAME, &option_pathname,
-     N_("Use pathname as prefix for the data files (default: /usr/share/iso-codes/json)"),
+     N_("Use pathname as prefix for the data files (default: /usr/share/iso-codes/json)."),
      N_("PATHNAME")},
+    {"locale", 'l', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, &option_locale,
+     N_("Use this locale for output."),
+     N_("LOCALE")},
     {"name", 'n', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_name,
      N_("Name for the supplied codes (default)."), NULL},
     {"official_name", 'o', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_officialname,
@@ -92,6 +96,7 @@ void options_set_default_values(void)
     option_standard = "3166-1";
     option_pathname = "/usr/share/iso-codes/json";
     option_namefield = "name";
+    option_locale = "";
 }
 
 /**
