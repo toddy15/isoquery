@@ -1,0 +1,3 @@
+EUR	978	Euro
+GBP	826	Livre sterling
+INR	356	Roupie indienne

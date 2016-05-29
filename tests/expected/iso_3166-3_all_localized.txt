@@ -1,0 +1,3 @@
+ATB	BQAQ			1979	Territoire britannique de l'Antarctique
+SCG	CSXX	891		2006-06-05	Serbie et Monténégro
+GEL	GEHH	296	now split into Kiribati and Tuvalu	1979	Îles Gilbert et Ellice

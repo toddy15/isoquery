@@ -1,0 +1,237 @@
+DE-BB	State		Brandebourg
+DE-BE	State		Berlin
+DE-BW	State		Bade-Wurtemberg
+DE-BY	State		Bavière
+DE-HB	State		Brème
+DE-HE	State		Hesse
+DE-HH	State		Hambourg
+DE-MV	State		Mecklembourg-Poméranie occidentale
+DE-NI	State		Basse-Saxe
+DE-NW	State		Rhénanie du Nord-Westfalie
+DE-RP	State		Rhénanie-Palatinat
+DE-SH	State		Schleswig-Holstein
+DE-SL	State		Sarre
+DE-SN	State		Saxe
+DE-ST	State		Saxe-Anhalt
+DE-TH	State		Turinge
+ES-A	Province	VC	Alicante
+ES-AB	Province	CM	Albacete
+ES-AL	Province	AN	Almeria
+ES-AN	Autonomous community		Andalousie
+ES-AR	Autonomous community		Aragon
+ES-AS	Autonomous community		Asturies, principauté des
+ES-AV	Province	CL	Avila
+ES-B	Province	CT	Barcelone
+ES-BA	Province	EX	Badajoz
+ES-BI	Province	PV	Biscaye
+ES-BU	Province	CL	Burgos
+ES-C	Province	GA	La Corogne
+ES-CA	Province	AN	Cadix
+ES-CB	Autonomous community		Cantabrique
+ES-CC	Province	EX	Caceres
+ES-CE	Autonomous city		Ceuta
+ES-CL	Autonomous community		Castille et Léon
+ES-CM	Autonomous community		Castille-La Manche
+ES-CN	Autonomous community		Canaries
+ES-CO	Province	AN	Cordoba
+ES-CR	Province	CM	Ciudad Real
+ES-CS	Province	VC	Castellon
+ES-CT	Autonomous community		Catalogne
+ES-CU	Province	CM	Cuenca
+ES-EX	Autonomous community		Extramadoure
+ES-GA	Autonomous community		Galice
+ES-GC	Province	CN	Las Palmas
+ES-GI	Province	CT	Gérone
+ES-GR	Province	AN	Grenade
+ES-GU	Province	CM	Guadalajara
+ES-H	Province	AN	Huelva
+ES-HU	Province	AR	Huesca
+ES-IB	Autonomous community		Îles Baléares
+ES-J	Province	AN	Jaen
+ES-L	Province	CT	Lleida
+ES-LE	Province	CL	Léon
+ES-LO	Province	RI	La Rioja
+ES-LU	Province	GA	Lugo
+ES-M	Province	MD	Madrid
+ES-MA	Province	AN	Malaga
+ES-MC	Autonomous community		Murcei, région de
+ES-MD	Autonomous community		Madrid, Communauté de
+ES-ML	Autonomous city		Melilla
+ES-MU	Province	MC	Murcie
+ES-NA	Province	NC	Navarre
+ES-NC	Autonomous community		Navarre, communauté florale de
+ES-O	Province	AS	Asturias
+ES-OR	Province	GA	Ourense
+ES-P	Province	CL	Palencia
+ES-PM	Province	IB	Baléares
+ES-PO	Province	GA	Pontevedra
+ES-PV	Autonomous community		Pays Basque
+ES-RI	Autonomous community		La Rioja
+ES-S	Province	CB	Cantabrique
+ES-SA	Province	CL	Salamanque
+ES-SE	Province	AN	Séville
+ES-SG	Province	CL	Segovie
+ES-SO	Province	CL	Soria
+ES-SS	Province	PV	Guipuzcoa
+ES-T	Province	CT	Tarragone
+ES-TE	Province	AR	Téruel
+ES-TF	Province	CN	Santa Cruz de Tenerife
+ES-TO	Province	CM	Toledo
+ES-V	Province	VC	Valence
+ES-VA	Province	CL	Valladolid
+ES-VC	Autonomous community		Valencienne, communauté
+ES-VI	Province	PV	Alava
+ES-Z	Province	AR	Saragosse
+ES-ZA	Province	CL	Zamora
+FR-01	Metropolitan department	V	Ain
+FR-02	Metropolitan department	S	Aisne
+FR-03	Metropolitan department	C	Allier
+FR-04	Metropolitan department	U	Alpes-de-Haute-Provence
+FR-05	Metropolitan department	U	Hautes-Alpes
+FR-06	Metropolitan department	U	Alpes-Maritimes
+FR-07	Metropolitan department	V	Ardèche
+FR-08	Metropolitan department	G	Ardennes
+FR-09	Metropolitan department	N	Ariège
+FR-10	Metropolitan department	G	Aube
+FR-11	Metropolitan department	K	Aude
+FR-12	Metropolitan department	N	Aveyron
+FR-13	Metropolitan department	U	Bouches-du-Rhône
+FR-14	Metropolitan department	P	Calvados
+FR-15	Metropolitan department	C	Cantal
+FR-16	Metropolitan department	T	Charente
+FR-17	Metropolitan department	T	Charente-Maritime
+FR-18	Metropolitan department	F	Cher
+FR-19	Metropolitan department	L	Corrèze
+FR-21	Metropolitan department	D	Côte-d'Or
+FR-22	Metropolitan department	E	Côtes-d'Armor
+FR-23	Metropolitan department	L	Creuse
+FR-24	Metropolitan department	B	Dordogne
+FR-25	Metropolitan department	I	Doubs
+FR-26	Metropolitan department	V	Drôme
+FR-27	Metropolitan department	Q	Eure
+FR-28	Metropolitan department	F	Eure-et-Loir
+FR-29	Metropolitan department	E	Finistère
+FR-2A	Metropolitan department	H	Corse-du-Sud
+FR-2B	Metropolitan department	H	Haute-Corse
+FR-30	Metropolitan department	K	Gard
+FR-31	Metropolitan department	N	Haute-Garonne
+FR-32	Metropolitan department	N	Gers
+FR-33	Metropolitan department	B	Gironde
+FR-34	Metropolitan department	K	Hérault
+FR-35	Metropolitan department	E	Ille-et-Vilaine
+FR-36	Metropolitan department	F	Indre
+FR-37	Metropolitan department	F	Indre-et-Loire
+FR-38	Metropolitan department	V	Isère
+FR-39	Metropolitan department	I	Jura
+FR-40	Metropolitan department	B	Landes
+FR-41	Metropolitan department	F	Loir-et-Cher
+FR-42	Metropolitan department	V	Loire
+FR-43	Metropolitan department	C	Haute-Loire
+FR-44	Metropolitan department	R	Loire-Atlantique
+FR-45	Metropolitan department	F	Loiret
+FR-46	Metropolitan department	N	Lot
+FR-47	Metropolitan department	B	Lot-et-Garonne
+FR-48	Metropolitan department	K	Lozère
+FR-49	Metropolitan department	R	Maine-et-Loire
+FR-50	Metropolitan department	P	Manche
+FR-51	Metropolitan department	G	Marne
+FR-52	Metropolitan department	G	Haute-Marne
+FR-53	Metropolitan department	R	Mayenne
+FR-54	Metropolitan department	M	Meurthe-et-Moselle
+FR-55	Metropolitan department	M	Meuse
+FR-56	Metropolitan department	E	Morbihan
+FR-57	Metropolitan department	M	Moselle
+FR-58	Metropolitan department	D	Nièvre
+FR-59	Metropolitan department	O	Nord
+FR-60	Metropolitan department	S	Oise
+FR-61	Metropolitan department	P	Orne
+FR-62	Metropolitan department	O	Pas-de-Calais
+FR-63	Metropolitan department	C	Puy-de-Dôme
+FR-64	Metropolitan department	B	Pyrénées-Atlantiques
+FR-65	Metropolitan department	N	Hautes-Pyrénées
+FR-66	Metropolitan department	K	Pyrénées-Orientales
+FR-67	Metropolitan department	A	Bas-Rhin
+FR-68	Metropolitan department	A	Haut-Rhin
+FR-69	Metropolitan department	V	Rhône
+FR-70	Metropolitan department	I	Haute-Saône
+FR-71	Metropolitan department	D	Saône-et-Loire
+FR-72	Metropolitan department	R	Sarthe
+FR-73	Metropolitan department	V	Savoie
+FR-74	Metropolitan department	V	Haute-Savoie
+FR-75	Metropolitan department	J	Paris
+FR-76	Metropolitan department	Q	Seine-Maritime
+FR-77	Metropolitan department	J	Seine-et-Marne
+FR-78	Metropolitan department	J	Yvelines
+FR-79	Metropolitan department	T	Deux-Sèvres
+FR-80	Metropolitan department	S	Somme
+FR-81	Metropolitan department	N	Tarn
+FR-82	Metropolitan department	N	Tarn-et-Garonne
+FR-83	Metropolitan department	U	Var
+FR-84	Metropolitan department	U	Vaucluse
+FR-85	Metropolitan department	R	Vendée
+FR-86	Metropolitan department	T	Vienne
+FR-87	Metropolitan department	L	Haute-Vienne
+FR-88	Metropolitan department	M	Vosges
+FR-89	Metropolitan department	D	Yonne
+FR-90	Metropolitan department	I	Territoire de Belfort
+FR-91	Metropolitan department	J	Essonne
+FR-92	Metropolitan department	J	Hauts-de-Seine
+FR-93	Metropolitan department	J	Seine-Saint-Denis
+FR-94	Metropolitan department	J	Val-de-Marne
+FR-95	Metropolitan department	J	Val d'Oise
+FR-A	Metropolitan region		Alsace
+FR-B	Metropolitan region		Aquitaine
+FR-BL	Overseas territorial collectivity		Saint-Barthélemy
+FR-C	Metropolitan region		Auvergne
+FR-CP	Dependency		Clipperton
+FR-D	Metropolitan region		Bourgogne
+FR-E	Metropolitan region		Bretagne
+FR-F	Metropolitan region		Centre
+FR-G	Metropolitan region		Champagne-Ardenne
+FR-GF	Overseas region/department		Guyane
+FR-GP	Overseas region/department		Guadeloupe
+FR-H	Metropolitan region		Corse
+FR-I	Metropolitan region		Franche-Comté
+FR-J	Metropolitan region		Île-de-France
+FR-K	Metropolitan region		Languedoc-Roussillon
+FR-L	Metropolitan region		Limousin
+FR-M	Metropolitan region		Lorraine
+FR-MF	Overseas territorial collectivity		Saint-Martin
+FR-MQ	Overseas region/department		Martinique
+FR-N	Metropolitan region		Midi-Pyrénées
+FR-NC	Overseas territorial collectivity		Nouvelle-Calédonie
+FR-O	Metropolitan region		Nord - Pas-de-Calais
+FR-P	Metropolitan region		Basse-Normandie
+FR-PF	Overseas territorial collectivity		Polynésie française
+FR-PM	Overseas territorial collectivity		Saint-Pierre-et-Miquelon
+FR-Q	Metropolitan region		Haute-Normandie
+FR-R	Metropolitan region		Pays de la Loire
+FR-RE	Overseas region/department		Réunion
+FR-S	Metropolitan region		Picardie
+FR-T	Metropolitan region		Poitou-Charentes
+FR-TF	Overseas territorial collectivity		Terres australes françaises
+FR-U	Metropolitan region		Provence-Alpes-Côte d'Azur
+FR-V	Metropolitan region		Rhône-Alpes
+FR-WF	Overseas territorial collectivity		Wallis-et-Futuna
+FR-YT	Overseas region/department		Mayotte
+NO-01	County		Østfold
+NO-02	County		Akershus
+NO-03	County		Oslo
+NO-04	County		Hedmark
+NO-05	County		Oppland
+NO-06	County		Buskerud
+NO-07	County		Vestfold
+NO-08	County		Telemark
+NO-09	County		Aust-Agder
+NO-10	County		Vest-Agder
+NO-11	County		Rogaland
+NO-12	County		Hordaland
+NO-14	County		Sogn og Fjordane
+NO-15	County		Møre og Romsdal
+NO-16	County		Sør-Trøndelag
+NO-17	County		Nord-Trøndelag
+NO-18	County		Nordland
+NO-19	County		Troms
+NO-20	County		Finnmark
+NO-21	Arctic Region		Svalbard (région arctique)
+NO-22	Arctic Region		Jan Mayen (région arctique)

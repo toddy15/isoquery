@@ -1,0 +1,7 @@
+DE	DEU	276	Allemagne
+ES	ESP	724	Espagne
+FR	FRA	250	France
+RU	RUS	643	Russie, Fédération de
+TV	TUV	798	Tuvalu
+TW	TWN	158	Taïwan, province de Chine
+UA	UKR	804	Ukraine

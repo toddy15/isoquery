@@ -1,0 +1,4 @@
+Beng	325	bengalî
+Cyrl	220	cyrillique
+Grek	200	grec
+Latn	215	latin

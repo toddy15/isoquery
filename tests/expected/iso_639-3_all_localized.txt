@@ -1,0 +1,3 @@
+aae	I	L			albanais d'Arbëreshë
+deu	I	L	de	ger	allemand
+nbs	I	L			langue des signes namibienne
