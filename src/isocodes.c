@@ -103,6 +103,7 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
 void isocodes_show_entry(JsonObject * entry)
 {
     gchar **fields = isocodes_get_fields();
+    gchar separator = '\n';
 
     // Ensure that we've got fields to display
     if (!fields) {
@@ -124,7 +125,12 @@ void isocodes_show_entry(JsonObject * entry)
     // switching which field to display,
     // translate the name
     isocodes_show_name(entry);
-    g_printf("\n");
+
+    // Separate entries, either with NULL byte or newline
+    if (option_null_separator) {
+        separator = 0;
+    }
+    g_printf("%c", separator);
     g_strfreev(fields);
 }
 
