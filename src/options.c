@@ -28,6 +28,7 @@ gchar *option_standard;
 gchar *option_pathname;
 gchar *option_namefield;
 gchar *option_locale;
+gboolean *option_null_separator;
 gboolean *option_version;
 
 // Helper variables, not to be accessed directly.
@@ -56,6 +57,8 @@ static GOptionEntry entries[] = {
      NULL},
     {"common_name", 'c', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_commonname,
      N_("Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)."), NULL},
+    {"null", '0', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_null_separator,
+     N_("Separate entries with a NULL character instead of newline."), NULL},
     {"version", 'v', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_version,
      N_("Show program version and copyright."), NULL},
     {NULL}
@@ -101,6 +104,8 @@ void options_set_default_values(void)
     option_pathname = "/usr/share/iso-codes/json";
     option_namefield = "name";
     option_locale = "";
+    option_null_separator = FALSE;
+    option_version = FALSE;
 }
 
 /**

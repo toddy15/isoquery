@@ -269,6 +269,23 @@ void test_opt_name_common_name(void)
 }
 
 /**
+ * Test null separator.
+ */
+void test_opt_null_separator(void)
+{
+    GError *error = NULL;
+    gboolean result = FALSE;
+
+    gchar **command_line = g_strsplit("isoquery --null", " ", -1);
+    result = options_parse_command_line(command_line, &error);
+    g_strfreev(command_line);
+
+    g_assert_true(result);
+    g_assert_null(error);
+    g_assert_true(option_null_separator);
+}
+
+/**
  * Test invalid option.
  */
 void test_opt_invalid_option(void)
@@ -304,6 +321,7 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/options/name_name", test_opt_name_name);
     g_test_add_func("/options/name_official_name", test_opt_name_official_name);
     g_test_add_func("/options/name_common_name", test_opt_name_common_name);
+    g_test_add_func("/options/null_separator", test_opt_null_separator);
     g_test_add_func("/options/invalid_option", test_opt_invalid_option);
     return g_test_run();
 }

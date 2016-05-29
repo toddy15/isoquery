@@ -22,6 +22,7 @@ extern gchar *option_standard;
 extern gchar *option_pathname;
 extern gchar *option_namefield;
 extern gchar *option_locale;
+extern gboolean *option_null_separator;
 extern gboolean *option_version;
 
 gboolean options_parse_command_line(gchar ** arguments, GError ** error);
