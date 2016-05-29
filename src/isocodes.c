@@ -191,5 +191,34 @@ void isocodes_show_name(JsonObject * entry)
         // Fallback: use the "name" field, which is mandatory
         output = json_object_get_string_member(entry, "name");
     }
+    // Try to translate, if there's a locale given
+    if (strlen(option_locale) > 0) {
+        // Save the current locale and environment variable LANGUAGE.
+        gchar *locale_backup = setlocale(LC_ALL, NULL);
+        gchar *env_backup = g_strdup(getenv("LANGUAGE"));
+
+        // Use the wanted locale to look for a translation
+        setenv("LANGUAGE", option_locale, TRUE);
+        // Use the default locale, based on the environment variable above
+        setlocale(LC_ALL, "");
+
+        // Determine the gettext domain from the standard
+        gchar *domain = g_strdup_printf("iso_%s", option_standard);
+        // Do the actual translation
+        output = dgettext(domain, output);
+
+        // Restore the environment variable LANGUAGE, either
+        // to the previous value or unset the variable.
+        if (env_backup == NULL) {
+            unsetenv("LANGUAGE");
+        } else {
+            setenv("LANGUAGE", env_backup, TRUE);
+        }
+        // Restore the locale from backup
+        setlocale(LC_ALL, locale_backup);
+
+        g_free(env_backup);
+        g_free(domain);
+    }
     g_printf("%s", output);
 }
