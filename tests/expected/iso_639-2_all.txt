@@ -1,0 +1,4 @@
+aar		aa	Afar
+alg			Algonquian languages
+bod	tib	bo	Tibetan
+heb		he	Hebrew

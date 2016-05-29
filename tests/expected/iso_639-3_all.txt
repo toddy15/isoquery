@@ -1,0 +1,3 @@
+aae	I	L			Arbëreshë Albanian
+deu	I	L	de	ger	German
+nbs	I	L			Namibian Sign Language

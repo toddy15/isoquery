@@ -1,0 +1,4 @@
+Beng	325	Bengali
+Cyrl	220	Cyrillic
+Grek	200	Greek
+Latn	215	Latin
