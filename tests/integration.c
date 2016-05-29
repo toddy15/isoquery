@@ -48,21 +48,25 @@ void test_integration_all(gconstpointer data)
 /**
  * Test all localized codes for ISO standard.
  */
-void test_integration_639_2_all_localized(void)
+void test_integration_all_localized(gconstpointer data)
 {
+    gchar *standard = (gchar *) data;
+    gchar *filename = g_strdup_printf("expected/iso_%s_all_localized.txt", standard);
     gchar *expected_output = NULL;
     GError *error = NULL;
-    g_file_get_contents("expected/iso_639-2_all_localized.txt", &expected_output, NULL, &error);
+    g_file_get_contents(filename, &expected_output, NULL, &error);
     g_assert_null(error);
     g_assert_nonnull(expected_output);
 
     if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "-i", "639-2", "-l", "fr", NULL);
+        execl(ISOQUERY_CALL, "-i", standard, "-l", "fr", NULL);
+        g_free(filename);
         return;
     }
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
+    g_free(filename);
 }
 
 /**
@@ -81,9 +85,13 @@ int main(int argc, gchar * argv[])
         testpath = g_strdup_printf("/integration/%s/all", standards[i]);
         g_test_add_data_func(testpath, standards[i], test_integration_all);
         g_free(testpath);
+
+        testpath = g_strdup_printf("/integration/%s/all_localized", standards[i]);
+        g_test_add_data_func(testpath, standards[i], test_integration_all_localized);
+        g_free(testpath);
+
         i++;
     }
-    g_test_add_func("/integration/639-2/all_localized", test_integration_639_2_all_localized);
 
     return g_test_run();
 }
