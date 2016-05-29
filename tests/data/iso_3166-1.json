@@ -1,0 +1,51 @@
+{
+  "3166-1": [
+    {
+      "alpha_2": "DE",
+      "alpha_3": "DEU",
+      "name": "Germany",
+      "numeric": "276",
+      "official_name": "Federal Republic of Germany"
+    },
+    {
+      "alpha_2": "ES",
+      "alpha_3": "ESP",
+      "name": "Spain",
+      "numeric": "724",
+      "official_name": "Kingdom of Spain"
+    },
+    {
+      "alpha_2": "FR",
+      "alpha_3": "FRA",
+      "name": "France",
+      "numeric": "250",
+      "official_name": "French Republic"
+    },
+    {
+      "alpha_2": "RU",
+      "alpha_3": "RUS",
+      "name": "Russian Federation",
+      "numeric": "643"
+    },
+    {
+      "alpha_2": "TV",
+      "alpha_3": "TUV",
+      "name": "Tuvalu",
+      "numeric": "798"
+    },
+    {
+      "alpha_2": "TW",
+      "alpha_3": "TWN",
+      "common_name": "Taiwan",
+      "name": "Taiwan, Province of China",
+      "numeric": "158",
+      "official_name": "Taiwan, Province of China"
+    },
+    {
+      "alpha_2": "UA",
+      "alpha_3": "UKR",
+      "name": "Ukraine",
+      "numeric": "804"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "639-3": [
+    {
+      "alpha_3": "aae",
+      "inverted_name": "Albanian, Arbëreshë",
+      "name": "Arbëreshë Albanian",
+      "scope": "I",
+      "type": "L"
+    },
+    {
+      "alpha_2": "de",
+      "alpha_3": "deu",
+      "bibliographic": "ger",
+      "name": "German",
+      "scope": "I",
+      "type": "L"
+    },
+    {
+      "alpha_3": "nbs",
+      "name": "Namibian Sign Language",
+      "scope": "I",
+      "type": "L"
+    }
+  ]
+}

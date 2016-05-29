@@ -1,0 +1,19 @@
+{
+  "4217": [
+    {
+      "alpha_3": "EUR",
+      "name": "Euro",
+      "numeric": "978"
+    },
+    {
+      "alpha_3": "GBP",
+      "name": "Pound Sterling",
+      "numeric": "826"
+    },
+    {
+      "alpha_3": "INR",
+      "name": "Indian Rupee",
+      "numeric": "356"
+    }
+  ]
+}

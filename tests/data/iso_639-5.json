@@ -1,0 +1,16 @@
+{
+  "639-5": [
+    {
+      "alpha_3": "aus",
+      "name": "Australian languages"
+    },
+    {
+      "alpha_3": "nai",
+      "name": "North American Indian languages"
+    },
+    {
+      "alpha_3": "tut",
+      "name": "Altaic languages"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "15924": [
+    {
+      "alpha_4": "Beng",
+      "name": "Bengali",
+      "numeric": "325"
+    },
+    {
+      "alpha_4": "Cyrl",
+      "name": "Cyrillic",
+      "numeric": "220"
+    },
+    {
+      "alpha_4": "Grek",
+      "name": "Greek",
+      "numeric": "200"
+    },
+    {
+      "alpha_4": "Latn",
+      "name": "Latin",
+      "numeric": "215"
+    }
+  ]
+}

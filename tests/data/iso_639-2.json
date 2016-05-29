@@ -1,0 +1,24 @@
+{
+  "639-2": [
+    {
+      "alpha_2": "aa",
+      "alpha_3": "aar",
+      "name": "Afar"
+    },
+    {
+      "alpha_3": "alg",
+      "name": "Algonquian languages"
+    },
+    {
+      "alpha_2": "bo",
+      "alpha_3": "bod",
+      "bibliographic": "tib",
+      "name": "Tibetan"
+    },
+    {
+      "alpha_2": "he",
+      "alpha_3": "heb",
+      "name": "Hebrew"
+    }
+  ]
+}
