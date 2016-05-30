@@ -587,6 +587,9 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+PO4A_GETTEXTIZE
+PO4A_TRANSLATE
+RST2MAN
 POSUB
 LTLIBINTL
 LIBINTL
@@ -6503,6 +6506,140 @@ $as_echo "#define HAVE_DCGETTEXT 1" >>confdefs.h
 
 $as_echo "#define GETTEXT_PACKAGE \"isoquery\"" >>confdefs.h
 
+
+# Detect some programs needed for building
+# Extract the first word of "rst2man", so it can be a program name with args.
+set dummy rst2man; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_path_RST2MAN+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  case $RST2MAN in
+  [\\/]* | ?:[\\/]*)
+  ac_cv_path_RST2MAN="$RST2MAN" # Let the user override the test with a path.
+  ;;
+  *)
+  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_path_RST2MAN="$as_dir/$ac_word$ac_exec_ext"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  test -z "$ac_cv_path_RST2MAN" && ac_cv_path_RST2MAN="no"
+  ;;
+esac
+fi
+RST2MAN=$ac_cv_path_RST2MAN
+if test -n "$RST2MAN"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $RST2MAN" >&5
+$as_echo "$RST2MAN" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+if test x"$RST2MAN" == x"no" ; then
+    as_fn_error $? "rst2man is required." "$LINENO" 5
+fi
+# Extract the first word of "po4a-translate", so it can be a program name with args.
+set dummy po4a-translate; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_path_PO4A_TRANSLATE+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  case $PO4A_TRANSLATE in
+  [\\/]* | ?:[\\/]*)
+  ac_cv_path_PO4A_TRANSLATE="$PO4A_TRANSLATE" # Let the user override the test with a path.
+  ;;
+  *)
+  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_path_PO4A_TRANSLATE="$as_dir/$ac_word$ac_exec_ext"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  test -z "$ac_cv_path_PO4A_TRANSLATE" && ac_cv_path_PO4A_TRANSLATE="no"
+  ;;
+esac
+fi
+PO4A_TRANSLATE=$ac_cv_path_PO4A_TRANSLATE
+if test -n "$PO4A_TRANSLATE"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PO4A_TRANSLATE" >&5
+$as_echo "$PO4A_TRANSLATE" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+if test x"$PO4A_TRANSLATE" == x"no" ; then
+    as_fn_error $? "po4a-translate is required." "$LINENO" 5
+fi
+# Extract the first word of "po4a-gettextize", so it can be a program name with args.
+set dummy po4a-gettextize; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_path_PO4A_GETTEXTIZE+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  case $PO4A_GETTEXTIZE in
+  [\\/]* | ?:[\\/]*)
+  ac_cv_path_PO4A_GETTEXTIZE="$PO4A_GETTEXTIZE" # Let the user override the test with a path.
+  ;;
+  *)
+  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_path_PO4A_GETTEXTIZE="$as_dir/$ac_word$ac_exec_ext"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  test -z "$ac_cv_path_PO4A_GETTEXTIZE" && ac_cv_path_PO4A_GETTEXTIZE="no"
+  ;;
+esac
+fi
+PO4A_GETTEXTIZE=$ac_cv_path_PO4A_GETTEXTIZE
+if test -n "$PO4A_GETTEXTIZE"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PO4A_GETTEXTIZE" >&5
+$as_echo "$PO4A_GETTEXTIZE" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+if test x"$PO4A_GETTEXTIZE" == x"no" ; then
+    as_fn_error $? "po4a-gettextize is required." "$LINENO" 5
+fi
 
 # Output
 ac_config_files="$ac_config_files Makefile po/Makefile.in src/Makefile tests/Makefile"
