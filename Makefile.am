@@ -16,7 +16,7 @@
 SUBDIRS = po src tests
 
 # Create and install english manpage
-EXTRA_DIST += man/isoquery.rst man/isoquery-man.pot
+EXTRA_DIST = man/isoquery.rst man/isoquery-man.pot
 man1_MANS = isoquery.1
 CLEANFILES = isoquery.1
 isoquery.1:

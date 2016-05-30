@@ -28,6 +28,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 VPATH = @srcdir@
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
@@ -129,11 +130,11 @@ am__v_P_1 = :
 AM_V_GEN = $(am__v_GEN_@AM_V@)
 am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
 am__v_GEN_0 = @echo "  GEN     " $@;
-am__v_GEN_1 =
+am__v_GEN_1 = 
 AM_V_at = $(am__v_at_@AM_V@)
 am__v_at_ = $(am__v_at_@AM_DEFAULT_V@)
 am__v_at_0 = @
-am__v_at_1 =
+am__v_at_1 = 
 SOURCES =
 DIST_SOURCES =
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
@@ -149,6 +150,39 @@ am__can_run_installinfo = \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
+am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+am__vpath_adj = case $$p in \
+    $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+    *) f=$$p;; \
+  esac;
+am__strip_dir = f=`echo $$p | sed -e 's|^.*/||'`;
+am__install_max = 40
+am__nobase_strip_setup = \
+  srcdirstrip=`echo "$(srcdir)" | sed 's/[].[^$$\\*|]/\\\\&/g'`
+am__nobase_strip = \
+  for p in $$list; do echo "$$p"; done | sed -e "s|$$srcdirstrip/||"
+am__nobase_list = $(am__nobase_strip_setup); \
+  for p in $$list; do echo "$$p $$p"; done | \
+  sed "s| $$srcdirstrip/| |;"' / .*\//!s/ .*/ ./; s,\( .*\)/[^/]*$$,\1,' | \
+  $(AWK) 'BEGIN { files["."] = "" } { files[$$2] = files[$$2] " " $$1; \
+    if (++n[$$2] == $(am__install_max)) \
+      { print $$2, files[$$2]; n[$$2] = 0; files[$$2] = "" } } \
+    END { for (dir in files) print dir, files[dir] }'
+am__base_list = \
+  sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+  sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+am__uninstall_files_from_dir = { \
+  test -z "$$files" \
+    || { test ! -d "$$dir" && test ! -f "$$dir" && test ! -r "$$dir"; } \
+    || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+         $(am__cd) "$$dir" && rm -f $$files; }; \
+  }
+man1dir = $(mandir)/man1
+am__installdirs = "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man_dedir)" \
+	"$(DESTDIR)$(man_frdir)" "$(DESTDIR)$(man_ptdir)"
+NROFF = nroff
+MANS = $(man1_MANS)
+DATA = $(man_de_DATA) $(man_fr_DATA) $(man_pt_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
@@ -183,8 +217,9 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/build/compile \
 	$(top_srcdir)/build/config.rpath \
 	$(top_srcdir)/build/config.sub $(top_srcdir)/build/install-sh \
 	$(top_srcdir)/build/missing $(top_srcdir)/build/tap-driver.sh \
-	ABOUT-NLS build/compile build/config.guess build/config.rpath \
-	build/config.sub build/depcomp build/install-sh build/missing
+	ABOUT-NLS AUTHORS COPYING ChangeLog README TODO build/compile \
+	build/config.guess build/config.rpath build/config.sub \
+	build/depcomp build/install-sh build/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -351,6 +386,24 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = po src tests
+
+# Create and install english manpage
+
+# Create and install german manpage
+
+# Create and install french manpage
+
+# Create and install portuguese manpage
+EXTRA_DIST = man/isoquery.rst man/isoquery-man.pot man/de.po \
+	man/de.add man/fr.po man/fr.add man/pt.po man/pt.add
+man1_MANS = isoquery.1
+CLEANFILES = isoquery.1
+man_dedir = $(mandir)/de/man1
+man_de_DATA = man_de/isoquery.1
+man_frdir = $(mandir)/fr/man1
+man_fr_DATA = man_fr/isoquery.1
+man_ptdir = $(mandir)/pt/man1
+man_pt_DATA = man_pt/isoquery.1
 all: all-recursive
 
 .SUFFIXES:
@@ -387,6 +440,110 @@ $(top_srcdir)/configure: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
+install-man1: $(man1_MANS)
+	@$(NORMAL_INSTALL)
+	@list1='$(man1_MANS)'; \
+	list2=''; \
+	test -n "$(man1dir)" \
+	  && test -n "`echo $$list1$$list2`" \
+	  || exit 0; \
+	echo " $(MKDIR_P) '$(DESTDIR)$(man1dir)'"; \
+	$(MKDIR_P) "$(DESTDIR)$(man1dir)" || exit 1; \
+	{ for i in $$list1; do echo "$$i"; done;  \
+	if test -n "$$list2"; then \
+	  for i in $$list2; do echo "$$i"; done \
+	    | sed -n '/\.1[a-z]*$$/p'; \
+	fi; \
+	} | while read p; do \
+	  if test -f $$p; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; echo "$$p"; \
+	done | \
+	sed -e 'n;s,.*/,,;p;h;s,.*\.,,;s,^[^1][0-9a-z]*$$,1,;x' \
+	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,' | \
+	sed 'N;N;s,\n, ,g' | { \
+	list=; while read file base inst; do \
+	  if test "$$base" = "$$inst"; then list="$$list $$file"; else \
+	    echo " $(INSTALL_DATA) '$$file' '$(DESTDIR)$(man1dir)/$$inst'"; \
+	    $(INSTALL_DATA) "$$file" "$(DESTDIR)$(man1dir)/$$inst" || exit $$?; \
+	  fi; \
+	done; \
+	for i in $$list; do echo "$$i"; done | $(am__base_list) | \
+	while read files; do \
+	  test -z "$$files" || { \
+	    echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man1dir)'"; \
+	    $(INSTALL_DATA) $$files "$(DESTDIR)$(man1dir)" || exit $$?; }; \
+	done; }
+
+uninstall-man1:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man1_MANS)'; test -n "$(man1dir)" || exit 0; \
+	files=`{ for i in $$list; do echo "$$i"; done; \
+	} | sed -e 's,.*/,,;h;s,.*\.,,;s,^[^1][0-9a-z]*$$,1,;x' \
+	      -e 's,\.[0-9a-z]*$$,,;$(transform);G;s,\n,.,'`; \
+	dir='$(DESTDIR)$(man1dir)'; $(am__uninstall_files_from_dir)
+install-man_deDATA: $(man_de_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(man_de_DATA)'; test -n "$(man_dedir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(man_dedir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(man_dedir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man_dedir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(man_dedir)" || exit $$?; \
+	done
+
+uninstall-man_deDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man_de_DATA)'; test -n "$(man_dedir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(man_dedir)'; $(am__uninstall_files_from_dir)
+install-man_frDATA: $(man_fr_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(man_fr_DATA)'; test -n "$(man_frdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(man_frdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(man_frdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man_frdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(man_frdir)" || exit $$?; \
+	done
+
+uninstall-man_frDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man_fr_DATA)'; test -n "$(man_frdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(man_frdir)'; $(am__uninstall_files_from_dir)
+install-man_ptDATA: $(man_pt_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(man_pt_DATA)'; test -n "$(man_ptdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(man_ptdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(man_ptdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man_ptdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(man_ptdir)" || exit $$?; \
+	done
+
+uninstall-man_ptDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man_pt_DATA)'; test -n "$(man_ptdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(man_ptdir)'; $(am__uninstall_files_from_dir)
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.
@@ -683,9 +840,12 @@ distcleancheck: distclean
 	       exit 1; } >&2
 check-am: all-am
 check: check-recursive
-all-am: Makefile
+all-am: Makefile $(MANS) $(DATA)
 installdirs: installdirs-recursive
 installdirs-am:
+	for dir in "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man_dedir)" "$(DESTDIR)$(man_frdir)" "$(DESTDIR)$(man_ptdir)"; do \
+	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+	done
 install: install-recursive
 install-exec: install-exec-recursive
 install-data: install-data-recursive
@@ -708,6 +868,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
@@ -718,7 +879,7 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 clean: clean-recursive
 
-clean-am: clean-generic mostlyclean-am
+clean-am: clean-generic clean-local mostlyclean-am
 
 distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
@@ -737,7 +898,8 @@ info: info-recursive
 
 info-am:
 
-install-data-am:
+install-data-am: install-man install-man_deDATA install-man_frDATA \
+	install-man_ptDATA
 
 install-dvi: install-dvi-recursive
 
@@ -753,7 +915,7 @@ install-info: install-info-recursive
 
 install-info-am:
 
-install-man:
+install-man: install-man1
 
 install-pdf: install-pdf-recursive
 
@@ -783,27 +945,77 @@ ps: ps-recursive
 
 ps-am:
 
-uninstall-am:
+uninstall-am: uninstall-man uninstall-man_deDATA uninstall-man_frDATA \
+	uninstall-man_ptDATA
+
+uninstall-man: uninstall-man1
 
 .MAKE: $(am__recursive_targets) install-am install-strip
 
 .PHONY: $(am__recursive_targets) CTAGS GTAGS TAGS all all-am \
 	am--refresh check check-am clean clean-cscope clean-generic \
-	cscope cscopelist-am ctags ctags-am dist dist-all dist-bzip2 \
-	dist-gzip dist-lzip dist-shar dist-tarZ dist-xz dist-zip \
-	distcheck distclean distclean-generic distclean-tags \
+	clean-local cscope cscopelist-am ctags ctags-am dist dist-all \
+	dist-bzip2 dist-gzip dist-lzip dist-shar dist-tarZ dist-xz \
+	dist-zip distcheck distclean distclean-generic distclean-tags \
 	distcleancheck distdir distuninstallcheck dvi dvi-am html \
 	html-am info info-am install install-am install-data \
 	install-data-am install-dvi install-dvi-am install-exec \
 	install-exec-am install-html install-html-am install-info \
-	install-info-am install-man install-pdf install-pdf-am \
-	install-ps install-ps-am install-strip installcheck \
-	installcheck-am installdirs installdirs-am maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
-	pdf-am ps ps-am tags tags-am uninstall uninstall-am
+	install-info-am install-man install-man1 install-man_deDATA \
+	install-man_frDATA install-man_ptDATA install-pdf \
+	install-pdf-am install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs installdirs-am \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
+	uninstall-am uninstall-man uninstall-man1 uninstall-man_deDATA \
+	uninstall-man_frDATA uninstall-man_ptDATA
 
 .PRECIOUS: Makefile
 
+isoquery.1:
+	$(RST2MAN) $(top_srcdir)/man/isoquery.rst isoquery.1
+man_de/isoquery.1: man/isoquery.rst man/de.po man/de.add
+	$(MKDIR_P) man_de
+	po4a-translate --format text --option markdown \
+	--master $(top_srcdir)/man/isoquery.rst \
+	--po $(top_srcdir)/man/de.po \
+	--addendum $(top_srcdir)/man/de.add \
+	--localized man_de/isoquery.rst
+	$(RST2MAN) man_de/isoquery.rst man_de/isoquery.1
+man_fr/isoquery.1: man/isoquery.rst man/fr.po man/fr.add
+	$(MKDIR_P) man_fr
+	po4a-translate --format text --option markdown \
+	--master $(top_srcdir)/man/isoquery.rst \
+	--po $(top_srcdir)/man/fr.po \
+	--addendum $(top_srcdir)/man/fr.add \
+	--localized man_fr/isoquery.rst
+	$(RST2MAN) man_fr/isoquery.rst man_fr/isoquery.1
+man_pt/isoquery.1: man/isoquery.rst man/pt.po man/pt.add
+	$(MKDIR_P) man_pt
+	po4a-translate --format text --option markdown \
+	--master $(top_srcdir)/man/isoquery.rst \
+	--po $(top_srcdir)/man/pt.po \
+	--addendum $(top_srcdir)/man/pt.add \
+	--localized man_pt/isoquery.rst
+	$(RST2MAN) man_pt/isoquery.rst man_pt/isoquery.1
+
+# Remove temporary build directories for translated manpages
+clean-local:
+	-rm -rf man_de man_fr man_pt
+
+# Some convenience targets for manpage generation
+pot-man:
+	po4a-gettextize --format text --option markdown \
+	--master $(top_srcdir)/man/isoquery.rst --master-charset UTF-8 \
+	--po $(top_srcdir)/man/isoquery-man.pot
+	sed -i -e "/^#: /d" $(top_srcdir)/man/isoquery-man.pot
+.PHONY: pot-man
+
+update-po-man:
+	for i in $(top_srcdir)/man/*.po; do \
+		msgmerge --previous --no-location $$i $(top_srcdir)/man/isoquery-man.pot > tmp.po && mv tmp.po $$i ; \
+	done
+.PHONY: update-po-man
 
 .PHONY: indent
 indent:
