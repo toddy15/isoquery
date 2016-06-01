@@ -81,17 +81,22 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
 
     // Set up a JSON object for an entry
     JsonObject *entry;
-    // Show all entries
-    while (list_entry) {
-        entry = json_node_get_object(list_entry->data);
-        isocodes_show_entry(entry);
-        list_entry = g_list_next(list_entry);
-    }
-    // Are there any codes?
-    int i = 0;
-    while (codes[i]) {
-        g_printf("Given code: %s\n", codes[i]);
-        i++;
+
+    // If there are codes given on the command line,
+    // only display entries matching those.
+    if (codes[0]) {
+        int i = 0;
+        while (codes[i]) {
+            search_entry(codes[i]);
+            i++;
+        }
+    } else {
+        // Show all entries
+        while (list_entry) {
+            entry = json_node_get_object(list_entry->data);
+            isocodes_show_entry(entry);
+            list_entry = g_list_next(list_entry);
+        }
     }
 
     g_list_free(entries_list);

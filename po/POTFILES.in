@@ -1,5 +1,6 @@
 src/isocodes.c
 src/isoquery.c
 src/options.c
+src/search.c
 tests/integration.c
 tests/options.c
