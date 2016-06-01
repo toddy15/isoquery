@@ -76,5 +76,14 @@ gchar **search_get_normalized_code_and_field(gchar * code)
  */
 gboolean search_is_number(gchar * code)
 {
-    return FALSE;
+    gboolean only_digits = TRUE;
+    int i = 0;
+    gchar *position = code;
+    while (*position) {
+        if (!g_unichar_isdigit(g_utf8_get_char_validated(position, -1))) {
+            only_digits = FALSE;
+        }
+        position = g_utf8_next_char(position);
+    }
+    return only_digits;
 }
