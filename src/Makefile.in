@@ -124,7 +124,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_isoquery_OBJECTS = isoquery.$(OBJEXT) options.$(OBJEXT) \
-	isocodes.$(OBJEXT)
+	isocodes.$(OBJEXT) search.$(OBJEXT)
 isoquery_OBJECTS = $(am_isoquery_OBJECTS)
 isoquery_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
@@ -320,6 +320,8 @@ isoquery_SOURCES = \
 	options.h \
 	isocodes.c \
 	isocodes.h \
+	search.c \
+	search.h \
 	(NULL)
 
 all: all-am
@@ -411,6 +413,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/isocodes.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/isoquery.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/options.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/search.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\

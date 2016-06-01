@@ -21,6 +21,7 @@
 #include <glib/gprintf.h>
 #include "isocodes.h"
 #include "options.h"
+#include "search.h"
 
 /**
  * Validate the given JSON data.
@@ -79,18 +80,17 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
     GList *entries_list = json_array_get_elements(entries_array);
     GList *list_entry = g_list_first(entries_list);
 
-    // Set up a JSON object for an entry
-    JsonObject *entry;
-
     // If there are codes given on the command line,
     // only display entries matching those.
     if (codes[0]) {
         int i = 0;
         while (codes[i]) {
-            search_entry(codes[i]);
+            search_entry(codes[i], entries_list);
             i++;
         }
     } else {
+        // Set up a JSON object for an entry
+        JsonObject *entry;
         // Show all entries
         while (list_entry) {
             entry = json_node_get_object(list_entry->data);

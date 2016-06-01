@@ -16,30 +16,28 @@
  */
 
 #include <glib.h>
+#include "isocodes.h"
 #include "search.h"
 #include "options.h"
 
 /**
  * Search for a given code
  */
-void search_entry(gchar * code)
+void search_entry(gchar * code, GList * entries_list)
 {
-    // Search for each code
-    int i = 0;
-    gchar *normalized_code;
-    while (codes[i]) {
-        // Reset the list for each entry
-        list_entry = g_list_first(entries_list);
-        normalized_code = search_get_normalized_code(codes[i]);
-        // Cycle through all entries
-        while (list_entry) {
-            entry = json_node_get_object(list_entry->data);
+    // Set up a JSON object for an entry
+    JsonObject *entry;
+    gchar *normalized_code = search_get_normalized_code(code);
+    GList *list_entry = g_list_first(entries_list);
+    // Cycle through all entries
+    while (list_entry) {
+        entry = json_node_get_object(list_entry->data);
+        if (!g_strcmp0(normalized_code, json_object_get_string_member(entry, "alpha_2"))) {
             isocodes_show_entry(entry);
-            list_entry = g_list_next(list_entry);
         }
-        g_free(normalized_code);
-        i++;
+        list_entry = g_list_next(list_entry);
     }
+    g_free(normalized_code);
 }
 
 /**

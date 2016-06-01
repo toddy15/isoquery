@@ -15,5 +15,5 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-void search_entry(gchar * code);
+void search_entry(gchar * code, GList * entries_list);
 gchar *search_get_normalized_code(gchar * code);
