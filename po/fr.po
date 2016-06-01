@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 21:22+0200\n"
+"POT-Creation-Date: 2016-06-01 21:39+0200\n"
 "PO-Revision-Date: 2014-05-08 18:00+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -18,6 +18,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
+#. TRANSLATORS:
+#. The first placeholder is a filename, including the directory path.
+#. The second placeholder is an ISO standard, e.g. 3166-1 or 639-3.
 #: src/isocodes.c:67
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
@@ -106,28 +109,32 @@ msgstr "Afficher la version du programme et les informations de copyright"
 msgid "[ISO codes]"
 msgstr "[codes ISO]"
 
-#: src/options.c:139
+#. TRANSLATORS: The placeholder is a string like "1234-5".
+#: src/options.c:140
 #, c-format
 msgid "ISO standard \"%s\" is not supported."
 msgstr "norme ISO « %s » non gérée."
 
-#. TRANSLATORS: The string is the version identifier.
-#: src/options.c:173
+#. TRANSLATORS: The placeholder is the version identifier.
+#: src/options.c:174
 #, c-format
 msgid "isoquery %s\n"
 msgstr "isoquery %s\n"
 
-#: src/options.c:174
+#: src/options.c:175
 msgid "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 
 #. TRANSLATORS: Please change the uppercase words as
 #. appropriate for your language.
-#: src/options.c:177
+#: src/options.c:178
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "Traduction française Copyright © 2007-2014 Christian Perrier\n"
 
-#: src/search.c:50
+#. TRANSLATORS: The first placeholder is a code like "urgl" or
+#. "does-not-exist", the second placeholder is the current
+#. ISO standard like "3166-1" or "15924".
+#: src/search.c:53
 #, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
 msgstr "Le code « %s » n'existe pas dans ISO-%s."

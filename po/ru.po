@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 21:22+0200\n"
+"POT-Creation-Date: 2016-06-01 21:39+0200\n"
 "PO-Revision-Date: 2014-05-08 18:19+0400\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
@@ -19,6 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#. TRANSLATORS:
+#. The first placeholder is a filename, including the directory path.
+#. The second placeholder is an ISO standard, e.g. 3166-1 or 639-3.
 #: src/isocodes.c:67
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
@@ -106,28 +109,32 @@ msgstr "Показать версию программы и инф. об авт�
 msgid "[ISO codes]"
 msgstr "[коды ISO]"
 
-#: src/options.c:139
+#. TRANSLATORS: The placeholder is a string like "1234-5".
+#: src/options.c:140
 #, c-format
 msgid "ISO standard \"%s\" is not supported."
 msgstr "Стандарт ISO «%s» не поддерживается."
 
-#. TRANSLATORS: The string is the version identifier.
-#: src/options.c:173
+#. TRANSLATORS: The placeholder is the version identifier.
+#: src/options.c:174
 #, c-format
 msgid "isoquery %s\n"
 msgstr "isoquery %s\n"
 
-#: src/options.c:174
+#: src/options.c:175
 msgid "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 
 #. TRANSLATORS: Please change the uppercase words as
 #. appropriate for your language.
-#: src/options.c:177
+#: src/options.c:178
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "Перевод на русский Copyright © 2010-2014 Юрий Козлов\n"
 
-#: src/search.c:50
+#. TRANSLATORS: The first placeholder is a code like "urgl" or
+#. "does-not-exist", the second placeholder is the current
+#. ISO standard like "3166-1" or "15924".
+#: src/search.c:53
 #, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
 msgstr "Код «%s» не определён в ISO %s."
