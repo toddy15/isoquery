@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 10:50+0200\n"
+"POT-Creation-Date: 2016-06-01 21:22+0200\n"
 "PO-Revision-Date: 2014-05-08 18:00+0200\n"
 "Last-Translator: Christian Perrier <bubulle@debian.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: src/isocodes.c:66
+#: src/isocodes.c:67
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
 msgstr "Le fichier « %s » ne contient pas de données ISO-%s valables."
 
 #. TRANSLATORS: This is an error message.
-#: src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#: src/isocodes.c:92 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
 #, c-format
 msgid "isoquery: %s\n"
 msgstr "isoquery : %s\n"
@@ -106,6 +106,12 @@ msgstr "Afficher la version du programme et les informations de copyright"
 msgid "[ISO codes]"
 msgstr "[codes ISO]"
 
+#: src/options.c:139
+#, fuzzy, c-format
+#| msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+msgid "ISO standard \"%s\" is not supported."
+msgstr "isoquery : norme ISO « %(standard)s » non gérée.\n"
+
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
 #, c-format
@@ -122,8 +128,12 @@ msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "Traduction française Copyright © 2007-2014 Christian Perrier\n"
 
-#~ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-#~ msgstr "isoquery : norme ISO « %(standard)s » non gérée.\n"
+#: src/search.c:50
+#, fuzzy, c-format
+#| msgid ""
+#| "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
+msgid "The code \"%s\" is not defined in ISO %s."
+msgstr "isoquery : Le code « %(code)s » n'existe pas dans ISO-%(standard)s.\n"
 
 #~ msgid "FILE"
 #~ msgstr "FICHIER"
@@ -141,11 +151,6 @@ msgstr "Traduction française Copyright © 2007-2014 Christian Perrier\n"
 #~ msgstr ""
 #~ "isoquery : Le fichier « %(filename)s » n'a pas pu être analysé "
 #~ "correctement.\n"
-
-#~ msgid ""
-#~ "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
-#~ msgstr ""
-#~ "isoquery : Le code « %(code)s » n'existe pas dans ISO-%(standard)s.\n"
 
 #~ msgid "Usage: %prog [options] [ISO codes]"
 #~ msgstr "Utilisation : %prog [options] [codes ISO]"

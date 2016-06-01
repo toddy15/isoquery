@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 10:50+0200\n"
+"POT-Creation-Date: 2016-06-01 21:22+0200\n"
 "PO-Revision-Date: 2014-05-13 10:14+0100\n"
 "Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: src/isocodes.c:66
+#: src/isocodes.c:67
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
 msgstr ""
 
 #. TRANSLATORS: This is an error message.
-#: src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#: src/isocodes.c:92 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
 #, c-format
 msgid "isoquery: %s\n"
 msgstr "isoquery: %s\n"
@@ -104,6 +104,12 @@ msgstr "Visa programversion och infomation om upphovsrätt"
 msgid "[ISO codes]"
 msgstr "[ISO-koder]"
 
+#: src/options.c:139
+#, fuzzy, c-format
+#| msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+msgid "ISO standard \"%s\" is not supported."
+msgstr "isoquery: ISO-standard \"%(standard)s\" stöds inte.\n"
+
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
 #, c-format
@@ -122,8 +128,10 @@ msgstr ""
 "Översatt till Svenska © 2010-2014 Martin Bagge.\n"
 " Skicka synpunkter på översättningen till tp-sv@listor.tp-sv.se.\n"
 
-#~ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-#~ msgstr "isoquery: ISO-standard \"%(standard)s\" stöds inte.\n"
+#: src/search.c:50
+#, c-format
+msgid "The code \"%s\" is not defined in ISO %s."
+msgstr ""
 
 #~ msgid "FILE"
 #~ msgstr "FIL"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 10:50+0200\n"
+"POT-Creation-Date: 2016-06-01 21:22+0200\n"
 "PO-Revision-Date: 2010-09-30 23:02+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: LocFactoryEditor 1.8\n"
 
-#: src/isocodes.c:66
+#: src/isocodes.c:67
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
 msgstr "Tập tin « %s » không chứa dữ liệu ISO %s đúng."
 
 # Variable: don't translate; Biến: đừng dịch
 #. TRANSLATORS: This is an error message.
-#: src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#: src/isocodes.c:92 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
 #, c-format
 msgid "isoquery: %s\n"
 msgstr "isoquery: %s\n"
@@ -104,6 +104,12 @@ msgstr "Hiển thị phiên bản chương trình và tác quyền"
 msgid "[ISO codes]"
 msgstr ""
 
+#: src/options.c:139
+#, fuzzy, c-format
+#| msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+msgid "ISO standard \"%s\" is not supported."
+msgstr "isoquery: Tiêu chuẩn ISO « %(standard)s » không phải được hỗ trợ.\n"
+
 # Variable: don't translate; Biến: đừng dịch
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
@@ -123,8 +129,13 @@ msgstr ""
 "Bản dịch tiếng Việt của Clytie Siddall (tác quyền © 2010 của Tổ chức Phần "
 "mềm Tự do)\n"
 
-#~ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-#~ msgstr "isoquery: Tiêu chuẩn ISO « %(standard)s » không phải được hỗ trợ.\n"
+#: src/search.c:50
+#, fuzzy, c-format
+#| msgid ""
+#| "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
+msgid "The code \"%s\" is not defined in ISO %s."
+msgstr ""
+"isoquery: Mã « %(code)s » không phải được xác định trong ISO %(standard)s.\n"
 
 #~ msgid "FILE"
 #~ msgstr "TỆP"
@@ -140,12 +151,6 @@ msgstr ""
 
 #~ msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 #~ msgstr "isoquery: Tập tin « %(filename)s » không phân tích được.\n"
-
-#~ msgid ""
-#~ "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
-#~ msgstr ""
-#~ "isoquery: Mã « %(code)s » không phải được xác định trong ISO "
-#~ "%(standard)s.\n"
 
 #~ msgid "Usage: %prog [options] [ISO codes]"
 #~ msgstr "Sử dụng: %prog [tùy_chọn] [mã_ISO]"

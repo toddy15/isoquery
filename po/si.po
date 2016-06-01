@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 10:50+0200\n"
+"POT-Creation-Date: 2016-06-01 21:22+0200\n"
 "PO-Revision-Date: 2011-12-28 06:29+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: src/isocodes.c:66
+#: src/isocodes.c:67
 #, fuzzy, c-format
 #| msgid "The file \"%s\" does not contain valid ISO %s data."
 msgid "The file \"%s\" does not contain valid ISO %s data."
 msgstr "'%(filename)s' ගොනුව සතුව වලංගු ISO %s දත්ත නොපවතී."
 
 #. TRANSLATORS: This is an error message.
-#: src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#: src/isocodes.c:92 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
 #, c-format
 msgid "isoquery: %s\n"
 msgstr "isoquery: %s\n"
@@ -100,6 +100,12 @@ msgstr "වැඩසටහන් වෙළුම හා හිමිකම් �
 msgid "[ISO codes]"
 msgstr ""
 
+#: src/options.c:139
+#, fuzzy, c-format
+#| msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+msgid "ISO standard \"%s\" is not supported."
+msgstr "isoquery: '%(standard)s' ISO සම්මතය සහාය නොදක්වයි.\n"
+
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
 #, c-format
@@ -116,10 +122,11 @@ msgstr "හිමිකම © 2007-2016 Dr. Tobias Quathamer\n"
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "සිංහල වෙත පරිවර්තනය හිමිකම © 2010-2011 ඩනිෂ්ක නවීන්\n"
 
-#, fuzzy
-#~| msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
-#~ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-#~ msgstr "isoquery: '%(standard)s' ISO සම්මතය සහාය නොදක්වයි.\n"
+#: src/search.c:50
+#, fuzzy, c-format
+#| msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+msgid "The code \"%s\" is not defined in ISO %s."
+msgstr "isoquery: ISO %(standard)s හි  '%(code)s' කේතය යොදා නොමැත.\n"
 
 #, fuzzy
 #~| msgid "isoquery %(version)s"
@@ -135,12 +142,6 @@ msgstr "සිංහල වෙත පරිවර්තනය හිමිකම
 #~| msgid "isoquery: The file '%(filename)s' could not be parsed correctly.\n"
 #~ msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 #~ msgstr "isoquery: '%(filename)s' ගොනුව නිවැරදිව විග්‍රහ කල නොහැක.\n"
-
-#, fuzzy
-#~| msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
-#~ msgid ""
-#~ "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
-#~ msgstr "isoquery: ISO %(standard)s හි  '%(code)s' කේතය යොදා නොමැත.\n"
 
 #~ msgid "Usage: %prog [options] [ISO codes]"
 #~ msgstr "භාතය: %prog [options] [ISO codes]"
