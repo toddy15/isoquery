@@ -42,6 +42,7 @@ void test_integration_all(gconstpointer data)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr(NULL);
     g_free(filename);
 }
 
@@ -66,6 +67,7 @@ void test_integration_all_localized(gconstpointer data)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr(NULL);
     g_free(filename);
 }
 
@@ -90,6 +92,7 @@ void test_integration_all_null_terminated(gconstpointer data)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr(NULL);
     g_free(filename);
 }
 
@@ -111,6 +114,7 @@ void test_integration_simple_call(void)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr(NULL);
 }
 
 /**
