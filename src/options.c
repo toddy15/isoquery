@@ -136,6 +136,7 @@ gboolean options_validate(GError ** error)
         i++;
     }
     if (!supported) {
+        // TRANSLATORS: The placeholder is a string like "1234-5".
         g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, _("ISO standard \"%s\" is not supported."),
                     option_standard);
         return FALSE;
@@ -169,7 +170,7 @@ gchar *options_get_filename(void)
  */
 void options_show_version(void)
 {
-    // TRANSLATORS: The string is the version identifier.
+    // TRANSLATORS: The placeholder is the version identifier.
     g_printf(_("isoquery %s\n"), VERSION);
     g_printf(_("Copyright © 2007-2016 Dr. Tobias Quathamer\n"));
     // TRANSLATORS: Please change the uppercase words as

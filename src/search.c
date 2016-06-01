@@ -47,6 +47,9 @@ gboolean search_entry(gchar * code, GList * entries_list, GError ** error)
     }
     g_strfreev(normalized_code_and_field);
     if (!entry_found) {
+        // TRANSLATORS: The first placeholder is a code like "urgl" or
+        // "does-not-exist", the second placeholder is the current
+        // ISO standard like "3166-1" or "15924".
         g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, _("The code \"%s\" is not defined in ISO %s."),
                     code, option_standard);
     }

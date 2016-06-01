@@ -60,10 +60,10 @@ gboolean isocodes_validate(JsonParser * parser, GError ** error)
  */
 void isocodes_set_validation_error(GError ** error)
 {
-    // TRANSLATORS:
-    // The first placeholder is a filename, including the directory path.
-    // The second placeholder is an ISO standard, e.g. 3166-1 or 639-3.
     g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0,
+                // TRANSLATORS:
+                // The first placeholder is a filename, including the directory path.
+                // The second placeholder is an ISO standard, e.g. 3166-1 or 639-3.
                 _("The file \"%s\" does not contain valid ISO %s data."), options_get_filename(), option_standard);
 }
 
