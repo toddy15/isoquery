@@ -98,10 +98,9 @@ msgid "[ISO codes]"
 msgstr ""
 
 #: src/options.c:139
-#, fuzzy, c-format
-#| msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+#, c-format
 msgid "ISO standard \"%s\" is not supported."
-msgstr "isoquery: ISO standard '%(standard)s' není podporován.\n"
+msgstr "ISO standard '%s' není podporován."
 
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
@@ -120,10 +119,9 @@ msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "Translation to Czech Copyright © 2010-2011 Michal Šimůnek\n"
 
 #: src/search.c:50
-#, fuzzy, c-format
-#| msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+#, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr "isoquery: Kód '%(code)s' není v ISO %(standard)s definován.\n"
+msgstr "Kód '%s' není v ISO %s definován."
 
 #, fuzzy
 #~| msgid "isoquery %(version)s"

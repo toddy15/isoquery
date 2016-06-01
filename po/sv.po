@@ -105,10 +105,9 @@ msgid "[ISO codes]"
 msgstr "[ISO-koder]"
 
 #: src/options.c:139
-#, fuzzy, c-format
-#| msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+#, c-format
 msgid "ISO standard \"%s\" is not supported."
-msgstr "isoquery: ISO-standard \"%(standard)s\" stöds inte.\n"
+msgstr "ISO-standard \"%s\" stöds inte."
 
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173

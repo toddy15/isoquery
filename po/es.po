@@ -130,10 +130,9 @@ msgid "[ISO codes]"
 msgstr ""
 
 #: src/options.c:139
-#, fuzzy, c-format
-#| msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+#, c-format
 msgid "ISO standard \"%s\" is not supported."
-msgstr "isoquery: No se acepta el estándar ISO «%(standard)s».\n"
+msgstr "No se acepta el estándar ISO «%s»."
 
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
@@ -152,12 +151,9 @@ msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "Traducción al español. Derechos de autor © 2010 Omar Campagne\n"
 
 #: src/search.c:50
-#, fuzzy, c-format
-#| msgid ""
-#| "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
+#, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr ""
-"isoquery: El código «%(code)s» no está definido en la ISO %(standard)s.\n"
+msgstr "El código «%s» no está definido en la ISO %s."
 
 #~ msgid "FILE"
 #~ msgstr "FICHERO"

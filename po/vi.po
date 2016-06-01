@@ -105,10 +105,9 @@ msgid "[ISO codes]"
 msgstr ""
 
 #: src/options.c:139
-#, fuzzy, c-format
-#| msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+#, c-format
 msgid "ISO standard \"%s\" is not supported."
-msgstr "isoquery: Tiêu chuẩn ISO « %(standard)s » không phải được hỗ trợ.\n"
+msgstr "Tiêu chuẩn ISO « %s » không phải được hỗ trợ."
 
 # Variable: don't translate; Biến: đừng dịch
 #. TRANSLATORS: The string is the version identifier.
@@ -130,12 +129,9 @@ msgstr ""
 "mềm Tự do)\n"
 
 #: src/search.c:50
-#, fuzzy, c-format
-#| msgid ""
-#| "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
+#, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr ""
-"isoquery: Mã « %(code)s » không phải được xác định trong ISO %(standard)s.\n"
+msgstr "Mã « %s » không phải được xác định trong ISO %s."
 
 #~ msgid "FILE"
 #~ msgstr "TỆP"

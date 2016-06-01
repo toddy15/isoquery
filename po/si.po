@@ -22,7 +22,7 @@ msgstr ""
 #, fuzzy, c-format
 #| msgid "The file \"%s\" does not contain valid ISO %s data."
 msgid "The file \"%s\" does not contain valid ISO %s data."
-msgstr "'%(filename)s' ගොනුව සතුව වලංගු ISO %s දත්ත නොපවතී."
+msgstr "'%s' ගොනුව සතුව වලංගු ISO %s දත්ත නොපවතී."
 
 #. TRANSLATORS: This is an error message.
 #: src/isocodes.c:92 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
@@ -101,10 +101,9 @@ msgid "[ISO codes]"
 msgstr ""
 
 #: src/options.c:139
-#, fuzzy, c-format
-#| msgid "isoquery: ISO standard '%(standard)s' is not supported.\n"
+#, c-format
 msgid "ISO standard \"%s\" is not supported."
-msgstr "isoquery: '%(standard)s' ISO සම්මතය සහාය නොදක්වයි.\n"
+msgstr "'%s' ISO සම්මතය සහාය නොදක්වයි."
 
 #. TRANSLATORS: The string is the version identifier.
 #: src/options.c:173
@@ -123,10 +122,9 @@ msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "සිංහල වෙත පරිවර්තනය හිමිකම © 2010-2011 ඩනිෂ්ක නවීන්\n"
 
 #: src/search.c:50
-#, fuzzy, c-format
-#| msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"
+#, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr "isoquery: ISO %(standard)s හි  '%(code)s' කේතය යොදා නොමැත.\n"
+msgstr "ISO %s හි  '%s' කේතය යොදා නොමැත."
 
 #, fuzzy
 #~| msgid "isoquery %(version)s"
