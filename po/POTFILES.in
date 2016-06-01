@@ -1,5 +1,5 @@
 src/isocodes.c
 src/isoquery.c
 src/options.c
-tests/getnumber.c
+tests/integration.c
 tests/options.c
