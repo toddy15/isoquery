@@ -15,6 +15,13 @@ po/stamp-po
 po/POTFILES
 po/remove-potcdate.sed
 po/*\.gmo
+po/*\.insert-header
+
+# manpages
+isoquery.1
+man_de
+man_fr
+man_pt
 
 # test output
 tests/options
