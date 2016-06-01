@@ -1,0 +1,4 @@
+TV	TUV	798	Tuvalu
+DE	DEU	276	Germany
+RU	RUS	643	Russian Federation
+FR	FRA	250	France
