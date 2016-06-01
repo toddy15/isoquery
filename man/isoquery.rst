@@ -38,10 +38,10 @@ starting with two dashes ('**-**'). **isoquery** supports the following options:
                              639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924
                              (default: 3166-1)
 
--p PATHNAME, --pathname=PATHNAME  Use *pathname* as prefix for the data files
+-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data files
                                   (default: /usr/share/iso-codes/json)
 
--l LOCALE, --locale=LOCALE   Use this *locale* for output
+-l LOCALE, --locale=LOCALE   Use this *LOCALE* for output
 
 -n, --name                   Name for the supplied codes (default)
 
@@ -85,9 +85,9 @@ the first three columns to cut down the output.
   MX      MEX     484     Mexico
 
 Should you need the translations of the countries' names, just specify
-in which *locale* you'd like to see the output.
+in which *LOCALE* you'd like to see the output.
 Please note that the original English name will be shown if there is no
-translation available for the specified *locale*.
+translation available for the specified *LOCALE*.
 
 ::
 
