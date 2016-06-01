@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2016-06-01 12:17+0200\n"
-"PO-Revision-Date: 2016-06-01 12:39+0100\n"
+"POT-Creation-Date: 2016-06-01 12:45+0200\n"
+"PO-Revision-Date: 2016-06-01 12:47+0100\n"
 "Last-Translator: Dr. Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -102,7 +102,7 @@ msgstr "-i STANDARD, --iso=STANDARD     Der gewünschte ISO-Standard. Mögliche 
 #| "-x file, --xmlfile=file      Use another XML *file* with ISO data\n"
 #| "                             (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
 msgid ""
-"-p PATHNAME, --pathname=PATHNAME  Use *pathname* as prefix for the data files\n"
+"-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data files\n"
 "                                  (default: /usr/share/iso-codes/json)\n"
 msgstr ""
 "-p PATHNAME, --pathname=PATHNAME  Use *pathname* as prefix for the data files\n"
@@ -110,7 +110,7 @@ msgstr ""
 
 #. type: Plain text
 #, no-wrap
-msgid "-l LOCALE, --locale=LOCALE   Use this *locale* for output\n"
+msgid "-l LOCALE, --locale=LOCALE   Use this *LOCALE* for output\n"
 msgstr "-l LOCALE, --locale=LOCALE  Diese *LOCALE* für die Ausgabe verwenden\n"
 
 #. type: Plain text
@@ -209,14 +209,14 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "Should you need the translations of the countries' names, just specify in "
-"which *locale* you'd like to see the output.  Please note that the original "
+"which *LOCALE* you'd like to see the output.  Please note that the original "
 "English name will be shown if there is no translation available for the "
-"specified *locale*."
+"specified *LOCALE*."
 msgstr ""
 "Wenn Sie die Übersetzung der Ländernamen brauchen, geben Sie einfach die "
-"*Locale* an, in der Sie die Ausgabe benötigen. Bitte beachten Sie, dass der "
+"*LOCALE* an, in der Sie die Ausgabe benötigen. Bitte beachten Sie, dass der "
 "ursprüngliche englische Name angezeigt wird, wenn es für die angegebene "
-"*Locale* keine Übersetzung gibt."
+"*LOCALE* keine Übersetzung gibt."
 
 #. type: Plain text
 #, no-wrap

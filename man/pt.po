@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2016-06-01 12:17+0200\n"
-"PO-Revision-Date: 2016-06-01 12:28+0100\n"
+"POT-Creation-Date: 2016-06-01 12:45+0200\n"
+"PO-Revision-Date: 2016-06-01 12:48+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -33,18 +33,14 @@ msgid "Search and display various ISO codes (country, language, ...)\n"
 msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| ":Date:            2014-05-30\n"
-#| ":Version:         2.0\n"
-#| ":Manual section:  1\n"
+#, no-wrap
 msgid ""
 ":Date:            2016-06-01\n"
 ":Version:         2.1.0\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            2014-05-30\n"
-":Version:         2.0\n"
+":Date:            2016-06-01\n"
+":Version:         2.1.0\n"
 ":Manual section:  1\n"
 
 #. type: Title =
@@ -112,17 +108,16 @@ msgstr ""
 #| "-x file, --xmlfile=file      Use another XML *file* with ISO data\n"
 #| "                             (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
 msgid ""
-"-p PATHNAME, --pathname=PATHNAME  Use *pathname* as prefix for the data files\n"
+"-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data files\n"
 "                                  (default: /usr/share/iso-codes/json)\n"
 msgstr ""
 "-x ficheiro, --xmlfile=ficheiro     Usa outro *ficheiro* XML com dados ISO\n"
 "                            (predefinição: /usr/share/xml/iso-codes/iso_3166.xml).\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid "-l locale, --locale=locale   Use this *locale* for output.\n"
-msgid "-l LOCALE, --locale=LOCALE   Use this *locale* for output\n"
-msgstr "-l locale, --locale=locale  Use este *locale* para os resultados.\n"
+#, no-wrap
+msgid "-l LOCALE, --locale=LOCALE   Use this *LOCALE* for output\n"
+msgstr "-l LOCALE, --locale=LOCALE  Use este *LOCALE* para os resultados\n"
 
 #. type: Plain text
 #, no-wrap
@@ -224,13 +219,13 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "Should you need the translations of the countries' names, just specify in "
-"which *locale* you'd like to see the output.  Please note that the original "
+"which *LOCALE* you'd like to see the output.  Please note that the original "
 "English name will be shown if there is no translation available for the "
-"specified *locale*."
+"specified *LOCALE*."
 msgstr ""
-"Se precisar das traduções dos nomes dos países, especifique em que *locale* "
+"Se precisar das traduções dos nomes dos países, especifique em que *LOCALE* "
 "deseja ver os resultados. Por favor note que será mostrado o nome original "
-"em Inglês se não existir uma tradução disponível para o *locale* "
+"em Inglês se não existir uma tradução disponível para o *LOCALE* "
 "especificado."
 
 #. type: Plain text

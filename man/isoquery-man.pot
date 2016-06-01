@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-06-01 12:17+0200\n"
+"POT-Creation-Date: 2016-06-01 12:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,14 +88,14 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid ""
-"-p PATHNAME, --pathname=PATHNAME  Use *pathname* as prefix for the data "
+"-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data "
 "files\n"
 "                                  (default: /usr/share/iso-codes/json)\n"
 msgstr ""
 
 #. type: Plain text
 #, no-wrap
-msgid "-l LOCALE, --locale=LOCALE   Use this *locale* for output\n"
+msgid "-l LOCALE, --locale=LOCALE   Use this *LOCALE* for output\n"
 msgstr ""
 
 #. type: Plain text
@@ -183,9 +183,9 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "Should you need the translations of the countries' names, just specify in "
-"which *locale* you'd like to see the output.  Please note that the original "
+"which *LOCALE* you'd like to see the output.  Please note that the original "
 "English name will be shown if there is no translation available for the "
-"specified *locale*."
+"specified *LOCALE*."
 msgstr ""
 
 #. type: Plain text
