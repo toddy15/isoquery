@@ -1,0 +1,3 @@
+isoquery: The code "invalid" is not defined in ISO 3166-1.
+isoquery: The code "öllö" is not defined in ISO 3166-1.
+isoquery: The code "1234" is not defined in ISO 3166-1.

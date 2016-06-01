@@ -42,7 +42,7 @@ void test_integration_all(gconstpointer data)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(NULL);
+    g_test_trap_assert_stderr("");
     g_free(filename);
 }
 
@@ -67,7 +67,7 @@ void test_integration_all_localized(gconstpointer data)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(NULL);
+    g_test_trap_assert_stderr("");
     g_free(filename);
 }
 
@@ -92,7 +92,7 @@ void test_integration_all_null_terminated(gconstpointer data)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(NULL);
+    g_test_trap_assert_stderr("");
     g_free(filename);
 }
 
@@ -114,7 +114,7 @@ void test_integration_simple_call(void)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(NULL);
+    g_test_trap_assert_stderr("");
 }
 
 /**
@@ -135,7 +135,7 @@ void test_integration_single_code(void)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(NULL);
+    g_test_trap_assert_stderr("");
 }
 
 /**
@@ -156,7 +156,32 @@ void test_integration_multiple_codes(void)
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
     g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(NULL);
+    g_test_trap_assert_stderr("");
+}
+
+/**
+ * Test multiple invalid codes on command line
+ */
+void test_integration_invalid_codes(void)
+{
+    gchar *expected_output = NULL;
+    gchar *expected_errors = NULL;
+    GError *error = NULL;
+    g_file_get_contents("expected/iso_3166-1_multiple_codes.txt", &expected_output, NULL, &error);
+    g_assert_null(error);
+    g_assert_nonnull(expected_output);
+    g_file_get_contents("expected/iso_3166-1_multiple_codes_errors.txt", &expected_errors, NULL, &error);
+    g_assert_null(error);
+    g_assert_nonnull(expected_errors);
+
+    if (g_test_subprocess()) {
+        execl(ISOQUERY_CALL, "TV", "invalid", "öllö", "Deu", "643", "1234", "fra", NULL);
+        return;
+    }
+    g_test_trap_subprocess(NULL, 0, 0);
+    g_test_trap_assert_passed();
+    g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr(expected_errors);
 }
 
 /**
@@ -191,6 +216,7 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/integration/simple_call", test_integration_simple_call);
     g_test_add_func("/integration/3166-1/single_code", test_integration_single_code);
     g_test_add_func("/integration/3166-1/multiple_codes", test_integration_multiple_codes);
+    g_test_add_func("/integration/3166-1/invalid_codes", test_integration_invalid_codes);
 
     return g_test_run();
 }
