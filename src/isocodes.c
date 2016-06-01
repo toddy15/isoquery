@@ -84,8 +84,14 @@ void isocodes_show_codes(JsonParser * parser, gchar * filename, gchar ** codes)
     // only display entries matching those.
     if (codes[0]) {
         int i = 0;
+        GError *error;
         while (codes[i]) {
-            search_entry(codes[i], entries_list);
+            error = NULL;
+            if (!search_entry(codes[i], entries_list, &error)) {
+                // TRANSLATORS: This is an error message.
+                g_printerr(_("isoquery: %s\n"), error->message);
+                g_error_free(error);
+            }
             i++;
         }
     } else {

@@ -136,7 +136,7 @@ gboolean options_validate(GError ** error)
         i++;
     }
     if (!supported) {
-        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, "ISO standard \"%s\" is not supported.",
+        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, _("ISO standard \"%s\" is not supported."),
                     option_standard);
         return FALSE;
     }

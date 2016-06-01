@@ -16,6 +16,7 @@
  */
 
 #include <glib.h>
+#include <glib/gi18n.h>
 #include "isocodes.h"
 #include "search.h"
 #include "options.h"
@@ -23,7 +24,7 @@
 /**
  * Search for a given code
  */
-void search_entry(gchar * code, GList * entries_list)
+gboolean search_entry(gchar * code, GList * entries_list, GError ** error)
 {
     // Set up a JSON object for an entry
     JsonObject *entry;
@@ -31,17 +32,25 @@ void search_entry(gchar * code, GList * entries_list)
     gchar *normalized_code = normalized_code_and_field[0];
     gchar *field = normalized_code_and_field[1];
     GList *list_entry = g_list_first(entries_list);
+    gboolean entry_found = FALSE;
     // Cycle through all entries
     while (list_entry) {
         entry = json_node_get_object(list_entry->data);
         if (json_object_has_member(entry, field)) {
             if (!g_strcmp0(normalized_code, json_object_get_string_member(entry, field))) {
                 isocodes_show_entry(entry);
+                entry_found = TRUE;
+                break;
             }
         }
         list_entry = g_list_next(list_entry);
     }
     g_strfreev(normalized_code_and_field);
+    if (!entry_found) {
+        g_set_error(error, g_quark_from_string(GETTEXT_PACKAGE), 0, _("The code \"%s\" is not defined in ISO %s."),
+                    code, option_standard);
+    }
+    return entry_found;
 }
 
 /**
@@ -53,6 +62,11 @@ gchar **search_get_normalized_code_and_field(gchar * code)
     gchar **res;
     gchar *normalized_code;
     gchar *field;
+    // Ensure that the code is valid UTF-8
+    if (g_utf8_validate(code, -1, NULL)) {
+        gchar *result[] = { code, "code-not-valid", NULL };
+        res = g_strdupv(result);
+    }
     if (!g_strcmp0("3166-1", option_standard)) {
         // Convert to upper case
         normalized_code = g_utf8_strup(code, -1);

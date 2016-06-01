@@ -15,6 +15,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-void search_entry(gchar * code, GList * entries_list);
+gboolean search_entry(gchar * code, GList * entries_list, GError ** error);
 gchar **search_get_normalized_code_and_field(gchar * code);
 gboolean search_is_number(gchar * code);
