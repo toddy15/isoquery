@@ -42,25 +42,25 @@ gboolean *option_commonname;
 static GOptionEntry entries[] = {
     {"iso", 'i', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, &option_standard,
      N_
-     ("The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (default: 3166-1)."),
+     ("The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (default: 3166-1)"),
      N_("STANDARD")},
     {"pathname", 'p', G_OPTION_FLAG_NONE, G_OPTION_ARG_FILENAME, &option_pathname,
-     N_("Use pathname as prefix for the data files (default: /usr/share/iso-codes/json)."),
+     N_("Use pathname as prefix for the data files (default: /usr/share/iso-codes/json)"),
      N_("PATHNAME")},
     {"locale", 'l', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, &option_locale,
-     N_("Use this locale for output."),
+     N_("Use this locale for output"),
      N_("LOCALE")},
     {"name", 'n', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_name,
-     N_("Name for the supplied codes (default)."), NULL},
+     N_("Name for the supplied codes (default)"), NULL},
     {"official_name", 'o', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_officialname,
-     N_("Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)."),
+     N_("Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)"),
      NULL},
     {"common_name", 'c', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_commonname,
-     N_("Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)."), NULL},
+     N_("Common name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)"), NULL},
     {"null", '0', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_null_separator,
-     N_("Separate entries with a NULL character instead of newline."), NULL},
+     N_("Separate entries with a NULL character instead of newline"), NULL},
     {"version", 'v', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_version,
-     N_("Show program version and copyright."), NULL},
+     N_("Show program version and copyright"), NULL},
     {NULL}
 };
 
