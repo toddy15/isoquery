@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery n/a\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-05-08 10:15+0200\n"
+"POT-Creation-Date: 2016-06-01 10:50+0200\n"
 "PO-Revision-Date: 2014-05-08 21:41+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -18,100 +18,18 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/isoquery.vala:56
-#, python-format
-msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-msgstr "isoquery: O ISO standard \"%(standard)s\" não é suportado.\n"
+#: src/isocodes.c:66
+#, c-format
+msgid "The file \"%s\" does not contain valid ISO %s data."
+msgstr "O ficheiro '%s' não contém dados de ISO %s válidos."
 
-#: src/isoquery.vala:64
-#, python-format
-msgid "isoquery %(version)s\n"
-msgstr "isoquery %(version)s\n"
+#. TRANSLATORS: This is an error message.
+#: src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#, c-format
+msgid "isoquery: %s\n"
+msgstr "isoquery: %s\n"
 
-#: src/isoquery.vala:66
-msgid "Copyright © 2007-2014 Tobias Quathamer\n"
-msgstr "Copyright © 2007-2014 Tobias Quathamer\n"
-
-#. TRANSLATORS: Please change the uppercase words as
-#. appropriate for your language.
-#: src/isoquery.vala:69
-msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
-msgstr "Tradução para Português Copyright © 2010-2014 Américo Monteiro\n"
-
-#: src/isoquery.vala:99
-msgid ""
-"The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, "
-"4217, 15924 (default: 3166)."
-msgstr ""
-"O standard ISO a usar: Valores possíveis: 639, 639-3, 639-5, 3166, 3166-2, "
-"4217, 15924. (Predefinição: 3166)."
-
-#: src/isoquery.vala:100
-msgid "STANDARD"
-msgstr "STANDARD"
-
-#: src/isoquery.vala:104
-msgid ""
-"Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
-"iso_3166.xml)"
-msgstr ""
-"Usa outro ficheiro XML com dados ISO. (Predefinição: /usr/share/xml/iso-"
-"codes/iso_3166.xml)"
-
-#: src/isoquery.vala:105
-msgid "FILE"
-msgstr "FICHEIRO"
-
-#: src/isoquery.vala:109
-msgid "Use this locale for output."
-msgstr "Usa este locale para os resultados."
-
-#: src/isoquery.vala:110
-msgid "LOCALE"
-msgstr "LOCALE"
-
-#: src/isoquery.vala:114
-msgid "Name for the supplied codes (default)."
-msgstr "Nome para os códigos fornecidos (predefinição)."
-
-#: src/isoquery.vala:118
-msgid ""
-"Official name for the supplied codes. This may be the same as --name (only "
-"applies to ISO 3166)."
-msgstr ""
-"Nome oficial para os códigos fornecidos. Isto pode ser o mesmo que --name "
-"(apenas se aplica ao ISO 3166)."
-
-#: src/isoquery.vala:122
-msgid ""
-"Common name for the supplied codes. This may be the same as --name (only "
-"applies to ISO 3166)."
-msgstr ""
-"Nome comum para os códigos fornecidos. Isto pode ser o mesmo que --name "
-"(apenas se aplica ao ISO 3166)."
-
-#: src/isoquery.vala:126
-msgid "Separate entries with a NULL character instead of newline."
-msgstr "Separa as entradas com o caractere NULO em vez de nova linha."
-
-#: src/isoquery.vala:130
-msgid "Show program version and copyright."
-msgstr "Mostra a versão do programa e o copyright."
-
-#: src/isoquery.vala:136
-msgid "[ISO codes]"
-msgstr "[códigos ISO]"
-
-#: src/isoquery.vala:141 src/handle_639.vala:57 src/handle_639.vala:70
-#: src/handle_639_3.vala:64 src/handle_639_3.vala:77 src/handle_639_5.vala:56
-#: src/handle_639_5.vala:69 src/handle_3166.vala:65 src/handle_3166.vala:78
-#: src/handle_3166_2.vala:58 src/handle_3166_2.vala:71 src/handle_4217.vala:56
-#: src/handle_4217.vala:69 src/handle_15924.vala:56 src/handle_15924.vala:69
-#, python-format
-msgid "isoquery: %(error_message)s\n"
-msgstr "isoquery: %(error_message)s\n"
-
-#: src/isoquery.vala:143
+#: src/isoquery.c:45
 msgid ""
 "Run \"isoquery --help\" to see a full list of available command line "
 "options.\n"
@@ -119,9 +37,101 @@ msgstr ""
 "Execute \"isoquery --help\" para ver uma lista completa de opções "
 "disponíveis de linha de comandos.\n"
 
-#: src/isoquery.vala:176
-msgid "isoquery: Internal error. Please report this bug.\n"
-msgstr "isoquery: erro interno. Por favor reporte este bug.\n"
+#: src/options.c:45
+msgid ""
+"The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
+msgstr ""
+"O standard ISO a usar: Valores possíveis: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924. (Predefinição: 3166-1)"
+
+#: src/options.c:46
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#: src/options.c:48
+#, fuzzy
+#| msgid ""
+#| "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
+#| "iso_3166.xml)"
+msgid ""
+"Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
+"json)"
+msgstr ""
+"Usa outro ficheiro XML com dados ISO. (Predefinição: /usr/share/xml/iso-"
+"codes/iso_3166.xml)"
+
+#: src/options.c:49
+msgid "PATHNAME"
+msgstr ""
+
+#: src/options.c:51
+msgid "Use this locale for output"
+msgstr "Usa este locale para os resultados"
+
+#: src/options.c:52
+msgid "LOCALE"
+msgstr "LOCALE"
+
+#: src/options.c:54
+msgid "Name for the supplied codes (default)"
+msgstr "Nome para os códigos fornecidos (predefinição)"
+
+#: src/options.c:56
+msgid ""
+"Official name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166-1)"
+msgstr ""
+"Nome oficial para os códigos fornecidos. Isto pode ser o mesmo que --name "
+"(apenas se aplica ao ISO 3166-1)"
+
+#: src/options.c:59
+msgid ""
+"Common name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166-1)"
+msgstr ""
+"Nome comum para os códigos fornecidos. Isto pode ser o mesmo que --name "
+"(apenas se aplica ao ISO 3166-1)"
+
+#: src/options.c:61
+msgid "Separate entries with a NULL character instead of newline"
+msgstr "Separa as entradas com o caractere NULO em vez de nova linha"
+
+#: src/options.c:63
+msgid "Show program version and copyright"
+msgstr "Mostra a versão do programa e o copyright"
+
+#: src/options.c:80
+msgid "[ISO codes]"
+msgstr "[códigos ISO]"
+
+#. TRANSLATORS: The string is the version identifier.
+#: src/options.c:173
+#, c-format
+msgid "isoquery %s\n"
+msgstr "isoquery %s\n"
+
+#: src/options.c:174
+msgid "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
+msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
+
+#. TRANSLATORS: Please change the uppercase words as
+#. appropriate for your language.
+#: src/options.c:177
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
+msgstr "Tradução para Português Copyright © 2010-2014 Américo Monteiro\n"
+
+#~ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+#~ msgstr "isoquery: O ISO standard \"%(standard)s\" não é suportado.\n"
+
+#~ msgid "FILE"
+#~ msgstr "FICHEIRO"
+
+#~ msgid "isoquery: %(error_message)s\n"
+#~ msgstr "isoquery: %(error_message)s\n"
+
+#~ msgid "isoquery: Internal error. Please report this bug.\n"
+#~ msgstr "isoquery: erro interno. Por favor reporte este bug.\n"
 
 #, fuzzy
 #~| msgid "isoquery: The file '%(filename)s' could not be opened.\n"
@@ -134,17 +144,6 @@ msgstr "isoquery: erro interno. Por favor reporte este bug.\n"
 #~ msgstr ""
 #~ "isoquery: O ficheiro '%(filename)s' não pôde ser analisado "
 #~ "correctamente.\n"
-
-#, fuzzy
-#~| msgid ""
-#~| "isoquery: The file '%(filename)s' does not contain valid ISO "
-#~| "%(standard)s data.\n"
-#~ msgid ""
-#~ "isoquery: The file \"%(filename)s\" does not contain valid ISO "
-#~ "%(standard)s data.\n"
-#~ msgstr ""
-#~ "isoquery: O ficheiro '%(filename)s' não contém dados de ISO %(standard)s "
-#~ "válidos.\n"
 
 #, fuzzy
 #~| msgid "isoquery: The code '%(code)s' is not defined in ISO %(standard)s.\n"

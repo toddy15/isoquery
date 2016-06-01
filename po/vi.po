@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2014-05-08 10:15+0200\n"
+"POT-Creation-Date: 2016-06-01 10:50+0200\n"
 "PO-Revision-Date: 2010-09-30 23:02+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -18,153 +18,128 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: LocFactoryEditor 1.8\n"
 
-#: src/isoquery.vala:56
-#, python-format
-msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
-msgstr "isoquery: Tiêu chuẩn ISO « %(standard)s » không phải được hỗ trợ.\n"
+#: src/isocodes.c:66
+#, c-format
+msgid "The file \"%s\" does not contain valid ISO %s data."
+msgstr "Tập tin « %s » không chứa dữ liệu ISO %s đúng."
 
 # Variable: don't translate; Biến: đừng dịch
-#: src/isoquery.vala:64
-#, fuzzy, python-format
-#| msgid "isoquery %(version)s"
-msgid "isoquery %(version)s\n"
-msgstr "isoquery %(version)s"
+#. TRANSLATORS: This is an error message.
+#: src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#, c-format
+msgid "isoquery: %s\n"
+msgstr "isoquery: %s\n"
 
-#: src/isoquery.vala:66
-#, fuzzy
-#| msgid "Copyright © 2007-2012 Tobias Quathamer"
-msgid "Copyright © 2007-2014 Tobias Quathamer\n"
-msgstr "Tác quyền © năm 2007-2012 của Tobias Quathamer"
-
-#. TRANSLATORS: Please change the uppercase words as
-#. appropriate for your language.
-#: src/isoquery.vala:69
-#, fuzzy
-#| msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME"
-msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
-msgstr ""
-"Bản dịch tiếng Việt của Clytie Siddall (tác quyền © 2010 của Tổ chức Phần "
-"mềm Tự do)"
-
-#: src/isoquery.vala:99
-#, fuzzy
-#| msgid ""
-#| "The ISO standard to use. Possible values: 639, 639-3, 3166, 3166-2, 4217, "
-#| "15924. Default value: %default"
-msgid ""
-"The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, 3166-2, "
-"4217, 15924 (default: 3166)."
-msgstr ""
-"Tiêu chuẩn ISO cần dùng. Giá trị có thể là: 639, 639-3, 3166, 3166-2, 4217, "
-"15924. Giá trị mặc định: %default"
-
-#: src/isoquery.vala:100
-msgid "STANDARD"
-msgstr "TIÊU CHUẨN"
-
-#: src/isoquery.vala:104
-#, fuzzy
-#| msgid "Use specified XML file with ISO data. Default value: %default"
-msgid ""
-"Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
-"iso_3166.xml)"
-msgstr "Dùng tập tin XML đưa ra với dữ liệu ISO. Giá trị mặc định: %default"
-
-#: src/isoquery.vala:105
-msgid "FILE"
-msgstr "TỆP"
-
-#: src/isoquery.vala:109
-#, fuzzy
-#| msgid "Use this locale for output"
-msgid "Use this locale for output."
-msgstr "Dùng miền địa phương này cho kết xuất"
-
-#: src/isoquery.vala:110
-msgid "LOCALE"
-msgstr "MIỀN ĐỊA PHƯƠNG"
-
-#: src/isoquery.vala:114
-#, fuzzy
-#| msgid "Display the name for the supplied codes (default)"
-msgid "Name for the supplied codes (default)."
-msgstr "Hiển thị tên cho mã được cung cấp (mặc định)"
-
-#: src/isoquery.vala:118
-#, fuzzy
-#| msgid ""
-#| "Display the official name for the supplied codes. This may be the same as "
-#| "--name. (Only applies to ISO 3166)"
-msgid ""
-"Official name for the supplied codes. This may be the same as --name (only "
-"applies to ISO 3166)."
-msgstr ""
-"Hiển thị tên chính thức cho mã được cung cấp. Giá trị này có thể trùng với « "
-"--name ». (Chỉ áp dụng cho ISO 3166.)"
-
-#: src/isoquery.vala:122
-#, fuzzy
-#| msgid ""
-#| "Display the common name for the supplied codes. This may be the same as --"
-#| "name. (Only applies to ISO 3166)"
-msgid ""
-"Common name for the supplied codes. This may be the same as --name (only "
-"applies to ISO 3166)."
-msgstr ""
-"Hiển thị tên chung cho mã được cung cấp. Giá trị này có thể trùng với « --"
-"name ». (Chỉ áp dụng cho ISO 3166.)"
-
-#: src/isoquery.vala:126
-#, fuzzy
-#| msgid "Separate entries with a NULL character instead of newline"
-msgid "Separate entries with a NULL character instead of newline."
-msgstr ""
-"Định giới các mục nhập bằng một ký tự vô giá trị (NULL) thay cho một ký tự "
-"dòng mới"
-
-#: src/isoquery.vala:130
-#, fuzzy
-#| msgid "Show program version and copyright"
-msgid "Show program version and copyright."
-msgstr "Hiển thị phiên bản chương trình và tác quyền"
-
-#: src/isoquery.vala:136
-msgid "[ISO codes]"
-msgstr ""
-
-# Variable: don't translate; Biến: đừng dịch
-#: src/isoquery.vala:141 src/handle_639.vala:57 src/handle_639.vala:70
-#: src/handle_639_3.vala:64 src/handle_639_3.vala:77 src/handle_639_5.vala:56
-#: src/handle_639_5.vala:69 src/handle_3166.vala:65 src/handle_3166.vala:78
-#: src/handle_3166_2.vala:58 src/handle_3166_2.vala:71 src/handle_4217.vala:56
-#: src/handle_4217.vala:69 src/handle_15924.vala:56 src/handle_15924.vala:69
-#, fuzzy, python-format
-#| msgid "isoquery %(version)s"
-msgid "isoquery: %(error_message)s\n"
-msgstr "isoquery %(version)s"
-
-#: src/isoquery.vala:143
+#: src/isoquery.c:45
 msgid ""
 "Run \"isoquery --help\" to see a full list of available command line "
 "options.\n"
 msgstr ""
 
-#: src/isoquery.vala:176
-msgid "isoquery: Internal error. Please report this bug.\n"
+#: src/options.c:45
+msgid ""
+"The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
 msgstr ""
+"Tiêu chuẩn ISO cần dùng. Giá trị có thể là: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924. Giá trị mặc định: 3166-1"
+
+#: src/options.c:46
+msgid "STANDARD"
+msgstr "TIÊU CHUẨN"
+
+#: src/options.c:48
+#, fuzzy
+#| msgid "Use specified XML file with ISO data. Default value: %default"
+msgid ""
+"Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
+"json)"
+msgstr "Dùng tập tin XML đưa ra với dữ liệu ISO. Giá trị mặc định: %default"
+
+#: src/options.c:49
+msgid "PATHNAME"
+msgstr ""
+
+#: src/options.c:51
+msgid "Use this locale for output"
+msgstr "Dùng miền địa phương này cho kết xuất"
+
+#: src/options.c:52
+msgid "LOCALE"
+msgstr "MIỀN ĐỊA PHƯƠNG"
+
+#: src/options.c:54
+#, fuzzy
+#| msgid "Display the name for the supplied codes (default)"
+msgid "Name for the supplied codes (default)"
+msgstr "Hiển thị tên cho mã được cung cấp (mặc định)"
+
+#: src/options.c:56
+msgid ""
+"Official name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166-1)"
+msgstr ""
+"Hiển thị tên chính thức cho mã được cung cấp. Giá trị này có thể trùng với « "
+"--name ». (Chỉ áp dụng cho ISO 3166-1)"
+
+#: src/options.c:59
+msgid ""
+"Common name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166-1)"
+msgstr ""
+"Hiển thị tên chung cho mã được cung cấp. Giá trị này có thể trùng với « --"
+"name ». (Chỉ áp dụng cho ISO 3166-1)"
+
+#: src/options.c:61
+msgid "Separate entries with a NULL character instead of newline"
+msgstr ""
+"Định giới các mục nhập bằng một ký tự vô giá trị (NULL) thay cho một ký tự "
+"dòng mới"
+
+#: src/options.c:63
+msgid "Show program version and copyright"
+msgstr "Hiển thị phiên bản chương trình và tác quyền"
+
+#: src/options.c:80
+msgid "[ISO codes]"
+msgstr ""
+
+# Variable: don't translate; Biến: đừng dịch
+#. TRANSLATORS: The string is the version identifier.
+#: src/options.c:173
+#, c-format
+msgid "isoquery %s\n"
+msgstr "isoquery %s\n"
+
+#: src/options.c:174
+msgid "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
+msgstr "Tác quyền © năm 2007-2016 của Dr. Tobias Quathamer\n"
+
+#. TRANSLATORS: Please change the uppercase words as
+#. appropriate for your language.
+#: src/options.c:177
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
+msgstr ""
+"Bản dịch tiếng Việt của Clytie Siddall (tác quyền © 2010 của Tổ chức Phần "
+"mềm Tự do)\n"
+
+#~ msgid "isoquery: ISO standard \"%(standard)s\" is not supported.\n"
+#~ msgstr "isoquery: Tiêu chuẩn ISO « %(standard)s » không phải được hỗ trợ.\n"
+
+#~ msgid "FILE"
+#~ msgstr "TỆP"
+
+# Variable: don't translate; Biến: đừng dịch
+#, fuzzy
+#~| msgid "isoquery %(version)s"
+#~ msgid "isoquery: %(error_message)s\n"
+#~ msgstr "isoquery %(version)s"
 
 #~ msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
 #~ msgstr "isoquery: Tập tin « %(filename)s » không mở được.\n"
 
 #~ msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
 #~ msgstr "isoquery: Tập tin « %(filename)s » không phân tích được.\n"
-
-#~ msgid ""
-#~ "isoquery: The file \"%(filename)s\" does not contain valid ISO "
-#~ "%(standard)s data.\n"
-#~ msgstr ""
-#~ "isoquery: Tập tin « %(filename)s » không chứa dữ liệu ISO %(standard)s "
-#~ "đúng.\n"
 
 #~ msgid ""
 #~ "isoquery: The code \"%(code)s\" is not defined in ISO %(standard)s.\n"
