@@ -16,4 +16,5 @@
  */
 
 void search_entry(gchar * code, GList * entries_list);
-gchar *search_get_normalized_code(gchar * code);
+gchar **search_get_normalized_code_and_field(gchar * code);
+gboolean search_is_number(gchar * code);

@@ -150,7 +150,7 @@ void test_integration_multiple_codes(void)
     g_assert_nonnull(expected_output);
 
     if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "TV", "DE", "RU", "FR", NULL);
+        execl(ISOQUERY_CALL, "TV", "Deu", "643", "fra", NULL);
         return;
     }
     g_test_trap_subprocess(NULL, 0, 0);
