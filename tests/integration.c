@@ -175,7 +175,7 @@ void test_integration_invalid_codes(void)
     g_assert_nonnull(expected_errors);
 
     if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "TV", "invalid", "öllö", "Deu", "643", "1234", "fra", NULL);
+        execl(ISOQUERY_CALL, "TV", "invalid", "öllö", "Deu", "643", "1234", "007", "URG", "fra", NULL);
         return;
     }
     g_test_trap_subprocess(NULL, 0, 0);
