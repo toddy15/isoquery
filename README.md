@@ -1,9 +1,11 @@
-Description
------------
+Isoquery
+========
+
+[![Build Status](https://travis-ci.org/toddy15/isoquery.svg?branch=master)](https://travis-ci.org/toddy15/isoquery)
 
 Search and display ISO codes for countries, languages, currencies, and scripts.
 
-isoquery can be used to generate a tabular output of the ISO standard
+Isoquery can be used to generate a tabular output of the ISO standard
 codes provided by the package iso-codes. It parses the JSON files and shows
 all included ISO codes or just matching entries, if specified on the command
 line. Moreover, it's possible to get all available translations for
