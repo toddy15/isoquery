@@ -1,0 +1,3 @@
+UA	UKR	804	Ukraine
+FR	FRA	250	Frankreich
+TW	TWN	158	Taiwan, Chinesische Provinz

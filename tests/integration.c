@@ -185,6 +185,27 @@ void test_integration_invalid_codes(void)
 }
 
 /**
+ * Test multiple codes localized on command line
+ */
+void test_integration_multiple_codes_localized(void)
+{
+    gchar *expected_output = NULL;
+    GError *error = NULL;
+    g_file_get_contents("expected/iso_3166-1_multiple_codes_localized.txt", &expected_output, NULL, &error);
+    g_assert_null(error);
+    g_assert_nonnull(expected_output);
+
+    if (g_test_subprocess()) {
+        execl(ISOQUERY_CALL, "--locale", "de", "ua", "frA", "158", NULL);
+        return;
+    }
+    g_test_trap_subprocess(NULL, 0, 0);
+    g_test_trap_assert_passed();
+    g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr("");
+}
+
+/**
  * Initializing all test functions
  */
 int main(int argc, gchar * argv[])
@@ -217,6 +238,7 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/integration/3166-1/single_code", test_integration_single_code);
     g_test_add_func("/integration/3166-1/multiple_codes", test_integration_multiple_codes);
     g_test_add_func("/integration/3166-1/invalid_codes", test_integration_invalid_codes);
+    g_test_add_func("/integration/3166-1/multiple_codes_localized", test_integration_multiple_codes_localized);
 
     return g_test_run();
 }
