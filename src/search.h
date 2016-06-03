@@ -15,11 +15,5 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-typedef struct code_and_field {
-    gchar *code;
-    gchar *field;
-} code_and_field;
-
 gboolean search_entry(gchar * code, GList * entries_list, GError ** error);
-code_and_field *search_get_normalized_code_and_field(gchar * code);
-gboolean search_is_number(gchar * code);
+gchar *search_get_normalized_code(gchar * code);

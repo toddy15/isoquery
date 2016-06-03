@@ -28,24 +28,31 @@ gboolean search_entry(gchar * code, GList * entries_list, GError ** error)
 {
     // Set up a JSON object for an entry
     JsonObject *entry;
-    code_and_field *search = search_get_normalized_code_and_field(code);
+    // Set up fields in which to search
+    gchar *fields[] = { "alpha_2", "alpha_3", "alpha_4", "numeric", "code", "bibliographic", NULL };
+    gchar *normalized_code = search_get_normalized_code(code);
     GList *list_entry = g_list_first(entries_list);
     gboolean entry_found = FALSE;
     // Cycle through all entries
     while (list_entry) {
         entry = json_node_get_object(list_entry->data);
-        if (json_object_has_member(entry, search->field)) {
-            if (!g_strcmp0(search->code, json_object_get_string_member(entry, search->field))) {
-                isocodes_show_entry(entry);
-                entry_found = TRUE;
-                break;
+        int i = 0;
+        while (fields[i]) {
+            if (json_object_has_member(entry, fields[i])) {
+                if (!g_strcmp0(normalized_code, json_object_get_string_member(entry, fields[i]))) {
+                    isocodes_show_entry(entry);
+                    entry_found = TRUE;
+                    break;
+                }
             }
+            i++;
+        }
+        if (entry_found) {
+            break;
         }
         list_entry = g_list_next(list_entry);
     }
-    g_free(search->code);
-    g_free(search->field);
-    g_free(search);
+    g_free(normalized_code);
     if (!entry_found) {
         // TRANSLATORS: The first placeholder is a code like "urgl" or
         // "does-not-exist", the second placeholder is the current
@@ -60,44 +67,15 @@ gboolean search_entry(gchar * code, GList * entries_list, GError ** error)
  * Return the normalized code and field to search in,
  * depending on ISO standard.
  */
-code_and_field *search_get_normalized_code_and_field(gchar * code)
+gchar *search_get_normalized_code(gchar * code)
 {
-    code_and_field *result = g_new(code_and_field, 1);
-    // Ensure that the code is valid UTF-8
-    if (g_utf8_validate(code, -1, NULL)) {
-        result->code = code;
-        result->field = g_strdup("code-not-valid");
-    }
-    if (!g_strcmp0("3166-1", option_standard)) {
+    gchar *normalized_code;
+    if (!g_strcmp0("639-2", option_standard)) {
+        // Convert to lower case
+        normalized_code = g_utf8_strdown(code, -1);
+    } else if (!g_strcmp0("3166-1", option_standard)) {
         // Convert to upper case
-        result->code = g_utf8_strup(code, -1);
-        // Determine which field to use for searching
-        if (search_is_number(code)) {
-            result->field = g_strdup("numeric");
-        } else if (g_utf8_strlen(result->code, -1) == 3) {
-            result->field = g_strdup("alpha_3");
-        } else {
-            // Default is alpha-2
-            result->field = g_strdup("alpha_2");
-        }
+        normalized_code = g_utf8_strup(code, -1);
     }
-    return result;
-}
-
-/**
- * Return true if the code is a number
- */
-gboolean search_is_number(gchar * code)
-{
-    gboolean only_digits = TRUE;
-    int i = 0;
-    gchar *position = code;
-    while (*position) {
-        if (!g_unichar_isdigit(g_utf8_get_char_validated(position, -1))) {
-            only_digits = FALSE;
-            break;
-        }
-        position = g_utf8_next_char(position);
-    }
-    return only_digits;
+    return normalized_code;
 }
