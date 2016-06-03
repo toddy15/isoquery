@@ -1,0 +1,8 @@
+sudo: required
+language: C
+services:
+  - docker
+before_install:
+  - docker build -t toddy15/isoquery .
+script:
+  - docker run -v $PWD:/isoquery -w /isoquery toddy15/isoquery /bin/sh -c "./configure && make && make check"
