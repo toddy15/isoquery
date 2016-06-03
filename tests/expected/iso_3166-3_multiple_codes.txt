@@ -1,0 +1,4 @@
+GEL	GEHH	296	now split into Kiribati and Tuvalu	1979	Gilbert and Ellice Islands
+SCG	CSXX	891		2006-06-05	Serbia and Montenegro
+ATB	BQAQ			1979	British Antarctic Territory
+SCG	CSXX	891		2006-06-05	Serbia and Montenegro

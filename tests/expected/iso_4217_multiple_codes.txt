@@ -1,0 +1,3 @@
+INR	356	Indian Rupee
+GBP	826	Pound Sterling
+EUR	978	Euro

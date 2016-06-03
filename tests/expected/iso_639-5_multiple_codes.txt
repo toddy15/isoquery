@@ -1,0 +1,3 @@
+tut	Altaic languages
+nai	North American Indian languages
+aus	Australian languages
