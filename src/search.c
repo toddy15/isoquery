@@ -95,6 +95,7 @@ gboolean search_is_number(gchar * code)
     while (*position) {
         if (!g_unichar_isdigit(g_utf8_get_char_validated(position, -1))) {
             only_digits = FALSE;
+            break;
         }
         position = g_utf8_next_char(position);
     }
