@@ -221,7 +221,7 @@ void test_integration_invalid_codes_localized(void)
     g_assert_nonnull(expected_errors);
 
     if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL,  "--locale", "de", "invalid", "öllö", "ua", "frA", "158", "1234", "007", "URG", NULL);
+        execl(ISOQUERY_CALL, "--locale", "de", "invalid", "öllö", "ua", "frA", "158", "1234", "007", "URG", NULL);
         return;
     }
     g_test_trap_subprocess(NULL, 0, 0);
@@ -229,6 +229,29 @@ void test_integration_invalid_codes_localized(void)
     g_test_trap_assert_stdout(expected_output);
     g_test_trap_assert_stderr(expected_errors);
 }
+
+/**
+ * Test multiple codes on command line
+ */
+void test_integration_639_2_multiple_codes(void)
+{
+    gchar *expected_output = NULL;
+    GError *error = NULL;
+    g_file_get_contents("expected/iso_639-2_multiple_codes.txt", &expected_output, NULL, &error);
+    g_assert_null(error);
+    g_assert_nonnull(expected_output);
+
+    if (g_test_subprocess()) {
+        execl(ISOQUERY_CALL, "-i", "639-2", "BOD", "he", "Alg", "TiB", "aa", NULL);
+        return;
+    }
+    g_test_trap_subprocess(NULL, 0, 0);
+    g_test_trap_assert_passed();
+    g_test_trap_assert_stdout(expected_output);
+    g_test_trap_assert_stderr("");
+}
+
+
 
 /**
  * Initializing all test functions
@@ -265,6 +288,7 @@ int main(int argc, gchar * argv[])
     g_test_add_func("/integration/3166-1/invalid_codes", test_integration_invalid_codes);
     g_test_add_func("/integration/3166-1/multiple_codes_localized", test_integration_multiple_codes_localized);
     g_test_add_func("/integration/3166-1/invalid_codes_localized", test_integration_invalid_codes_localized);
+    g_test_add_func("/integration/639-2/multiple_codes", test_integration_639_2_multiple_codes);
 
     return g_test_run();
 }
