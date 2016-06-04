@@ -69,13 +69,28 @@ gboolean search_entry(gchar * code, GList * entries_list, GError ** error)
  */
 gchar *search_get_normalized_code(gchar * code)
 {
-    gchar *normalized_code;
-    if (!g_strcmp0("639-2", option_standard)) {
-        // Convert to lower case
+    // Convert to upper case for ISO 3166 and 4217
+    gchar *normalized_code = g_utf8_strup(code, -1);
+    if (g_str_has_prefix(option_standard, "639")) {
+        // Convert to lower case for ISO 639 family
+        g_free(normalized_code);
         normalized_code = g_utf8_strdown(code, -1);
-    } else if (!g_strcmp0("3166-1", option_standard)) {
-        // Convert to upper case
-        normalized_code = g_utf8_strup(code, -1);
+    } else if (!g_strcmp0(option_standard, "15924")) {
+        // Convert to title case for ISO 15924
+        // The first character is already uppercase, see above.
+        // Start at the second character and convert all to lowercase.
+        if (g_utf8_strlen(normalized_code, -1) > 1) {
+            gchar *titlecase;
+            gchar *trail = g_utf8_offset_to_pointer(normalized_code, 1);
+            gchar *lowercase = g_utf8_strdown(trail, -1);
+            // Terminate the string after the first character
+            *trail = 0;
+            // Construct the resulting string
+            titlecase = g_strdup_printf("%s%s", normalized_code, lowercase);
+            g_free(lowercase);
+            g_free(normalized_code);
+            normalized_code = titlecase;
+        }
     }
     return normalized_code;
 }
