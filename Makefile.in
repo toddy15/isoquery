@@ -217,7 +217,7 @@ am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/build/compile \
 	$(top_srcdir)/build/config.rpath \
 	$(top_srcdir)/build/config.sub $(top_srcdir)/build/install-sh \
 	$(top_srcdir)/build/missing $(top_srcdir)/build/tap-driver.sh \
-	ABOUT-NLS AUTHORS COPYING ChangeLog README TODO build/compile \
+	ABOUT-NLS AUTHORS COPYING ChangeLog TODO build/compile \
 	build/config.guess build/config.rpath build/config.sub \
 	build/depcomp build/install-sh build/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -391,6 +391,8 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 SUBDIRS = po src tests
 
+# Add README.md
+
 # Create and install english manpage
 
 # Create and install german manpage
@@ -398,7 +400,7 @@ SUBDIRS = po src tests
 # Create and install french manpage
 
 # Create and install portuguese manpage
-EXTRA_DIST = man/isoquery.rst man/isoquery-man.pot man/de.po \
+EXTRA_DIST = README.md man/isoquery.rst man/isoquery-man.pot man/de.po \
 	man/de.add man/fr.po man/fr.add man/pt.po man/pt.add
 man1_MANS = isoquery.1
 CLEANFILES = isoquery.1
