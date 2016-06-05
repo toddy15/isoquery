@@ -1,0 +1,1 @@
+isoquery -p data -i 15924 cyrl Beng LATN grEK 220

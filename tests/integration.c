@@ -64,99 +64,6 @@ void test_integration_add_test_from_files(gconstpointer data)
 }
 
 /**
- * Test all localized codes for ISO standard.
- */
-void test_integration_all_localized(gconstpointer data)
-{
-    gchar *standard = (gchar *) data;
-    gchar *filename = g_strdup_printf("expected/iso_%s_all_localized.txt", standard);
-    gchar *expected_output = NULL;
-    GError *error = NULL;
-    g_file_get_contents(filename, &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
-
-    if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "-i", standard, "-l", "fr", NULL);
-        g_free(filename);
-        return;
-    }
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr("");
-    g_free(filename);
-}
-
-/**
- * Test all codes for ISO standard, separated by NULL bytes.
- */
-void test_integration_all_null_terminated(gconstpointer data)
-{
-    gchar *standard = (gchar *) data;
-    gchar *filename = g_strdup_printf("expected/iso_%s_all_null_separator.txt", standard);
-    gchar *expected_output = NULL;
-    GError *error = NULL;
-    g_file_get_contents(filename, &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
-
-    if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "-i", standard, "--null", NULL);
-        g_free(filename);
-        return;
-    }
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr("");
-    g_free(filename);
-}
-
-/**
- * Test multiple codes on command line
- */
-void test_integration_multiple_codes(gconstpointer data)
-{
-    gchar *standard = (gchar *) data;
-    gchar *filename = g_strdup_printf("expected/iso_%s_multiple_codes.txt", standard);
-    gchar *expected_output = NULL;
-    GError *error = NULL;
-    g_file_get_contents(filename, &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
-
-    if (g_test_subprocess()) {
-        // Use different arguments depending on standard
-        if (!g_strcmp0(standard, "639-2")) {
-            execl(ISOQUERY_CALL, "-i", standard, "BOD", "he", "Alg", "TiB", "aa", NULL);
-        } else if (!g_strcmp0(standard, "639-3")) {
-            execl(ISOQUERY_CALL, "-i", standard, "NBS", "De", "aae", NULL);
-        } else if (!g_strcmp0(standard, "639-5")) {
-            execl(ISOQUERY_CALL, "-i", standard, "TUT", "Nai", "aus", NULL);
-        } else if (!g_strcmp0(standard, "3166-1")) {
-            execl(ISOQUERY_CALL, "-i", standard, "TV", "Deu", "643", "fra", NULL);
-        } else if (!g_strcmp0(standard, "3166-2")) {
-            execl(ISOQUERY_CALL, "-i", standard, "fr-m", "FR-35", "Fr-u", "de-HH", "eS-BA", "es-b", "ES-BI", "no-22",
-                  "NO-16", NULL);
-        } else if (!g_strcmp0(standard, "3166-3")) {
-            execl(ISOQUERY_CALL, "-i", standard, "gel", "Csxx", "BQAQ", "891", NULL);
-        } else if (!g_strcmp0(standard, "4217")) {
-            execl(ISOQUERY_CALL, "-i", standard, "inr", "826", "EUR", NULL);
-        } else {
-            execl(ISOQUERY_CALL, "-i", standard, "cyrl", "Beng", "LATN", "grEK", "220", NULL);
-        }
-        g_free(filename);
-        return;
-    }
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr("");
-    g_free(filename);
-}
-
-/**
  * Test invocation without arguments, should be the same as ISO 3166-1.
  */
 void test_integration_simple_call(void)
@@ -274,7 +181,10 @@ void test_integration_invalid_codes_localized(void)
  */
 int main(int argc, gchar * argv[])
 {
-    gchar *test_directories[] = { "iso_3166-2", NULL };
+    gchar *test_directories[] =
+        { "iso_639-2", "iso_639-3", "iso_639-5", "iso_3166-1", "iso_3166-2", "iso_3166-3", "iso_4217", "iso_15924",
+        NULL
+    };
     gchar *pathname, *testpath, *testname;
     const gchar *filename;
     GDir *testdir;
@@ -315,15 +225,9 @@ int main(int argc, gchar * argv[])
             g_free(testpath);
         }
         g_list_free_full(testfiles, *g_free);
+        testfiles = NULL;
         i++;
     }
-
-    // Add single tests
-    // g_test_add_func("/integration/simple_call", test_integration_simple_call);
-    // g_test_add_func("/integration/3166-1/single_code", test_integration_single_code);
-    // g_test_add_func("/integration/3166-1/invalid_codes", test_integration_invalid_codes);
-    // g_test_add_func("/integration/3166-1/multiple_codes_localized", test_integration_multiple_codes_localized);
-    // g_test_add_func("/integration/3166-1/invalid_codes_localized", test_integration_invalid_codes_localized);
 
     return g_test_run();
 }
