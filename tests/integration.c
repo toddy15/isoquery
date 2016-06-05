@@ -85,6 +85,7 @@ int main(int argc, gchar * argv[])
         "iso_639-2", "iso_639-3", "iso_639-5",
         "iso_3166-1", "iso_3166-2", "iso_3166-3",
         "iso_4217", "iso_15924",
+        "common",
         NULL
     };
     gchar *pathname, *testpath, *testname;
