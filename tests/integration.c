@@ -16,6 +16,7 @@
  */
 
 #include <glib.h>
+#include <string.h>
 #include <unistd.h>
 
 // Define the path to the executable for integration testing.
@@ -29,17 +30,30 @@ void test_integration_add_test_from_files(gconstpointer data)
     gchar *path_prefix = (gchar *) data;
     gchar *filename;
     GError *error = NULL;
+    gchar *commandline = NULL;
     gchar *expected_stdout = NULL;
+    gchar **commandline_args = NULL;
 
     if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "-i", "3166-2", NULL);
+        // Get the commandline
+        filename = g_strdup_printf("%s_test_commandline.txt", path_prefix);
+        g_file_get_contents(filename, &commandline, NULL, &error);
+        g_assert_null(error);
+        g_assert_nonnull(commandline);
+        g_free(filename);
+
+        // Set up arguments and execute program
+        commandline_args = g_strsplit(g_strchomp(commandline), " ", -1);
+        execv("../src/isoquery", commandline_args);
+        g_strfreev(commandline_args);
+
         return;
     }
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
 
     // Get the expected output on stdout
-    filename = g_strdup_printf("%s.txt", path_prefix);
+    filename = g_strdup_printf("%s_test_stdout.txt", path_prefix);
     g_file_get_contents(filename, &expected_stdout, NULL, &error);
     g_assert_null(error);
     g_assert_nonnull(expected_stdout);
@@ -281,7 +295,7 @@ int main(int argc, gchar * argv[])
         while (filename = g_dir_read_name(testdir)) {
             // Only add files for command lines, the stdout files
             // will be read by the test; the stderr files are optional.
-            if (g_str_has_suffix(filename, ".txt")) {
+            if (g_str_has_suffix(filename, "_test_commandline.txt")) {
                 testfiles = g_list_prepend(testfiles, g_strdup(filename));
             }
         }
@@ -291,7 +305,7 @@ int main(int argc, gchar * argv[])
         // Add all test files to the queue
         for (GList * l = testfiles; l != NULL; l = l->next) {
             // Remove the file extension and test description to get a name
-            testname = g_strndup(l->data, strlen(l->data) - strlen(".txt"));
+            testname = g_strndup(l->data, strlen(l->data) - strlen("_test_commandline.txt"));
             testpath = g_strdup_printf("/integration/%s/%s", test_directories[i], testname);
 
             // Construct the pathname to the file
