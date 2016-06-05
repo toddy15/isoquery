@@ -1,0 +1,1 @@
+isoquery -p data -i 3166-2 fr-m FR-35 Fr-u de-HH eS-BA es-b ES-BI no-22 NO-16
