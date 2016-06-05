@@ -105,7 +105,7 @@ int main(int argc, gchar * argv[])
         g_assert_nonnull(testdir);
 
         // Read in all files
-        while (filename = g_dir_read_name(testdir)) {
+        while ((filename = g_dir_read_name(testdir))) {
             // Only add files for command lines, the stdout files
             // will be read by the test; the stderr files are optional.
             if (g_str_has_suffix(filename, "_test_commandline.txt")) {
