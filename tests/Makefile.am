@@ -16,8 +16,7 @@
 include $(top_srcdir)/build/glib-tap.mk
 
 AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(JSON_LIBS) \
-	$(top_srcdir)/src/options.o
+LDADD = $(GLIB_LIBS) $(JSON_LIBS)
 
 # test binaries
 test_programs = options integration

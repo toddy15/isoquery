@@ -197,13 +197,11 @@ integration_SOURCES = integration.c
 integration_OBJECTS = integration.$(OBJEXT)
 integration_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-integration_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_srcdir)/src/options.o
+integration_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 options_SOURCES = options.c
 options_OBJECTS = options.$(OBJEXT)
 options_LDADD = $(LDADD)
-options_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(top_srcdir)/src/options.o
+options_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 SCRIPTS = $(installed_test_SCRIPTS) $(noinst_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -620,9 +618,7 @@ all_test_ltlibs = $(test_ltlibraries) $(uninstalled_test_ltlibraries) $(installe
 
 @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
 AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(JSON_LIBS) \
-	$(top_srcdir)/src/options.o
-
+LDADD = $(GLIB_LIBS) $(JSON_LIBS)
 
 # test binaries
 test_programs = options integration
