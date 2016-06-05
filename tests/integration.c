@@ -64,27 +64,6 @@ void test_integration_add_test_from_files(gconstpointer data)
 }
 
 /**
- * Test invocation without arguments, should be the same as ISO 3166-1.
- */
-void test_integration_simple_call(void)
-{
-    gchar *expected_output = NULL;
-    GError *error = NULL;
-    g_file_get_contents("expected/iso_3166-1_all.txt", &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
-
-    if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, NULL);
-        return;
-    }
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr("");
-}
-
-/**
  * Test single code on command line
  */
 void test_integration_single_code(void)
