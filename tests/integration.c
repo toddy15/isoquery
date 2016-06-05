@@ -19,9 +19,6 @@
 #include <string.h>
 #include <unistd.h>
 
-// Define the path to the executable for integration testing.
-#define ISOQUERY_CALL "../src/isoquery", "../src/isoquery", "-p", "data"
-
 /**
  * Test all codes for ISO standard.
  */
@@ -32,6 +29,7 @@ void test_integration_add_test_from_files(gconstpointer data)
     GError *error = NULL;
     gchar *commandline = NULL;
     gchar *expected_stdout = NULL;
+    gchar *expected_stderr = NULL;
     gchar **commandline_args = NULL;
 
     if (g_test_subprocess()) {
@@ -59,58 +57,23 @@ void test_integration_add_test_from_files(gconstpointer data)
     g_assert_nonnull(expected_stdout);
     g_free(filename);
 
+    // Get the expected output on stderr, if available
+    filename = g_strdup_printf("%s_test_stderr.txt", path_prefix);
+    if (g_file_get_contents(filename, &expected_stderr, NULL, &error)) {
+        g_assert_null(error);
+        g_assert_nonnull(expected_stderr);
+    } else {
+        // Make sure that the only acceptable error is "file not found".
+        g_assert_cmpint(error->code, ==, G_FILE_ERROR_NOENT);
+        expected_stderr = g_strdup("");
+    }
+    g_free(filename);
+
     g_test_trap_assert_stdout(expected_stdout);
-    g_test_trap_assert_stderr("");
-}
+    g_test_trap_assert_stderr(expected_stderr);
 
-/**
- * Test multiple invalid codes on command line
- */
-void test_integration_invalid_codes(void)
-{
-    gchar *expected_output = NULL;
-    gchar *expected_errors = NULL;
-    GError *error = NULL;
-    g_file_get_contents("expected/iso_3166-1_multiple_codes.txt", &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
-    g_file_get_contents("expected/iso_3166-1_multiple_codes_errors.txt", &expected_errors, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_errors);
-
-    if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "TV", "invalid", "öllö", "Deu", "643", "1234", "007", "URG", "fra", NULL);
-        return;
-    }
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(expected_errors);
-}
-
-/**
- * Test multiple invalid codes localized on command line
- */
-void test_integration_invalid_codes_localized(void)
-{
-    gchar *expected_output = NULL;
-    gchar *expected_errors = NULL;
-    GError *error = NULL;
-    g_file_get_contents("expected/iso_3166-1_multiple_codes_localized.txt", &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
-    g_file_get_contents("expected/iso_3166-1_multiple_codes_errors.txt", &expected_errors, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_errors);
-
-    if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "--locale", "de", "invalid", "öllö", "ua", "frA", "158", "1234", "007", "URG", NULL);
-        return;
-    }
-    g_test_trap_subprocess(NULL, 0, 0);
-    g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr(expected_errors);
+    g_free(expected_stdout);
+    g_free(expected_stderr);
 }
 
 /**
@@ -118,8 +81,10 @@ void test_integration_invalid_codes_localized(void)
  */
 int main(int argc, gchar * argv[])
 {
-    gchar *test_directories[] =
-        { "iso_639-2", "iso_639-3", "iso_639-5", "iso_3166-1", "iso_3166-2", "iso_3166-3", "iso_4217", "iso_15924",
+    gchar *test_directories[] = {
+        "iso_639-2", "iso_639-3", "iso_639-5",
+        "iso_3166-1", "iso_3166-2", "iso_3166-3",
+        "iso_4217", "iso_15924",
         NULL
     };
     gchar *pathname, *testpath, *testname;
