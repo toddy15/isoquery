@@ -18,6 +18,7 @@ AC_INIT([isoquery],[2.1.0])
 AC_CONFIG_AUX_DIR([build])
 AC_CONFIG_MACRO_DIR([build/m4])
 AC_REQUIRE_AUX_FILE([tap-driver.sh])
+AC_REQUIRE_AUX_FILE([tap-test])
 
 AM_INIT_AUTOMAKE([dist-xz no-dist-gzip foreign subdir-objects])
 AM_MAINTAINER_MODE
