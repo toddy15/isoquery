@@ -19,7 +19,7 @@ include $(top_srcdir)/build/glib-tap.mk
 EXTRA_DIST += data expected
 
 AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(JSON_CFLAGS)
-LDADD = $(GLIB_LIBS) $(JSON_LIBS)
+LDADD = $(GLIB_LIBS) $(JSON_LIBS) $(top_builddir)/src/options.o
 
 # test binaries
 test_programs = options integration
