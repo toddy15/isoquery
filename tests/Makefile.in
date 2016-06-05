@@ -583,7 +583,10 @@ BUILT_EXTRA_DIST =
 CLEANFILES = *.log *.trs $(am__append_13)
 DISTCLEANFILES = 
 MAINTAINERCLEANFILES = 
-EXTRA_DIST = $(all_dist_test_scripts) $(all_dist_test_data)
+
+# Include data and test files directories
+EXTRA_DIST = $(all_dist_test_scripts) $(all_dist_test_data) data \
+	expected
 installed_test_LTLIBRARIES = $(am__append_12)
 installed_test_SCRIPTS = $(am__append_10)
 nobase_installed_test_DATA = $(am__append_11)

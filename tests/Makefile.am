@@ -15,6 +15,9 @@
 
 include $(top_srcdir)/build/glib-tap.mk
 
+# Include data and test files directories
+EXTRA_DIST += data expected
+
 AM_CPPFLAGS = -I$(top_srcdir)/src $(GLIB_CFLAGS) $(JSON_CFLAGS)
 LDADD = $(GLIB_LIBS) $(JSON_LIBS)
 
