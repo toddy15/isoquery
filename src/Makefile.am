@@ -26,4 +26,4 @@ isoquery_SOURCES = \
 	isocodes.h \
 	search.c \
 	search.h \
-	(NULL)
+	$(NULL)
