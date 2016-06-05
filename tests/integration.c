@@ -319,11 +319,11 @@ int main(int argc, gchar * argv[])
     }
 
     // Add single tests
-    g_test_add_func("/integration/simple_call", test_integration_simple_call);
-    g_test_add_func("/integration/3166-1/single_code", test_integration_single_code);
-    g_test_add_func("/integration/3166-1/invalid_codes", test_integration_invalid_codes);
-    g_test_add_func("/integration/3166-1/multiple_codes_localized", test_integration_multiple_codes_localized);
-    g_test_add_func("/integration/3166-1/invalid_codes_localized", test_integration_invalid_codes_localized);
+    // g_test_add_func("/integration/simple_call", test_integration_simple_call);
+    // g_test_add_func("/integration/3166-1/single_code", test_integration_single_code);
+    // g_test_add_func("/integration/3166-1/invalid_codes", test_integration_invalid_codes);
+    // g_test_add_func("/integration/3166-1/multiple_codes_localized", test_integration_multiple_codes_localized);
+    // g_test_add_func("/integration/3166-1/invalid_codes_localized", test_integration_invalid_codes_localized);
 
     return g_test_run();
 }
