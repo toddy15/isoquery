@@ -24,26 +24,29 @@
 /**
  * Test all codes for ISO standard.
  */
-void test_integration_all(gconstpointer data)
+void test_integration_add_test_from_files(gconstpointer data)
 {
-    gchar *standard = (gchar *) data;
-    gchar *filename = g_strdup_printf("expected/iso_%s_all.txt", standard);
-    gchar *expected_output = NULL;
+    gchar *path_prefix = (gchar *) data;
+    gchar *filename;
     GError *error = NULL;
-    g_file_get_contents(filename, &expected_output, NULL, &error);
-    g_assert_null(error);
-    g_assert_nonnull(expected_output);
+    gchar *expected_stdout = NULL;
 
     if (g_test_subprocess()) {
-        execl(ISOQUERY_CALL, "-i", standard, NULL);
-        g_free(filename);
+        execl(ISOQUERY_CALL, "-i", "3166-2", NULL);
         return;
     }
     g_test_trap_subprocess(NULL, 0, 0);
     g_test_trap_assert_passed();
-    g_test_trap_assert_stdout(expected_output);
-    g_test_trap_assert_stderr("");
+
+    // Get the expected output on stdout
+    filename = g_strdup_printf("%s.txt", path_prefix);
+    g_file_get_contents(filename, &expected_stdout, NULL, &error);
+    g_assert_null(error);
+    g_assert_nonnull(expected_stdout);
     g_free(filename);
+
+    g_test_trap_assert_stdout(expected_stdout);
+    g_test_trap_assert_stderr("");
 }
 
 /**
@@ -257,30 +260,47 @@ void test_integration_invalid_codes_localized(void)
  */
 int main(int argc, gchar * argv[])
 {
-    gchar *standards[] = { "639-2", "639-3", "639-5", "3166-1", "3166-2", "3166-3", "4217", "15924", NULL };
-    gchar *testpath;
+    gchar *test_directories[] = { "iso_3166-2", NULL };
+    gchar *pathname, *testpath, *testname;
+    const gchar *filename;
+    GDir *testdir;
+    GError *error = NULL;
+    GList *testfiles = NULL;
     int i = 0;
 
     g_test_init(&argc, &argv, NULL);
 
     // Add common tests for various standards
-    while (standards[i]) {
-        testpath = g_strdup_printf("/integration/%s/all", standards[i]);
-        g_test_add_data_func(testpath, standards[i], test_integration_all);
-        g_free(testpath);
+    while (test_directories[i]) {
+        // Open the directory for the current standard
+        testdir = g_dir_open(g_strdup_printf("expected/%s", test_directories[i]), 0, &error);
+        g_assert_null(error);
+        g_assert_nonnull(testdir);
 
-        testpath = g_strdup_printf("/integration/%s/all_localized", standards[i]);
-        g_test_add_data_func(testpath, standards[i], test_integration_all_localized);
-        g_free(testpath);
+        // Read in all files
+        while (filename = g_dir_read_name(testdir)) {
+            // Only add files for command lines, the stdout files
+            // will be read by the test; the stderr files are optional.
+            if (g_str_has_suffix(filename, ".txt")) {
+                testfiles = g_list_prepend(testfiles, g_strdup(filename));
+            }
+        }
+        testfiles = g_list_sort(testfiles, (GCompareFunc) * g_strcmp0);
+        g_dir_close(testdir);
 
-        testpath = g_strdup_printf("/integration/%s/all_null_terminated", standards[i]);
-        g_test_add_data_func(testpath, standards[i], test_integration_all_null_terminated);
-        g_free(testpath);
+        // Add all test files to the queue
+        for (GList * l = testfiles; l != NULL; l = l->next) {
+            // Remove the file extension and test description to get a name
+            testname = g_strndup(l->data, strlen(l->data) - strlen(".txt"));
+            testpath = g_strdup_printf("/integration/%s/%s", test_directories[i], testname);
 
-        testpath = g_strdup_printf("/integration/%s/multiple_codes", standards[i]);
-        g_test_add_data_func(testpath, standards[i], test_integration_multiple_codes);
-        g_free(testpath);
-
+            // Construct the pathname to the file
+            pathname = g_strdup_printf("expected/%s/%s", test_directories[i], testname);
+            g_test_add_data_func(testpath, pathname, test_integration_add_test_from_files);
+            g_free(testname);
+            g_free(testpath);
+        }
+        g_list_free_full(testfiles, *g_free);
         i++;
     }
 
