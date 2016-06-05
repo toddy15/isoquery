@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-01 21:39+0200\n"
+"POT-Creation-Date: 2016-06-05 16:16+0200\n"
 "PO-Revision-Date: 2014-05-08 14:44+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 #. TRANSLATORS:
 #. The first placeholder is a filename, including the directory path.
 #. The second placeholder is an ISO standard, e.g. 3166-1 or 639-3.
-#: src/isocodes.c:67
+#: src/isocodes.c:68
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
 msgstr ""
 
 #. TRANSLATORS: This is an error message.
-#: src/isocodes.c:92 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#: src/isocodes.c:93 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
 #, c-format
 msgid "isoquery: %s\n"
 msgstr "isoquery: %s\n"
@@ -141,7 +141,7 @@ msgstr "Oversættelse til dansk ophavsret 2010-2014 Joe Hansen\n"
 #. TRANSLATORS: The first placeholder is a code like "urgl" or
 #. "does-not-exist", the second placeholder is the current
 #. ISO standard like "3166-1" or "15924".
-#: src/search.c:53
+#: src/search.c:60
 #, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
 msgstr ""
