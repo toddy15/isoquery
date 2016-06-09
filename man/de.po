@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "POT-Creation-Date: 2016-06-09 21:43+0200\n"
-"PO-Revision-Date: 2016-06-01 12:47+0100\n"
+"PO-Revision-Date: 2016-06-09 21:46+0200\n"
 "Last-Translator: Dr. Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -33,18 +33,14 @@ msgid "Search and display various ISO codes (country, language, ...)\n"
 msgstr "Suche und Anzeige verschiedener ISO-Codes (Land, Sprache, ...)\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| ":Date:            2016-06-01\n"
-#| ":Version:         2.1.0\n"
-#| ":Manual section:  1\n"
+#, no-wrap
 msgid ""
 ":Date:            2016-06-09\n"
 ":Version:         3.0.0\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            1\\. Juni 2016\n"
-":Version:         2.1.0\n"
+":Date:            9\\. Juni 2016\n"
+":Version:         3.0.0\n"
 ":Manual section:  1\n"
 
 #. type: Title =
@@ -101,16 +97,11 @@ msgid ""
 msgstr "-i STANDARD, --iso=STANDARD     Der gewünschte ISO-Standard. Mögliche Werte: 639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924 (Voreinstellung: 3166-1)\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| "-x file, --xmlfile=file      Use another XML *file* with ISO data\n"
-#| "                             (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
+#, no-wrap
 msgid ""
 "-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data files\n"
 "                                  (default: /usr/share/iso-codes/json)\n"
-msgstr ""
-"-p PATHNAME, --pathname=PATHNAME  Use *pathname* as prefix for the data files\n"
-"                                  (default: /usr/share/iso-codes/json)\n"
+msgstr "-p PFADNAME, --pathname=PFADNAME  PFADNAME als Präfix für die Datendateien verwenden (Voreinstellung: /usr/share/iso-codes/json)"
 
 #. type: Plain text
 #, no-wrap
@@ -130,15 +121,12 @@ msgid ""
 msgstr "-o, --official_name         Offizieller Name der übergebenen Codes. Dies kann das Gleiche sein wie --name (gilt nur für ISO 3166-1)\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| "-c, --common_name            Common name for the supplied codes. This may be\n"
-#| "                             the same as --name (only applies to ISO 3166-1)\n"
+#, no-wrap
 msgid ""
 "-c, --common_name            Common name for the supplied codes. This may be\n"
 "                             the same as --name (only applies to ISO 639-2,\n"
 "                             639-3, and 3166-1)\n"
-msgstr "-c, --common_name           Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name (gilt nur für ISO 3166-1)\n"
+msgstr "-c, --common_name           Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name (gilt nur für ISO 639-2, 639-3 und 3166-1)\n"
 
 #. type: Plain text
 #, no-wrap
@@ -303,7 +291,7 @@ msgid ""
 "be empty."
 msgstr ""
 "Bei ISO 639-2 enthalten die ersten drei Spalten den Alpha-3 Code, den "
-"bibliografischen Codeund den Alpha-2 Code. Die zweite und dritte Spalte "
+"bibliografischen Code und den Alpha-2 Code. Die zweite und dritte Spalte "
 "können leer sein."
 
 #. type: Plain text
