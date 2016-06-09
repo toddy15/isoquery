@@ -1,3 +1,15 @@
+Isoquery 3.0.0
+============
+9 June 2016
+
+* Complete rewrite in C, using GLib
+* Supports the newly added ISO 3166-3 codes
+* Updated translations:
+  - German, thanks to Dr. Tobias Quathamer
+* Updated manpage translations:
+  - German, thanks to Dr. Tobias Quathamer
+
+
 Isoquery 2.0
 ============
 30 May 2014
