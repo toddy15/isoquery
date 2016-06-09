@@ -1,1 +1,1 @@
-isoquery -p data -i 3166-1 TV
+-i 3166-1 TV

@@ -1,1 +1,1 @@
-isoquery -p data -i 639-5
+-i 639-5

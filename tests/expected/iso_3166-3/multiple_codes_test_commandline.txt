@@ -1,1 +1,1 @@
-isoquery -p data -i 3166-3 gel Csxx BQAQ 891
+-i 3166-3 gel Csxx BQAQ 891

@@ -1,1 +1,1 @@
-isoquery -p data -i 3166-2 --null
+-i 3166-2 --null

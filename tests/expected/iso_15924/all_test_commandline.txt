@@ -1,1 +1,1 @@
-isoquery -p data -i 15924
+-i 15924

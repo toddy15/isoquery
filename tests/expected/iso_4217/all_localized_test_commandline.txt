@@ -1,1 +1,1 @@
-isoquery -p data -i 4217 -l fr
+-i 4217 -l fr

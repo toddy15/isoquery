@@ -1,1 +1,1 @@
-isoquery -p data -i 3166-1 --locale de invalid öllö ua frA 158 1234 007 URG
+-i 3166-1 --locale de invalid öllö ua frA 158 1234 007 URG

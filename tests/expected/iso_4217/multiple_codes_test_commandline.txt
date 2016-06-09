@@ -1,1 +1,1 @@
-isoquery -p data -i 4217 inr 826 EUR
+-i 4217 inr 826 EUR

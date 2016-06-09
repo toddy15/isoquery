@@ -1,1 +1,1 @@
-isoquery -p data -i 639-5 TUT Nai aus
+-i 639-5 TUT Nai aus

@@ -1,1 +1,1 @@
-isoquery -p data -i 3166-1 TV Deu 643 fra
+-i 3166-1 TV Deu 643 fra

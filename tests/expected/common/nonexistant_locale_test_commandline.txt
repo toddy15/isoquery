@@ -1,1 +1,1 @@
-isoquery -p data --locale nonexistant
+--locale nonexistant

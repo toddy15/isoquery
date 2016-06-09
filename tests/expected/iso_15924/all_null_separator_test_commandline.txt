@@ -1,1 +1,1 @@
-isoquery -p data -i 15924 --null
+-i 15924 --null
