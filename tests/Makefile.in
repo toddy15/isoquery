@@ -194,7 +194,7 @@ am__EXEEXT_2 = $(am__EXEEXT_1)
 @ENABLE_ALWAYS_BUILD_TESTS_TRUE@am__EXEEXT_5 = $(am__EXEEXT_2)
 PROGRAMS = $(installed_test_PROGRAMS) $(noinst_PROGRAMS)
 integration_SOURCES = integration.c
-integration_OBJECTS = integration.$(OBJEXT)
+integration_OBJECTS = integration-integration.$(OBJEXT)
 integration_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 integration_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
@@ -221,6 +221,10 @@ DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/build/depcomp
 am__depfiles_maybe = depfiles
 am__mv = mv -f
+AM_V_lt = $(am__v_lt_@AM_V@)
+am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+am__v_lt_0 = --silent
+am__v_lt_1 = 
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 AM_V_CC = $(am__v_CC_@AM_V@)
@@ -627,6 +631,7 @@ LDADD = $(GLIB_LIBS) $(JSON_LIBS) $(top_builddir)/src/options.o
 
 # test binaries
 test_programs = options integration
+integration_CPPFLAGS = -DTESTDIR=\"$(srcdir)\" $(AM_CPPFLAGS)
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -817,7 +822,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/integration.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/integration-integration.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/options.Po@am__quote@
 
 .c.o:
@@ -835,6 +840,20 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(COMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+
+integration-integration.o: integration.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(integration_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT integration-integration.o -MD -MP -MF $(DEPDIR)/integration-integration.Tpo -c -o integration-integration.o `test -f 'integration.c' || echo '$(srcdir)/'`integration.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/integration-integration.Tpo $(DEPDIR)/integration-integration.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='integration.c' object='integration-integration.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(integration_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o integration-integration.o `test -f 'integration.c' || echo '$(srcdir)/'`integration.c
+
+integration-integration.obj: integration.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(integration_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT integration-integration.obj -MD -MP -MF $(DEPDIR)/integration-integration.Tpo -c -o integration-integration.obj `if test -f 'integration.c'; then $(CYGPATH_W) 'integration.c'; else $(CYGPATH_W) '$(srcdir)/integration.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/integration-integration.Tpo $(DEPDIR)/integration-integration.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='integration.c' object='integration-integration.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(integration_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o integration-integration.obj `if test -f 'integration.c'; then $(CYGPATH_W) 'integration.c'; else $(CYGPATH_W) '$(srcdir)/integration.c'; fi`
 install-installed_test_metaDATA: $(installed_test_meta_DATA)
 	@$(NORMAL_INSTALL)
 	@list='$(installed_test_meta_DATA)'; test -n "$(installed_test_metadir)" || list=; \

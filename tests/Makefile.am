@@ -23,3 +23,5 @@ LDADD = $(GLIB_LIBS) $(JSON_LIBS) $(top_builddir)/src/options.o
 
 # test binaries
 test_programs = options integration
+
+integration_CPPFLAGS = -DTESTDIR=\"$(srcdir)\" $(AM_CPPFLAGS)
