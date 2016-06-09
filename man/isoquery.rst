@@ -5,8 +5,8 @@ isoquery
 Search and display various ISO codes (country, language, ...)
 -------------------------------------------------------------
 
-:Date:            2016-06-01
-:Version:         2.1.0
+:Date:            2016-06-09
+:Version:         3.0.0
 :Manual section:  1
 
 
@@ -49,7 +49,8 @@ starting with two dashes ('**-**'). **isoquery** supports the following options:
                              the same as --name (only applies to ISO 3166-1)
 
 -c, --common_name            Common name for the supplied codes. This may be
-                             the same as --name (only applies to ISO 3166-1)
+                             the same as --name (only applies to ISO 639-2,
+                             639-3, and 3166-1)
 
 -0, --null                   Separate entries with a NULL character instead
                              of newline
