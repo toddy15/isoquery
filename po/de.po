@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2016-06-09 21:39+0200\n"
-"PO-Revision-Date: 2016-06-01 11:05+0100\n"
+"PO-Revision-Date: 2016-06-09 21:40+0200\n"
 "Last-Translator: Dr. Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -85,16 +85,12 @@ msgstr ""
 "name (gilt nur für ISO 3166-1)"
 
 #: src/options.c:59
-#, fuzzy
-#| msgid ""
-#| "Common name for the supplied codes. This may be the same as --name (only "
-#| "applies to ISO 3166-1)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 639-2, 639-3, and 3166-1)"
 msgstr ""
 "Üblicher Name der übergebenen Codes. Dies kann das Gleiche sein wie --name "
-"(gilt nur für ISO 3166-1)"
+"(gilt nur für ISO 639-2, 639-3 und 3166-1)"
 
 #: src/options.c:61
 msgid "Separate entries with a NULL character instead of newline"
