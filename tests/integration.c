@@ -27,6 +27,7 @@ void test_integration_add_test_from_files(gconstpointer data)
     gchar *path_prefix = (gchar *) data;
     gchar *filename;
     GError *error = NULL;
+    gchar *tmp = NULL;
     gchar *commandline = NULL;
     gchar *expected_stdout = NULL;
     gchar *expected_stderr = NULL;
@@ -40,10 +41,16 @@ void test_integration_add_test_from_files(gconstpointer data)
         g_assert_nonnull(commandline);
         g_free(filename);
 
+        // Set up the commandline prefix
+        tmp = g_strdup_printf("isoquery -p %s/data %s", TESTDIR, commandline);
+        g_free(commandline);
+        commandline = tmp;
+
         // Set up arguments and execute program
         commandline_args = g_strsplit(g_strchomp(commandline), " ", -1);
         execv("../src/isoquery", commandline_args);
         g_strfreev(commandline_args);
+        g_free(commandline);
 
         return;
     }
@@ -100,7 +107,7 @@ int main(int argc, gchar * argv[])
     // Add common tests for various standards
     while (test_directories[i]) {
         // Open the directory for the current standard
-        testdir = g_dir_open(g_strdup_printf("expected/%s", test_directories[i]), 0, &error);
+        testdir = g_dir_open(g_strdup_printf("%s/expected/%s", TESTDIR, test_directories[i]), 0, &error);
         g_assert_null(error);
         g_assert_nonnull(testdir);
 
@@ -122,7 +129,7 @@ int main(int argc, gchar * argv[])
             testpath = g_strdup_printf("/integration/%s/%s", test_directories[i], testname);
 
             // Construct the pathname to the file
-            pathname = g_strdup_printf("expected/%s/%s", test_directories[i], testname);
+            pathname = g_strdup_printf("%s/expected/%s/%s", TESTDIR, test_directories[i], testname);
             g_test_add_data_func(testpath, pathname, test_integration_add_test_from_files);
             g_free(testname);
             g_free(testpath);
