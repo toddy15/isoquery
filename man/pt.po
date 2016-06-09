@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2016-06-01 12:45+0200\n"
+"POT-Creation-Date: 2016-06-09 21:43+0200\n"
 "PO-Revision-Date: 2016-06-01 12:48+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -33,10 +33,14 @@ msgid "Search and display various ISO codes (country, language, ...)\n"
 msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)\n"
 
 #. type: Plain text
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| ":Date:            2016-06-01\n"
+#| ":Version:         2.1.0\n"
+#| ":Manual section:  1\n"
 msgid ""
-":Date:            2016-06-01\n"
-":Version:         2.1.0\n"
+":Date:            2016-06-09\n"
+":Version:         3.0.0\n"
 ":Manual section:  1\n"
 msgstr ""
 ":Date:            2016-06-01\n"
@@ -134,10 +138,14 @@ msgstr ""
 "                            o mesmo que --name (apenas se aplica ao ISO 3166-1)\n"
 
 #. type: Plain text
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "-c, --common_name            Common name for the supplied codes. This may be\n"
+#| "                             the same as --name (only applies to ISO 3166-1)\n"
 msgid ""
 "-c, --common_name            Common name for the supplied codes. This may be\n"
-"                             the same as --name (only applies to ISO 3166-1)\n"
+"                             the same as --name (only applies to ISO 639-2,\n"
+"                             639-3, and 3166-1)\n"
 msgstr ""
 "-c, --common_name           Nome comum dos códigos fornecidos. Isto pode ser\n"
 "                            o mesmo que --name (apenas se aplica ao ISO 3166-1)\n"
