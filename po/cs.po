@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
-"POT-Creation-Date: 2016-06-09 21:39+0200\n"
+"POT-Creation-Date: 2016-06-10 11:20+0200\n"
 "PO-Revision-Date: 2011-06-02 18:31+0200\n"
 "Last-Translator: Michal Simunek <michal.simunek@gmail.com>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
@@ -80,7 +80,7 @@ msgstr ""
 "Oficiální název dodávaných kódů. Může být stejný jako  --name (použije se "
 "pouze u ISO 3166-1)"
 
-#: src/options.c:59
+#: src/options.c:60
 #, fuzzy
 #| msgid ""
 #| "Common name for the supplied codes. This may be the same as --name (only "
@@ -92,37 +92,37 @@ msgstr ""
 "Obecný název dodávaných kódů. Může být stejný jako  --name (použije se pouze "
 "u ISO 3166-1)"
 
-#: src/options.c:61
+#: src/options.c:63
 msgid "Separate entries with a NULL character instead of newline"
 msgstr "Oddělí položky mezerou namísto nového řádku"
 
-#: src/options.c:63
+#: src/options.c:65
 msgid "Show program version and copyright"
 msgstr "Zobrazí verzi programu a copyright"
 
-#: src/options.c:80
+#: src/options.c:82
 msgid "[ISO codes]"
 msgstr ""
 
 #. TRANSLATORS: The placeholder is a string like "1234-5".
-#: src/options.c:140
+#: src/options.c:142
 #, c-format
 msgid "ISO standard \"%s\" is not supported."
 msgstr "ISO standard '%s' není podporován."
 
 #. TRANSLATORS: The placeholder is the version identifier.
-#: src/options.c:174
+#: src/options.c:176
 #, c-format
 msgid "isoquery %s\n"
 msgstr "isoquery %s\n"
 
-#: src/options.c:175
+#: src/options.c:177
 msgid "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 
 #. TRANSLATORS: Please change the uppercase words as
 #. appropriate for your language.
-#: src/options.c:178
+#: src/options.c:180
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr "Translation to Czech Copyright © 2010-2011 Michal Šimůnek\n"
 

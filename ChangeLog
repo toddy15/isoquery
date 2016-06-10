@@ -1,5 +1,12 @@
+Isoquery 3.0.1
+==============
+10 June 2016
+
+* Fix uninitialized variable
+
+
 Isoquery 3.0.0
-============
+==============
 9 June 2016
 
 * Complete rewrite in C, using GLib
