@@ -56,7 +56,9 @@ static GOptionEntry entries[] = {
      N_("Official name for the supplied codes. This may be the same as --name (only applies to ISO 3166-1)"),
      NULL},
     {"common_name", 'c', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_commonname,
-     N_("Common name for the supplied codes. This may be the same as --name (only applies to ISO 639-2, 639-3, and 3166-1)"), NULL},
+     N_
+     ("Common name for the supplied codes. This may be the same as --name (only applies to ISO 639-2, 639-3, and 3166-1)"),
+     NULL},
     {"null", '0', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_null_separator,
      N_("Separate entries with a NULL character instead of newline"), NULL},
     {"version", 'v', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, &option_version,
@@ -71,7 +73,7 @@ static GOptionEntry entries[] = {
  */
 gboolean options_parse_command_line(gchar ** arguments, GError ** error)
 {
-    int argc;
+    int argc = 0;
     GOptionContext *context;
 
     // Ensure that there are sensible default options.
