@@ -2,20 +2,20 @@
 # This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
-# Martin Bagge <brother@bsnet.se>, 2010, 2011.
+# Martin Bagge <brother@bsnet.se>, 2010, 2011, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2016-06-10 11:20+0200\n"
-"PO-Revision-Date: 2014-05-13 10:14+0100\n"
+"PO-Revision-Date: 2016-06-10 18:16+0200\n"
 "Last-Translator: Martin Bagge / brother <brother@bsnet.se>\n"
 "Language-Team: Swedish <debian-l10n-swedish@lists.debian.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. TRANSLATORS:
 #. The first placeholder is a filename, including the directory path.
@@ -23,7 +23,7 @@ msgstr ""
 #: src/isocodes.c:68
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
-msgstr ""
+msgstr "Filen \"%s\" innehåller inte korrekt ISO %s-data."
 
 #. TRANSLATORS: This is an error message.
 #: src/isocodes.c:93 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
@@ -52,20 +52,15 @@ msgid "STANDARD"
 msgstr "STANDARD"
 
 #: src/options.c:48
-#, fuzzy
-#| msgid ""
-#| "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
-#| "iso_3166.xml)"
 msgid ""
 "Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
 "json)"
 msgstr ""
-"Använd annan XML-fil med ISO-data (standard: /usr/share/xml/iso-codes/"
-"iso_3166.xml)."
+"Använd sökväg som prefix för datafiler (standard: /usr/share/iso-codes/json)"
 
 #: src/options.c:49
 msgid "PATHNAME"
-msgstr ""
+msgstr "SÖKVÄG"
 
 #: src/options.c:51
 msgid "Use this locale for output"
@@ -88,16 +83,12 @@ msgstr ""
 "endast ISO 3166-1)"
 
 #: src/options.c:60
-#, fuzzy
-#| msgid ""
-#| "Common name for the supplied codes. This may be the same as --name (only "
-#| "applies to ISO 3166-1)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 639-2, 639-3, and 3166-1)"
 msgstr ""
-"Generellt namn för angivna koder. Detta kan vara samma som --name. (Gäller "
-"endast ISO 3166-1)"
+"Generellt namn för angivna koder. Detta kan vara samma som --name (Gäller "
+"endast ISO 639-2, 639-3 och 3166-1)."
 
 #: src/options.c:63
 msgid "Separate entries with a NULL character instead of newline"
@@ -132,7 +123,7 @@ msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 #: src/options.c:180
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr ""
-"Översatt till Svenska © 2010-2014 Martin Bagge.\n"
+"Översatt till Svenska © 2010-2016 Martin Bagge.\n"
 " Skicka synpunkter på översättningen till tp-sv@listor.tp-sv.se.\n"
 
 #. TRANSLATORS: The first placeholder is a code like "urgl" or
@@ -141,14 +132,4 @@ msgstr ""
 #: src/search.c:60
 #, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr ""
-
-#~ msgid "FILE"
-#~ msgstr "FIL"
-
-#~| msgid "isoquery %(version)s"
-#~ msgid "isoquery: %(error_message)s\n"
-#~ msgstr "isoquery: %(error_message)s\n"
-
-#~ msgid "isoquery: Internal error. Please report this bug.\n"
-#~ msgstr "isoquery: internt fel. Vänligen rapportera detta.\n"
+msgstr "Koden \"%s\" är inte definierad i ISO %s."
