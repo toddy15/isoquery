@@ -1,22 +1,24 @@
 # Vietnamese translation for IsoQuery.
+# Bản dịch tiếng Việt dành cho isoquery.
 # Copyright © 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the isoquery package.
 # Clytie Siddall <clytie@riverland.net.au>, 2010.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2016-06-10 11:20+0200\n"
-"PO-Revision-Date: 2010-09-30 23:02+0930\n"
-"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"PO-Revision-Date: 2016-06-11 07:26+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
+"Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.8\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #. TRANSLATORS:
 #. The first placeholder is a filename, including the directory path.
@@ -24,7 +26,7 @@ msgstr ""
 #: src/isocodes.c:68
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
-msgstr "Tập tin « %s » không chứa dữ liệu ISO %s đúng."
+msgstr "Tập tin “%s” không chứa dữ liệu ISO %s hợp lệ."
 
 # Variable: don't translate; Biến: đừng dịch
 #. TRANSLATORS: This is an error message.
@@ -37,31 +39,31 @@ msgstr "isoquery: %s\n"
 msgid ""
 "Run \"isoquery --help\" to see a full list of available command line "
 "options.\n"
-msgstr ""
+msgstr "Chạy \"isoquery --help\" để xem danh sách tùy chọn dòng lệnh đầy đủ.\n"
 
 #: src/options.c:45
 msgid ""
 "The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
 "3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
 msgstr ""
-"Tiêu chuẩn ISO cần dùng. Giá trị có thể là: 639-2, 639-3, 639-5, 3166-1, "
-"3166-2, 3166-3, 4217, 15924. Giá trị mặc định: 3166-1"
+"Tiêu chuẩn ISO muốn dùng. Giá trị có thể là: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (mặc định: 3166-1)"
 
 #: src/options.c:46
 msgid "STANDARD"
-msgstr "TIÊU CHUẨN"
+msgstr "TIÊU_CHUẨN"
 
 #: src/options.c:48
-#, fuzzy
-#| msgid "Use specified XML file with ISO data. Default value: %default"
 msgid ""
 "Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
 "json)"
-msgstr "Dùng tập tin XML đưa ra với dữ liệu ISO. Giá trị mặc định: %default"
+msgstr ""
+"Dùng tên đường dẫn như là tiền tố cho các tập tin dữ liệu (mặc định: /usr/"
+"share/iso-codes/json)"
 
 #: src/options.c:49
 msgid "PATHNAME"
-msgstr ""
+msgstr "TÊN_ĐƯỜNG_DẪN"
 
 #: src/options.c:51
 msgid "Use this locale for output"
@@ -69,39 +71,32 @@ msgstr "Dùng miền địa phương này cho kết xuất"
 
 #: src/options.c:52
 msgid "LOCALE"
-msgstr "MIỀN ĐỊA PHƯƠNG"
+msgstr "MIỀN_ĐỊA_PHƯƠNG"
 
 #: src/options.c:54
-#, fuzzy
-#| msgid "Display the name for the supplied codes (default)"
 msgid "Name for the supplied codes (default)"
-msgstr "Hiển thị tên cho mã được cung cấp (mặc định)"
+msgstr "Tên cho mã được cung cấp (mặc định)"
 
 #: src/options.c:56
 msgid ""
 "Official name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166-1)"
 msgstr ""
-"Hiển thị tên chính thức cho mã được cung cấp. Giá trị này có thể trùng với « "
-"--name ». (Chỉ áp dụng cho ISO 3166-1)"
+"Tên chính thức cho mã được cung cấp. Giá trị này có thể trùng với “--name”. "
+"(Chỉ áp dụng cho ISO 3166-1)"
 
 #: src/options.c:60
-#, fuzzy
-#| msgid ""
-#| "Common name for the supplied codes. This may be the same as --name (only "
-#| "applies to ISO 3166-1)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 639-2, 639-3, and 3166-1)"
 msgstr ""
-"Hiển thị tên chung cho mã được cung cấp. Giá trị này có thể trùng với « --"
-"name ». (Chỉ áp dụng cho ISO 3166-1)"
+"Tên thường gọi cho mã được cung cấp. Giá trị này có thể trùng với “--name”. "
+"(Chỉ áp dụng cho ISO 639-2, 639-3 và ISO 3166-1)"
 
 #: src/options.c:63
 msgid "Separate entries with a NULL character instead of newline"
 msgstr ""
-"Định giới các mục nhập bằng một ký tự vô giá trị (NULL) thay cho một ký tự "
-"dòng mới"
+"Ngăn cách các mục tin bằng một ký tự mã 0 (NULL) thay cho một ký tự dòng mới"
 
 #: src/options.c:65
 msgid "Show program version and copyright"
@@ -109,13 +104,13 @@ msgstr "Hiển thị phiên bản chương trình và tác quyền"
 
 #: src/options.c:82
 msgid "[ISO codes]"
-msgstr ""
+msgstr "[Các mã ISO]"
 
 #. TRANSLATORS: The placeholder is a string like "1234-5".
 #: src/options.c:142
 #, c-format
 msgid "ISO standard \"%s\" is not supported."
-msgstr "Tiêu chuẩn ISO « %s » không phải được hỗ trợ."
+msgstr "Tiêu chuẩn ISO “%s” không được hỗ trợ."
 
 # Variable: don't translate; Biến: đừng dịch
 #. TRANSLATORS: The placeholder is the version identifier.
@@ -135,6 +130,8 @@ msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
 msgstr ""
 "Bản dịch tiếng Việt của Clytie Siddall (tác quyền © 2010 của Tổ chức Phần "
 "mềm Tự do)\n"
+"và nhóm Việt hóa phần mềm tại <https://www.debian.org/international/"
+"Vietnamese>.\n"
 
 #. TRANSLATORS: The first placeholder is a code like "urgl" or
 #. "does-not-exist", the second placeholder is the current
@@ -142,7 +139,7 @@ msgstr ""
 #: src/search.c:60
 #, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr "Mã « %s » không phải được xác định trong ISO %s."
+msgstr "Mã “%s” không được định nghĩa trong ISO %s."
 
 #~ msgid "FILE"
 #~ msgstr "TỆP"
@@ -154,10 +151,10 @@ msgstr "Mã « %s » không phải được xác định trong ISO %s."
 #~ msgstr "isoquery %(version)s"
 
 #~ msgid "isoquery: The file \"%(filename)s\" could not be opened.\n"
-#~ msgstr "isoquery: Tập tin « %(filename)s » không mở được.\n"
+#~ msgstr "isoquery: Tập tin “%(filename)s” không mở được.\n"
 
 #~ msgid "isoquery: The file \"%(filename)s\" could not be parsed correctly.\n"
-#~ msgstr "isoquery: Tập tin « %(filename)s » không phân tích được.\n"
+#~ msgstr "isoquery: Tập tin “%(filename)s” không phân tích được.\n"
 
 #~ msgid "Usage: %prog [options] [ISO codes]"
 #~ msgstr "Sử dụng: %prog [tùy_chọn] [mã_ISO]"
@@ -166,7 +163,7 @@ msgstr "Mã « %s » không phải được xác định trong ISO %s."
 #~ "isoquery: The locale \"%(locale)s\" is not available for ISO "
 #~ "%(standard)s.\n"
 #~ msgstr ""
-#~ "isoquery: Miền địa phương « %(locale)s » không sẫn sàng cho ISO "
+#~ "isoquery: Miền địa phương “%(locale)s” không sẫn sàng cho ISO "
 #~ "%(standard)s.\n"
 
 #~ msgid "Show this information"
