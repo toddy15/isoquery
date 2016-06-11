@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
-# Yuri Kozlov <yuray@komyakino.ru>, 2010, 2011, 2014.
+# Yuri Kozlov <yuray@komyakino.ru>, 2010, 2011, 2014, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2016-06-10 11:20+0200\n"
-"PO-Revision-Date: 2014-05-08 18:19+0400\n"
+"PO-Revision-Date: 2016-06-11 08:03+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
@@ -46,32 +46,26 @@ msgid ""
 "The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
 "3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
 msgstr ""
-"Использовать стандарт ISO. Возможные значения: 639-2, 639-3, 639-5, 3166-1, "
-"3166-2, 3166-3, 4217, 15924 (по умолчанию: 3166-1)"
+"Стандарт ISO. Возможные значения: 639-2, 639-3, 639-5, 3166-1, 3166-2, "
+"3166-3, 4217, 15924 (по умолчанию: 3166-1)."
 
 #: src/options.c:46
 msgid "STANDARD"
 msgstr "СТАНДАРТ"
 
 #: src/options.c:48
-#, fuzzy
-#| msgid ""
-#| "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
-#| "iso_3166.xml)"
 msgid ""
 "Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
 "json)"
-msgstr ""
-"Использовать другой файл XML с данными ISO (по умолчанию: /usr/share/xml/iso-"
-"codes/iso_3166.xml)"
+msgstr "Префикс к файлам данных (по умолчанию: /usr/share/iso-codes/json)."
 
 #: src/options.c:49
 msgid "PATHNAME"
-msgstr ""
+msgstr "ПУТЬ"
 
 #: src/options.c:51
 msgid "Use this locale for output"
-msgstr "Использовать данную локаль при выводе"
+msgstr "Локаль, используемая при выводе."
 
 #: src/options.c:52
 msgid "LOCALE"
@@ -79,35 +73,31 @@ msgstr "ЛОКАЛЬ"
 
 #: src/options.c:54
 msgid "Name for the supplied codes (default)"
-msgstr "Показать имена имеющих кодов (по умолчанию)"
+msgstr "Имена имеющихся кодов (действие по умолчанию)."
 
 #: src/options.c:56
 msgid ""
 "Official name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 3166-1)"
 msgstr ""
-"Показать официальные имена имеющих кодов. Может быть тоже, что и с --name "
-"(применимо только к ISO 3166-1)"
+"Официальные имена имеющихся кодов. Может быть тоже, что и с --name "
+"(применимо только к ISO 3166-1)."
 
 #: src/options.c:60
-#, fuzzy
-#| msgid ""
-#| "Common name for the supplied codes. This may be the same as --name (only "
-#| "applies to ISO 3166-1)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 639-2, 639-3, and 3166-1)"
 msgstr ""
-"Показать общие имена имеющих кодов. Может быть тоже, что и с --name "
-"(применимо только к ISO 3166-1)"
+"Общие имена имеющихся кодов. Может быть тоже, что и с --name (применимо "
+"только к ISO 639-2, 639-3 и 3166-1)."
 
 #: src/options.c:63
 msgid "Separate entries with a NULL character instead of newline"
-msgstr "Разделять элементы символом NULL, а не символом новой строки"
+msgstr "Разделять элементы символом NULL, а не символом новой строки."
 
 #: src/options.c:65
 msgid "Show program version and copyright"
-msgstr "Показать версию программы и инф. об авторском праве"
+msgstr "Показать версию программы и инф. об авторском праве."
 
 #: src/options.c:82
 msgid "[ISO codes]"
@@ -133,7 +123,7 @@ msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
 #. appropriate for your language.
 #: src/options.c:180
 msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
-msgstr "Перевод на русский Copyright © 2010-2014 Юрий Козлов\n"
+msgstr "Перевод на русский Copyright © 2010-2016 Юрий Козлов\n"
 
 #. TRANSLATORS: The first placeholder is a code like "urgl" or
 #. "does-not-exist", the second placeholder is the current
