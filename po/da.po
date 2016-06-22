@@ -1,7 +1,7 @@
 # Danish translation isoquery.
-# Copyright (C) 2014 isoquery & nedenstående oversætttere.
+# Copyright (C) 2016 isoquery & nedenstående oversætttere.
 # This file is distributed under the same license as the isoquery package.
-# Joe Hansen <joedalton2@yahoo.dk>, 2010, 2011, 2014.
+# Joe Hansen <joedalton2@yahoo.dk>, 2010, 2011, 2014, 2016.
 #
 # Hi Tobias, what is the meaning for locale in this file.
 # Is it regional settings, language or place.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: isoquery\n"
 "Report-Msgid-Bugs-To: toddy@debian.org\n"
 "POT-Creation-Date: 2016-06-10 11:20+0200\n"
-"PO-Revision-Date: 2014-05-08 14:44+0200\n"
+"PO-Revision-Date: 2016-06-19 14:44+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <debian-l10n-danish@lists.debian.org>\n"
 "Language: da\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: src/isocodes.c:68
 #, c-format
 msgid "The file \"%s\" does not contain valid ISO %s data."
-msgstr ""
+msgstr "Filen »%s« indeholder ikke gyldige ISO %s-data."
 
 #. TRANSLATORS: This is an error message.
 #: src/isocodes.c:93 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
@@ -43,10 +43,6 @@ msgstr ""
 "indstillinger for kommandolinjen.\n"
 
 #: src/options.c:45
-#, fuzzy
-#| msgid ""
-#| "The ISO standard to use. Possible values: 639, 639-3, 639-5, 3166, "
-#| "3166-2, 4217, 15924 (default: 3166)."
 msgid ""
 "The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
 "3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
@@ -59,26 +55,20 @@ msgid "STANDARD"
 msgstr "STANDARD"
 
 #: src/options.c:48
-#, fuzzy
-#| msgid ""
-#| "Use another XML file with ISO data (default: /usr/share/xml/iso-codes/"
-#| "iso_3166.xml)"
 msgid ""
 "Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
 "json)"
 msgstr ""
-"Brug en anden XML-fil med ISO-data (standard: /usr/share/xml/iso-codes/"
-"iso_3166.xml)"
+"Brug stinavn som præfiks for datafilerne (standard: /usr/share/iso-codes/"
+"json)"
 
 #: src/options.c:49
 msgid "PATHNAME"
-msgstr ""
+msgstr "STINAVN"
 
 #: src/options.c:51
-#, fuzzy
-#| msgid "Use this locale for output."
 msgid "Use this locale for output"
-msgstr "Brug dette sprog for uddata."
+msgstr "Brug dette sprog for uddata"
 
 #: src/options.c:52
 msgid "LOCALE"
@@ -97,16 +87,12 @@ msgstr ""
 "(gælder kun for ISO 3166-1)"
 
 #: src/options.c:60
-#, fuzzy
-#| msgid ""
-#| "Common name for the supplied codes. This may be the same as --name (only "
-#| "applies to ISO 3166-1)"
 msgid ""
 "Common name for the supplied codes. This may be the same as --name (only "
 "applies to ISO 639-2, 639-3, and 3166-1)"
 msgstr ""
-"Almindelige navne for de angivne koder. Dette kan være det samme som --name "
-"(gælder kun for ISO 3166-1)"
+"Almindeligt navn for de angivne koder. Dette kan være det samme som --name "
+"(gælder kun for ISO 639-2, 639-3 og 3166-1)"
 
 #: src/options.c:63
 msgid "Separate entries with a NULL character instead of newline"
@@ -148,13 +134,4 @@ msgstr "Oversættelse til dansk ophavsret 2010-2014 Joe Hansen\n"
 #: src/search.c:60
 #, c-format
 msgid "The code \"%s\" is not defined in ISO %s."
-msgstr ""
-
-#~ msgid "FILE"
-#~ msgstr "FIL"
-
-#~ msgid "isoquery: %(error_message)s\n"
-#~ msgstr "isoquery: %(error_message)s\n"
-
-#~ msgid "isoquery: Internal error. Please report this bug.\n"
-#~ msgstr "isoquery: Intern fejl. Rapporter venligst denne fejl.\n"
+msgstr "Koden »%s« er ikke defineret i ISO %s."
