@@ -4,18 +4,19 @@
 # Copyright ©
 # Debian French l10n team <debian-l10n-french@lists.debian.org>, 2011.
 # David Prévot <david@tilapin.org>, 2011, 2014.
+# Baptiste Jammet <baptiste@mailoo.org>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
 "POT-Creation-Date: 2016-06-10 11:21+0200\n"
-"PO-Revision-Date: 2016-06-01 12:47+0100\n"
-"Last-Translator: David Prévot <david@tilapin.org>\n"
+"PO-Revision-Date: 2016-06-27 20:00+0200\n"
+"Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. type: Plain text
@@ -34,18 +35,14 @@ msgid "Search and display various ISO codes (country, language, ...)\n"
 msgstr "Rechercher et afficher divers codes ISO (pays, langues, etc.)\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| ":Date:            2014-05-30\n"
-#| ":Version:         2.0\n"
-#| ":Manual section:  1\n"
+#, no-wrap
 msgid ""
 ":Date:            2016-06-10\n"
 ":Version:         3.0.1\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            30 mai 2014\n"
-":Version:         2.0\n"
+":Date:            10 juin 2016\n"
+":Version:         3.0.1\n"
 ":Manual section:  1\n"
 
 #. type: Title =
@@ -54,10 +51,9 @@ msgid "SYNOPSIS\n"
 msgstr "SYNOPSIS\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid "**isoquery** [*options*] [*file*] [*ISO codes*]\n"
+#, no-wrap
 msgid "**isoquery** [*OPTION...*] [*ISO codes*]\n"
-msgstr "**isoquery** [*options*] [*fichier*] [*codes ISO*]\n"
+msgstr "**isoquery** [*OPTION...*] [*codes ISO*]\n"
 
 #. type: Title =
 #, no-wrap
@@ -75,8 +71,8 @@ msgstr ""
 "Ce manuel décrit brièvement la commande **isoquery**. Elle permet de créer "
 "un tableau à partir des codes de la norme ISO fournis dans le paquet **iso-"
 "codes**. Elle parcourt les fichiers JSON et montre tous les codes ISO ou "
-"simplement les entrées correspondantes, si demandées sur la ligne de "
-"commande. De plus, toutes les traductions disponibles des normes ISO sont "
+"simplement les entrées correspondantes, si elles sont précisées sur la ligne "
+"de commande. De plus, toutes les traductions disponibles des normes ISO sont "
 "accessibles."
 
 #. type: Title =
@@ -95,25 +91,25 @@ msgstr ""
 "les options suivantes."
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| "-i standard, --iso=standard  The ISO standard to use. Possible values: 639,\n"
-#| "                             639-3, 639-5, 3166, 3166-2, 4217, 15924 (default: 3166).\n"
+#, no-wrap
 msgid ""
 "-i STANDARD, --iso=STANDARD  The ISO standard to use. Possible values: 639-2,\n"
 "                             639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217, 15924\n"
 "                             (default: 3166-1)\n"
-msgstr "-i norme, --iso=norme     La norme ISO à utiliser. Valeurs disponibles : 639, 639-3, 639-5, 3166, 3166-2, 4217, 15924 (3166 par défaut).\n"
+msgstr ""
+"-i NORME, --iso=NORME     La norme ISO à utiliser. Valeurs disponibles :\n"
+"                          639-2, 639-3, 639-5, 3166-1, 3166-2, 3166-3, 4217,\n"
+"                          15924 (3166-1 par défaut).\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| "-x file, --xmlfile=file      Use another XML *file* with ISO data\n"
-#| "                             (default: /usr/share/xml/iso-codes/iso_3166.xml).\n"
+#, no-wrap
 msgid ""
 "-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data files\n"
 "                                  (default: /usr/share/iso-codes/json)\n"
-msgstr "-x fichier, --xmlfile=fichier  Utiliser un autre *fichier* XML avec les données ISO (/usr/share/xml/iso-codes/iso_3166.xml par défaut).\n"
+msgstr ""
+"-p chemin, --pathname=chemin  Utiliser un autre *chemin* comme préfixe pour\n"
+"                              les fichiers de données\n"
+"                              (/usr/share/iso-codes/json par défaut).\n"
 
 #. type: Plain text
 #, no-wrap
@@ -123,42 +119,50 @@ msgstr "-l LOCALE, --locale=LOCALE  Utiliser cette *LOCALE* pour l'affichage\n"
 #. type: Plain text
 #, no-wrap
 msgid "-n, --name                   Name for the supplied codes (default)\n"
-msgstr "-n, --name  Nom des codes fournis (par défaut)\n"
+msgstr "-n, --name                Nom des codes fournis (par défaut)\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
 "-o, --official_name          Official name for the supplied codes. This may be\n"
 "                             the same as --name (only applies to ISO 3166-1)\n"
-msgstr "-o, --official_name  Nom officiel correspondant aux codes demandés. Il peut être identique à --name. Cette option n'est utile que pour ISO 3166-1\n"
+msgstr ""
+"-o, --official_name       Nom officiel correspondant aux codes demandés.\n"
+"                          Il peut être identique à --name.\n"
+"                          Cette option n'est utile que pour ISO 3166-1\n"
 
 #. type: Plain text
-#, fuzzy, no-wrap
-#| msgid ""
-#| "-c, --common_name            Common name for the supplied codes. This may be\n"
-#| "                             the same as --name (only applies to ISO 3166-1)\n"
+#, no-wrap
 msgid ""
 "-c, --common_name            Common name for the supplied codes. This may be\n"
 "                             the same as --name (only applies to ISO 639-2,\n"
 "                             639-3, and 3166-1)\n"
-msgstr "-c, --common_name  Nom courant correspondant aux codes demandés. Il peut être identique à --name. Cette option n'est utile que pour ISO 3166-1\n"
+msgstr ""
+"-c, --common_name         Nom courant correspondant aux codes demandés.\n"
+"                          Il peut être identique à --name.\n"
+"                          Cette option n'est utile que pour ISO 639-2,\n"
+"                          639-3 et 3166-1\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
 "-0, --null                   Separate entries with a NULL character instead\n"
 "                             of newline\n"
-msgstr "-0, --null  Séparer les entrées avec un caractère NULL au lieu d'un retour à la ligne\n"
+msgstr ""
+"-0, --null                Séparer les entrées avec un caractère NULL\n"
+"                          au lieu d'un retour à la ligne\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "-h, --help                   Show summary of options\n"
-msgstr "-h, --help  Afficher un résumé des options\n"
+msgstr "-h, --help                Afficher un résumé des options\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "-v, --version                Show program version and copyright\n"
-msgstr "-v, --version  Afficher la version du programme et les renseignements de copyright\n"
+msgstr ""
+"-v, --version             Afficher la version du programme et les\n"
+"                           renseignements de copyright\n"
 
 #. type: Title =
 #, no-wrap
@@ -240,13 +244,6 @@ msgstr ""
 "  ES      ESP     724     Espagne\n"
 
 #. type: Plain text
-#, fuzzy
-#| msgid ""
-#| "All of the above works for different ISO standards as well, so you can "
-#| "switch to the more extensive standard ISO 3166-2 by using the **--iso** "
-#| "command line option. The columns are country code, subset type (e.g. "
-#| "State, Province, etc.), ISO 3166-2 code, parent, and name. The fourth "
-#| "column (parent) may be empty."
 msgid ""
 "All of the above works for different ISO standards as well, so you can "
 "switch to the more extensive standard ISO 3166-2 by using the **--iso** "
@@ -256,10 +253,9 @@ msgid ""
 msgstr ""
 "Tout ce qui précède fonctionne aussi pour les différentes normes ISO, ce qui "
 "vous permet de basculer vers la norme ISO 3166-2 plus complète en utilisant "
-"l'option de ligne de commande **--iso**. Les colonnes contiennent le code de "
-"pays, le type de sous-ensemble (par exemple State ou Province), le code "
-"ISO 3166-2, le parent et le nom. La quatrième colonne (parent) peut être "
-"vide."
+"l'option de ligne de commande **--iso**. Les colonnes contiennent le code  "
+"ISO 3166-2, le type de sous-ensemble (par exemple State ou Province), le "
+"parent et le nom. La troisième colonne (parent) peut être vide."
 
 #. type: Plain text
 #, no-wrap
@@ -281,6 +277,10 @@ msgid ""
 "withdrawal date, and name. The columns for numeric code, comment, and "
 "withdrawal date may be empty."
 msgstr ""
+"Les codes supprimés de ISO 31661 sont disponibles dans ISO 3166-3. Les "
+"colonnes contiennent le code alpha-3, alpha-4, numérique, un commentaire, la "
+"date de retrait et le nom. Les colonnes du code numérique, du commentaire et "
+"de la date de retrait peuvent être vides."
 
 #. type: Plain text
 #, no-wrap
@@ -300,17 +300,14 @@ msgstr ""
 "  ZAR     ZRCD    180             1997-07-14      Zaire, Republic of\n"
 
 #. type: Plain text
-#, fuzzy
-#| msgid ""
-#| "For ISO 639, the first three columns are the ISO 639 2B code, the ISO 639 "
-#| "2T code and the ISO 639-1 code. The third column may be empty."
 msgid ""
 "For ISO 639-2, the first three columns are the alpha-3 code, the "
 "bibliographic code, and the alpha-2 code. The second and third columns may "
 "be empty."
 msgstr ""
-"Pour ISO 639, les trois premières colonnes contiennent les codes ISO 639 2B, "
-"ISO 639 2T et ISO 639-1. La troisième colonne peut être vide."
+"Pour ISO 639-2, les trois premières colonnes contiennent le code alpha-3, le "
+"code bibliographique et le code apha-2. Les deuxième et troisième colonnes "
+"peuvent être vides."
 
 #. type: Plain text
 #, no-wrap
@@ -355,19 +352,14 @@ msgstr ""
 "  kal             kl      Kalaallisut; Greenlandic\n"
 
 #. type: Plain text
-#, fuzzy
-#| msgid ""
-#| "If you want to use ISO 639-3, the displayed columns are id, scope, type, "
-#| "part 1 code, part 2 code, and the language name. Both part 1 and part 2 "
-#| "may be empty."
 msgid ""
 "If you want to use ISO 639-3, the displayed columns are alpha-3, scope, "
 "type, alpha-2, bibliographic, and the language name. Both alpha-2 and "
 "bibliographic may be empty."
 msgstr ""
-"Pour ISO 639-3, les colonnes affichées sont l'identifiant, le champ "
-"d'application, le type, le code ISO 639-1, le code ISO 639-2 et le nom de la "
-"langue. Les codes ISO 639-1 et ISO 639-2 peuvent être vides."
+"Pour ISO 639-3, les colonnes affichées sont le code alpha-3, le champ "
+"d'application, le type, le code alpha-2, le code bibliographique et le nom "
+"de la langue. Les codes alpha-2 et bibliographiques peuvent être vides."
 
 #. type: Plain text
 #, no-wrap
@@ -385,15 +377,11 @@ msgstr ""
 "  guc     I       L                       Wayuu\n"
 
 #. type: Plain text
-#, fuzzy
-#| msgid ""
-#| "ISO 639-5 is also available. The displayed columns are id, parents, and "
-#| "name. The parents column may be empty."
 msgid ""
 "ISO 639-5 is also available. The displayed columns are alpha-3 and name."
 msgstr ""
-"ISO 639-5 est aussi disponible. Les colonnes affichées sont l'identifiant, "
-"les parents et le nom. La colonne des parents peut être vide."
+"ISO 639-5 est aussi disponible. Les colonnes affichées sont le code "
+"alpha-3 et le nom."
 
 #. type: Plain text
 #, no-wrap
