@@ -133,7 +133,7 @@
     },
     {
       "code": "ES-BI",
-      "name": "Vizcayaa / Bizkaia",
+      "name": "Bizkaia",
       "parent": "PV",
       "type": "Province"
     },
@@ -412,7 +412,7 @@
     },
     {
       "code": "ES-SS",
-      "name": "Guipúzcoa / Gipuzkoa",
+      "name": "Gipuzkoa",
       "parent": "PV",
       "type": "Province"
     },
@@ -454,7 +454,7 @@
     },
     {
       "code": "ES-VC",
-      "name": "Valenciana, Comunidad / Valenciana, Comunitat ",
+      "name": "Valenciana, Comunidad / Valenciana, Comunitat",
       "type": "Autonomous community"
     },
     {
