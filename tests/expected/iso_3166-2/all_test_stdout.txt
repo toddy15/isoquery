@@ -23,7 +23,7 @@ ES-AS	Autonomous community		Asturias, Principado de
 ES-AV	Province	CL	Ávila
 ES-B	Province	CT	Barcelona
 ES-BA	Province	EX	Badajoz
-ES-BI	Province	PV	Vizcayaa / Bizkaia
+ES-BI	Province	PV	Bizkaia
 ES-BU	Province	CL	Burgos
 ES-C	Province	GA	A Coruña
 ES-CA	Province	AN	Cádiz
@@ -72,14 +72,14 @@ ES-SA	Province	CL	Salamanca
 ES-SE	Province	AN	Sevilla
 ES-SG	Province	CL	Segovia
 ES-SO	Province	CL	Soria
-ES-SS	Province	PV	Guipúzcoa / Gipuzkoa
+ES-SS	Province	PV	Gipuzkoa
 ES-T	Province	CT	Tarragona
 ES-TE	Province	AR	Teruel
 ES-TF	Province	CN	Santa Cruz de Tenerife
 ES-TO	Province	CM	Toledo
 ES-V	Province	VC	Valencia / València
 ES-VA	Province	CL	Valladolid
-ES-VC	Autonomous community		Valenciana, Comunidad / Valenciana, Comunitat 
+ES-VC	Autonomous community		Valenciana, Comunidad / Valenciana, Comunitat
 ES-VI	Province	PV	Álava
 ES-Z	Province	AR	Zaragoza
 ES-ZA	Province	CL	Zamora

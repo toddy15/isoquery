@@ -4,6 +4,6 @@ FR-U	Metropolitan region		Provence-Alpes-Côte d'Azur
 DE-HH	State		Hamburg
 ES-BA	Province	EX	Badajoz
 ES-B	Province	CT	Barcelona
-ES-BI	Province	PV	Vizcayaa / Bizkaia
+ES-BI	Province	PV	Bizkaia
 NO-22	Arctic Region		Jan Mayen (Arctic Region)
 NO-16	County		Sør-Trøndelag
