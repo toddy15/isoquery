@@ -46,9 +46,15 @@ void test_integration_add_test_from_files(gconstpointer data)
         g_free(commandline);
         commandline = tmp;
 
-        // Set up arguments and execute program
+        // Set up arguments
         commandline_args = g_strsplit(g_strchomp(commandline), " ", -1);
-        execv("../src/isoquery", commandline_args);
+
+        // Set up a defined environment to execute test reproducibly
+        gchar *env[] = { "LC_ALL=C.UTF-8", NULL };
+
+        // Execute program
+        execvpe("../src/isoquery", commandline_args, env);
+
         g_strfreev(commandline_args);
         g_free(commandline);
 
