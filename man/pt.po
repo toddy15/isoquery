@@ -36,11 +36,11 @@ msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)\n"
 #, no-wrap
 msgid ""
 ":Date:            2016-08-30\n"
-":Version:         3.2.0\n"
+":Version:         3.2.1\n"
 ":Manual section:  1\n"
 msgstr ""
 ":Date:            2016-08-30\n"
-":Version:         3.2.0\n"
+":Version:         3.2.1\n"
 ":Manual section:  1\n"
 
 #. type: Title =

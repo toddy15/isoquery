@@ -1,3 +1,10 @@
+Isoquery 3.2.1
+==============
+30 August 2016
+
+* Use Feature Test Macro for execvpe()
+
+
 Isoquery 3.2.0
 ==============
 30 August 2016
