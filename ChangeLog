@@ -1,3 +1,11 @@
+Isoquery 3.2.0
+==============
+30 August 2016
+
+* Set up a defined environment to enable reproducible testing
+* Update expected test result to match latest changes in iso-codes
+
+
 Isoquery 3.1.0
 ==============
 13 July 2016
