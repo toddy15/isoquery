@@ -15,6 +15,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// Feature Test Macro Requirements for glibc: execvpe()
+#define _GNU_SOURCE
+
 #include <glib.h>
 #include <string.h>
 #include <unistd.h>
