@@ -23,7 +23,7 @@ ES-AS	Autonomous community		Asturies, principauté des
 ES-AV	Province	CL	Avila
 ES-B	Province	CT	Barcelone
 ES-BA	Province	EX	Badajoz
-ES-BI	Province	PV	Bizkaia
+ES-BI	Province	PV	Biscaye
 ES-BU	Province	CL	Burgos
 ES-C	Province	GA	La Corogne
 ES-CA	Province	AN	Cadix
@@ -72,7 +72,7 @@ ES-SA	Province	CL	Salamanque
 ES-SE	Province	AN	Séville
 ES-SG	Province	CL	Segovie
 ES-SO	Province	CL	Soria
-ES-SS	Province	PV	Gipuzkoa
+ES-SS	Province	PV	Guipuscoa
 ES-T	Province	CT	Tarragone
 ES-TE	Province	AR	Téruel
 ES-TF	Province	CN	Santa Cruz de Tenerife
