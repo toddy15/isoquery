@@ -18,14 +18,14 @@ SUBDIRS = po src tests
 # Add README.md
 EXTRA_DIST = README.md
 
-# Create and install english manpage
+# Create and install English manpage
 EXTRA_DIST += man/isoquery.rst man/isoquery-man.pot
 man1_MANS = isoquery.1
 CLEANFILES = isoquery.1
 isoquery.1:
 	$(RST2MAN) $(top_srcdir)/man/isoquery.rst isoquery.1
 
-# Create and install german manpage
+# Create and install German manpage
 EXTRA_DIST += man/de.po man/de.add
 man_dedir = $(mandir)/de/man1
 man_de_DATA = man_de/isoquery.1
@@ -38,7 +38,7 @@ man_de/isoquery.1: man/isoquery.rst man/de.po man/de.add
 	--localized man_de/isoquery.rst
 	$(RST2MAN) man_de/isoquery.rst man_de/isoquery.1
 
-# Create and install french manpage
+# Create and install French manpage
 EXTRA_DIST += man/fr.po man/fr.add
 man_frdir = $(mandir)/fr/man1
 man_fr_DATA = man_fr/isoquery.1
@@ -51,7 +51,7 @@ man_fr/isoquery.1: man/isoquery.rst man/fr.po man/fr.add
 	--localized man_fr/isoquery.rst
 	$(RST2MAN) man_fr/isoquery.rst man_fr/isoquery.1
 
-# Create and install portuguese manpage
+# Create and install Portuguese manpage
 EXTRA_DIST += man/pt.po man/pt.add
 man_ptdir = $(mandir)/pt/man1
 man_pt_DATA = man_pt/isoquery.1

@@ -394,13 +394,13 @@ SUBDIRS = po src tests
 
 # Add README.md
 
-# Create and install english manpage
+# Create and install English manpage
 
-# Create and install german manpage
+# Create and install German manpage
 
-# Create and install french manpage
+# Create and install French manpage
 
-# Create and install portuguese manpage
+# Create and install Portuguese manpage
 EXTRA_DIST = README.md man/isoquery.rst man/isoquery-man.pot man/de.po \
 	man/de.add man/fr.po man/fr.add man/pt.po man/pt.add
 man1_MANS = isoquery.1
