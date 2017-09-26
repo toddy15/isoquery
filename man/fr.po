@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
+"POT-Creation-Date: 2017-09-26 14:05+0200\n"
 "PO-Revision-Date: 2016-06-27 20:00+0200\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
@@ -37,12 +37,12 @@ msgstr "Rechercher et afficher divers codes ISO (pays, langues, etc.)\n"
 #. type: Plain text
 #, no-wrap
 msgid ""
-":Date:            2016-08-30\n"
-":Version:         3.2.1\n"
+":Date:            2017-09-26\n"
+":Version:         3.2.2\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            30 août 2016\n"
-":Version:         3.2.1\n"
+":Date:            26 septembre 2017\n"
+":Version:         3.2.2\n"
 ":Manual section:  1\n"
 
 #. type: Title =

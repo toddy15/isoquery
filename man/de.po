@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the isoquery package.
 #
 # Copyright ©
-# Dr. Tobias Quathamer <toddy@debian.org>, 2007-2016.
+# Dr. Tobias Quathamer <toddy@debian.org>, 2007-2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2016-08-30 20:58+0100\n"
+"POT-Creation-Date: 2017-09-26 14:05+0200\n"
+"PO-Revision-Date: 2017-09-26 14:05+0100\n"
 "Last-Translator: Dr. Tobias Quathamer <toddy@debian.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -35,12 +35,12 @@ msgstr "Suche und Anzeige verschiedener ISO-Codes (Land, Sprache, ...)\n"
 #. type: Plain text
 #, no-wrap
 msgid ""
-":Date:            2016-08-30\n"
-":Version:         3.2.1\n"
+":Date:            2017-09-26\n"
+":Version:         3.2.2\n"
 ":Manual section:  1\n"
 msgstr ""
-":Date:            30\\. August 2016\n"
-":Version:         3.2.1\n"
+":Date:            26\\. September 2017\n"
+":Version:         3.2.2\n"
 ":Manual section:  1\n"
 
 #. type: Title =
