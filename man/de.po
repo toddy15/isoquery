@@ -101,7 +101,7 @@ msgstr "-i STANDARD, --iso=STANDARD     Der gewünschte ISO-Standard. Mögliche 
 msgid ""
 "-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data files\n"
 "                                  (default: /usr/share/iso-codes/json)\n"
-msgstr "-p PFADNAME, --pathname=PFADNAME  PFADNAME als Präfix für die Datendateien verwenden (Voreinstellung: /usr/share/iso-codes/json)"
+msgstr "-p PFADNAME, --pathname=PFADNAME  PFADNAME als Präfix für die Datendateien verwenden (Voreinstellung: /usr/share/iso-codes/json)\n"
 
 #. type: Plain text
 #, no-wrap
