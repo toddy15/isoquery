@@ -1,3 +1,11 @@
+Isoquery 3.2.2
+==============
+26 September 2017
+
+* Fix FTBFS due to missing newline character in German translation.
+  Closes: #876855
+
+
 Isoquery 3.2.1
 ==============
 30 August 2016
