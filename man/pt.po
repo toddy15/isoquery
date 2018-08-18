@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: isoquery\n"
-"POT-Creation-Date: 2017-09-26 14:05+0200\n"
+"POT-Creation-Date: 2018-08-18 19:41+0200\n"
 "PO-Revision-Date: 2016-06-10 19:26+0100\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -24,13 +24,13 @@ msgstr "========\n"
 
 #. type: Title =
 #, no-wrap
-msgid "isoquery\n"
-msgstr "isoquery\n"
+msgid "isoquery"
+msgstr "isoquery"
 
 #. type: Title -
 #, no-wrap
-msgid "Search and display various ISO codes (country, language, ...)\n"
-msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)\n"
+msgid "Search and display various ISO codes (country, language, ...)"
+msgstr "Procura e mostra vários códigos ISO (país, linguagem, ...)"
 
 #. type: Plain text
 #, no-wrap
@@ -45,8 +45,8 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "SYNOPSIS\n"
-msgstr "SINOPSE\n"
+msgid "SYNOPSIS"
+msgstr "SINOPSE"
 
 #. type: Plain text
 #, no-wrap
@@ -55,8 +55,8 @@ msgstr "**isoquery** [*OPÇÃO...*] [*códigos ISO*]\n"
 
 #. type: Title =
 #, no-wrap
-msgid "DESCRIPTION\n"
-msgstr "DESCRIÇÃO\n"
+msgid "DESCRIPTION"
+msgstr "DESCRIÇÃO"
 
 #. type: Plain text
 msgid ""
@@ -75,8 +75,8 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "OPTIONS\n"
-msgstr "OPÇÕES\n"
+msgid "OPTIONS"
+msgstr "OPÇÕES"
 
 #. type: Plain text
 msgid ""
@@ -159,8 +159,8 @@ msgstr "-v, --version               Mostra a versão do programa e o copyright\n
 
 #. type: Title =
 #, no-wrap
-msgid "EXAMPLES\n"
-msgstr "EXEMPLO\n"
+msgid "EXAMPLES"
+msgstr "EXEMPLO"
 
 #. type: Plain text
 msgid ""
@@ -433,8 +433,8 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "FILES\n"
-msgstr "FICHEIROS\n"
+msgid "FILES"
+msgstr "FICHEIROS"
 
 #. type: Plain text
 msgid ""
@@ -463,8 +463,8 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "AUTHOR\n"
-msgstr "AUTOR\n"
+msgid "AUTHOR"
+msgstr "AUTOR"
 
 #. type: Plain text
 msgid "Dr. Tobias Quathamer <toddy@debian.org>"

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-26 14:05+0200\n"
+"POT-Creation-Date: 2018-08-18 19:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "isoquery\n"
+msgid "isoquery"
 msgstr ""
 
 #. type: Title -
 #, no-wrap
-msgid "Search and display various ISO codes (country, language, ...)\n"
+msgid "Search and display various ISO codes (country, language, ...)"
 msgstr ""
 
 #. type: Plain text
@@ -41,7 +41,7 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "SYNOPSIS\n"
+msgid "SYNOPSIS"
 msgstr ""
 
 #. type: Plain text
@@ -51,7 +51,7 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "DESCRIPTION\n"
+msgid "DESCRIPTION"
 msgstr ""
 
 #. type: Plain text
@@ -65,7 +65,7 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "OPTIONS\n"
+msgid "OPTIONS"
 msgstr ""
 
 #. type: Plain text
@@ -142,7 +142,7 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "EXAMPLES\n"
+msgid "EXAMPLES"
 msgstr ""
 
 #. type: Plain text
@@ -333,7 +333,7 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "FILES\n"
+msgid "FILES"
 msgstr ""
 
 #. type: Plain text
@@ -356,7 +356,7 @@ msgstr ""
 
 #. type: Title =
 #, no-wrap
-msgid "AUTHOR\n"
+msgid "AUTHOR"
 msgstr ""
 
 #. type: Plain text
