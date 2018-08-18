@@ -5,8 +5,8 @@ isoquery
 Search and display various ISO codes (country, language, ...)
 -------------------------------------------------------------
 
-:Date:            2017-09-26
-:Version:         3.2.2
+:Date:            2018-08-18
+:Version:         3.2.3
 :Manual section:  1
 
 
