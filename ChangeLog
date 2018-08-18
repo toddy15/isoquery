@@ -1,3 +1,11 @@
+Isoquery 3.2.3
+==============
+18 August 2018
+
+* Fix FTBFS due to changed po4a string extraction in rst manpage
+  Closes: #906475
+
+
 Isoquery 3.2.2
 ==============
 26 September 2017
