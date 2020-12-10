@@ -1,0 +1,137 @@
+# Translation of isoquery to Italian
+# This file is distributed under the same license as the isoquery package.
+#
+# Copyright ©
+# Sebastiano Pistore <SebastianoPistore.info@protonmail, 2020
+msgid ""
+msgstr ""
+"Project-Id-Version: isoquery 3.0.1\n"
+"Report-Msgid-Bugs-To: toddy@debian.org\n"
+"POT-Creation-Date: 2016-06-10 11:20+0200\n"
+"PO-Revision-Date: 2020-01-21 17:49+0100\n"
+"Language-Team: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: Sebastiano Pistore <SebastianoPistore.info@protonmail."
+"ch>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+
+#. TRANSLATORS:
+#. The first placeholder is a filename, including the directory path.
+#. The second placeholder is an ISO standard, e.g. 3166-1 or 639-3.
+#: src/isocodes.c:68
+#, c-format
+msgid "The file \"%s\" does not contain valid ISO %s data."
+msgstr "Il file \"%s\" non contiene dati ISO %s validi."
+
+#. TRANSLATORS: This is an error message.
+#: src/isocodes.c:93 src/isoquery.c:43 src/isoquery.c:60 src/isoquery.c:70
+#, c-format
+msgid "isoquery: %s\n"
+msgstr "isoquery: %s\n"
+
+#: src/isoquery.c:45
+msgid ""
+"Run \"isoquery --help\" to see a full list of available command line "
+"options.\n"
+msgstr ""
+"Eseguire \"isoquery --help\" per visualizzare un elenco completo delle "
+"opzioni disponibili.\n"
+
+#: src/options.c:45
+msgid ""
+"The ISO standard to use. Possible values: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
+msgstr ""
+"Standard ISO da utilizzare. Valori possibili: 639-2, 639-3, 639-5, 3166-1, "
+"3166-2, 3166-3, 4217, 15924 (default: 3166-1)"
+
+#: src/options.c:46
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#: src/options.c:48
+msgid ""
+"Use pathname as prefix for the data files (default: /usr/share/iso-codes/"
+"json)"
+msgstr ""
+"Usare il nome del percorso come prefisso per i file di dati (default: /usr/"
+"share/iso-codes/json)"
+
+#: src/options.c:49
+msgid "PATHNAME"
+msgstr "PERCORSO"
+
+#: src/options.c:51
+msgid "Use this locale for output"
+msgstr "Usare queste impostazioni locali per l'output"
+
+#: src/options.c:52
+msgid "LOCALE"
+msgstr "LOCALE"
+
+#: src/options.c:54
+msgid "Name for the supplied codes (default)"
+msgstr "Nome associato ai codici (predefinito)"
+
+#: src/options.c:56
+msgid ""
+"Official name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 3166-1)"
+msgstr ""
+"Denominazione ufficiale associata ai codici. Può essere la stessa di --"
+"name (si applica solo a ISO 3166-1)"
+
+#: src/options.c:60
+msgid ""
+"Common name for the supplied codes. This may be the same as --name (only "
+"applies to ISO 639-2, 639-3, and 3166-1)"
+msgstr ""
+"Nome comune associato ai codici forniti. Può essere lo stesso di --name "
+"(si applica solo a ISO 639-2, 639-3 e 3166-1)"
+
+#: src/options.c:63
+msgid "Separate entries with a NULL character instead of newline"
+msgstr "Separare le voci con un carattere NULL anziché con il ritorno a capo"
+
+#: src/options.c:65
+msgid "Show program version and copyright"
+msgstr "Mostra la versione del programma ed il copyright"
+
+#: src/options.c:82
+msgid "[ISO codes]"
+msgstr "[Codici ISO]"
+
+#. TRANSLATORS: The placeholder is a string like "1234-5".
+#: src/options.c:142
+#, c-format
+msgid "ISO standard \"%s\" is not supported."
+msgstr "Lo standard ISO \"%s\" non è supportato."
+
+#. TRANSLATORS: The placeholder is the version identifier.
+#: src/options.c:176
+#, c-format
+msgid "isoquery %s\n"
+msgstr "isoquery %s\n"
+
+#: src/options.c:177
+msgid "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
+msgstr "Copyright © 2007-2016 Dr. Tobias Quathamer\n"
+
+#. TRANSLATORS: Please change the uppercase words as
+#. appropriate for your language.
+#: src/options.c:180
+msgid "Translation to LANGUAGE Copyright © YEAR YOUR-NAME\n"
+msgstr "Traduzione in Italiano Copyright © 2020 Sebastiano Pistore\n"
+
+#. TRANSLATORS: The first placeholder is a code like "urgl" or
+#. "does-not-exist", the second placeholder is the current
+#. ISO standard like "3166-1" or "15924".
+#: src/search.c:60
+#, c-format
+msgid "The code \"%s\" is not defined in ISO %s."
+msgstr "Il codice \"%s\" non è presente in ISO %s."

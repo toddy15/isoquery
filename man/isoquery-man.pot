@@ -161,7 +161,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "  $ isoquery\n"
-"  AF      AFG     004     Afghanistan\n"
+"  AW      ABW     533     Aruba\n"
 "  [...]\n"
 "  ZW      ZWE     716     Zimbabwe\n"
 msgstr ""
